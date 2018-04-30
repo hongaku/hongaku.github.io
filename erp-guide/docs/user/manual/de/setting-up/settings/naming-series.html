@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>Nummernkreis</title>
+    <link type="text/css" rel="stylesheet" href="../../../../../assets/css/github-markdown.css">
+    <link type="text/css" rel="stylesheet" href="../../../../../assets/css/pilcrow.css">
+    <link type="text/css" rel="stylesheet" href="../../../../../assets/css/hljs-github.min.css"/>
+  </head>
+  <body>
+    <article class="markdown-body"><h1 id="nummernkreis"><a class="header-link" href="#nummernkreis"></a>Nummernkreis</h1>
+<p><span class="text-muted contributed-by">Beigetragen von CWT Connector &amp; Wire Technology GmbH</span></p>
+<h3 id="1.-einleitung"><a class="header-link" href="#1.-einleitung"></a>1. Einleitung</h3>
+<p>Datensätze werden ganz allgemein nach &quot;Stammdaten&quot; oder &quot;Transaktionen&quot; eingeteilt. Ein Stammdatensatz ist ein Datensatz der einen &quot;Namen&quot; hat, z. B. von einem Kunden, einem Artikel, einem Lieferanten, einem Mitarbeiter, etc. Eine Transaktion hat demgegenüber eine &quot;Nummer&quot;. Beispiele für Transaktionen sind Ausgangsrechnung, Angebot usw. Sie erstellen Transaktionen zu einer Anzahl von Stammdatensätzen.</p>
+<p>ERPNext erlaubt es Ihnen, Ihren Transaktionen Präfixe voranzustellen, wobei jedes Präfix einen eigenen Nummernkreis darstellt. So hat z. B. der Nummernkreis INV12 die Nummern INV120001, INV120002 usw.</p>
+<p>Sie können für all Ihre Transaktionen viele verschiedene Nummernkreise verwenden. Gewöhnlicherweise wird für jedes Geschäftsjahr ein eigener Nummernkreis verwendet. In Ausgangsrechnungen können Sie z. B. folgende verwenden:</p>
+<ul class="list">
+<li>INV120001</li>
+<li>INV120002</li>
+<li>INV-A-120002</li>
+</ul>
+<p>usw. Sie können auch für jeden Kundentyp oder für jedes Ihrer Einzelhandelsgeschäfte einen eigenen Nummernkreis verwenden.</p>
+<h3 id="2.-verwalten-von-nummernkreisen-für-dokumente"><a class="header-link" href="#2.-verwalten-von-nummernkreisen-für-dokumente"></a>2. Verwalten von Nummernkreisen für Dokumente</h3>
+<p>Um einen Nummernkreis einzustellen, gehen Sie zu:</p>
+<blockquote>
+<p>Einstellungen &gt; Daten &gt; Nummernkreis</p>
+</blockquote>
+<p>In diesem Formular,</p>
+<ol class="list">
+<li>Wählen Sie die Transaktion aus, für die Sie den Nummernkreis einstellen wollen. Das System wird den aktuellen Nummernkreis in der Textbox aktualisieren.</li>
+<li>Passen Sie den Nummernkreis nach Ihren Wünschen mit eindeutigen Präfixen an. Jedes Präfix muss in einer neuen Zeile stehen.</li>
+<li>Das erste Präfix wird zum Standard-Präfix. Wenn Sie möchten, dass ein Benutzer explizit einen Nummernkreis statt der Standardeinstellung auswählt, markieren Sie die Option &quot;Benutzer muss immer auswählen&quot;.</li>
+</ol>
+<p>Sie können auch den Startpunkt eines Nummernkreises auswählen, indem Sie den Namen und den Startpunkt des Nummernkreises im Abschnitt &quot;Seriennummer aktualisieren&quot; angeben.</p>
+<h3 id="3.-beispiel"><a class="header-link" href="#3.-beispiel"></a>3. Beispiel</h3>
+<p>Sehen Sie hier, wie der Nummernkreis eingestellt wird.</p>
+<p class="img-container"><img class="screenshot" alt="Nummernkreise" src="{{docs_base_url}}/assets/img/setup/settings/naming-series.gif"></p>
+<p>{next}</p>
+    </article>
+  </body>
+</html>

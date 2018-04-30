@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>Tareas</title>
+    <link type="text/css" rel="stylesheet" href="../../../../assets/css/github-markdown.css">
+    <link type="text/css" rel="stylesheet" href="../../../../assets/css/pilcrow.css">
+    <link type="text/css" rel="stylesheet" href="../../../../assets/css/hljs-github.min.css"/>
+  </head>
+  <body>
+    <article class="markdown-body"><h1 id="tareas"><a class="header-link" href="#tareas"></a>Tareas</h1>
+<p>Proyecto es dividido en Tareas.
+En ERPNext, puedes crear las tareas de forma independiente.</p>
+<p class="img-container"><img class="screenshot" alt="Task" src="{{docs_base_url}}/assets/img/project/task.png"></p>
+<h3 id="estado-de-una-tarea"><a class="header-link" href="#estado-de-una-tarea"></a>Estado de una Tarea</h3>
+<p>Una tarea puede tener uno de los siguientes estados - Abierto, Trabajando, Pendiente de Revisión, Cerrado, o Cancelado.</p>
+<p class="img-container"><img class="screenshot" alt="Task - Status" src="{{docs_base_url}}/assets/img/project/task_status.png"></p>
+<ul class="list">
+<li><p>Por defecto, cada nueva tarea creada se le establece el estado &#39;Abierto&#39;.</p>
+</li>
+<li><p>Si un registro de tiempo es realizado sobre una tarea, su estado es asignado a &#39;Working&#39;.</p>
+</li>
+</ul>
+<h3 id="tarea-dependiente"><a class="header-link" href="#tarea-dependiente"></a>Tarea Dependiente</h3>
+<p>Puedes especificar una lista de tareas dependientes en la sección &#39;Depende de&#39;</p>
+<p class="img-container"><img class="screenshot" alt="Depends On" src="{{docs_base_url}}/assets/img/project/task_depends_on.png"></p>
+<ul class="list">
+<li><p>No puedes cerrar una tarea padre hasta que todas las tareas dependientes esten cerradas.</p>
+</li>
+<li><p>Si una tarea dependiente se encuentra en retraso y se sobrepone con la fecha esperada de inicio de la tarea padre, el sistema va a re calandarizar la tarea padre.</p>
+</li>
+</ul>
+<h3 id="manejando-el-tiempo"><a class="header-link" href="#manejando-el-tiempo"></a>Manejando el tiempo</h3>
+<p>ERPNext usa <a href="/docs/user/manual/en/projects/time-log.html">Time Log</a> para seguir el progreso de una tarea.
+Puedes crear varios registros de tiempo para cada tarea.
+El tiempo de inicio y fin actual junto con el costo es actualizado en base al Registro de Tiempo.</p>
+<ul class="list">
+<li>Para ver el Registro de tiempo realizado a una tarea, dar click en &#39;Time Logs&#39;</li>
+</ul>
+<p class="img-container"><img class="screenshot" alt="Task - View Time Log" src="{{docs_base_url}}/assets/img/project/task_view_time_log.png"></p>
+<p class="img-container"><img class="screenshot" alt="Task - Time Log List" src="{{docs_base_url}}/assets/img/project/task_time_log_list.png"></p>
+<ul class="list">
+<li>Puedes también crear un Registro de Tiempo directamente y luego asociarlo a una Tarea.</li>
+</ul>
+<p class="img-container"><img class="screenshot" alt="Task - Link Time Log" src="{{docs_base_url}}/assets/img/project/task_time_log_link.png"></p>
+<h3 id="gestión-de-gastos"><a class="header-link" href="#gestión-de-gastos"></a>Gestión de gastos</h3>
+<p>Puede reservar la <a href="/docs/user/manual/en/human-resources/expense-claim.html">Reclamación de gastos</a> contra una tarea de proyecto.
+El sistema actualizará el monto total de las reclamaciones de gastos en la sección de costos del proyecto.</p>
+<ul class="list">
+<li>Para ver las reclamaciones de gastos realizadas en un proyecto, haga clic en &#39;Reclamaciones de gastos&#39;</li>
+</ul>
+<p class="img-container"><img class="screenshot" alt="Task - View Expense Claim" src="{{docs_base_url}}/assets/img/project/task_view_expense_claim.png"></p>
+<ul class="list">
+<li>También puede crear un Reclamo de gastos directamente y vincularlo al Proyecto.</li>
+</ul>
+<p class="img-container"><img class="screenshot" alt="Task - Link Expense Claim" src="{{docs_base_url}}/assets/img/project/task_expense_claim_link.png"></p>
+<ul class="list">
+<li>El monto total de los Reclamos de gastos reservados contra un proyecto se muestra en &#39;Reclamo de gastos totales&#39; en la Sección de Costos del proyecto</li>
+</ul>
+<p class="img-container"><img class="screenshot" alt="Task - Total Expense Claim" src="{{docs_base_url}}/assets/img/project/task_total_expense_claim.png"></p>
+<p>{next}</p>
+    </article>
+  </body>
+</html>

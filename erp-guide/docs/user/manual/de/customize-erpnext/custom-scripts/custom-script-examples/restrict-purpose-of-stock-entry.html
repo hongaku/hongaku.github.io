@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>Anliegen der Lagerbuchung einschränken</title>
+    <link type="text/css" rel="stylesheet" href="../../../../../../assets/css/github-markdown.css">
+    <link type="text/css" rel="stylesheet" href="../../../../../../assets/css/pilcrow.css">
+    <link type="text/css" rel="stylesheet" href="../../../../../../assets/css/hljs-github.min.css"/>
+  </head>
+  <body>
+    <article class="markdown-body"><h1 id="anliegen-der-lagerbuchung-einschränken"><a class="header-link" href="#anliegen-der-lagerbuchung-einschränken"></a>Anliegen der Lagerbuchung einschränken</h1>
+<p><span class="text-muted contributed-by">Beigetragen von CWT Connector &amp; Wire Technology GmbH</span></p>
+<pre class="hljs"><code>frappe.ui.form.on(<span class="hljs-string">"Material Request"</span>, <span class="hljs-string">"validate"</span>, <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(frm)</span> </span>{
+    <span class="hljs-keyword">if</span>(user==<span class="hljs-string">"user1@example.com"</span> &amp;&amp; frm.doc.purpose!=<span class="hljs-string">"Material Receipt"</span>) {
+        frappe.msgprint(<span class="hljs-string">"You are only allowed Material Receipt"</span>);
+        frappe.<span class="hljs-keyword">throw</span>(__(<span class="hljs-string">"Not allowed"</span>));
+    }
+}</code></pre><p>{next}</p>
+    </article>
+  </body>
+</html>

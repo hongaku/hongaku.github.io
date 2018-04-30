@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>Stock Entry</title>
+    <link type="text/css" rel="stylesheet" href="../../../../assets/css/github-markdown.css">
+    <link type="text/css" rel="stylesheet" href="../../../../assets/css/pilcrow.css">
+    <link type="text/css" rel="stylesheet" href="../../../../assets/css/hljs-github.min.css"/>
+  </head>
+  <body>
+    <article class="markdown-body"><h1 id="stock-entry"><a class="header-link" href="#stock-entry"></a>Stock Entry</h1>
+<p>A Stock Entry is a simple document that lets you record Item movement from a
+Warehouse, to a Warehouse and between Warehouses.</p>
+<p>To make a Stock Entry you have to go to:</p>
+<blockquote>
+<p>Stock &gt; Stock Entry &gt; New</p>
+</blockquote>
+<p class="img-container"><img class="screenshot" alt="Stock Entry" src="{{docs_base_url}}/assets/img/stock/stock-entry.png"></p>
+<p>Stock Entries can be made for the following purposes:</p>
+<ul class="list">
+<li>Material Issue - If the material is being issued. (Outgoing Material)</li>
+<li>Material Receipt - If the material is being received. (Incoming Material)</li>
+<li>Material Transfer - If the material is being moved from one warehouse to another.</li>
+<li>Material Transfer for Manufacturing - If the material being transfered is for Manufacturing Process.</li>
+<li>Manufacture - If the Material is being received from a Manufacturing/Production Operation.</li>
+<li>Repack - If the Original item/items is being repacked into new item/items.</li>
+<li>Subcontract - If the Material is being issued for a sub-contract activity.</li>
+</ul>
+<p>In the Stock Entry you have to update the Items table with all your
+transactions. For each row, you must enter a “Source Warehouse” or a “Target
+Warehouse” or both (if you are recording a movement).</p>
+<div class="embed-container">
+    <iframe src="https://www.youtube.com/embed/Njt107hlY3I?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+    </iframe>
+</div>
+
+<p><strong>Additional Costs:</strong></p>
+<p>If the stock entry is an incoming entry i.e any item is receiving at a target warehouse, you can add related additional costs (like Shipping Charges, Customs Duty, Operating Costs etc) associated with the process. The additional costs will be considered to calculate valuation rate of the items.</p>
+<p>To add additional costs, enter the description and amount of the cost in the Additional Costs table.</p>
+<p class="img-container"><img class="screenshot" alt="Stock Entry Additional Costs" src="{{docs_base_url}}/assets/img/stock/additional-costs-table.png"></p>
+<p>The added additional costs will be distributed among the receiving items (where the target warehouse mentioned) proportionately based on Basic Amount of the items. And the distributed additional cost will be added to the basic rate of the item, to calculate valuation rate.</p>
+<p class="img-container"><img class="screenshot" alt="Stock Entry Item Valuation Rate" src="{{docs_base_url}}/assets/img/stock/stock-entry-item-valuation-rate.png"></p>
+<p>If perpetual inventory system is enabled, additional costs will be booked in &quot;Expense Included In Valuation&quot; account.</p>
+<p class="img-container"><img class="screenshot" alt="Additional Costs General Ledger" src="{{docs_base_url}}/assets/img/stock/additional-costs-general-ledger.png"></p>
+<blockquote>
+<p><strong>Note:</strong> To update Stock from a spreadsheet, see <a href="{{doc_base_url}}/user/manual/en/setting-up/stock-reconciliation-for-non-serialized-item.html">Stock Reconciliation</a>.</p>
+</blockquote>
+<p>{next}</p>
+    </article>
+  </body>
+</html>

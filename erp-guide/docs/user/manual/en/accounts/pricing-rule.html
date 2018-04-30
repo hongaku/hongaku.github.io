@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>Scenario:</title>
+    <link type="text/css" rel="stylesheet" href="../../../../assets/css/github-markdown.css">
+    <link type="text/css" rel="stylesheet" href="../../../../assets/css/pilcrow.css">
+    <link type="text/css" rel="stylesheet" href="../../../../assets/css/hljs-github.min.css"/>
+  </head>
+  <body>
+    <article class="markdown-body"><p>#Pricing Rule</p>
+<p>Pricing Rule is a master where you can define rules based on which discount is applied to specific Customer or Supplier.</p>
+<h3 id="scenario:"><a class="header-link" href="#scenario:"></a>Scenario:</h3>
+<p>Following are the few cases which can be addressed using Pricing Rule.</p>
+<ol class="list">
+<li><p>As per the promotional sale policy, if customer purchases more than 10 units of an item, he enjoys 20% discount. </p>
+</li>
+<li><p>For Customer &quot;XYZ&quot;, selling price for the specific Item should be updated as ###.</p>
+</li>
+<li><p>Items categorized under specific Item Group has same selling or buying price.</p>
+</li>
+<li><p>Customers balonging to specific Customer Group should get ### selling price, ot % of Discount on Items.</p>
+</li>
+<li><p>Supplier&#39;s categorized under specific Supplier Type should have ### buying rate applied.</p>
+</li>
+</ol>
+<p>To have %Discount and Price List Rate for an Item auto-applied, you should create Pricing Rules for it.</p>
+<p>Pricing Rule master has two sections:</p>
+<h3 id="1.-applicability-section:"><a class="header-link" href="#1.-applicability-section:"></a>1. Applicability Section:</h3>
+<p>In this section, conditions are set for the application of Pricing Rule. When transaction meets condition as specified in this section, Rate or Discount as specified in the Pricing Rule will be applied. You can set condition on following values.</p>
+<p>####1.1 Applicable On:</p>
+<p class="img-container"><img alt="Applicable On" class="screenshot" src="{{docs_base_url}}/assets/img/articles/pricing-rule-on.png"></p>
+<p>If you want Pricing Rule to be applied on all the items, select based on Item Group. For value, select <strong>All Item Group</strong> (parent Item Group).</p>
+<p>####1.2 Applicable For:</p>
+<p>Applicability option will updated based on our selection for Selling or Buying or both. You can set applicability on one of the following master.</p>
+<p class="img-container"><img alt="Applicable for" class="screenshot" src="{{docs_base_url}}/assets/img/articles/pricing-rule-for.png"></p>
+<p>####1.3 Quantity:</p>
+<p>Specify minimum and maximum qty of an item when this Pricing Rule should be applicable.</p>
+<p class="img-container"><img alt="Applicable Qty" class="screenshot" src="{{docs_base_url}}/assets/img/articles/pricing-rule-qty.png"></p>
+<p>###2. Application:</p>
+<p>Using Price List Rule, you can ultimately define rate or %discount to be applied on an item.</p>
+<p class="img-container"><img alt="Applicable" class="screenshot" src="{{docs_base_url}}/assets/img/articles/pricing-rule-application.png"></p>
+<p>####2.1 Rate</p>
+<p>Rate or Discount specified in the Pricing Rule will be applied only if above applicability rules are matched with values in the transaction. Rate mentioned in Pricing Rule will be given priority over item&#39;s Price List rate.</p>
+<p class="img-container"><img alt="Applicable Rate" class="screenshot" src="/docs/assets/img/articles/pricing-rule-price.png"></p>
+<h4 id="2.2-discount-percentage"><a class="header-link" href="#2.2-discount-percentage"></a>2.2 Discount Percentage</h4>
+<p>Discount Percentage can be applied for a specific Price List. To have it applied for all the Price List, %Discount field should be left blank.</p>
+<p class="img-container"><img alt="Discount" class="screenshot" src="{{docs_base_url}}/assets/img/articles/pricing-rule-discount.png"></p>
+<p>If %Discount is to be applied on all Price Lists, then leave Price List field blank.</p>
+<h4 id="validity"><a class="header-link" href="#validity"></a>Validity</h4>
+<p>Enter From and To date between which this Pricing Rule will be applicable. This will be useful if creating Pricing Rule for sales promotion exercise available for certain days.</p>
+<p class="img-container"><img alt="Validity" class="screenshot" src="{{docs_base_url}}/assets/img/articles/pricing-rule-validity.png"></p>
+<h4 id="priority"><a class="header-link" href="#priority"></a>Priority</h4>
+<p>If two or more Pricing Rules are found based on same conditions, Priority is applied. Priority is a number between 0 to 20 while default value is zero (blank). Higher number means it will take precedence if there are multiple Pricing Rules with same conditions.</p>
+<p class="img-container"><img alt="Priority" class="screenshot" src="{{docs_base_url}}/assets/img/articles/pricing-rule-priority.png"></p>
+<h4 id="disable"><a class="header-link" href="#disable"></a>Disable</h4>
+<p>Check to Disable Pricing Rule.</p>
+<p class="img-container"><img alt="Disable" class="screenshot" src="{{docs_base_url}}/assets/img/articles/pricing-rule-disable.png"></p>
+<h3 id="add-margin"><a class="header-link" href="#add-margin"></a>Add Margin</h3>
+<p>Using pricing rule user can add margin on the sales transactions</p>
+<p>For example :  User want to add 10% margin on the supplier price list at the time of sales</p>
+<p>####1. Make Price List</p>
+<p>Create price list for supllier and create item price against the price list.</p>
+<p class="img-container"><img alt="Disable" class="screenshot" src="{{docs_base_url}}/assets/img/articles/price-list.png"></p>
+<p>####2. Make Pricing Rule </p>
+<p>Create pricing rule for the item against which supplier rate has created</p>
+<p class="img-container"><img alt="Disable" class="screenshot" src="{{docs_base_url}}/assets/img/articles/pricing-rule-margin.png"></p>
+<p>####2. Make Invoice</p>
+<p>System apply the margin rate on the item price on selection of an item.</p>
+<p class="img-container"><img alt="Disable" class="screenshot" src="{{docs_base_url}}/assets/img/articles/pricing-rule-invoice.png"></p>
+<p>For more details about pricing rule <a href="/docs/user/manual/en/selling/articles/adding-margin.html">Click Here</a></p>
+<!-- markdown -->    </article>
+  </body>
+</html>

@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>Production Planning Tool</title>
+    <link type="text/css" rel="stylesheet" href="../../../../../assets/css/github-markdown.css">
+    <link type="text/css" rel="stylesheet" href="../../../../../assets/css/pilcrow.css">
+    <link type="text/css" rel="stylesheet" href="../../../../../assets/css/hljs-github.min.css"/>
+  </head>
+  <body>
+    <article class="markdown-body"><h1 id="production-planning-tool"><a class="header-link" href="#production-planning-tool"></a>Production Planning Tool</h1>
+<p>Production Planning Tool helps you plan production and purchase of Items for a
+period (usually a week or a month).</p>
+<div class-"embed-container">
+  <iframe src="https://www.youtube.com/embed/i0E_RcngliQ?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+  </iframe>
+</div>
+
+<p>This list of Items can be generated from the open Sales Orders or pending Material Requests that can be Manufactured in the system
+and will generate:</p>
+<ul class="list">
+<li>Work Orders for each Item.</li>
+<li>Purchase Requests for Items whose Projected Quantity is likely to fall below zero.</li>
+</ul>
+<p>To use the Production Planning Tool, go to:</p>
+<blockquote>
+<p>Manufacturing &gt; Tools &gt; Production Planning Tool</p>
+</blockquote>
+<p class="img-container"><img class="screenshot" alt="Production Planing Tool" src="{{docs_base_url}}/assets/img/manufacturing/ppt.png"></p>
+<h4 id="step-1:-specify-source-to-get-production-items"><a class="header-link" href="#step-1:-specify-source-to-get-production-items"></a>Step 1: Specify source to get Production Items</h4>
+<ul class="list">
+<li>You can select Sales Order or Material Request according to where you want to source the items from</li>
+<li>If you plan to add items manually, keep the &quot;Get items from&quot; field empty</li>
+</ul>
+<h4 id="step-2:-select-and-get-sales-order-/-material-request"><a class="header-link" href="#step-2:-select-and-get-sales-order-/-material-request"></a>Step 2: Select and get Sales Order / Material Request</h4>
+<ul class="list">
+<li>Use filters to get the Sales Order / Material Request</li>
+<li>Click on Get Sales Order / Get Material Requests to generate a list.</li>
+</ul>
+<p class="img-container"><img class="screenshot" alt="Production Planing Tool" src="{{docs_base_url}}/assets/img/manufacturing/ppt-get-sales-orders.png"></p>
+<h4 id="step-3:-get-items"><a class="header-link" href="#step-3:-get-items"></a>Step 3: Get Items</h4>
+<ul class="list">
+<li>Get the items for the Sales Order / Material request list</li>
+<li>You can add/remove or change quantity of these Items.</li>
+</ul>
+<p class="img-container"><img class="screenshot" alt="Production Planing Tool" src="{{docs_base_url}}/assets/img/manufacturing/ppt-get-item.png"></p>
+<h4 id="step-4:-create-work-orders"><a class="header-link" href="#step-4:-create-work-orders"></a>Step 4: Create Work Orders</h4>
+<p class="img-container"><img class="screenshot" alt="Production Planing Tool" src="{{docs_base_url}}/assets/img/manufacturing/ppt-create-production-order.png"></p>
+<h4 id="step-5:-create-material-request"><a class="header-link" href="#step-5:-create-material-request"></a>Step 5: Create Material Request</h4>
+<p>Create Material Request for Items with projected shortfall.</p>
+<p class="img-container"><img class="screenshot" alt="Production Planing Tool" src="{{docs_base_url}}/assets/img/manufacturing/ppt-create-material-request.png"></p>
+<p>The Production Planning Tool is used in two stages:</p>
+<ul class="list">
+<li>Selection of open Sales Orders / pending Material Request for the period based on “Expected Delivery Date”.</li>
+<li>Selection of Items from those Sales Orders / Material Requests</li>
+</ul>
+<p>The tool will update if you have already created Production Orde rs for a
+particular Item against its Sales Order (“Planned Quantity”) or Material Request.</p>
+<p>You can always edit the Item list and increase / reduce quantities to plan
+your production.</p>
+<blockquote>
+<p>Note: How do you change a Production Plan? The output of the Production
+Planning Tool is the Work Order. Once your orders are created, you can
+change them by amending the Work Orders.</p>
+</blockquote>
+<p>{next}</p>
+    </article>
+  </body>
+</html>

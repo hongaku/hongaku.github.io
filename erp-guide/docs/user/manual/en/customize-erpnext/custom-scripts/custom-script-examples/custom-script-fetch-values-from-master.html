@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>Custom Script Fetch Values From Master</title>
+    <link type="text/css" rel="stylesheet" href="../../../../../../assets/css/github-markdown.css">
+    <link type="text/css" rel="stylesheet" href="../../../../../../assets/css/pilcrow.css">
+    <link type="text/css" rel="stylesheet" href="../../../../../../assets/css/hljs-github.min.css"/>
+  </head>
+  <body>
+    <article class="markdown-body"><h1 id="custom-script-fetch-values-from-master"><a class="header-link" href="#custom-script-fetch-values-from-master"></a>Custom Script Fetch Values From Master</h1>
+<p>To pull a value of a link on selection, use the <code>add_fetch</code> method.</p>
+<pre class="hljs"><code><span class="hljs-function"><span class="hljs-title">add_fetch</span><span class="hljs-params">(link_fieldname, source_fieldname, target_fieldname)</span></span></code></pre><h3 id="example"><a class="header-link" href="#example"></a>Example</h3>
+<p>You create Custom Field <strong>VAT ID</strong> (<code>vat_id</code>) in <strong>Customer</strong> and <strong>Sales
+Invoice</strong> and want to make sure this value gets updated every time you select
+a Customer in a Sales Invoice.</p>
+<p>Then in the Sales Invoice Custom Script, add this line:</p>
+<pre class="hljs"><code><span class="hljs-selector-tag">cur_frm</span><span class="hljs-selector-class">.add_fetch</span>(<span class="hljs-string">'customer'</span>,<span class="hljs-string">'vat_id'</span>,<span class="hljs-string">'vat_id'</span>)</code></pre><p>{next}</p>
+    </article>
+  </body>
+</html>

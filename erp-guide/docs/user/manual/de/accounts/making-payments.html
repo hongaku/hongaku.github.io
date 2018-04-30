@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>Zahlungen durchführen</title>
+    <link type="text/css" rel="stylesheet" href="../../../../assets/css/github-markdown.css">
+    <link type="text/css" rel="stylesheet" href="../../../../assets/css/pilcrow.css">
+    <link type="text/css" rel="stylesheet" href="../../../../assets/css/hljs-github.min.css"/>
+  </head>
+  <body>
+    <article class="markdown-body"><h1 id="zahlungen-durchführen"><a class="header-link" href="#zahlungen-durchführen"></a>Zahlungen durchführen</h1>
+<p><span class="text-muted contributed-by">Beigetragen von CWT Connector &amp; Wire Technology GmbH</span></p>
+<p>Zahlungen zu Ausgangs- oder Eingangsrechnungen können über die Schaltfläche &quot;Zahlungsbuchung erstellen&quot; zu übertragenen Rechnungen erfasst werden.</p>
+<ol class="list">
+<li>Aktualisieren Sie das Bankkonto (Sie können hier auch ein Standardkonto in den Unternehmensstammdaten einstellen).</li>
+<li>Aktualiseren Sie das Veröffentlichungsdatum.</li>
+<li>Geben Sie Schecknummer und Scheckdatum ein.</li>
+<li>Speichern und Übertragen Sie.</li>
+</ol>
+<p class="img-container"><img class="screenshot" alt="Zahlungen durchführen" src="{{docs_base_url}}/assets/img/accounts/make-payment.png"></p>
+<p>Zahlungen können auch unabhängig von Rechnungen erstellt werden, indem Sie einen neuen Journalbeleg erstellen und die Zahlungsart auswählen.</p>
+<h3 id="eingehende-zahlungen"><a class="header-link" href="#eingehende-zahlungen"></a>Eingehende Zahlungen</h3>
+<p>Für Zahlungen von Kunden gilt:</p>
+<ul class="list">
+<li>Soll: Bank oder Kasse</li>
+<li>Haben: Kundenkonto</li>
+</ul>
+<blockquote>
+<p>Anmerkung: Vergessen Sie nicht &quot;Zu Ausgangsrechnung&quot; und &quot;Ist Anzahlung&quot; zu markieren, wenn es zutrifft.</p>
+</blockquote>
+<h3 id="ausgehende-zahlungen"><a class="header-link" href="#ausgehende-zahlungen"></a>Ausgehende Zahlungen</h3>
+<p>Für Zahlungen an Lieferanten gilt:</p>
+<ul class="list">
+<li>Soll: Lieferant</li>
+<li>Haben: Bank oder Kasse</li>
+</ul>
+<h3 id="beispiel-eines-buchungssatzes-für-eine-zahlung"><a class="header-link" href="#beispiel-eines-buchungssatzes-für-eine-zahlung"></a>Beispiel eines Buchungssatzes für eine Zahlung</h3>
+<p class="img-container"><img class="screenshot" alt="Zahlungen durchführen" src="{{docs_base_url}}/assets/img/accounts/new-bank-entry.png"></p>
+<hr>
+<h3 id="eine-zahlung-per-scheck-abgleichen"><a class="header-link" href="#eine-zahlung-per-scheck-abgleichen"></a>Eine Zahlung per Scheck abgleichen</h3>
+<p>Wenn Sie Zahlungen per Scheck erhalten oder leisten, geben die Kontoauszüge Ihrer Bank nicht exakt die Daten Ihrer Buchung wieder, weil die Bank normalerweise einige Zeit braucht diese Zahlungen einzulösen. Das gleiche trifft zu, wenn Sie Ihrem Lieferanten einen Scheck zusenden und es einige Tage braucht, bis er vom Lieferanten angenommen und eingereicht wird. In ERPNext können Sie Kontoauszüge der Bank und Ihre Buchungssätze über das Werkzeug zum Kontenabgleich in Einklang bringen.</p>
+<p>Dafür gehen Sie zu:</p>
+<blockquote>
+<p>Rechnungswesen &gt; Werkzeuge &gt; Kontenabgleich</p>
+</blockquote>
+<p>Wählen Sie Ihr Bankkonto aus und geben Sie das Datum Ihres Kontoauszuges ein. Sie bekommen alle Buchungen vom Typ Bankbeleg. Aktualisieren Sie in jeder Buchung über die Spalte ganz rechts das &quot;Einlösungsdatum&quot; und klicken Sie auf &quot;Aktualisieren&quot;.</p>
+<p>So können Sie Ihre Kontoauszüge und Ihre Systembuchungen angleichen.</p>
+<hr>
+<h3 id="offene-zahlungen-verwalten"><a class="header-link" href="#offene-zahlungen-verwalten"></a>Offene Zahlungen verwalten</h3>
+<p>Ausgenommen von Endkundenverkäufen sind in den meisten Fällen die Rechnungslegung und die Zahlung voneinander getrennte Aktivitäten. Es gibt verschiedene Kombinationsmöglichkeiten, wie Zahlungen getätigt werden können. Diese Kombinationen finden sowohl bei Verkäufen als auch bei Einkäufen Anwendung.</p>
+<ul class="list">
+<li>Zahlungen können im Voraus erfolgen (100% Anzahlung).</li>
+<li>Sie können nach dem Versand erfolgen. Entweder zum Zeitpunkt der Lieferung oder innerhalb von ein paar Tagen.</li>
+<li>Es kann eine Teilzahlung im Voraus erfolgen und eine Restzahlung nach der Auslieferung.</li>
+<li>Zahlungen können zusammen für mehrere Rechnungen erfolgen.</li>
+<li>Anzahlungen können zusammen für mehrere Rechnungen erfolgen (und können dann auf die Rechnungen aufgeteilt werden).</li>
+</ul>
+<p>ERPNext erlaubt es Ihnen alle diese Szenarien zu verwalten. Alle Buchungen des Hauptbuches können zu Ausgangsrechnungen, Eingangsrechnungen und Journalbelegen erfolgen.</p>
+<p>Der gesamte offene Betrag einer Rechnung ist die Summe aller Buchungen, die zu dieser Rechnung erstellt wurden (oder mit ihr verknüpft sind). Auf diese Weise können Sie in Buchungssätzen Zahlungen kombinieren oder aufteilen um alle Szenarien abzudecken.</p>
+<h3 id="zahlungen-mit-rechnungen-abgleichen"><a class="header-link" href="#zahlungen-mit-rechnungen-abgleichen"></a>Zahlungen mit Rechnungen abgleichen</h3>
+<p>In komplexen Szenarien, besonders im Geschäftsfeld Investitionsgüter, gibt es manchmal keinen direkten Bezug zwischen Zahlungen und Rechnungen. Sie schicken an Ihre Kunden Rechnungen und Kunden senden Ihnen Zahlungsblöcke oder Zahlungen, die auf einem Zeitplan basieren, der nicht mit Ihren Rechnungen verknüpft ist.</p>
+<p>In solchen Fällen können Sie das Werkzeug zum Zahlungsabgleich verwenden.</p>
+<blockquote>
+<p>Rechnungswesen &gt; Werkzeuge &gt; Zahlungsabgleichs-Werkzeug</p>
+</blockquote>
+<p>In diesem Werkzeug können Sie ein Konto auswählen (z. B. das Konto Ihres Kunden) und auf &quot;Zahlungsbuchungen ermitteln&quot; klicken und das System wählt alle offenen Journalbuchungen und Ausgangsrechnungen dieses Kunden aus.</p>
+<p>Um Zahlungen und Rechnungen zu abzugleichen, wählen Sie Rechnungen und Journalbelege aus und klicken Sie auf &quot;Abgleichen&quot;.</p>
+<p>{next}</p>
+    </article>
+  </body>
+</html>

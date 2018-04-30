@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>Expense Claim</title>
+    <link type="text/css" rel="stylesheet" href="../../../../assets/css/github-markdown.css">
+    <link type="text/css" rel="stylesheet" href="../../../../assets/css/pilcrow.css">
+    <link type="text/css" rel="stylesheet" href="../../../../assets/css/hljs-github.min.css"/>
+  </head>
+  <body>
+    <article class="markdown-body"><h1 id="expense-claim"><a class="header-link" href="#expense-claim"></a>Expense Claim</h1>
+<p>Expense Claim is made when Employee’s make expenses out of their pocket on behalf of the company. For example, if they take a customer out for lunch, they can make a request for reimbursement via the Expense Claim form.</p>
+<p>To make a new Expense Claim, go to:</p>
+<blockquote>
+<p>HR &gt; Expense Claim &gt; New Expense Claim</p>
+</blockquote>
+<p class="img-container"><img class="screenshot" alt="Expense Claim" src="{{docs_base_url}}/assets/img/human-resources/expense_claim.png"></p>
+<p>Set the Employee ID, date and the list of expenses that are to be claimed and
+“Submit” the record.</p>
+<div class="embed-container">
+    <iframe src="https://www.youtube.com/embed/5SZHJF--ZFY?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+    </iframe>
+</div>
+
+
+<h3 id="set-account-for-employee"><a class="header-link" href="#set-account-for-employee"></a>Set Account for Employee</h3>
+<p>Set employee&#39;s expense account on the employee form, system books an expense amount of an employee under this account.
+<img class="screenshot" alt="Expense Claim" src="{{docs_base_url}}/assets/img/human-resources/employee_account.png"></p>
+<h3 id="approving-expenses"><a class="header-link" href="#approving-expenses"></a>Approving Expenses</h3>
+<p>Approver for the Expense Claim is selected by an Employee himself. Users to whom <code>Expense Approver</code> role is assigned will shown in the Expense Claim Approver field.</p>
+<p>After saving Expense Claim, Employee should <a href="/docs/user/manual/en/using-eprnext/assignment.html">Assign document to Approver</a>. On assignment, approving user will also receive email notification. To automate email notification, you can also setup <a href="/docs/user/manual/en/setting-up/email/email-alerts.html">Email Alert</a>.</p>
+<p>Expense Claim Approver can update the “Sanctioned Amounts” against Claimed Amount of an Employee. If submitting, Approval Status should be submitted to Approved or Rejected. If Approved, then Expense Claim gets submitted. If rejected, then Expen
+Comments can be added in the Comments section explaining why the claim was approved or rejected.</p>
+<h3 id="booking-the-expense"><a class="header-link" href="#booking-the-expense"></a>Booking the Expense</h3>
+<p>On submission of Expense Claim, system books an expense against the expense account and the employee account
+<img class="screenshot" alt="Expense Claim" src="{{docs_base_url}}/assets/img/human-resources/expense_claim_book.png"></p>
+<p>User can view unpaid expense claim using report &quot;Unclaimed Expense Claims&quot;
+<img class="screenshot" alt="Expense Claim" src="{{docs_base_url}}/assets/img/human-resources/unclaimed_expense_claims.png"></p>
+<h3 id="payment-for-expense-claim"><a class="header-link" href="#payment-for-expense-claim"></a>Payment for Expense Claim</h3>
+<p>To make payment against the expense claim, user has to click on Make &gt; Bank Entry</p>
+<h4 id="expense-claim-1"><a class="header-link" href="#expense-claim-1"></a>Expense Claim</h4>
+<p class="img-container"><img class="screenshot" alt="Expense Claim" src="{{docs_base_url}}/assets/img/human-resources/payment.png"></p>
+<h4 id="payment-entry"><a class="header-link" href="#payment-entry"></a>Payment Entry</h4>
+<p class="img-container"><img class="screenshot" alt="Expense Claim" src="{{docs_base_url}}/assets/img/human-resources/payment_entry.png"></p>
+<p>Note: This amount should not be clubbed with Salary because the amount will then be taxable to the Employee.</p>
+<p>Alternatively, a Payment Entry can be made for an employee and all outstanding Expense Claims will be pulled in.</p>
+<blockquote>
+<p>Accounts &gt; Payment Entry &gt; New Payment Entry</p>
+</blockquote>
+<p>Set the Payment Type to &quot;Pay&quot;, the Party Type to Employee, the Party to the employee being paid and the account being paid 
+from. All outstanding expense claims will be pulled in and payments amounts can be allocated to each expense.
+<img class="screenshot" alt="Expense Claim" src="{{docs_base_url}}/assets/img/human-resources/expense_claim_payment_entry.png"></p>
+<h3 id="linking-with-task-&-project"><a class="header-link" href="#linking-with-task-&-project"></a>Linking with Task &amp; Project</h3>
+<ul class="list">
+<li>To Link Expense Claim with Task or Project specify the Task or the Project while making an Expense Claim</li>
+</ul>
+<p class="img-container"><img class="screenshot" alt="Expense Claim - Project Link" src="{{docs_base_url}}/assets/img/project/project_expense_claim_link.png"></p>
+<p>{next}</p>
+    </article>
+  </body>
+</html>

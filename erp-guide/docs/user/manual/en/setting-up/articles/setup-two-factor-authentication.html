@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title></title>
+    <link type="text/css" rel="stylesheet" href="../../../../../assets/css/github-markdown.css">
+    <link type="text/css" rel="stylesheet" href="../../../../../assets/css/pilcrow.css">
+    <link type="text/css" rel="stylesheet" href="../../../../../assets/css/hljs-github.min.css"/>
+  </head>
+  <body>
+    <article class="markdown-body"><p>#Setup Two Factor Authentication</p>
+<p>##Enable Two Factor Authentication (2FA)</p>
+<p>Activate two factor authentication by running the command.</p>
+<p><code>bench --site [sitename] enable_two_factor_auth true</code> </p>
+<p>Specify the following in System Settings</p>
+<ul class="list">
+<li>The method of OTP validation (OTP App = TOTP using Soft or Hard Token while Email/SMS = HOTP using Email or SMS</li>
+<li>The expiry time for the QR Code on the server if OTP App is specified</li>
+<li>The OTP Issuer Name.</li>
+</ul>
+<p class="img-container"><img alt="Enable Two Factor Auth" class="screenshot" src="{{docs_base_url}}/assets/img/articles/twofactor/twofactor-1.png"></p>
+<p>On activation of 2FA from setup, it is also activated for the Role &quot;All&quot;. In this way, all users including the Administrator have to perform a 2nd level authentication with a token. By unchecking the &quot;Two Factor Authentication&quot; checkbox in the &quot;All&quot; role and enabling it in other roles, the need to login with a token can be limited to specific roles. 2FA does not apply to login by Web Users and API login</p>
+<p class="img-container"><img alt="Role Enable Two Factor Auth" class="screenshot" src="{{docs_base_url}}/assets/img/articles/twofactor/twofactor-2.png"></p>
+<p>If using SMS authentication, please make sure that your SMS settings are updated</p>
+<p class="img-container"><img alt="SMS Settings" class="screenshot" src="{{docs_base_url}}/assets/img/articles/twofactor/twofactor-3.png"></p>
+<p>If using Email, make sure that your outgoing Email account settings are updated</p>
+<p class="img-container"><img alt="Email Settings" class="screenshot" src="{{docs_base_url}}/assets/img/articles/twofactor/twofactor-4.png"></p>
+<p>When the new user tries to log in for the first time in a system that has two-factor authentication enabled and which has the authentication option as OTP App, an email is sent containing a link to the QR Code.</p>
+<p><img alt="Email Notify Two Factor" class="screenshot" src="{{docs_base_url}}/assets/img/articles/twofactor/twofactor-5.png">
+<img alt="QR Code Page" class="screenshot" src="{{docs_base_url}}/assets/img/articles/twofactor/twofactor-6.png"></p>
+<p>Scanning the QR Code with an authentication app like Google Authenticator registers the access for the user and automatically starts to generate tokens that can be used to login</p>
+<p class="img-container"><img alt="Two Factor Scan App" class="screenshot" src="{{docs_base_url}}/assets/img/articles/twofactor/twofactor_app.jpeg"></p>
+<p>If either of Email/SMS is used as the authentication method, you get notifications also</p>
+<p class="img-container"><img alt="Email and SMS" class="screenshot" src="{{docs_base_url}}/assets/img/articles/twofactor/twofactor-8.png"></p>
+    </article>
+  </body>
+</html>

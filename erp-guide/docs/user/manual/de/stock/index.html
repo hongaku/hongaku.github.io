@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>Lager</title>
+    <link type="text/css" rel="stylesheet" href="../../../../assets/css/github-markdown.css">
+    <link type="text/css" rel="stylesheet" href="../../../../assets/css/pilcrow.css">
+    <link type="text/css" rel="stylesheet" href="../../../../assets/css/hljs-github.min.css"/>
+  </head>
+  <body>
+    <article class="markdown-body"><h1 id="lager"><a class="header-link" href="#lager"></a>Lager</h1>
+<p><span class="text-muted contributed-by">Beigetragen von CWT Connector &amp; Wire Technology GmbH</span></p>
+<p>Die meisten kleinen Unternehmen, die mit physischen Waren handeln, investieren einen großen Teil ihres Kapitals in Lagerbestände.</p>
+<h3 id="materialfluß"><a class="header-link" href="#materialfluß"></a>Materialfluß</h3>
+<p>Es gibt drei Haupttypen von Buchungen:</p>
+<ul class="list">
+<li>Kaufbeleg: Artikel die das Unternehmen von Lieferanten aufgrund einer Einkaufsbestellung erhält.</li>
+<li>Lagerbuchung: Artikel, die von einem Lager in ein anderes Lager übertragen werden.</li>
+<li>Lieferschein: Artikel, die an Kunden versandt wurden.</li>
+</ul>
+<h3 id="wie-verfolgt-erpnext-lagerbewegungen-und-lagerstände?"><a class="header-link" href="#wie-verfolgt-erpnext-lagerbewegungen-und-lagerstände?"></a>Wie verfolgt ERPNext Lagerbewegungen und Lagerstände?</h3>
+<p>Das Lager abzubilden bedeutet nicht nur, Mengen zu addieren und subtrahieren. Schwierigkeiten treten dann auf, wenn:</p>
+<ul class="list">
+<li>Zurückdatierte (vergangene) Buchungen getätigt/geändert werden: Dies wirkt sich auf zukünftige Lagerstände aus und könnte zu negativen Beständen führen.</li>
+<li>Das Lager basierend auf der FIFO(Firts-in-first-out)-Methode bewertet werden soll: ERPNext benötigt eine Reihenfolge aller Transaktionen, um den exakten Wert Ihrer Artikel ermitteln zu können.</li>
+<li>Lagerberichte zu einem beliebigen Zeitpunkt in der Vergangenheit benötigt werden: Wenn Sie für Artikel X zu einem Zeitpunkt Y die Menge/den Wert in ihrem Lager nachvollziehen müssen.</li>
+</ul>
+<p>Um dies umzusetzen, sammelt ERPNext alle Bestandstransaktionen in einer Tabelle, die als Lagerhauptbuch bezeichnet wird. Alle Kaufbelege, Lagerbuchungen und Lieferscheine aktualisieren diese Tabelle.</p>
+<h3 id="themen"><a class="header-link" href="#themen"></a>Themen</h3>
+<p>{index}</p>
+    </article>
+  </body>
+</html>

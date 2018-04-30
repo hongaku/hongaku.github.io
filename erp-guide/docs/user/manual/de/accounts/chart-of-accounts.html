@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>Kontenplan</title>
+    <link type="text/css" rel="stylesheet" href="../../../../assets/css/github-markdown.css">
+    <link type="text/css" rel="stylesheet" href="../../../../assets/css/pilcrow.css">
+    <link type="text/css" rel="stylesheet" href="../../../../assets/css/hljs-github.min.css"/>
+  </head>
+  <body>
+    <article class="markdown-body"><h1 id="kontenplan"><a class="header-link" href="#kontenplan"></a>Kontenplan</h1>
+<p><span class="text-muted contributed-by">Beigetragen von CWT Connector &amp; Wire Technology GmbH</span></p>
+<p>Der Kontenplan bildet die Blaupause Ihres Unternehmens. Die Rahmenstruktur Ihres Kontenplans basiert auf einem System der doppelten Buchführung, die auf der ganzen Welt zum Standard der finanziellen Bewertung eines Unternehmens geworden ist.</p>
+<p>Der Kontenplan hilft Ihnen bei der Beantwortung folgender Fragen:</p>
+<ul class="list">
+<li>Was ist Ihre Organisation wert?</li>
+<li>Wieviele Schulden haben Sie?</li>
+<li>Wieviel Gewinn erwirtschaften Sie (und in diesem Zuge auch, wieviele Steuern zahlen Sie?)</li>
+<li>Wieviel Umsatz generieren Sie?</li>
+<li>Wie setzen sich Ihre Ausgaben zusammen?</li>
+</ul>
+<p>Als Manager werden Sie zu schätzen wissen, wenn Sie beurteilen können wie Ihr Geschäft läuft.</p>
+<blockquote>
+<p>Tipp: Wenn Sie eine Bilanz nicht lesen können (es hat lange gedauert bis wir das konnten), dann ist jetzt eine gute Gelegenheit es zu erlernen. Es wird die Mühe wert sein. Sie können auch die Hilfe Ihres Buchhalters in Anspruch nehmen, wenn Sie Ihren Kontenplan einrichten möchten.</p>
+</blockquote>
+<p>Sie können in ERPNext leicht die finanzielle Lage Ihres Unternehmens einsehen. Ein Beispiel für eine Finanzanalyse sehen Sie unten abgebildet.</p>
+<p class="img-container"><img class="screenshot" alt="Finanzanalyse Bilanz" src="{{docs_base_url}}/assets/img/accounts/financial-analytics-bl.png"></p>
+<p>Um Ihren Kontenplan in ERPNext zu bearbeiten gehen Sie zu:</p>
+<blockquote>
+<p>Rechnungswesen &gt; Einstellungen &gt; Kontenplan</p>
+</blockquote>
+<p>Im Kontenplan erhalten Sie eine Baumstruktur der Konten(bezeichnungen) und Kontengruppen, die ein Unternehmen benötigt um seine Buchungsvorgänge vornehmen zu können. ERPNext richtet für jede neu angelegte Firma einen einfachen Kontenrahmen ein, aber Sie müssen noch Anpassungen vornehmen, damit Ihren Anforderungen und gesetzlichen Bestimmungen Genüge geleistet wird. Der Kontenplan gibt für jede Firma an, wie Buchungssätze klassifiziert werden, meistens aufgrund gesetzlicher Vorschriften (Steuern und Einhaltung staatlicher Regelungen).</p>
+<p>Lassen Sie uns die Hauptgruppen des Kontenplans besser verstehen lernen.</p>
+<p class="img-container"><img class="screenshot" alt="Kontenplan" src="{{docs_base_url}}/assets/img/accounts/chart-of-accounts-1.png"></p>
+<h3 id="bilanzkonten"><a class="header-link" href="#bilanzkonten"></a>Bilanzkonten</h3>
+<p>Die Bilanz beinhaltet Vermögenswerte (Mittelverwendung) und Verbindlichkeiten (Mittelherkunft), die den Nettowert Ihres Unternehmens zu einem bestimmten Zeitpunkt angeben. Wenn Sie eine Finanzperiode beginnen oder beenden dann ist die Gesamtsumme aller Vermögenswerte gleich den Verbindlichkeiten.</p>
+<blockquote>
+<p>Buchhaltung: Wenn Sie in Bezug auf Buchhaltung Anfänger sind, wundern Sie sich vielleicht, wie das Vermögen gleich den Verbindlichkeiten sein kann? Das würde ja heißen, dass das Unternehmen selbst nichts besitzt. Das ist auch richtig. Alle Investitionen, die im Unternehmen getätigt werden, um Vermögen anzuschaffen (wie Land, Möbel, Maschinen) werden von den Inhabern getätigt und sind für das Unternehmen eine Verbindlichkeit. Wenn das Unternehmen schliessen möchte, müssen alle Vermögenswerte verkauft werden und die Verbindlichkeiten den Inhabern zurückgezahlt werden (einschliesslich der Gewinne), es bleibt nichts übrig.</p>
+</blockquote>
+<p>So repräsentieren in dieser Sichtweise alle Konten ein Vermögen des Unternehmens, wie Bank, Grundstücke, Geschäftsausstattung, oder eine Verbindlichkeit (Kapital welches das Unternehmen anderen schuldet), wie Eigenkapital und diverse Verbindlichkeiten.</p>
+<p>Zwei besondere Konten, die in diesem Zuge angesprochen werden sollten, sind die Forderungen (Geld, welches Sie noch von Ihren Kunden bekommen) und die Verbindlichkeiten (aus Lieferungen und Leistungen) (Geld, welches Sie noch an Ihre Lieferanten zahlen müssen), jeweils dem Vermögen und den Verbindlichkeiten zugeordnet.</p>
+<h3 id="gewinn--und-verlustkonten"><a class="header-link" href="#gewinn--und-verlustkonten"></a>Gewinn- und Verlustkonten</h3>
+<p>Gewinn und Verlust ist die Gruppe von Ertrags- und Aufwandskonten, die Ihre Buchungstransaktionen eines Zeitraums repräsentieren.</p>
+<p>Entgegen den Bilanzkonten, repräsentieren Gewinn und Verlustkonnten (GuV) keine Nettowerte (Vermögen), sondern die Menge an Geld, welche im Zuge von Geschäften mit Kunden in einem Zeitraum ausgegeben oder verdient wird. Deshalb sind sie auch zu Beginn und zum Ende eines Geschäftsjahres gleich 0.</p>
+<p>In ERPNext ist es einfach eine graphische Auswertung von Gewinn und Verlust zu erstellen. Im Folgenden ist ein Beispiel einer GuV-Analyse abgebildet:</p>
+<p class="img-container"><img class="screenshot" alt="Finanzanalyse GuV" src="{{docs_base_url}}/assets/img/accounts/financial-analytics-pl.png"></p>
+<p>(Am ersten Tag eines Jahres haben Sie noch keinen Gewinn oder Verlust gemacht, aber Sie haben bereits Vermögen, deshalb haben Bestandskonten zum Anfang oder Ende eines Zeitraums einen Wert.)</p>
+<h3 id="gruppen-und-hauptbücher"><a class="header-link" href="#gruppen-und-hauptbücher"></a>Gruppen und Hauptbücher</h3>
+<p>Es gibt in ERPNext zwei Hauptgruppen von Konten: Gruppen und Bücher. Gruppen können Untergruppen und Bücher haben, wohingegen Bücher die Knoten Ihres Plans sind und nicht weiter unterteilt werden können.</p>
+<p>Buchungstransaktionen können nur zu Kontobüchern erstellt werden (nicht zu Gruppen).</p>
+<blockquote>
+<p>Info: Der Begriff &quot;Hauptbuch&quot; bezeichnet eine Aufzeichnung, in der Buchungen verzeichnet sind. Normalerweise gibt es für jedes Konto (wie z. B. einem Kunden oder Lieferanten) nur ein Buch.</p>
+</blockquote>
+<blockquote>
+<p>Anmerkung: Ein Kontenbuch wird manchmal auch als Kontokopf bezeichnet.</p>
+</blockquote>
+<p class="img-container"><img class="screenshot" alt="Kontenplan" src="{{docs_base_url}}/assets/img/accounts/chart-of-accounts-2.png"></p>
+<h3 id="andere-kontentypen"><a class="header-link" href="#andere-kontentypen"></a>Andere Kontentypen</h3>
+<p>Wenn sie in ERPNext ein neues Konto anlegen, können Sie dazu auch Informationen mit angeben, und zwar deshalb, weil es eine Hilfe sein kann, in einem bestimmte Szenario, ein bestimmtes Konto, wie Bankkonto ein Steuerkonto, auszuwählen. Das hat auf den Kontenrahmen selbst keine Auswirkung.</p>
+<h3 id="konten-erstellen-und-bearbeiten"><a class="header-link" href="#konten-erstellen-und-bearbeiten"></a>Konten erstellen und bearbeiten</h3>
+<p>Um ein neues Konto zu erstellen, gehen Sie Ihren Kontenplan durch und klicken Sie auf die Kontengruppe unter der Sie das neue Konto erstellen wollen. Auf der rechten Seite finden Sie die Option ein neues Konto zu &quot;öffnen&quot; oder ein Unterkonto zu erstellen.</p>
+<p class="img-container"><img class="screenshot" alt="Kontenplan" src="{{docs_base_url}}/assets/img/accounts/chart-of-accounts-3.png"></p>
+<p>Die Option zum Erstellen erscheint nur dann, wenn Sie auf ein Konto vom Typ Gruppe (Ordner) klicken.</p>
+<p>ERPNext legt eine Standardkontenstruktur an, wenn eine Firma angelegt wird. Es liegt aber an Ihnen, Konten zu bearbeiten, hinzuzufügen oder zu löschen.</p>
+<p>Typischerweise werden Sie vielleicht Konten hierfür anlegen wollen:</p>
+<ul class="list">
+<li>Aufwandskonten (Reisen, Gehälter, Telefon) unter Aufwände</li>
+<li>Steuern (Mehrwertsteuer, Verkaufssteuer je nach Ihrem Land) unter kurzfristige Verbindlichkeiten</li>
+<li>Verkaufsarten (z. B. Produktverkäufe, Dienstleistungsverkäufe) unter Erträge</li>
+<li>Vermögenstypen (Gebäude, Maschinen, Geschäftsausstattung) unter Anlagevermögen</li>
+</ul>
+<p>{next}</p>
+    </article>
+  </body>
+</html>

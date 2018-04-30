@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>Make Read Only After Saving</title>
+    <link type="text/css" rel="stylesheet" href="../../../../../../assets/css/github-markdown.css">
+    <link type="text/css" rel="stylesheet" href="../../../../../../assets/css/pilcrow.css">
+    <link type="text/css" rel="stylesheet" href="../../../../../../assets/css/hljs-github.min.css"/>
+  </head>
+  <body>
+    <article class="markdown-body"><h1 id="make-read-only-after-saving"><a class="header-link" href="#make-read-only-after-saving"></a>Make Read Only After Saving</h1>
+<p>Use the method <code>cur_frm.set_df_property</code> to update the field&#39;s display.</p>
+<p>In this script we also use the <code>__islocal</code> property of the doc to check if the
+document has been saved atleast once or is never saved. If <code>__islocal</code> is <code>1</code>,
+then the document has never been saved.</p>
+<pre class="hljs"><code>frappe.ui.form.on(<span class="hljs-string">"MyDocType"</span>, <span class="hljs-string">"refresh"</span>, <span class="hljs-keyword">function</span>(frm) {
+    // <span class="hljs-keyword">use</span> the __islocal value <span class="hljs-keyword">of</span> doc, to check <span class="hljs-keyword">if</span> the doc <span class="hljs-keyword">is</span> saved <span class="hljs-keyword">or</span> <span class="hljs-keyword">not</span>
+    frm.set_df_property(<span class="hljs-string">"myfield"</span>, <span class="hljs-string">"read_only"</span>, frm.doc.__islocal ? <span class="hljs-number">0</span> : 1);
+}</code></pre><p>{next}</p>
+    </article>
+  </body>
+</html>

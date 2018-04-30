@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>Email Alerts</title>
+    <link type="text/css" rel="stylesheet" href="../../../../../assets/css/github-markdown.css">
+    <link type="text/css" rel="stylesheet" href="../../../../../assets/css/pilcrow.css">
+    <link type="text/css" rel="stylesheet" href="../../../../../assets/css/hljs-github.min.css"/>
+  </head>
+  <body>
+    <article class="markdown-body"><h1 id="email-alerts"><a class="header-link" href="#email-alerts"></a>Email Alerts</h1>
+<p>You can configure various email alerts in your system to remind you of important activities such as:</p>
+<ol class="list">
+<li>Completion date of a Task.</li>
+<li>Expected Delivery Date of a Sales Order.</li>
+<li>Expected Payment Date.</li>
+<li>Reminder of followup.</li>
+<li>If an Order greater than a particular value is received or sent.</li>
+<li>Expiry notification for a Contract.</li>
+<li>Completion / Status change of a Task.</li>
+</ol>
+<p>For this, you need to setup an Email Alert.</p>
+<blockquote>
+<p>Setup &gt; Email &gt; Email Alert</p>
+</blockquote>
+<h3 id="setting-up-an-alert"><a class="header-link" href="#setting-up-an-alert"></a>Setting Up An Alert</h3>
+<p>To setup an Email Alert:</p>
+<ol class="list">
+<li>Select which Document Type you want watch changes on</li>
+<li>Define what events you want to watch. Events are:<ol class="list">
+<li>New: When a new document of the selected type is made.</li>
+<li>Save / Submit / Cancel: When a document of the selected type is saved, submitted, cancelled.</li>
+<li>Value Change: When a particular value in the selected type changes.</li>
+<li>Days Before / Days After: Trigger this alert a few days before or after the <strong>Reference Date.</strong> To set the days, set <strong>Days Before or After</strong>. This can be useful in reminding you of upcoming due dates or reminding you to follow up on certain leads of quotations.</li>
+</ol>
+</li>
+<li>Set additional conditions if you want.</li>
+<li>Set the recipients of this alert. The recipient could either be a field of the document or a list of fixed Email Addresses.</li>
+<li>Compose the message</li>
+</ol>
+<h3 id="setting-a-subject"><a class="header-link" href="#setting-a-subject"></a>Setting a Subject</h3>
+<p>You can retrieve the data for a particular field by using <code>doc.[field_name]</code>. To use it in your subject / message, you have to surround it with <code>{% raw %}{{ }}{% endraw %}</code>. These are called <a href="http://jinja.pocoo.org/">Jinja</a> tags. So, for example to get the name of a document, you use <code>{% raw %}{{ doc.name }}{% endraw %}</code>. The below example sends an email on saving a Task with the Subject, &quot;TASK##### has been created&quot;</p>
+<p class="img-container"><img class="screenshot" alt="Setting Subject" src="{{docs_base_url}}/assets/img/setup/email/email-alert-subject.png"></p>
+<h3 id="setting-conditions"><a class="header-link" href="#setting-conditions"></a>Setting Conditions</h3>
+<p>Email alerts allow you to set conditions according to the field data in your documents. For example, if you want to recieve an Email if a Lead has been saved as &quot;Interested&quot; as it&#39;s status, you put <code>doc.status == &quot;Interested&quot;</code> in the conditions textbox. You can also set more complex conditions by combining them.</p>
+<p class="img-container"><img class="screenshot" alt="Setting Condition" src="{{docs_base_url}}/assets/img/setup/email/email-alert-condition.png"></p>
+<p>The above example will send an Email Alert when a Task is saved with the status &quot;Open&quot; and the Expected End Date for the Task is the date on or before the date on which it was saved on.</p>
+<h3 id="setting-a-message"><a class="header-link" href="#setting-a-message"></a>Setting a Message</h3>
+<p>You can use both Jinja Tags (<code>{% raw %}{{ doc.[field_name] }}{% endraw %}</code>) and HTML tags in the message textbox.</p>
+<pre class="hljs"><code><span class="xml"></span><span class="hljs-template-tag">{% <span class="hljs-name">raw</span> %}</span><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">h3</span>&gt;</span>Order Overdue<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Transaction </span><span class="hljs-template-variable">{{ doc.name }}</span><span class="xml"> has exceeded Due Date. Please take necessary action.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- show last comment --&gt;</span>
+</span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-name">if</span></span> comments %}</span><span class="xml">
+Last comment: </span><span class="hljs-template-variable">{{ comments[-1].comment }}</span><span class="xml"> by </span><span class="hljs-template-variable">{{ comments[-1].by }}</span><span class="xml">
+</span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-name">endif</span></span> %}</span><span class="xml">
+
+<span class="hljs-tag">&lt;<span class="hljs-name">h4</span>&gt;</span>Details<span class="hljs-tag">&lt;/<span class="hljs-name">h4</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Customer: </span><span class="hljs-template-variable">{{ doc.customer }}</span><span class="xml">
+<span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Amount: </span><span class="hljs-template-variable">{{ doc.total_amount }}</span><span class="xml">
+<span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span></span><span class="hljs-template-tag">{% <span class="hljs-name">endraw</span> %}</span><span class="xml"></span></code></pre><hr>
+<h3 id="setting-a-value-after-the-alert-is-set"><a class="header-link" href="#setting-a-value-after-the-alert-is-set"></a>Setting a Value after the Alert is Set</h3>
+<p>Sometimes to make sure that the email alert is not sent multiple times, you can
+define a custom property (via Customize Form) like &quot;Email Alert Sent&quot; and then
+set this property after the alert is sent by setting the <strong>Set Property After Alert</strong>
+field.</p>
+<p>Then you can use that as a condition in the <strong>Condition</strong> rules to ensure emails are not sent multiple times</p>
+<p class="img-container"><img class="screenshot" alt="Setting Property in Email Alert" src="{{docs_base_url}}/assets/img/setup/email/email-alert-subject.png"></p>
+<h3 id="example"><a class="header-link" href="#example"></a>Example</h3>
+<ol class="list">
+<li><p>Defining the Criteria
+ <img class="screenshot" alt="Defining Criteria" src="{{docs_base_url}}/assets/img/setup/email/email-alert-1.png"></p>
+</li>
+<li><p>Setting the Recipients and Message
+ <img class="screenshot" alt="Set Message" src="{{docs_base_url}}/assets/img/setup/email/email-alert-2.png"></p>
+</li>
+</ol>
+<p>{next}</p>
+    </article>
+  </body>
+</html>

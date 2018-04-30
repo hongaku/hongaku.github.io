@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>Ausgangsrechung</title>
+    <link type="text/css" rel="stylesheet" href="../../../../assets/css/github-markdown.css">
+    <link type="text/css" rel="stylesheet" href="../../../../assets/css/pilcrow.css">
+    <link type="text/css" rel="stylesheet" href="../../../../assets/css/hljs-github.min.css"/>
+  </head>
+  <body>
+    <article class="markdown-body"><h1 id="ausgangsrechung"><a class="header-link" href="#ausgangsrechung"></a>Ausgangsrechung</h1>
+<p><span class="text-muted contributed-by">Beigetragen von CWT Connector &amp; Wire Technology GmbH</span></p>
+<p>Eine Ausgangsrechnung ist eine Rechnung, die Sie an Ihren Kunden senden, und aufgrund derer der Kunde eine Zahlung leistet. Die Ausgangsrechnung ist ein Buchungsvorgang. Beim Übertragen einer Ausgangsrechnung aktualisiert das System das Forderungskonto und bucht einen Ertrag gegen das Kundenkonto.</p>
+<p>Sie können eine Ausgangsrechnung direkt erstellen über:</p>
+<blockquote>
+<p>Rechnungswesen &gt; Dokumente &gt; Ausgangsrechnung &gt; Neu</p>
+</blockquote>
+<p>oder indem Sie in der rechten Ecke des Lieferscheins auf &quot;Rechnung erstellen&quot; klicken.</p>
+<p class="img-container"><img class="screenshot" alt="Ausgangsrechnung" src="{{docs_base_url}}/assets/img/accounts/sales-invoice.png"></p>
+<h3 id="auswirkung-auf-die-buchhaltung"><a class="header-link" href="#auswirkung-auf-die-buchhaltung"></a>Auswirkung auf die Buchhaltung</h3>
+<p>Alle Verkäufe müssen gegen ein Ertragskonto gebucht werden. Das bezieht sich auf ein Konto aus dem Abschnitt &quot;Erträge&quot; in Ihrem Kontenplan. Es hat sich als sinnvoll heraus gestellt, Erträge nach Ertragstyp (wie Erträge aus Produktverkäufen und Erträge aus Dienstleistungen) einzuteilen. Das Ertragskonto muss für jede Zeile der Postenliste angegeben werden.</p>
+<blockquote>
+<p>Tipp: Um Ertragskonten für Artikel voreinzustellen, können Sie unter dem Artikel oder der Artikelgruppe entsprechende Angaben eintragen.</p>
+</blockquote>
+<p>Das andere Konto, das betroffen ist, ist das Konto des Kunden. Dieses wird automatisch über &quot;Lastschrift für&quot; im Kopfabschnitt angegeben.</p>
+<p>Sie müssen auch die Kostenstelle angeben, auf die Ihr Ertrag gebucht wird. Erinnern Sie sich daran, dass Kostenstellen etwas über die Profitabilität verschiedener Geschäftsbereiche aussagen. Sie können in den Artikelstammdaten auch eine Standardkostenstelle eintragen.</p>
+<h3 id="buchungen-in-der-doppelten-buchführung-für-einen-typischen-verkaufsvorfall"><a class="header-link" href="#buchungen-in-der-doppelten-buchführung-für-einen-typischen-verkaufsvorfall"></a>Buchungen in der doppelten Buchführung für einen typischen Verkaufsvorfall</h3>
+<p>So verbuchen Sie einen Verkauf aufgeschlüsselt:</p>
+<p><strong>Soll:</strong> Kunde (Gesamtsumme) </p>
+<p><strong>Haben:</strong> Ertrag (Nettosumme, abzüglich Steuern für jeden Artikel) </p>
+<p><strong>Haben:</strong> Steuern (Verbindlichkeiten gegenüber dem Staat)</p>
+<blockquote>
+<p>Um die Buchungen zu Ihrer Ausgangsrechnung nach dem Übertragen sehen zu können, klicken Sie auf Rechnungswesen &gt; Hauptberichte &gt; Hauptbuch.</p>
+</blockquote>
+<h3 id="termine"><a class="header-link" href="#termine"></a>Termine</h3>
+<p>Veröffentlichungsdatum: Das Datum zu dem sich die Ausgangsrechnung auf Ihre Bilanz auswirkt, d. h. auf das Hauptbuch. Das wirkt sich auf alle Ihre Bilanzen in dieser Abrechnungsperiode aus.</p>
+<p>Fälligkeitsdatum: Das Datum zu dem die Zahlung fällig ist (wenn Sie auf Rechnung verkauft haben). Das kann automatisch über die Kundenstammdaten vorgegeben werden.</p>
+<h3 id="wiederkehrende-rechnungen"><a class="header-link" href="#wiederkehrende-rechnungen"></a>Wiederkehrende Rechnungen</h3>
+<p>Wenn Sie einen Vertrag mit einem Kunden haben, bei dem Sie dem Kunden monatlich, vierteljährlich, halbjährlich oder jährlich eine Rechnung stellen, dann können Sie das Feld &quot;Wiederkehrende Rechnung&quot; anklicken. Hier können Sie eingeben in welchen Abständen die Rechnungen erstellt werden sollen, und die Gesamtlaufzeit des Vertrages.</p>
+<p>ERPNext erstellt dann automatisch neue Rechnungen und verschickt Sie an die angegebenen E-Mail-Adressen.</p>
+<hr>
+<h3 id="proforma-rechnung"><a class="header-link" href="#proforma-rechnung"></a>Proforma-Rechnung</h3>
+<p>Wenn Sie einem Kunden eine Rechnung ausstellen wollen, damit dieser eine Anzahlung leisten kann, d. h. Sie haben Zahlung im Voraus vereinbart, dann sollten Sie ein Angebot erstellen und dieses als &quot;Proforma-Rechnung&quot; (oder ähnlich) bezeichnen, indem Sie die Funktion &quot;Druckkopf&quot; nutzen.</p>
+<p>&quot;Proforma&quot; bezieht sich auf eine Formsache. Warum sollte man das tun? Wenn Sie eine Ausgangsrechnung buchen, dann erscheint diese bei den Forderungen und den Erträgen. Das ist genau dann nicht optimal, wenn nicht sicher ist, ob Ihr Kunden die Anzahlung auch wirklich leistet. Wenn Ihr Kunden aber dennoch eine &quot;Rechnung&quot; will, dann geben Sie ihm ein Angebot (in ERPNext) das als &quot;Proforma-Rechnung&quot; bezeichnet wird. Auf diese Weise ist jeder glücklich.</p>
+<p>Das ist ein weithin gebräuchliches Verfahren. Wir bei Frappé machen das genauso.</p>
+<p>{next}</p>
+    </article>
+  </body>
+</html>

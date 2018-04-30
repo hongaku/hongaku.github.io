@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>Asset Maintenance Management</title>
+    <link type="text/css" rel="stylesheet" href="../../../../assets/css/github-markdown.css">
+    <link type="text/css" rel="stylesheet" href="../../../../assets/css/pilcrow.css">
+    <link type="text/css" rel="stylesheet" href="../../../../assets/css/hljs-github.min.css"/>
+  </head>
+  <body>
+    <article class="markdown-body"><h1 id="asset-maintenance-management"><a class="header-link" href="#asset-maintenance-management"></a>Asset Maintenance Management</h1>
+<p>ERPNext provides features to track the details of individual maintenance/calibration tasks for an asset by date, the person responsible for the maintenance and future maintenance due date.</p>
+<p>To perform Asset Maintenance in ERPNext,</p>
+<ol class="list">
+<li>Enable Asset Maintenance.</li>
+<li>Create Asset Maintenance Team.</li>
+<li>Create Asset Maintenance.</li>
+<li>Create Asset Maintenance Log.</li>
+<li>Create Asset Repair Log.</li>
+</ol>
+<h3 id="enable-asset-maintenance"><a class="header-link" href="#enable-asset-maintenance"></a>Enable Asset Maintenance</h3>
+<p>Check Maintain Required in Asset to enable Asset Maintenance
+<img class="screenshot" alt="Asset" src="{{docs_base_url}}/assets/img/asset/maintenance_required.png"></p>
+<h3 id="asset-maintenance-team"><a class="header-link" href="#asset-maintenance-team"></a>Asset Maintenance Team</h3>
+<p>Create Asset Maintenance Team, select team members and their role.
+<img class="screenshot" alt="Asset" src="{{docs_base_url}}/assets/img/asset/asset_maintenance_team.png"></p>
+<h3 id="asset-maintenance"><a class="header-link" href="#asset-maintenance"></a>Asset Maintenance</h3>
+<p>For each asset create a Asset Maintenance record listing all the associated maintenance tasks, maintenance type (Preventive Maintenance or Calibration), periodicity, assign to and start and end date of maintenance. Based on start date and periodicity the next due date is auto-calculated and a ToDo is created for the Assignee.
+<img class="screenshot" alt="Asset" src="{{docs_base_url}}/assets/img/asset/asset_maintenance.png"></p>
+<h3 id="asset-maintenance-log"><a class="header-link" href="#asset-maintenance-log"></a>Asset Maintenance Log</h3>
+<p>For each task in Asset Maintenance, Asset Maintenance Log is auto created to keep track of the upcoming Maintenances. It will have status, completion date and actions performed. Based on completion date here, next due date is calculated automatically and new Asset Maintenance Log is created.
+<img class="screenshot" alt="Asset" src="{{docs_base_url}}/assets/img/asset/asset_maintenance_log.png"></p>
+<h3 id="asset-repair"><a class="header-link" href="#asset-repair"></a>Asset Repair</h3>
+<p>You can also maintain the records of Repair/Failures of your asset which are not listed in Asset Maintenance.
+<img class="screenshot" alt="Asset" src="{{docs_base_url}}/assets/img/asset/asset_repair.png"></p>
+    </article>
+  </body>
+</html>

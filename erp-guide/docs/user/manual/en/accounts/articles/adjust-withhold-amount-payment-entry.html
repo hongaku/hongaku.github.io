@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title></title>
+    <link type="text/css" rel="stylesheet" href="../../../../../assets/css/github-markdown.css">
+    <link type="text/css" rel="stylesheet" href="../../../../../assets/css/pilcrow.css">
+    <link type="text/css" rel="stylesheet" href="../../../../../assets/css/hljs-github.min.css"/>
+  </head>
+  <body>
+    <article class="markdown-body"><p>#Adjust Withhold Amount in the Payment Entry</p>
+<p>###Question</p>
+<p>Let&#39;s assume that outstanding against a Sales Invoice is 20,000. When client makes payment, they will only pay 19,600. Rest 400 will be booked under Withhold account. How to manage this scenario in the Payment Entry.</p>
+<p>###Answer</p>
+<p>In the Payment Entry, you can mention Withhold Account in the Deductions or Loss table. Detailed steps below.</p>
+<p>####Step 1: Setup Withhold Account</p>
+<p>Create a Withhold Account in your Chart of Accounts master.</p>
+<p>`Accounts &gt; Chart of Accounts&#39;</p>
+<p>####Step 2: Payment Entry</p>
+<p>To create Payment Entry, go to unpaid Sales Invoice and create click on Make Payment button.</p>
+<p>#####Step 2.1: Enter Payment Amount</p>
+<p>Enter Payment Amount as 19,600.</p>
+<p class="img-container"><img alt="Sales Invoice Payment Amount" class="screenshot" src="{{docs_base_url}}/assets/img/articles/withhold-1.png"></p>
+<p>#####Step 2.2: Allocate Against Sales Invoice</p>
+<p>Against Sales Invoice, allocate 20,000 (explained in GIF below).</p>
+<p>#####Step 2.3: Add Deduction/Loss Account</p>
+<p>You can notice that there is a difference of 400 in the Payment Amount and the Amount Allocated against Sales Invoice. You can book this difference account under Withhold Account.</p>
+<p class="img-container"><img alt="Deduction/Loss Account" class="screenshot" src="{{docs_base_url}}/assets/img/articles/withhold-2.gif"></p>
+<p> Following same steps, you can also manage difference availed due to Currency Exchange Gain/Loss.</p>
+    </article>
+  </body>
+</html>

@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>Autorisierungsregeln</title>
+    <link type="text/css" rel="stylesheet" href="../../../../assets/css/github-markdown.css">
+    <link type="text/css" rel="stylesheet" href="../../../../assets/css/pilcrow.css">
+    <link type="text/css" rel="stylesheet" href="../../../../assets/css/hljs-github.min.css"/>
+  </head>
+  <body>
+    <article class="markdown-body"><h1 id="autorisierungsregeln"><a class="header-link" href="#autorisierungsregeln"></a>Autorisierungsregeln</h1>
+<p><span class="text-muted contributed-by">Beigetragen von CWT Connector &amp; Wire Technology GmbH</span></p>
+<p>Mit Hilfe des Werkzeugs &quot;Autorisierungsregeln&quot; können Sie Regeln für Genehmigungen bestimmen, die an Bedingungen geknüpft sind.</p>
+<p>Wenn eine Ihrer Vertriebs- oder Einkaufstransaktionen von höherem Wert oder mit höherem Rabatt eine Genehmigung durch eine Führungskraft benötigt, können Sie dafür eine Autorisierungsregel einrichten.</p>
+<p>Um eine neue Autorisierungsregel zu erstellen, gehen Sie zu:</p>
+<blockquote>
+<p>Einstellungen &gt; Anpassen &gt; Autorisierungsregel</p>
+</blockquote>
+<p>Lassen Sie uns ein Beispiel für eine Autorisierungsregel betrachten, um den Sachverhalt besser zu verstehen.</p>
+<p>Nehmen wir an dass ein Vertriebsmitarbeiter Kundenbestellungen nur dann genehmigen lassen muss, wenn der Gesamtwert 10.000 Euro übersteigt. Wenn die Kundenbestellung 10.000 Euro nicht übersteigt, dann kann auch ein Vertriebsmitarbeiter diese Transaktion übertragen. Das bedeutet, dass die Berechtigung des Vertriebsmitarbeiters zum Übertragen auf Kundenaufträge mit einer Maximalsumme von 10.000 Euro beschränkt wird.</p>
+<h4 id="schritt-1"><a class="header-link" href="#schritt-1"></a>Schritt 1</h4>
+<p>Öffnen Sie eine neue Autorisierungsregel.</p>
+<h4 id="schritt-2"><a class="header-link" href="#schritt-2"></a>Schritt 2</h4>
+<p>Wählen Sie die Firma und die Transaktion aus, für die diese Autorisierungsregel angewendet werden soll. Diese Funktionalität ist nur für beschränkte Transaktionen verfügbar.</p>
+<h4 id="schritt-3"><a class="header-link" href="#schritt-3"></a>Schritt 3</h4>
+<p>Wählen Sie einen Wert für &quot;Basiert auf&quot; aus. Eine Autorisierungsregel wird auf Grundlage eines Wertes in diesem Feld angewendet.</p>
+<h4 id="schritt-4"><a class="header-link" href="#schritt-4"></a>Schritt 4</h4>
+<p>Wählen Sie eine Rolle, auf die die Autorisierungsregel angewendet werden soll. Für unser angenommenes Beispiel wird die Rolle &quot;Nutzer Vertrieb&quot; über &quot;Anwenden auf (Rolle)&quot; als Rolle ausgewählt. Um noch etwas genauer zu werden, können Sie auch über &quot;Anwenden auf (Benutzer)&quot; einen bestimmten Benutzer auswählen, wenn Sie eine Regel speziell auf einen Mitarbeiter anwenden wollen, und nicht auf alle Mitarbeiter aus dem Vertrieb. Es ist auch in Ordnung, keinen Benutzer aus dem Vertrieb anzugeben, weil es nicht zwingend erforderlich ist.</p>
+<h4 id="schritt-5"><a class="header-link" href="#schritt-5"></a>Schritt 5</h4>
+<p>Wählen Sie die Rolle des Genehmigers aus. Das könnte z. B. die Rolle des Vertriebsleiters sein, die Kundenaufträge über 10.000 Euro übertragen darf. Sie können auch hier einen bestimmten Vertriebsleiter auswählen, und dann die Regel so gestalten, dass Sie nur auf diesen Benutzer anwendbar ist. Einen genehmigenden Benutzer anzugeben ist nicht zwingend erfoderlich.</p>
+<h4 id="schritt-6"><a class="header-link" href="#schritt-6"></a>Schritt 6</h4>
+<p>Geben Sie &quot;Autorisierter Wert&quot; ein. Im Beispiel stellen wir das auf 10.000 Euro ein.</p>
+<p class="img-container"><img class="screenshot" alt="Autorisierungsregel" src="{{docs_base_url}}/assets/img/setup/auth-rule.png"></p>
+<p>Wenn ein Benutzer aus dem Vertrieb versucht eine Kundenbestellung mit einem Wert über 10.000 Euro zu übertragen, dann bekommt er eine Fehlermeldung.</p>
+<blockquote>
+<p>Wenn Sie den Vertriebsmitarbeiter generall davon ausschliessen wollen, Kundenaufträge zu übertragen, dann sollten Sie keine Autorisierungsregel erstellen, sondern die Berechtigung zum Übertragen über den Rollenberchtigungs-Manager für die Rolle Vertriebsmitarbeiter entfernen.</p>
+</blockquote>
+<p>{next}</p>
+    </article>
+  </body>
+</html>

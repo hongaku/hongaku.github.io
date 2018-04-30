@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title></title>
+    <link type="text/css" rel="stylesheet" href="../../../../../assets/css/github-markdown.css">
+    <link type="text/css" rel="stylesheet" href="../../../../../assets/css/pilcrow.css">
+    <link type="text/css" rel="stylesheet" href="../../../../../assets/css/hljs-github.min.css"/>
+  </head>
+  <body>
+    <article class="markdown-body"><p>#ERPNext for Service Organization</p>
+<p><strong>Question:</strong> ERPNext looks primarily designed for the traders and manufacturers. Is ERPNext used by companies offering servies?</p>
+<p><strong>Answer:</strong></p>
+<p>About 30% of ERPNext customers are companies into services. These are companies into software development, certification services, individual consultants and many more. Being into service business ourselves, we use ERPNext to manage our sales, accounting, support and HR operations. Check following video to learn how ERPNext uses ERPNext.</p>
+<iframe width="640" height="360" src="//www.youtube.com/embed/b6r7WxJMfFA" frameborder="0" allowfullscreen=""></iframe>
+
+<p>###Master Setup</p>
+<p>The setup for a Service company differs primarily for Items. They don&#39;t maintain the Stock for Items and thus, don&#39;t have Warehouses.</p>
+<p>To create a Service (non-stock) Item, in the item master, uncheck &quot;Maintain Stock&quot; field.</p>
+<p class="img-container"><img alt="Service Item" class="screenshot"  src="{{docs_base_url}}/assets/img/articles/services-1.png"></p>
+<p>When creating Sales Order for the services, select Order Type as <strong>Maintenance</strong>. Sales Order of Maintenance Type needs lesser details compared to stock item&#39;s order like Delivery Note, item warehouse etc.</p>
+<p>Service company can still add stock items to mantain their fixed assets like computers, furniture and other office equipments.</p>
+<p>###Hiding Non-required Features</p>
+<p>Since many modules like Manufacturing and Stock will not be required for the services company, you can hide those modules from:</p>
+<p><code>Setup &gt; Permissions &gt; Show/Hide Modules</code></p>
+<p>Modules unchecked here will be hidden from all the User.</p>
+<p>####Feature Setup</p>
+<p>Within the form, there are many fields only needed for companies into trading and manufacturing businesses. These fields can be hidden for the service company. Feature Setup is a tool where you can enable/disable specific feature. If a feature is disabled, then fields relevant to that feature is hidden from all the forms. For example, if Serial No. feature is disabled, then Serial. No. field from Item as well as from all the sales and purchase transaction will be hidden.</p>
+<p><a href="/docs/user/manual/en/customize-erpnext/hiding-modules-and-features.html">To learn more about Feature Setup, click here.</a>.</p>
+<p>####Permissions</p>
+<p>ERPNext is the permission controlled system. Users access system based on permissions assigned to them. So, if user is not assigned Role related to Stock and Manufacturing module, it will be hidden from that User. <a href="/docs/user/manual/en/setting-up/users-and-permissions.html">Click here to learn more about permission management.</a>.</p>
+<p>You can also refer to help video on User and Permissions setting in ERPNext.</p>
+<div class="embed-container">
+    <iframe src="https://www.youtube.com/embed/8Slw1hsTmUI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+    </iframe>
+</div>
+
+<!-- markdown -->    </article>
+  </body>
+</html>

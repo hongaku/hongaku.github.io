@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title></title>
+    <link type="text/css" rel="stylesheet" href="../../../../../assets/css/github-markdown.css">
+    <link type="text/css" rel="stylesheet" href="../../../../../assets/css/pilcrow.css">
+    <link type="text/css" rel="stylesheet" href="../../../../../assets/css/hljs-github.min.css"/>
+  </head>
+  <body>
+    <article class="markdown-body"><p>#Timesheet based on Work Order</p>
+<p>Creating Timesheet for Work Order helps in capacity planning for the Workstations. Also it helps in tracking actual time consumed the Workstation for completing specific operation.</p>
+<p>When a Work Order is submitted, based on the Planned Start Date and the availability of the Workstations, system schedules all operations by creating Timesheet.</p>
+<p class="img-container"><img class="screenshot" alt="Sales Invoice" src="{{docs_base_url}}/assets/img/project/timesheet/timesheet-capacity-planning.png"></p>
+<p>Let&#39;s assume we are manufacturing a mobile phone. As per the Bill of Material, time required for the assembly of components could be one hour. However the actual time taken for it&#39;s completion could be more than planned. The actual time tracking provides actual operation cost, hence helps in determining accurate valuation of the manufacturing item.</p>
+<p>####Work Order</p>
+<p>As per the Bill of Materials of manufacturing item, following are the Operations and Workstation through which raw-material items are processed.</p>
+<p class="img-container"><img class="screenshot" alt="Sales Invoice" src="{{docs_base_url}}/assets/img/project/timesheet/timesheet-work-order-1.png"></p>
+<p>On submission on Work Order, Timesheet will be created automatically.</p>
+<p class="img-container"><img class="screenshot" alt="Sales Invoice" src="{{docs_base_url}}/assets/img/project/timesheet/timesheet-work-order-2.png"></p>
+<p>####Time Sheet created from Work Order</p>
+<p>In the Timesheet, unique row will be added for each Operation - Workstation. This allows operator/supervisor at the workstation to enter actual From Time and To Time taken for each Operation.</p>
+<p class="img-container"><img class="screenshot" alt="Sales Invoice" src="{{docs_base_url}}/assets/img/project/timesheet/timesheet-work-order-3.gif"></p>
+<p>After enter From Time and To Time for all the Operations, Total Hours will be calculated.</p>
+<p class="img-container"><img class="screenshot" alt="Sales Invoice" src="{{docs_base_url}}/assets/img/project/timesheet/timesheet-work-order-6.png"></p>
+<p>With updating actual time, you can also enter &quot;Completed Qty&quot;. If all the items are not processed in the same Timesheet, you can create another Timesheet from the Work Order.</p>
+<p class="img-container"><img class="screenshot" alt="Sales Invoice" src="{{docs_base_url}}/assets/img/project/timesheet/timesheet-work-order-4.png"></p>
+<p>####Save and Submit Timesheet</p>
+<p>On the submission of Timesheet, Total Hours is calculated. Also, in the Work Order, for each Operation, actual Start and End Time is updated.</p>
+<p class="img-container"><img class="screenshot" alt="Sales Invoice" src="{{docs_base_url}}/assets/img/project/timesheet/timesheet-work-order-5.png"></p>
+    </article>
+  </body>
+</html>

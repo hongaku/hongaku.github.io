@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>Date Validation</title>
+    <link type="text/css" rel="stylesheet" href="../../../../../../assets/css/github-markdown.css">
+    <link type="text/css" rel="stylesheet" href="../../../../../../assets/css/pilcrow.css">
+    <link type="text/css" rel="stylesheet" href="../../../../../../assets/css/hljs-github.min.css"/>
+  </head>
+  <body>
+    <article class="markdown-body"><h1 id="date-validation"><a class="header-link" href="#date-validation"></a>Date Validation</h1>
+<pre class="hljs"><code>frappe.ui.form.on(<span class="hljs-string">"Task"</span>, <span class="hljs-string">"validate"</span>, <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(frm)</span> </span>{
+    <span class="hljs-keyword">if</span> (frm.doc.from_date &lt; get_today()) {
+        frappe.msgprint(__(<span class="hljs-string">"You can not select past date in From Date"</span>));
+        frappe.validated = <span class="hljs-literal">false</span>;
+    }
+});</code></pre><p>{next}</p>
+    </article>
+  </body>
+</html>

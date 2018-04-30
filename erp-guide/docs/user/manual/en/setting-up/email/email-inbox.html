@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>Email Inbox</title>
+    <link type="text/css" rel="stylesheet" href="../../../../../assets/css/github-markdown.css">
+    <link type="text/css" rel="stylesheet" href="../../../../../assets/css/pilcrow.css">
+    <link type="text/css" rel="stylesheet" href="../../../../../assets/css/hljs-github.min.css"/>
+  </head>
+  <body>
+    <article class="markdown-body"><h1 id="email-inbox"><a class="header-link" href="#email-inbox"></a>Email Inbox</h1>
+<p>Business involves many transactional emails exchanges with parties like Customers and Suppliers, and within a company. Email Inbox feature allows you pull all your business emails into your ERPNext account. Accessing all the business emails with other transactions details makes ERPNext a single platform for accessing complete business information in one place.</p>
+<p>In ERPNext, you can configure Email Inbox for each System User. Following are the detailed steps to configure Email Inbox for a User.</p>
+<h4 id="step-1:-create-user"><a class="header-link" href="#step-1:-create-user"></a>Step 1: Create User</h4>
+<p>As mentioned above, you can configure Email Inbox for a System User only. Hence ensure that you have added yourself and your colleagues as a User and assigned them required permissions.</p>
+<p>To add new User, go to:</p>
+<p><code>Setup &gt; User &gt; New User</code></p>
+<p class="img-container"><img class="screenshot" alt="Email User" src="{{docs_base_url}}/assets/img/setup/email/email-user.png"></p>
+<h4 id="step-2:-create-email-domain"><a class="header-link" href="#step-2:-create-email-domain"></a>Step 2: Create Email Domain</h4>
+<p>To be able to send and receive emails into your ERPNext from other email service (like WebMail or Gmail), you should setup an Email Domain master. In this master, email gateway details like SMTP Address, Port No., IMAP/POP3 address details are captured. If you have ever configured a local email client (like Outlook), Email Domain master requires details to be fed in the similar way.</p>
+<p>To add new Email Domain, go to:</p>
+<p><code>Setup &gt; Emails &gt; Email Domain &gt; New</code></p>
+<p class="img-container"><img class="screenshot" alt="Email Domain" src="{{docs_base_url}}/assets/img/setup/email/email-domain.png"></p>
+<p>Once you have configured an Email Domain for your Email Service, it will be used for creating Email Accounts for all the Users in your ERPNext account.</p>
+<div class=well>If you use one of the following Email Service, then you need not create Email Domain in your ERPNext account. In ERPNext, Email Domain for the following Services is available out-of-the-box and you can directly proceed to creating Email Account.
+<ul class="list">
+<li>Gmail</li>
+<li>Yahoo</li>
+<li>Sparkpost</li>
+<li>SendGrid</li>
+<li>Outlook.com</li>
+<li>Yandex.mail</li>
+<ul class="list">
+</div>
+
+<h4 id="step-3:-email-account"><a class="header-link" href="#step-3:-email-account"></a>Step 3: Email Account</h4>
+<p>Create an Email Account based on the Email ID of the User. For each User who&#39;s email account is to be integrated with ERPNext, an Email Account master should be created for it. </p>
+<p>If you are creating an Email Account for your colleague who&#39;s Email Password is unknown to you, then check field &quot;Awaiting Password&quot;. As per this setting, a User (for whom Email Account is created) will get a prompt to enter email password when accessing his/her ERPNext Account.</p>
+<p class="img-container"><img class="screenshot" alt="Email Password" src="{{docs_base_url}}/assets/img/setup/email/email-password.png"></p>
+<p>In the Email Account, select Email Domain only if you are using Email Service other than Email Services listed above. Else, you can just select Email Service, leave Email Domain blank and proceed forward.</p>
+<p class="img-container"><img class="screenshot" alt="Email Service" src="{{docs_base_url}}/assets/img/setup/email/email-service.png"></p>
+<blockquote>
+<p>If you are creating an Email Account for Email Inbox of a User, then leave Append To field as blank.</p>
+</blockquote>
+<p>For more details on how to setup Email Account, <a href="/docs/user/manual/en/setting-up/email/email-account.html&quot;">click here</a>.</p>
+<h4 id="step-4:-linking-email-account-in-user-master"><a class="header-link" href="#step-4:-linking-email-account-in-user-master"></a>Step 4: Linking Email Account in User master</h4>
+<p>Once an Email Account is created for an User, select that Email Account in the User. This will ensure that emails pulled from the said Email ID will accessible only to this User in your ERPNext account.</p>
+<p class="img-container"><img class="screenshot" alt="Email User Link" src="{{docs_base_url}}/assets/img/setup/email/email-user-link.png"></p>
+<h2 id="email-inbox-1"><a class="header-link" href="#email-inbox-1"></a>Email Inbox</h2>
+<p>If you have correctly configured Email Inbox as instructed above, then on the login of a User, Email Inbox icon will be visible. This will navigate user to Email Inbox view within the ERPNext account. All the Emails received on that email will be fetch and listed in the Email Inbox view. User will be able to open emails and take various actions against it.</p>
+<p class="img-container"><img class="screenshot" alt="Email Inbox" src="{{docs_base_url}}/assets/img/setup/email/email-inbox.png"></p>
+<h4 id="folders"><a class="header-link" href="#folders"></a>Folders</h4>
+<p>In ERPNext, you can link multiple Email Accounts with the single User. To switch to Inbox of different email account and access other folders like Sent Emails, Spam, Trash, check Email Inbox option in the left bar.</p>
+<p class="img-container"><img class="screenshot" alt="Email Folders" src="{{docs_base_url}}/assets/img/setup/email/email-folders.png"></p>
+<h4 id="actions"><a class="header-link" href="#actions"></a>Actions</h4>
+<p>On the emails in your inbox, you can take various actions like Reply, Forward, Mark as Spam or Trash.</p>
+<p class="img-container"><img class="screenshot" alt="Email Actions" src="{{docs_base_url}}/assets/img/setup/email/email-actions.png"></p>
+<h4 id="make-options"><a class="header-link" href="#make-options"></a>Make Options</h4>
+<p>The Email Inbox within ERPNext also allow you to quickly create ERPNext transaction based on email received. From an Email itself, you can a Issue, Lead or Opportunity based on the context of the email.</p>
+<p class="img-container"><img class="screenshot" alt="Make from Email" src="{{docs_base_url}}/assets/img/setup/email/make-from-email.png"></p>
+    </article>
+  </body>
+</html>

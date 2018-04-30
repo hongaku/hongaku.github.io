@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>Calculate Incentive For Sales Team</title>
+    <link type="text/css" rel="stylesheet" href="../../../../../assets/css/github-markdown.css">
+    <link type="text/css" rel="stylesheet" href="../../../../../assets/css/pilcrow.css">
+    <link type="text/css" rel="stylesheet" href="../../../../../assets/css/hljs-github.min.css"/>
+  </head>
+  <body>
+    <article class="markdown-body"><h1 id="calculate-incentive-for-sales-team"><a class="header-link" href="#calculate-incentive-for-sales-team"></a>Calculate Incentive For Sales Team</h1>
+<p>Can be used in any Sales Transaction with <strong>Sales Team</strong> Table:</p>
+<pre class="hljs"><code>cur_frm.cscript.custom_validate = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">doc</span>) </span>{
+    <span class="hljs-comment">// calculate incentives for each person on the deal</span>
+    total_incentive = <span class="hljs-number">0</span>
+    $.each(wn.model.get(<span class="hljs-string">"Sales Team"</span>, {<span class="hljs-attr">parent</span>:doc.name}), <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">i, d</span>) </span>{
+
+        <span class="hljs-comment">// calculate incentive</span>
+        <span class="hljs-keyword">var</span> incentive_percent = <span class="hljs-number">2</span>;
+        <span class="hljs-keyword">if</span>(doc.grand_total &gt; <span class="hljs-number">400</span>) incentive_percent = <span class="hljs-number">4</span>;
+
+        <span class="hljs-comment">// actual incentive</span>
+        d.incentives = flt(doc.grand_total) * incentive_percent / <span class="hljs-number">100</span>;
+        total_incentive += flt(d.incentives)
+    });
+
+    doc.total_incentive = total_incentive;
+}</code></pre>    </article>
+  </body>
+</html>

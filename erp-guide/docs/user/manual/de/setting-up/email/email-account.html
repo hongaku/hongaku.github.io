@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>E-Mail-Konto</title>
+    <link type="text/css" rel="stylesheet" href="../../../../../assets/css/github-markdown.css">
+    <link type="text/css" rel="stylesheet" href="../../../../../assets/css/pilcrow.css">
+    <link type="text/css" rel="stylesheet" href="../../../../../assets/css/hljs-github.min.css"/>
+  </head>
+  <body>
+    <article class="markdown-body"><h1 id="e-mail-konto"><a class="header-link" href="#e-mail-konto"></a>E-Mail-Konto</h1>
+<p><span class="text-muted contributed-by">Beigetragen von CWT Connector &amp; Wire Technology GmbH</span></p>
+<p>Sie können in ERPNext viele verschiedene E-Mail-Konten für eingehende und ausgehende E-Mails verwalten. Es muss mindestens ein Standard-Konto für ausgehende E-Mails und eines für eingehende E-Mails geben. Wenn Sie sich in der ERPNext-Cloud befinden, dann werden die Einstellungen für ausgehende E-Mails von uns getroffen.</p>
+<p><strong>Anmerkung, wenn Sie das System selbst einrichten:</strong> Für ausgehende E-Mails sollten Sie Ihren eigenen SMTP-Server einrichten oder sich bei einem SMTP Relay Service wie mandrill.com oder sendgrid.com, der den Versand einer größeren Menge von Transaktions-E-Mails erlaubt, registrieren. Standard-E-Mail-Services wie GMail beschränken Sie auf eine Höchstgrenze an E-Mails pro Tag.</p>
+<h3 id="standard-e-mail-konten"><a class="header-link" href="#standard-e-mail-konten"></a>Standard-E-Mail-Konten</h3>
+<p>ERPNext erstellt standardmäßig Vorlagen für einige E-Mail-Konten. Nicht alle sind aktiviert. Um sie zu aktivieren, müssen Sie Ihre Konteneinstellungen bearbeiten.</p>
+<p>Es gibt zwei Arten von E-Mail-Konten, ausgehend und eingehend. E-Mail-Konten für ausgehende E-Mails verwenden einen SMTP-Service, eingehende E-Mails verwenden einen POP-Service. Die meisten E-Mail-Anbieter wie GMail, Outlook oder Yahoo bieten diese Seriveleistungen an.</p>
+<p class="img-container"><img class="screenshot" alt="Kriterien definieren" src="{{docs_base_url}}/assets/img/setup/email/email-account-list.png"></p>
+<h3 id="konten-zu-ausgehenden-e-mails"><a class="header-link" href="#konten-zu-ausgehenden-e-mails"></a>Konten zu ausgehenden E-Mails</h3>
+<p>Alle E-Mails, die vom System aus versendet werden, sei es von einem Benutzer zu einem Kontakt oder als Transaktion oder als Benachrichtung, werden aus einem Konto für ausgehende E-Mails heraus versendet.</p>
+<p>Um ein Konto für ausgehende E-Mails einzurichten, markieren Sie die Option <strong>Ausgehend aktivieren</strong> und geben Sie die Einstellungen zum SMTP-Server an. Wenn Sie einen bekannten E-Mail-Service nutzen, wird das vom System für Sie voreingestellt.</p>
+<p class="img-container"><img class="screenshot" alt="Ausgehende E-Mails" src="{{docs_base_url}}/assets/img/setup/email/email-account-sending.png"></p>
+<h3 id="konten-zu-eingehenden-e-mails"><a class="header-link" href="#konten-zu-eingehenden-e-mails"></a>Konten zu eingehenden E-Mails</h3>
+<p>Um ein Konto für eingehende E-Mails einzurichten, markieren Sie die Option <strong>Eingehend aktivieren</strong> und geben Sie die Einstellungen zum POP3-Server an. Wenn Sie einen bekannten E-Mail-Service nutzen, wird das vom System für Sie voreingestellt.</p>
+<p class="img-container"><img class="screenshot" alt="Eingehende E-Mails" src="{{docs_base_url}}/assets/img/setup/email/email-account-incoming.png"></p>
+<h3 id="wie-erpnext-antworten-handhabt"><a class="header-link" href="#wie-erpnext-antworten-handhabt"></a>Wie ERPNext Antworten handhabt</h3>
+<p>Wenn Sie aus ERPNext heraus eine E-Mail an einen Kontakt wie z. B. einen Kunden versenden, dann ist der Absender gleich dem Benutzer, der die E-Mail versendet. In den Einstellungen zu <strong>Antworten an</strong> steht die E-Mail-ID des Standardkontos für den Posteingang (z. B. <a href="mailto:replies@yourcompany.com">replies@yourcompany.com</a>). ERPNext entnimmt diese E-Mails automatisch aus dem Posteingang und hängt Sie an die betreffende Kommunikation an.</p>
+<h3 id="benachrichtigung-über-unbeantwortete-nachrichten"><a class="header-link" href="#benachrichtigung-über-unbeantwortete-nachrichten"></a>Benachrichtigung über unbeantwortete Nachrichten</h3>
+<p>Wenn Sie möchten, dass ERPNext Sie benachrichtigt, wenn eine E-Mail für eine bestimmte Zeit unbeantwortet bleibt, dann können Sie die Option <strong>Benachrichtigen, wenn unbeantwortet</strong> markieren. Hier können Sie die Anzahl der Minuten einstellen, die das System warten soll, bevor eine Benachrichtigung gesendet wird, und den Empfänger.</p>
+<p class="img-container"><img class="screenshot" alt="Eingehende Email" src="{{docs_base_url}}/assets/img/setup/email/email-account-unreplied.png"></p>
+<p>{next}</p>
+    </article>
+  </body>
+</html>

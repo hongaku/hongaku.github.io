@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>Artikel</title>
+    <link type="text/css" rel="stylesheet" href="../../../../../assets/css/github-markdown.css">
+    <link type="text/css" rel="stylesheet" href="../../../../../assets/css/pilcrow.css">
+    <link type="text/css" rel="stylesheet" href="../../../../../assets/css/hljs-github.min.css"/>
+  </head>
+  <body>
+    <article class="markdown-body"><h1 id="artikel"><a class="header-link" href="#artikel"></a>Artikel</h1>
+<p><span class="text-muted contributed-by">Beigetragen von CWT Connector &amp; Wire Technology GmbH</span></p>
+<p>Ein Artikel ist ein Produkt oder eine Dienstleistung Ihres Unternehmens. Die Bezeichnung Artikel ist genauso anwendbar auf Ihre Kernprodukte wie auch auf Ihr Rohmaterial. Es kann ein Produkt oder eine Dienstleistung sein, welche Sie von Lieferanten kaufen/an Kunden verkaufen. ERPNext versetzt sie in die Lage alle Arten von Artikeln wie Rohmaterial, Unterbeauftragungen, Fertigprodukte, Artikelvarianten und Dienstleistungsartikel zu verwalten.
+ERPNext ist auf die artikelbezogene Verwaltung Ihrer Ver- und Einkäufe optimiert. Wenn Sie sich im Bereich Dienstleistungen befinden, können Sie für jede Dienstleistung, die Sie anbieten, einen eigenen Artikel erstellen. Die Artikelstammdaten zu vervollständigen ist für eine erfolgreiche Einführung von ERPNext ausschlaggebend.</p>
+<h3 id="artikeleigenschaften"><a class="header-link" href="#artikeleigenschaften"></a>Artikeleigenschaften</h3>
+<ul class="list">
+<li><strong>Artikelname:</strong> Artikelname ist der tatsächliche Name Ihres Artikels oder Ihrer Dienstleistung.</li>
+<li><strong>Artikelcode:</strong> Der Artikelcode ist eine Kurzform um Ihren Artikel zu beschreiben. Wenn Sie sehr wenig Artikel haben, ist es ratsam den Artikelnamen und den Artikelcode gleich zu halten. Das hilft neuen Nutzern dabei, Artikeldetails in allen Transaktionen zu erkennen und einzugeben. Für den Fall, dass Sie sehr viele Artikel mit langen Namen haben, und die Anzahl in die Hunderte geht, ist es ratsam, zu kodieren. Um die Benamung der Artikelcodes zu verstehen, lesen Sie bitte den Bereich &quot;Artikel-Kodierung&quot;.</li>
+<li><strong>Artikelgruppe:</strong> Artikelgruppe wird verwendet um einen Artikel nach verschiedenen Kriterien zu kategorisieren, wie zum Beispiel Produkte, Rohmaterial, Dienstleistungen, Unterbeauftragungen, Verbrauchsgüter oder alle Artikelgruppen. Erstellen Sie Ihre Standard-Artikelgruppen-Liste unter Lagerbestand &gt; Einstellungen &gt; Artikelgruppenstruktur und stellen Sie diese Option vorein, während Sie die Details zu Ihren neuen Artikeln unter Artikelgruppe eingeben.</li>
+<li><strong>Standardmaßeinheit:</strong> Das ist die Standardmaßeinheit, die in Verbindung mit Ihrem Produkt verwendet wird. Hierbei kann es sich um Stückzahl, kg, Meter, usw. handeln. Sie können alle Standardmaßeinheiten, die Ihr Produkt benötigt, unter Einstellungen &gt; Lagerbestand &gt; Einstellungen &gt; Maßeinheit ablegen. Für das Eingeben von neuen Artikeln kann eine Voreinstellung getroffen werden, indem man % drückt um eine Popup-Liste der Standardmaßeinheiten zu erhalten.</li>
+<li><strong>Marke:</strong> Wenn Sie mehr als eine Marke haben, speichern Sie diese bitte unter Lagerbestand &gt; Einstellungen &gt; Marke und stellen Sie diese vorein, während Sie neue Artikel erstellen.</li>
+<li><strong>Variante:</strong> Eine Artikelvariante ist eine Abwandlung eines Artikels. Um mehr über die Verwaltung von Varianten zu erfahren, lesen Sie bitte &quot;Artikelvarianten&quot;.</li>
+</ul>
+<h3 id="ein-bild-hochladen"><a class="header-link" href="#ein-bild-hochladen"></a>Ein Bild hochladen</h3>
+<p>Um für Ihr Icon ein Bild hochzuladen, das in allen Transaktionen erscheint, speichern Sie bitte das teilweise ausgefüllte Formular. Nur dann, wenn die Datei abgespeichert wurde, ist die &quot;Hochladen&quot;-Schaltfläche über dem Bildsymbol verwendbar. Klicken Sie auf dieses Symbol und laden Sie das Bild hoch.</p>
+<h3 id="lagerbestand:-lager--und-bestandseinstellungen"><a class="header-link" href="#lagerbestand:-lager--und-bestandseinstellungen"></a>Lagerbestand: Lager- und Bestandseinstellungen</h3>
+<p>In ERPNext können Sie verschiedene Typen von Lagern einstellen um Ihre unterschiedlichen Artikel zu lagern. Die Auswahl kann aufgrund der Artikeltypen getroffen werden. Das kann ein Artikel des Anlagevermögens sein, ein Lagerartikel oder auch ein Fertigungsartikel.</p>
+<ul class="list">
+<li><strong>Lagerartikel:</strong> Wenn Sie Lagerartikel dieses Typs in Ihrem Lagerbestand verwalten, erzeugt ERPNext für jede Transaktion dieses Artikels eine Buchung im Lagerhauptbuch.</li>
+<li><strong>Standardlager:</strong> Das ist das Lager, welches automatisch bei Ihren Transaktionen ausgewählt wird.</li>
+<li><strong>Erlaubter Prozentsatz:</strong> Das ist der Prozentsatz der angibt, wieviel Sie bei einem Artikel überberechnen oder überliefern dürfen. Wenn er nicht vorgegeben ist, wird er aus den globalen Einstellungen übernommen.</li>
+<li><strong>Bewertungsmethode:</strong> Es gibt zwei Möglichkeiten den Lagerbestand zu bewerten. FIFO (first in - first out) und Gleitender Durchschnitt. Um dieses Thema besser zu verstehen, lesen Sie bitte &quot;Artikelbewertung, FIFO und Gleitender Durchschnitt&quot;.</li>
+</ul>
+<h3 id="serialisierter-und-chargenbezogener-lagerbestand"><a class="header-link" href="#serialisierter-und-chargenbezogener-lagerbestand"></a>Serialisierter und chargenbezogener Lagerbestand</h3>
+<p>Die Nummerierungen helfen dabei einzelne Artikel oder Chargen individuell nachzuverfolgen. Ebenso können Garantieleistungen und Rückläufe nachverfolgt werden. Für den Fall, dass ein bestimmter Artikel von einem Lieferanten zurück gerufen wird, hilft die Nummer dabei, einzelne Artikel nachzuverfolgen. Das Nummerierungssystem verwaltet weiterhin das Verfalldatum. Bitte beachten Sie, dass Sie Ihre Artikel nicht serialisieren müssen, wenn Sie die Artikel zu Tausenden verkaufen, und sie sehr klein sind, wie z. B. Stifte oder Radiergummis. In der ERPNext-Software müssen Sie die Seriennummer bei bestimmten Buchungen mit angeben. Um Seriennummern zu erstellen, müssen Sie die Seriennummern per Hand in Ihren Buchungen eintragen. Wenn es sich nicht um ein großes und haltbares Verbrauchsgut handelt, es keine Garantie hat und die Möglichkeit eines Rückrufs äußerst gering ist, sollten Sie eine Seriennummerierung vermeiden.</p>
+<blockquote>
+<p>Wichtig: Sobald Sie einen Artikel als serialisiert oder als Charge oder beides markiert haben, können Sie das nicht mehr ändern, nachdem Sie eine Buchung erstellt haben.</p>
+</blockquote>
+<h3 id="diskussion-zu-serialisiertem-lagerbestand"><a class="header-link" href="#diskussion-zu-serialisiertem-lagerbestand"></a>Diskussion zu serialisiertem Lagerbestand</h3>
+<h3 id="automatische-nachbestellung"><a class="header-link" href="#automatische-nachbestellung"></a>Automatische Nachbestellung</h3>
+<ul class="list">
+<li><strong>Meldebestand</strong> bezeichnet eine definierte Menge an Artikeln im Lager, bei der nachbestellt wird.</li>
+<li><strong>Nachbestellmenge</strong> bezeichnet die Menge an Artikeln die bestellt werden muss, um einen bestimmtem Lagerbestand zu erreichen.</li>
+<li><strong>Mindestbestellmenge</strong> ist die kleinstmögliche Menge, für die eine Materialanfrage / eine Einkaufsbestellung ausgelöst werden kann.</li>
+</ul>
+<h3 id="artikelsteuer"><a class="header-link" href="#artikelsteuer"></a>Artikelsteuer</h3>
+<p>Diese Einstellungen werden nur dann benötigt, wenn ein bestimmter Artikel einer anderen Besteuerung unterliegt als derjenigen, die im Standard-Steuerkonto hinterlegt ist. Beispiel: Wenn Sie ein Steuerkonto &quot;Umsatzsteuer 19%&quot; haben, und der Artikel, um den es sich dreht, von der Steuer ausgenommen ist, dann wählen Sie &quot;Umsatzsteuer 19%&quot; in der ersten Spalte und stellen als Steuersatz in der zweiten Spalte &quot;0&quot; ein.</p>
+<p>Lesen Sie im Abschnitt &quot;Steuern einstellen&quot; weiter, wenn Sie mehr Informationen wünschen.</p>
+<h2 id="prüfkriterien"><a class="header-link" href="#prüfkriterien"></a>Prüfkriterien</h2>
+<ul class="list">
+<li><strong>Kontrolle erforderlich:</strong> Wenn für einen Artikel eine Wareneingangskontrolle (zum Zeitpunkt der Anlieferung durch den Lieferanten) zwingend erforderlich ist, aktivieren Sie &quot;Ja&quot; bei den Einstellungen für &quot;Prüfung erforderlich&quot;. Das Sytem stellt sicher, dass eine Qualitätskontrolle vorbereitet und durchgeführt wird bevor ein Kaufbeleg übertragen wird.</li>
+<li><strong>Kontrollkriterien:</strong> Wenn eine Qualitätsprüfung für den Artikel vorbereitet wird, dann wird die Vorlage für die Kriterien automatisch in der Tabelle Qualitätskontrolle aktualisiert. Beispiele für Kriterien sind: Gewicht, Länge, Oberfläche usw.</li>
+</ul>
+<h2 id="einkaufsdetails"><a class="header-link" href="#einkaufsdetails"></a>Einkaufsdetails</h2>
+<ul class="list">
+<li><strong>Lieferzeit in Tagen:</strong> Die Lieferzeit in Tagen bezeichnet die Anzahl der Tage die benötigt werden bis der Artikel das Lager erreicht.</li>
+<li><strong>Standard-Aufwandskonto:</strong> Dies ist das Konto auf dem die Kosten für den Artikel verzeichnet werden.</li>
+<li><strong>Standard-Einkaufskostenstelle:</strong> Sie wird verwendet um die Kosten für den Artikel nachzuverfolgen.</li>
+</ul>
+<h2 id="verkausdetails"><a class="header-link" href="#verkausdetails"></a>Verkausdetails</h2>
+<ul class="list">
+<li><strong>Standard-Ertragskonto:</strong> Das hier gewählte Ertragskonto wird automatisch mit der Ausgangsrechung für diesen Artikel verknüpft.</li>
+<li><strong>Standard-Vertriebskostenstelle:</strong> Die hier gewählte Kostenstelle wird automatisch mit der Ausgangsrechnung für diesen Artikel verknüpft.</li>
+</ul>
+<h2 id="fertigung-und-webseite"><a class="header-link" href="#fertigung-und-webseite"></a>Fertigung und Webseite</h2>
+<p>Lesen Sie in den Abschnitten &quot;Fertigung&quot; und &quot;Webseite&quot; nach, um weitere Informationen zu diesen Themen zu erhalten.</p>
+<p>{next}</p>
+    </article>
+  </body>
+</html>

@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>Batch</title>
+    <link type="text/css" rel="stylesheet" href="../../../../assets/css/github-markdown.css">
+    <link type="text/css" rel="stylesheet" href="../../../../assets/css/pilcrow.css">
+    <link type="text/css" rel="stylesheet" href="../../../../assets/css/hljs-github.min.css"/>
+  </head>
+  <body>
+    <article class="markdown-body"><h1 id="batch"><a class="header-link" href="#batch"></a>Batch</h1>
+<p>Batch feature in ERPNext allows you to group multiple units of an item,
+and assign them a unique value/number/tag called Batch No.</p>
+<p>This is done based on the Item. If the Item is batched, then a Batch number must be mentioned in every stock transaction. Batch numbers can be maintained manually or automatically</p>
+<h3 id="item-setup"><a class="header-link" href="#item-setup"></a>Item Setup</h3>
+<p>To set item as a batch item, &quot;Has Batch No&quot; field should be checked in the Item master.</p>
+<p>If you want automatic batch creation at the time of Purchase Receipt, you must check &quot;Create New Batches Automatically&quot;</p>
+<p class="img-container"><img class="screenshot" alt="Item Setup for Batches" src="{{docs_base_url}}/assets/img/stock/item_setup_for_batch.png"></p>
+<h3 id="creating-batches"><a class="header-link" href="#creating-batches"></a>Creating Batches</h3>
+<p>If you have not selected &quot;Create New Batches Automatically&quot;, you will have to make Batches Manually as you go along.</p>
+<p>To create new Batch No. master for an item, go to:</p>
+<blockquote>
+<p>Stock &gt; Setup &gt; Batch &gt; New</p>
+</blockquote>
+<h3 id="splitting-and-moving-batches"><a class="header-link" href="#splitting-and-moving-batches"></a>Splitting and Moving Batches</h3>
+<p>When you open a batch, you will see all the quantities relating this that batch on the page.</p>
+<p class="img-container"><img class="screenshot" alt="Batch View" src="{{docs_base_url}}/assets/img/stock/batch_view.png"></p>
+<p>To move the batch from one warehouse to another, you can click on the move button.</p>
+<p>You can also split the batch into smaller one by clicking on &quot;Split&quot;. This will create a new Batch based on this Batch and the quantities will be split between the batches.</p>
+<h3 id="transacting-items-with-batches"><a class="header-link" href="#transacting-items-with-batches"></a>Transacting Items with Batches</h3>
+<p>Batch master is created before creation of Purchase Receipt.
+Hence eveytime there is Purchase Receipt or Work Order being made for a batch item,
+you will first create its Batch No, and then select it in Purchase order or Production Entry.</p>
+<p>On every stock transaction (Purchase Receipt, Delivery Note, POS Invoice) made for batch item,
+you should provide item&#39;s Batch No.</p>
+<blockquote>
+<p>Note: In stock transactions, Batch IDs will be filtered based on Item Code, Warehouse,
+Batch Expiry Date (compared with Posting date of a transaction) and Actual Qty in Warehouse.
+While searching for Batch ID  without value in Warehouse field, then Actual Qty filter won&#39;t be applied.</p>
+</blockquote>
+<p>{next}</p>
+    </article>
+  </body>
+</html>

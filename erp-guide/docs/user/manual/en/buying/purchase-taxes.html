@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>Purchase Taxes</title>
+    <link type="text/css" rel="stylesheet" href="../../../../assets/css/github-markdown.css">
+    <link type="text/css" rel="stylesheet" href="../../../../assets/css/pilcrow.css">
+    <link type="text/css" rel="stylesheet" href="../../../../assets/css/hljs-github.min.css"/>
+  </head>
+  <body>
+    <article class="markdown-body"><h1 id="purchase-taxes"><a class="header-link" href="#purchase-taxes"></a>Purchase Taxes</h1>
+<p>For Tax Accounts that you want to use in the tax templates, you must mention
+them as type “Tax” in your Chart of Accounts.</p>
+<p>Similar to your Sales Taxes and Charges Template is the Purchase Taxes and
+Charges Master. This is the tax template that you can use in your Purchase
+Orders and Purchase Invoices.</p>
+<blockquote>
+<p>Buying &gt; Setup &gt; Purchase Taxes and Charges Template &gt; New Purchase Taxes and Charges
+Master</p>
+</blockquote>
+<p class="img-container"><img class="screenshot" alt="Purchase taxes" src="{{docs_base_url}}/assets/img/buying/purchase-taxes.png"></p>
+<p>You can specify if the tax / charge is only for valuation (not a part of
+total) or only for total (does not add value to the item) or for both.</p>
+<p>If you select a particular tax as your Default tax, the system will apply this
+tax to all the purchase transactions by default. </p>
+<h3 id="calculation-type"><a class="header-link" href="#calculation-type"></a>Calculation Type</h3>
+<p>This can be on Net Total (that is the sum of basic amount). On Previous Row
+Total / Amount (for cumulative taxes or charges). If you select this option,
+the tax will be applied as a percentage of the previous row (in the tax table)
+amount or total. Actual (as mentioned).</p>
+<ul class="list">
+<li><strong>Account Head:</strong> The Account ledger under which this tax will be booked.</li>
+<li><strong>Cost Center:</strong> If the tax / charge is an income (like shipping) or expense it needs to be booked against a Cost Center.</li>
+<li><strong>Description:</strong> Description of the tax (that will be printed in invoices / quotes).</li>
+<li><strong>Rate:</strong> Tax rate.</li>
+<li><strong>Amount:</strong> Tax amount.</li>
+<li><strong>Total:</strong> Cumulative total to this point.</li>
+<li><strong>Enter Row:</strong> If based on &quot;Previous Row Total&quot; you can select the row number which will be taken as a base for this calculation (default is the previous row).</li>
+<li><strong>Consider Tax or Charge for:</strong> In this section you can specify if the tax / charge is only for valuation (not a part of total) or only for total (does not add value to the item) or for both.</li>
+<li><strong>Add or Deduct:</strong> Whether you want to add or deduct the tax.</li>
+</ul>
+<p>{next}</p>
+    </article>
+  </body>
+</html>

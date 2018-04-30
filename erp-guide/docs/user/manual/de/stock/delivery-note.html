@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>Lieferschein</title>
+    <link type="text/css" rel="stylesheet" href="../../../../assets/css/github-markdown.css">
+    <link type="text/css" rel="stylesheet" href="../../../../assets/css/pilcrow.css">
+    <link type="text/css" rel="stylesheet" href="../../../../assets/css/hljs-github.min.css"/>
+  </head>
+  <body>
+    <article class="markdown-body"><h1 id="lieferschein"><a class="header-link" href="#lieferschein"></a>Lieferschein</h1>
+<p><span class="text-muted contributed-by">Beigetragen von CWT Connector &amp; Wire Technology GmbH</span></p>
+<p>Ein Lieferschein wird dann erstellt, wenn ein Versand vom Lager der Firma statt findet.</p>
+<p>Normalerweise wird eine Kopie des Lieferscheins der Sendung beigelegt. Der Lieferschein beinhaltet die Auflistung der Artikel, die versendet werden, und aktualisiert den Lagerbestand.</p>
+<p>Die Buchung zum Lieferschein ist derjenigen zum Kaufbeleg sehr ähnlich. Sie können einen neuen Lieferschein erstellen über:  </p>
+<blockquote>
+<p>Lagerbestand &gt; Dokumente &gt; Lieferschein &gt; Neu</p>
+</blockquote>
+<p>oder aber über eine &quot;übertragene&quot; Kundenbestellung (die noch nicht versandt wurde) indem Sie auf &quot;Lieferschein erstellen&quot; klicken.</p>
+<p class="img-container"><img class="screenshot" alt="Lieferschein" src="{{docs_base_url}}/assets/img/stock/delivery-note.png"></p>
+<p>Sie können die Details auch aus einer noch nicht gelieferten Kundenbestellung &quot;herausziehen&quot;.</p>
+<p>Sie werden bemerken, dass alle Informationen über nicht gelieferte Artikel und andere Details aus der Kundenbestellung übernommen werden.</p>
+<h3 id="pakete-oder-artikel-mit-produkt-bundles-versenden"><a class="header-link" href="#pakete-oder-artikel-mit-produkt-bundles-versenden"></a>Pakete oder Artikel mit Produkt-Bundles versenden</h3>
+<p>Wenn Sie Artikel, die ein <a href="/docs/user/manual/de/selling/setup/product-bundle.html">Produkt-Bundle</a>, ERPNext will automatically beinhalten, versenden, erstellt Ihnen ERPNext automatisch eine Tabelle &quot;Packliste&quot; basierend auf den Unterartikeln dieses Artikels.</p>
+<p>Wenn Ihre Artikel serialisiert sind, dann müssen Sie für Artikel vom Typ Produkt-Bundle die Seriennummer in der Tabelle &quot;Packliste&quot; aktualisieren.</p>
+<h3 id="artikel-für-containerversand-verpacken"><a class="header-link" href="#artikel-für-containerversand-verpacken"></a>Artikel für Containerversand verpacken</h3>
+<p>Wenn Sie per Containerversand oder nach Gewicht versenden, können Sie die Packliste verwenden um Ihren Lieferschein in kleinere Einheiten aufzuteilen. Um eine Packliste zu erstellen gehen Sie zu:</p>
+<blockquote>
+<p>Lagerbestand &gt; Werkzeuge &gt; Packzettel &gt; Neu</p>
+</blockquote>
+<p>Sie können für Ihren Lieferschein mehrere Packlisten erstellen und ERPNext stellt sicher dass die Mengenangaben in der Packliste  nicht die Mengen im Lieferschein übersteigen.</p>
+<hr>
+<h3 id="frage:-wie-druckt-man-ohne-die-angabe-der-stückzahl/menge-aus?"><a class="header-link" href="#frage:-wie-druckt-man-ohne-die-angabe-der-stückzahl/menge-aus?"></a>Frage: Wie druckt man ohne die Angabe der Stückzahl/Menge aus?</h3>
+<p>Wenn Sie Ihre Lieferscheine ohne Mengenangabe ausdrucken wollen (das ist dann sinnvoll, wenn Sie Artikel mit hohem Wert versenden), kreuzen Sie &quot;Ohne Mengenangabe ausdrucken&quot; im Bereich &quot;Weitere Informationen&quot; an.</p>
+<h3 id="frage:-was-passiert,-wenn-der-lieferschein-"übertragen"-wurde?"><a class="header-link" href="#frage:-was-passiert,-wenn-der-lieferschein-"übertragen"-wurde?"></a>Frage: Was passiert, wenn der Lieferschein &quot;übertragen&quot; wurde?</h3>
+<p>Für jeden Artikel wird eine Buchung im Lagerhauptbuch erstellt und der Lagerbestand wird aktualisiert. Ebenfalls wird die Ausstehende Menge im Kundenauftrag (sofern zutreffend) aktualisiert.</p>
+<p>{next}</p>
+    </article>
+  </body>
+</html>

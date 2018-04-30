@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>Lieferantenreklamation</title>
+    <link type="text/css" rel="stylesheet" href="../../../../assets/css/github-markdown.css">
+    <link type="text/css" rel="stylesheet" href="../../../../assets/css/pilcrow.css">
+    <link type="text/css" rel="stylesheet" href="../../../../assets/css/hljs-github.min.css"/>
+  </head>
+  <body>
+    <article class="markdown-body"><h1 id="lieferantenreklamation"><a class="header-link" href="#lieferantenreklamation"></a>Lieferantenreklamation</h1>
+<p><span class="text-muted contributed-by">Beigetragen von CWT Connector &amp; Wire Technology GmbH</span></p>
+<p>In ERPNext gibt es eine Option für Produkte, die zurück zum Lieferanten geschickt werden müssen. Die Gründe dafür können vielfältig sein, z. B. defekte Waren, nicht ausreichende Qualität, der Käufer braucht die Ware nicht (mehr), usw.</p>
+<p>Sie können eine Lieferantenreklamation erstellen indem Sie ganz einfach einen Kaufbeleg mit negativer Menge erstellen.</p>
+<p>Öffnen Sie hierzu zuerst die ursprüngliche Eingangsrechnung zu der der Lieferant die Artikel geliefert hat.</p>
+<p class="img-container"><img class="screenshot" alt="Original-Eingangsrechnung" src="{{docs_base_url}}/assets/img/stock/purchase-return-original-purchase-receipt.png"></p>
+<p>Klicken Sie dann auf &quot;Lieferantenreklamation erstellen&quot;, dies öffnet einen neuen Kaufbeleg bei dem &quot;Ist Reklamation&quot; markiert ist, und bei dem die Artikel mit negativer Menge aufgeführt sind.</p>
+<p class="img-container"><img class="screenshot" alt="Reklamation zum Lieferschein" src="{{docs_base_url}}/assets/img/stock/purchase-return-against-purchase-receipt.png"></p>
+<p>Bei der Ausgabe eines Reklamations-Kaufbelegs vermindert das System die Menge des Artikels auf dem entsprechenden Lager. Um einen korrekten Lagerwert zu erhalten, verändert sich der Lagersaldo entsprechend dem Einkaufspreis des zurückgesendeten Artikels.</p>
+<p class="img-container"><img class="screenshot" alt="Reklamation und Lagerbuch" src="{{docs_base_url}}/assets/img/stock/purchase-return-stock-ledger.png"></p>
+<p>Wenn die Ständige Inventur aktiviert wurde, verbucht das System weiterhin Buchungssätze zum Lagerkonto um den Lagersaldo  mit dem Lagerbestand des Lagerbuchs zu synchronisieren.</p>
+<p class="img-container"><img class="screenshot" alt="Reklamation und Lagerbuch" src="{{docs_base_url}}/assets/img/stock/purchase-return-general-ledger.png"></p>
+<p>{next}</p>
+    </article>
+  </body>
+</html>

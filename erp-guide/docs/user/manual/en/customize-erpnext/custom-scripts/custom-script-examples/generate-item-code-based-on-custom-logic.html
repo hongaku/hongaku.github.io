@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>Generate Item Code Based On Custom Logic</title>
+    <link type="text/css" rel="stylesheet" href="../../../../../../assets/css/github-markdown.css">
+    <link type="text/css" rel="stylesheet" href="../../../../../../assets/css/pilcrow.css">
+    <link type="text/css" rel="stylesheet" href="../../../../../../assets/css/hljs-github.min.css"/>
+  </head>
+  <body>
+    <article class="markdown-body"><h1 id="generate-item-code-based-on-custom-logic"><a class="header-link" href="#generate-item-code-based-on-custom-logic"></a>Generate Item Code Based On Custom Logic</h1>
+<p>Add this in the Custom Script of <strong>Item</strong>, so that the new Item Code is
+generated just before the a new Item is saved.</p>
+<p>(Thanks to Aditya Duggal)</p>
+<pre class="hljs"><code>cur<span class="hljs-number">_f</span>rm.cscript.custom<span class="hljs-number">_</span>validate = <span class="hljs-keyword">function</span>(<span class="hljs-meta">doc</span>) {
+    <span class="hljs-comment">// clear item_code (name is from item_code)</span>
+    <span class="hljs-meta">doc</span>.item<span class="hljs-number">_</span>code = <span class="hljs-string">""</span>;
+
+    <span class="hljs-comment">// first 2 characters based on item_group</span>
+    <span class="hljs-keyword">switch</span>(<span class="hljs-meta">doc</span>.item<span class="hljs-number">_</span>group) {
+        <span class="hljs-keyword">case</span> <span class="hljs-string">"Test A"</span>:
+            <span class="hljs-meta">doc</span>.item<span class="hljs-number">_</span>code = <span class="hljs-string">"TA"</span>;
+            <span class="hljs-keyword">break</span>;
+        <span class="hljs-keyword">case</span> <span class="hljs-string">"Test B"</span>:
+            <span class="hljs-meta">doc</span>.item<span class="hljs-number">_</span>code = <span class="hljs-string">"TB"</span>;
+            <span class="hljs-keyword">break</span>;
+        <span class="hljs-keyword">default</span>:
+            <span class="hljs-meta">doc</span>.item<span class="hljs-number">_</span>code = <span class="hljs-string">"XX"</span>;
+    }
+
+    <span class="hljs-comment">// add next 2 characters based on brand</span>
+    <span class="hljs-keyword">switch</span>(<span class="hljs-meta">doc</span>.brand) {
+        <span class="hljs-keyword">case</span> <span class="hljs-string">"Brand A"</span>:
+            <span class="hljs-meta">doc</span>.item<span class="hljs-number">_</span>code += <span class="hljs-string">"BA"</span>;
+            <span class="hljs-keyword">break</span>;
+        <span class="hljs-keyword">case</span> <span class="hljs-string">"Brand B"</span>:
+            <span class="hljs-meta">doc</span>.item<span class="hljs-number">_</span>code += <span class="hljs-string">"BB"</span>;
+            <span class="hljs-keyword">break</span>;
+        <span class="hljs-keyword">default</span>:
+            <span class="hljs-meta">doc</span>.item<span class="hljs-number">_</span>code += <span class="hljs-string">"BX"</span>;
+    }
+}</code></pre><p>{next}</p>
+    </article>
+  </body>
+</html>

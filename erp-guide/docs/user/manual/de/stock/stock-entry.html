@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>Lagerbuchung</title>
+    <link type="text/css" rel="stylesheet" href="../../../../assets/css/github-markdown.css">
+    <link type="text/css" rel="stylesheet" href="../../../../assets/css/pilcrow.css">
+    <link type="text/css" rel="stylesheet" href="../../../../assets/css/hljs-github.min.css"/>
+  </head>
+  <body>
+    <article class="markdown-body"><h1 id="lagerbuchung"><a class="header-link" href="#lagerbuchung"></a>Lagerbuchung</h1>
+<p><span class="text-muted contributed-by">Beigetragen von CWT Connector &amp; Wire Technology GmbH</span></p>
+<p>Eine Lagerbuchung ist ein einfaches Dokument, welches Sie Lagerbewegungen aus einem Lager heraus, in ein Lager hinein oder zwischen Lagern aufzeichnen lässt.</p>
+<p>Wenn Sie eine Lagerbuchung erstellen möchten, gehen Sie zu: </p>
+<blockquote>
+<p>Lagerbestand &gt; Dokumente &gt; Lagerbuchung &gt; Neu</p>
+</blockquote>
+<p class="img-container"><img class="screenshot" alt="Lagerbuchung" src="{{docs_base_url}}/assets/img/stock/stock-entry.png"></p>
+<p>Lagerbuchungen können aus folgenden Gründen erstellt werden:</p>
+<ul class="list">
+<li>Materialentnahme - Wenn das Material ausgegeben wird (ausgehendes Material).</li>
+<li>Materialannahme - Wenn das Material angenommen wird (eingehendes Material).</li>
+<li>Materialübertrag - Wenn das Material von einem Lager in ein anders Lager übertragen wird.</li>
+<li>Materialübertrag für Herstellung - Wann das Material in den Fertigungsprozess übertragen wird.</li>
+<li>Herstellung - Wenn das Material von einem Fertigungs-/Produktionsarbeitsgang empfangen wird.</li>
+<li>Umpacken - Wenn der/die Originalartikel zu einem neuen Artikel verpackt wird/werden.</li>
+<li>Zulieferer - Wenn das Material aufgrund einer Untervergabe ausgegeben wird.</li>
+</ul>
+<p>In einer Lagerbuchung müssen Sie die Artikelliste mit all Ihren Transaktionen aktualisieren. Für jede Zeile müssen Sie ein Ausgangslager oder ein Eingangslager oder beides eingeben (wenn Sie eine Bewegung erfassen).</p>
+<h4 id="zusätzliche-kosten"><a class="header-link" href="#zusätzliche-kosten"></a>Zusätzliche Kosten</h4>
+<p>Wenn die Lagerbuchung eine Eingangsbuchung ist, d. h. wenn ein beliebiger Artikel an einem Ziellager angenommen wird, können Sie zusätzliche Kosten erfassen (wie Versandgebühren, Zollgebühren, Betriebskosten, usw.), die mit dem Prozess verbunden sind. Die Zusatzkosten werden berücksichtigt, um den Wert des Artikels zu kalkulieren.</p>
+<p>Um Zusatzkosten hinzuzufügen, geben Sie die Beschreibung und den Betrag der Kosten in die Tabelle Zusatzkosten ein.</p>
+<p class="img-container"><img class="screenshot" alt="Lagerbuchung Zusatzlkosten" src="{{docs_base_url}}/assets/img/stock/additional-costs-table.png"></p>
+<p>Die hinzugefügten Zusatzkosten werden basierend auf dem Grundwert der Artikel proportional auf die erhaltenen Artikel verteilt. Dann werden die verteilten Zusatzkosten zum Grundpreis hinzugerechnet, um den Wert neu zu berechnen.</p>
+<p class="img-container"><img class="screenshot" alt="Lagerbuchung Preis für Artikelvarianten" src="{{docs_base_url}}/assets/img/stock/stock-entry-item-valuation-rate.png"></p>
+<p>Wenn die laufende Inventur aktiviert ist, werden Zusatzkosten auf das Konto &quot;Aufwendungen im Wert beinhaltet&quot; gebucht.</p>
+<p class="img-container"><img class="screenshot" alt="Zusatzkosten Hauptbuch" src="{{docs_base_url}}/assets/img/stock/additional-costs-general-ledger.png"></p>
+<blockquote>
+<p>Hinweis: Um den Lagerbestand über eine Tabellenkalkulation zu aktualisieren, bitte unter Lagerabgleich nachlesen.</p>
+</blockquote>
+<p>{next}</p>
+    </article>
+  </body>
+</html>

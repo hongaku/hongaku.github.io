@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>1. New Stock Entry</title>
+    <link type="text/css" rel="stylesheet" href="../../../../../assets/css/github-markdown.css">
+    <link type="text/css" rel="stylesheet" href="../../../../../assets/css/pilcrow.css">
+    <link type="text/css" rel="stylesheet" href="../../../../../assets/css/hljs-github.min.css"/>
+  </head>
+  <body>
+    <article class="markdown-body"><p>#Repack Entry</p>
+<p>Repack Entry is created for item bought in bulk, which is being packed into smaller packages. For example, item bought in tons can be repacked into Kgs. </p>
+<p>Notes:</p>
+<ol class="list">
+<li>Purchase Item and repack will be have different Item Codes.</li>
+<li>Repack entry can be made with or without BOM (Bill of Material).</li>
+</ol>
+<p>In a Repack Entry, there can be one or more than one repack items. Let&#39;s check below scenario to understand this better.</p>
+<p>Assume we are buying boxes of spray paint of specific colour (Green, Blue etc). And later re-bundling to create packs having multiple colours of spray paint (Blue-Green, Green-Yellow etc.) in them.</p>
+<h4 id="1.-new-stock-entry"><a class="header-link" href="#1.-new-stock-entry"></a>1. New Stock Entry</h4>
+<p><code>Stock &gt; Documents &gt; Stock Entry &gt; New Stock Entry</code></p>
+<h4 id="2.-enter-items"><a class="header-link" href="#2.-enter-items"></a>2. Enter Items</h4>
+<p>Select Purpose as &#39;Repack Entry&#39;.</p>
+<p>For raw-material/input item, only Source Warehouse will be provided.</p>
+<p>For repacked/output items, only Target Warehouse will be provided. You will have to provide valuation for the repack items.</p>
+<p class="img-container"><img alt="Repack Entry" class="screenshot" src="{{docs_base_url}}/assets/img/articles/repack-1.png"></p>
+<p>Update Qty for all the items selected.</p>
+<h4 id="3.-submit-stock-entry"><a class="header-link" href="#3.-submit-stock-entry"></a>3. Submit Stock Entry</h4>
+<p>On submitting Stock Entry, stock of input item will be reduced from Source Warehouse, and stock of repack/output item will be added in the Target Warehouse.</p>
+<p class="img-container"><img alt="Repack Stock Entry" class="screenshot" src="{{docs_base_url}}/assets/img/articles/repack-2.png"></p>
+<!-- markdown -->     </article>
+  </body>
+</html>

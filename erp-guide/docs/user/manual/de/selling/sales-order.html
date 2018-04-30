@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>Kundenauftrag</title>
+    <link type="text/css" rel="stylesheet" href="../../../../assets/css/github-markdown.css">
+    <link type="text/css" rel="stylesheet" href="../../../../assets/css/pilcrow.css">
+    <link type="text/css" rel="stylesheet" href="../../../../assets/css/hljs-github.min.css"/>
+  </head>
+  <body>
+    <article class="markdown-body"><h1 id="kundenauftrag"><a class="header-link" href="#kundenauftrag"></a>Kundenauftrag</h1>
+<p><span class="text-muted contributed-by">Beigetragen von CWT Connector &amp; Wire Technology GmbH</span></p>
+<p>Der Kundenauftrag bestätigt Ihren Verkauf und stößt Einkauf (<strong>Materialanfrage</strong>), Versand (<strong>Lieferschein</strong>), Abrechnung (<strong>Ausgangsrechnung</strong>) und Fertigung (<strong>Produktionsplan</strong>) an.</p>
+<p>Ein Kundenauftrag ist normalerweise ein bindender Vertrag mit Ihrem Kunden.</p>
+<p>Wenn Ihr Kunde das Angebot annimmt, können Sie das Angebot in einen Kundenauftrag umwandeln.</p>
+<h3 id="flußdiagramm-des-kundenauftrags"><a class="header-link" href="#flußdiagramm-des-kundenauftrags"></a>Flußdiagramm des Kundenauftrags</h3>
+<p class="img-container"><img class="screenshot" alt="Kundenauftrag aus Angebot erstellen" src="{{docs_base_url}}/assets/img/selling/sales-order-f.jpg"></p>
+<p>Um einen neuen Kundenauftrag zu erstellen gehen Sie zu: &gt; Vertrieb &gt; Kundenauftrag &gt; Neuer Kundenauftrag</p>
+<h3 id="einen-kundenauftrag-aus-einem-angebot-erstellen"><a class="header-link" href="#einen-kundenauftrag-aus-einem-angebot-erstellen"></a>Einen Kundenauftrag aus einem Angebot erstellen</h3>
+<p>Sie können einen Kundenauftrag auch aus einem übertragenen Angebot heraus erstellen.</p>
+<p class="img-container"><img class="screenshot" alt="Kundenauftrag aus Angebot erstellen" src="{{docs_base_url}}/assets/img/selling/make-SO-from-quote.png"></p>
+<p>Oder Sie erstellen einen neuen Kundenauftrag und entnehmen die Details aus dem Angebot.</p>
+<p class="img-container"><img class="screenshot" alt="Kundenauftrag aus Angebot erstellen" src="{{docs_base_url}}/assets/img/selling/make-so.gif"></p>
+<p>Die meisten Informationen im Kundenauftrag sind dieselben wie im Angebot. Einige Dinge möchte der Kundenauftrag aber aktualisiert haben.</p>
+<ul class="list">
+<li>Voraussichtlicher Liefertermin</li>
+<li>Kundenbestellnummer: Wenn Ihnen Ihr Kunde einen Kundenauftrag geschickt hat, können Sie dessen Nummer als Refernz für die Zukunft (Abrechnung) erfassen.</li>
+</ul>
+<h3 id="packliste"><a class="header-link" href="#packliste"></a>Packliste</h3>
+<p>Die Tabelle &quot;Packliste&quot; wird automatisch aktualisiert, wenn Sie den Kundenauftrag abspeichern. Wenn einer der Artikel in Ihrer Tabelle ein Produkt-Bundle (Paket) ist, dann enthält die Packliste eine aufgelöste Übersicht Ihrer Artikel.</p>
+<h3 id="reservierung-und-lager"><a class="header-link" href="#reservierung-und-lager"></a>Reservierung und Lager</h3>
+<p>Wenn Ihr Kundenauftrag Artikel enthält, für die das Lager nachverfolgt wird (&quot;Ist Lagerartikel&quot; ist mit JA markiert), dann fragt sie ERPNext nach einem Reservierungslager. Wenn Sie ein Standard-Lager für den Artikel eingestellt haben, wird dieses automatisch verwendet.</p>
+<p>Die &quot;reservierte&quot; Menge hilft Ihnen dabei, die Menge abzuschätzen, die Sie basierend auf all Ihren Verpflichtungen einkaufen müssen.</p>
+<h3 id="vertriebsteam"><a class="header-link" href="#vertriebsteam"></a>Vertriebsteam</h3>
+<p><strong>Vertriebspartner:</strong> Wenn ein Verkauf über einen Vertriebspartner gebucht wurde, können Sie die Einzelheiten des Vertriebspartners mit der Provision und anderen gesammelten Informationen aktualisieren.</p>
+<p><strong>Vertriebsperson:</strong> ERPNext erlaubt es Ihnen verschiedene Vertriebspersonen zu markieren, die an diesem Geschäft mitgearbeitet haben. Sie können auch den Anteil an der Zielerreichung auf die Vertriebspersonen aufteilen und nachverfolgen wieviele Prämien sie mit diesem Geschäft verdient haben.</p>
+<h3 id="wiederkehrende-kundenaufträge"><a class="header-link" href="#wiederkehrende-kundenaufträge"></a>Wiederkehrende Kundenaufträge</h3>
+<p>Wenn Sie mit einem Kunden einen Serienkontrakt vereinbart haben, bei dem Sie einen monatlichen, vierteljährlichen, halbjährlichen oder jährlichen Kundenauftrag generieren müssen, können Sie hierfür &quot;In wiederkehrende Bestellung umwandeln&quot; aktivieren.</p>
+<p>Hier können Sie folgende Details eingeben: Wie häufig Sie eine Bestellung generieren wollen im Feld &quot;Wiederholungstyp&quot;, an welchem Tag des Monats die Bestellung generiert werden soll im Feld &quot;Wiederholen an Tag des Monats&quot; und das Datum an dem die wiederkehrenden Bestellungen eingestellt werden sollen im Feld &quot;Enddatum&quot;.</p>
+<p><strong>Wiederholungstyp:</strong> Hier können Sie die Häufigkeit in der Sie eine Bestellung generieren wollen eingeben.</p>
+<p><strong>Wiederholen an Tag des Monats:</strong> Sie können angeben, an welchem Tag des Monats die Bestellung generiert werden soll.</p>
+<p><strong>Enddatum:</strong> Das Datum an dem die wiederkehrenden Bestellungen eingestellt werden sollen.</p>
+<p>Wenn Sie den Kundenauftrag aktualisieren, wird eine wiederkehrende ID generiert, die für alle wiederkehrenden Bestellungen dieses speziellen Kundenauftrag gleich ist.</p>
+<p>ERPNext erstellt automatisch eine neue Bestellung und versendet eine E-Mail-Mitteilung an die E-Mail-Konten, die Sie im Feld &quot;Benachrichtigungs-E-Mail-Adresse&quot; eingestellt haben.</p>
+<p class="img-container"><img class="screenshot" alt="Wiederkehrende Kundenaufträge" src="{{docs_base_url}}/assets/img/selling/recurring-sales-order.png"></p>
+<h3 id="die-nächsten-schritte"><a class="header-link" href="#die-nächsten-schritte"></a>Die nächsten Schritte</h3>
+<p>In dem Moment, in dem Sie Ihren Kundenauftrag &quot;übertragen&quot; haben, können Sie nun verschiedene Aktionen im Unternehmen anstossen:</p>
+<ul class="list">
+<li>Um den Beschaffungsvorgang einzuleiten klicken Sie auf &quot;Materialanforderung&quot;</li>
+<li>Um den Versand einzuleiten klicken Sie auf &quot;Auslieferung&quot;</li>
+<li>Um eine Rechnung zu erstellen klicken Sie auf &quot;Rechnung&quot;</li>
+<li>Um den Prozess anzuhalten, klicken Sie auf &quot;Anhalten&quot;</li>
+</ul>
+<h3 id="übertragung"><a class="header-link" href="#übertragung"></a>Übertragung</h3>
+<p>Der Kundenauftrag ist eine &quot;übertragbare&quot; Transaktion. Sehen Sie hierzu auch die Dokumentenphasen. Sie können abhängige Schritte (wie einen Lieferschein zu erstellen) erst dann durchführen, wenn Sie den Kundenauftrag übertragen haben.</p>
+<h3 id="kundenauftrag-mit-wartungsauftrag"><a class="header-link" href="#kundenauftrag-mit-wartungsauftrag"></a>Kundenauftrag mit Wartungsauftrag</h3>
+<p>Wenn der Bestelltyp des Kundenauftrags &quot;Wartung&quot; ist, folgen Sie bitte unten dargestellten Schritten:</p>
+<ul class="list">
+<li><strong>Schritt 1:</strong> Geben Sie die Währung, die Preisliste und die Artikeldetails ein.</li>
+<li><strong>Schritt 2:</strong> Berücksichtigen Sie Steuern und andere Informationen.</li>
+<li><strong>Schritt 3:</strong> Speichern und übertragen Sie das Formular.</li>
+<li><strong>Schritt 4:</strong> Wenn das Formular übertragen wurde, zeigt die Aktionsschaltfläche drei Auswahlmöglichkeiten: 1) Wartungsbesuch 2) Wartungsplan 3) Rechnung</li>
+</ul>
+<blockquote>
+<p><strong>Anmerkung 1:</strong> Wenn Sie auf die Aktionsschaltfläche klicken und &quot;Wartungsbesuch&quot; auswählen können Sie das Besuchsformular direkt ausfüllen. Die Details werden automatisch aus dem Kundenauftrag übernommen.</p>
+</blockquote>
+<blockquote>
+<p><strong>Anmerkung 2:</strong> Wenn Sie auf die Aktionsschaltfläche klicken und &quot;Wartungsplan&quot; auswählen, können Sie die Details zum Wartungsplan eintragen. Die Details werden autmomatisch aus dem Kundenauftrag übernommen.</p>
+</blockquote>
+<blockquote>
+<p><strong>Anmerkung 3:</strong> Wenn Sie auf die Schaltfläche &quot;Rechnung&quot; klicken, können Sie eine Rechnung für die Wartungsarbeiten erstellen. Die Details werden automatisch aus dem Kundenauftrag übernommen.</p>
+</blockquote>
+<p>{next}</p>
+    </article>
+  </body>
+</html>

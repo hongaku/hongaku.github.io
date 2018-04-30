@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>Dokumentenbezeichnung</title>
+    <link type="text/css" rel="stylesheet" href="../../../../assets/css/github-markdown.css">
+    <link type="text/css" rel="stylesheet" href="../../../../assets/css/pilcrow.css">
+    <link type="text/css" rel="stylesheet" href="../../../../assets/css/hljs-github.min.css"/>
+  </head>
+  <body>
+    <article class="markdown-body"><h1 id="dokumentenbezeichnung"><a class="header-link" href="#dokumentenbezeichnung"></a>Dokumentenbezeichnung</h1>
+<p><span class="text-muted contributed-by">Beigetragen von CWT Connector &amp; Wire Technology GmbH</span></p>
+<p>Sie können die Bezeichnung von Dokumenten basierend auf den Einstellungen anpassen, so dass Sie für die Listenansichten eine sinnvolle Bedeutung erhalten.</p>
+<p>Beispiel: Die Standardbezeichung eines <strong>Angebotes</strong> ist der Kundenname. Wenn Sie aber Geschäftsbeziehungen mit wenigen Kunden haben, diesen aber sehr viele Angebote erstellen, könnte es sinnvoll sein, die Bezeichnungen anzupassen.</p>
+<h3 id="bezeichnung-von-feldern-einstellen"><a class="header-link" href="#bezeichnung-von-feldern-einstellen"></a>Bezeichnung von Feldern einstellen</h3>
+<p>Ab der Version 6.0 von ERPNext haben alle Transaktionen eine Eigenschaft &quot;Bezeichnung&quot;. Wenn Sie keine Eigenschaft &quot;Bezeichnung&quot; finden, können Sie ein <strong>benutzerdefiniertes Feld</strong> &quot;Bezeichnung&quot; hinzufügen und dieses über <strong>Formular anpassen</strong> entsprechend gestalten.</p>
+<p>Sie können für diese Eigenschaft den Standardwert übernehmen indem Sie in <strong>Standard</strong> oder <strong>Optionen</strong> den Python-Kode einfügen.</p>
+<p>Um eine Standard-Bezeichnung einzufügen, gehen Sie zu:</p>
+<ol class="list">
+<li>Einstellungen &gt; Anpassen &gt; Formular anpassen</li>
+<li>Wählen Sie Ihre Transaktion aus</li>
+<li>Bearbeiten Sie das Feld &quot;Standard&quot; in Ihrem Formular</li>
+</ol>
+<h3 id="bezeichnungen-definieren"><a class="header-link" href="#bezeichnungen-definieren"></a>Bezeichnungen definieren</h3>
+<p>Sie können eine Bezeichnung definieren, indem Sie Dokumenteneinstellungen in geschweifte Klammern {} setzen. Beispiel: Wenn Ihr Dokument die Eigenschaften customer_name und project hat, können Sie die Standard-Bezeichnung wie folgt setzen:</p>
+<blockquote>
+<p>{customer_name} for {project}</p>
+</blockquote>
+<p class="img-container"><img class="screenshot" alt = "Bezeichnung anpassen"
+    src="{{docs_base_url}}/assets/img/customize/customize-title.gif"></p>
+<h3 id="fest-eingestellte-und-bearbeitbare-bezeichnungen"><a class="header-link" href="#fest-eingestellte-und-bearbeitbare-bezeichnungen"></a>Fest eingestellte und bearbeitbare Bezeichnungen</h3>
+<p>Wenn Ihre Bezeichnung als Standard-Bezeichnung generiert wurde, kann sie vom Benutzer durch klicken auf den Kopf des Dokuments bearbeitet werden.</p>
+<p class="img-container"><img class="screenshot" alt = "Bearbeitbare Bezeichnung"
+    src="{{docs_base_url}}/assets/img/customize/editable-title.gif"></p>
+<p>Wenn Sie eine fest eingestellte Bezeichnung haben wollen, können Sie dies als Regel unter <strong>Optionen</strong> einstellen. Auf diese Weise wird die Bezeichnung jedesmal automatisch aktualisiert, wenn das Dokument aktualisiert wird.</p>
+<p>{next}</p>
+    </article>
+  </body>
+</html>

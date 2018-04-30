@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>Restrict User Based On Child Record</title>
+    <link type="text/css" rel="stylesheet" href="../../../../../../assets/css/github-markdown.css">
+    <link type="text/css" rel="stylesheet" href="../../../../../../assets/css/pilcrow.css">
+    <link type="text/css" rel="stylesheet" href="../../../../../../assets/css/hljs-github.min.css"/>
+  </head>
+  <body>
+    <article class="markdown-body"><h1 id="restrict-user-based-on-child-record"><a class="header-link" href="#restrict-user-based-on-child-record"></a>Restrict User Based On Child Record</h1>
+<pre class="hljs"><code><span class="hljs-comment">// restrict certain warehouse to Material Manager</span>
+cur<span class="hljs-number">_f</span>rm.cscript.custom<span class="hljs-number">_</span>validate = <span class="hljs-keyword">function</span>(<span class="hljs-meta">doc</span>) {
+    <span class="hljs-keyword">if</span>(frappe.user<span class="hljs-number">_</span>roles.indexOf(<span class="hljs-string">"Material Manager"</span>)==-<span class="hljs-number">1</span>) {
+
+        var restricted<span class="hljs-number">_</span><span class="hljs-keyword">in</span><span class="hljs-number">_</span>source = frappe.model.get<span class="hljs-number">_</span>list(<span class="hljs-string">"Stock Entry Detail"</span>,
+            {parent:cur<span class="hljs-number">_f</span>rm.<span class="hljs-meta">doc</span>.name, s<span class="hljs-number">_</span>warehouse:<span class="hljs-string">"Restricted"</span>});
+
+        var restricted<span class="hljs-number">_</span><span class="hljs-keyword">in</span><span class="hljs-number">_</span>target = frappe.model.get<span class="hljs-number">_</span>list(<span class="hljs-string">"Stock Entry Detail"</span>,
+            {parent:cur<span class="hljs-number">_f</span>rm.<span class="hljs-meta">doc</span>.name, t<span class="hljs-number">_</span>warehouse:<span class="hljs-string">"Restricted"</span>})
+
+        <span class="hljs-keyword">if</span>(restricted<span class="hljs-number">_</span><span class="hljs-keyword">in</span><span class="hljs-number">_</span>source.length || restricted<span class="hljs-number">_</span><span class="hljs-keyword">in</span><span class="hljs-number">_</span>target.length) {
+            frappe.msgprint(<span class="hljs-number">__</span>(<span class="hljs-string">"Only Material Manager can make entry in Restricted Warehouse"</span>));
+            validated = false;
+        }
+    }
+}</code></pre><p>{next}</p>
+    </article>
+  </body>
+</html>

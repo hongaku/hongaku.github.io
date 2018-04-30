@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>1. Setting the Current Value</title>
+    <link type="text/css" rel="stylesheet" href="../../../../../assets/css/github-markdown.css">
+    <link type="text/css" rel="stylesheet" href="../../../../../assets/css/pilcrow.css">
+    <link type="text/css" rel="stylesheet" href="../../../../../assets/css/hljs-github.min.css"/>
+  </head>
+  <body>
+    <article class="markdown-body"><p>#Setting the Current Value for Naming Series</p>
+<p>Naming Series feature allows you to define prefix for naming of a documents. For example, if a Sales Order has prefix &quot;SO&quot;, then the series will be generated as SO-00001, SO-00002... and so on. Click <a href="/docs/user/manual/en/setting-up/settings/naming-series.html">here</a> to learn how you can customize Number Series for a transaction/master in ERPNext.</p>
+<h3 id="1.-setting-the-current-value"><a class="header-link" href="#1.-setting-the-current-value"></a>1. Setting the Current Value</h3>
+<p>Naming Series feature also offers a tool where you can set Current Value for specific prefix. This is generally required if you have recently started using ERPNext, and have old transactions in the previous system, and you want the numbering series to start in from where it ended in the old system. Let&#39;s consider a scenario to learn this better.</p>
+<p>For example, you have 322 Sales Orders created in your old system with SO00322 as highest Sales Order Id. In ERPNext, you need the first Sales Order to pick up #323 when it is saved. To enable this, you should set Current Value for SO series in following steps.</p>
+<h4 id="go-to-naming-series-tool"><a class="header-link" href="#go-to-naming-series-tool"></a>Go to Naming Series Tool</h4>
+<p><code>Setup &gt; System &gt; Naming Series</code></p>
+<h4 id="update-series-section"><a class="header-link" href="#update-series-section"></a>Update Series Section</h4>
+<p class="img-container"><img alt="Update Series Section" class="screenshot" src="{{docs_base_url}}/assets/img/articles/current-no-1.png"></p>
+<h4 id="select-prefix"><a class="header-link" href="#select-prefix"></a>Select Prefix</h4>
+<p>Considering our scenario, prefix for Sales Order will be &quot;SO&quot;.</p>
+<p class="img-container"><img alt="Series Prefix" class="screenshot" src="{{docs_base_url}}/assets/img/articles/current-no-2.png"></p>
+<h4 id="current-value"><a class="header-link" href="#current-value"></a>Current Value</h4>
+<p>If you have currently 12 Sales Orders created in your account, then current value updated will be 12. You can edit Current Value to 322, and then click on Update Series Number.</p>
+<p class="img-container"><img alt="Series Current Value" class="screenshot" src="{{docs_base_url}}/assets/img/articles/current-no-3.png"></p>
+<p>With this setting, you will have numbering for the New Sales Orders starting with #323.</p>
+<h3 id="2.-error-due-series-number"><a class="header-link" href="#2.-error-due-series-number"></a>2. Error Due Series Number</h3>
+<p>If you receive a Duplicate Name error while saving a transaction, for example, while saving Item Price, you receive an error saying:</p>
+<p><code>Duplicate name Item Price RFD/00016</code></p>
+<p>This error message indicates that when you are saving Item Price, system is trying to allocate &quot;RFD/00016&quot; to that Item Price record. But it is finding that Item Price with this ID is already existing in your system.</p>
+<p>This error could arise because Current Value for Series/Prefix of Item Price is disturbed and not in sync with actual Current Value. While actual Current Value for Item Price could be 20 (or any number more than 16), someone has set Current Value for this series as 15. </p>
+<p>To confirm actual Current Value for particular Series, you should check report for document in question (Item Price in this case), and check for the Item Price ID with highest value. </p>
+<p>Let&#39;s assume we find that actual Current Value for Item price is 22, then you go Naming Series, and set Current Value for the Prefix/Series of Item Price to 22, and Update Series Number.</p>
+<p>These instructions is applicable for all the documents in ERPNext for which user can customize Series and its Current Value.</p>
+<p>Let&#39;s consider another scenario to learn this better. On assigning a document to another user, error message says:</p>
+<p><code>Duplicate name ToDo TDI00014286</code></p>
+<p>This indicate the Current Value for Series/Prefix of ToDo (TDI) has been disturbed. You should follow these steps to correct value for Current Value for TDI prefix.</p>
+<ol class="list">
+<li>Check ToDo report for the highest ToDo id value.</li>
+<li>Setup &gt;&gt; Settings &gt;&gt; Naming Series</li>
+<li>Check section B of Update Series</li>
+<li>Select Prefix for ToDo &quot;TDI&quot;</li>
+<li>Ensure that highest number for ToDo is updated as Current Value in Naming Series. If not, correct Current Value, and click on &quot;Update Series Numbering&quot;.</li>
+</ol>
+<!-- markdown -->    </article>
+  </body>
+</html>

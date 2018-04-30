@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>Capacity Planning based on Work Order</title>
+    <link type="text/css" rel="stylesheet" href="../../../../../assets/css/github-markdown.css">
+    <link type="text/css" rel="stylesheet" href="../../../../../assets/css/pilcrow.css">
+    <link type="text/css" rel="stylesheet" href="../../../../../assets/css/hljs-github.min.css"/>
+  </head>
+  <body>
+    <article class="markdown-body"><h1 id="capacity-planning-based-on-work-order"><a class="header-link" href="#capacity-planning-based-on-work-order"></a>Capacity Planning based on Work Order</h1>
+<p>Capacity Planning functionality helps you in tracking production jobs allocated on each Workstation.</p>
+<p class="img-container"><img alt="Role Desk Permission" class="screenshot" src="{{docs_base_url}}/assets/img/articles/capacity-1.png"></p>
+<p>Follow are the steps to use Capacity Planning Feature in your ERPNext account.</p>
+<ol class="list">
+<li><p>Operations  </p>
+<p>To add operations, go to:  </p>
+<p><code>Manufacturing &gt; Bill of Materials &gt; Operations</code></p>
+</li>
+<li><p>Workstation  </p>
+<p>Add each Workstation in your ERPNext account from:  </p>
+<p><code>Manufacturing &gt; Bill of Materials &gt; Workstation</code> </p>
+<p>In the Workstation master, you can define which operations will be performed on it, what are the cost associated with it, and what are the working hours of that Workstation.  </p>
+</li>
+<li><p>Bill of Materials (BOM):  </p>
+<p>In a BOM, with the list of raw material needed, for manufacturing, you can also list operation and workstations through which those raw materials will be processed.  </p>
+</li>
+<li><p>Work Order:  </p>
+<p>On submission of Work Order, Timesheet for Operations. This helps you allocate production jobs on each Workstation, as well as you can update actual time taken for each Operation.  </p>
+</li>
+</ol>
+<h3 id="error-due-to-capacity-planning"><a class="header-link" href="#error-due-to-capacity-planning"></a>Error due to Capacity Planning</h3>
+<p><strong>Question:</strong> On Submission of Work Order, we are getting following error message.</p>
+<p class="img-container"><img alt="Role Desk Permission" class="screenshot" src="{{docs_base_url}}/assets/img/articles/capacity-2.png"></p>
+<p><strong>Answer: </strong>Please check if you have updated Working Hours in the Workstation master? If not, then please update it and then try to submit Work Order.</p>
+<p>On submission of Work Order, Operations (as added in the BOM) are allocated on the workstation. Each operation should start and end on the same day. If a system is not able to schedule that operation in a day, then system request you to divide that Project, so that system can allocate smaller operations in a day.</p>
+<p>If you have update working hours in the Workstation, but still getting this issue, that because one of your operation is taking too long, and cannot be completed in a day. Please divide that operation into smaller operations, so that it can be allocated on Workstation and completed on the same day.</p>
+<h3 id="avoid-working-hours-of-workstation"><a class="header-link" href="#avoid-working-hours-of-workstation"></a>Avoid Working Hours of Workstation</h3>
+<p>If you want to ignore above validation and allow scheduling of production job beyond the working hours of the Workstation, enable
+Overtime in the Manufacturing Settings.</p>
+<p class="img-container"><img alt="Role Desk Permission" class="screenshot" src="{{docs_base_url}}/assets/img/articles/capacity-3.png"></p>
+<p>If you want to complete disable Capacity Planning feature, in the Manufacturing Settings, check field &quot;Disable Capacity Planning and Time Tracking&quot;.</p>
+    </article>
+  </body>
+</html>

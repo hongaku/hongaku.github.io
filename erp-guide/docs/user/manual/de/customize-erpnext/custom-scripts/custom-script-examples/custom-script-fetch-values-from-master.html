@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>Benutzerdefiniertes Skript holt sich Werte aus der Formularvorlage</title>
+    <link type="text/css" rel="stylesheet" href="../../../../../../assets/css/github-markdown.css">
+    <link type="text/css" rel="stylesheet" href="../../../../../../assets/css/pilcrow.css">
+    <link type="text/css" rel="stylesheet" href="../../../../../../assets/css/hljs-github.min.css"/>
+  </head>
+  <body>
+    <article class="markdown-body"><h1 id="benutzerdefiniertes-skript-holt-sich-werte-aus-der-formularvorlage"><a class="header-link" href="#benutzerdefiniertes-skript-holt-sich-werte-aus-der-formularvorlage"></a>Benutzerdefiniertes Skript holt sich Werte aus der Formularvorlage</h1>
+<p><span class="text-muted contributed-by">Beigetragen von CWT Connector &amp; Wire Technology GmbH</span></p>
+<p>Um einen Wert oder eine Verknüpfung auf eine Auswahl zu holen, verwenden Sie die Methode add_fetch.</p>
+<blockquote>
+<p>add_fetch(link_fieldname, source_fieldname, target_fieldname)</p>
+</blockquote>
+<h3 id="beispiel"><a class="header-link" href="#beispiel"></a>Beispiel</h3>
+<p>Sie erstellen ein benutzerdefiniertes Feld <strong>VAT ID</strong> (vat_id) unter <strong>Kunde</strong> und <strong>Ausgangsrechnung</strong> und Sie möchten sicher stellen, dass dieser Wert immer aktualisiert wird, wenn Sie einen Kunden oder eine Ausgangsrechnung aufrufen.</p>
+<p>Fügen Sie also im Skript Ausgangsrechnung Kunde Folgendes hinzu:</p>
+<blockquote>
+<p>cur_frm.add_fetch(&#39;customer&#39;,&#39;vat_id&#39;,&#39;vat_id&#39;)</p>
+</blockquote>
+<hr>
+<p>Sehen Sie hierzu auch: <a href="/docs/user/manual/de/customize-erpnext/custom-scripts/">Wie man ein benutzerdefiniertes Skript erstellt</a>.</p>
+<p>{next}</p>
+    </article>
+  </body>
+</html>

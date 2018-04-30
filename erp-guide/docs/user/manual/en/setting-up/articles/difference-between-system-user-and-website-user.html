@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>Difference Between System User and Website User</title>
+    <link type="text/css" rel="stylesheet" href="../../../../../assets/css/github-markdown.css">
+    <link type="text/css" rel="stylesheet" href="../../../../../assets/css/pilcrow.css">
+    <link type="text/css" rel="stylesheet" href="../../../../../assets/css/hljs-github.min.css"/>
+  </head>
+  <body>
+    <article class="markdown-body"><h1 id="difference-between-system-user-and-website-user"><a class="header-link" href="#difference-between-system-user-and-website-user"></a>Difference Between System User and Website User</h1>
+<p><strong>Question:</strong> I have added my Employee as a User and have assigned them Roles as well. Still, they are not able to view Dashboard on the login.</p>
+<p><strong>Answer:</strong></p>
+<p>There are two type of Users in ERPNext.</p>
+<ul class="list">
+<li><p><strong>System User</strong>: They are Employees of your company. Example of Roles assigned to System Users are Account User, Sales Manager, Purchase User, Support Team etc.</p>
+</li>
+<li><p><strong>Website User</strong>: They are to parties (like Customer and Suppliers) of your Company. </p>
+</li>
+</ul>
+<p>Example Website User Roles are Customer and Suppliers.</p>
+<p>How to check if Role is for System User or Website User?</p>
+<p>In the Role master, if field &quot;Desk Access&quot; is checked, that Role is for System User. If Desk Access field is unchecked, then that Role is for Website User.</p>
+<p class="img-container"><img alt="Role Desk Permission" class="screenshot" src="{{docs_base_url}}/assets/img/articles/role-deskperm.png"></p>
+    </article>
+  </body>
+</html>

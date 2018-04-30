@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>Step 2: Select Employee</title>
+    <link type="text/css" rel="stylesheet" href="../../../../../assets/css/github-markdown.css">
+    <link type="text/css" rel="stylesheet" href="../../../../../assets/css/pilcrow.css">
+    <link type="text/css" rel="stylesheet" href="../../../../../assets/css/hljs-github.min.css"/>
+  </head>
+  <body>
+    <article class="markdown-body"><p>#Sales Invoice from Timesheet</p>
+<p>Customer can be invoiced based on total no. of hours your Employees has worked for that Customer. Timesheet can be used to track actual no. of hours Employee has worked. For example, in the IT services domain, clients are billed based on man-hour bases, where per hour billing cost is pre-determined.s</p>
+<p>###Timesheet</p>
+<p>####Step 1: Create new Timesheet</p>
+<p>To create new Timesheet, go to:</p>
+<p><code>Project &gt; Timesheet &gt; New</code></p>
+<h4 id="step-2:-select-employee"><a class="header-link" href="#step-2:-select-employee"></a>Step 2: Select Employee</h4>
+<p>In the Employee field, only ones having ative Salary Structure will be selectable. Further in the Salary Structure , is created for the E on the actual hours worked, Employee can create Timesheet. To be able to create Sales Invoice against this Timesheet, ensure <code>Billable</code> field is checked.</p>
+<p class="img-container"><img class="screenshot" alt="Sales Invoice" src="{{docs_base_url}}/assets/img/project/timesheet/timesheet-salary-structure.png"></p>
+<h4 id="step-3:activity-type"><a class="header-link" href="#step-3:activity-type"></a>Step 3:Activity Type</h4>
+<p>Employee will have to select an Activity Type (like planning, site visit, repairing etc. ). Costing and Billing Rate for each Activity can be different for each Employee. These cost can be tracked in the Activity Cost. On selection of Activity Type, Activity Cost is fetched from that Employee. Based on total Activity Cost and total no. of hours, Total Billing Amount (to the Customer) is calculated.</p>
+<p>To learn more on how to setup Activity Type and Activity Cost, click <a href="/docs/user/manual/en/projects/articles/project-costing">here</a>.</p>
+<p class="img-container"><img class="screenshot" alt="Sales Invoice" src="{{docs_base_url}}/assets/img/project/timesheet/timesheet-cost.png"></p>
+<h4 id="step-4:-enter-actual-time"><a class="header-link" href="#step-4:-enter-actual-time"></a>Step 4: Enter Actual Time</h4>
+<p>In the Timesheet Details table, enter actual hours an Employee has worked for. One Timesheet can be used for multiple days as well.</p>
+<p>To be able to create Sales Invoice from the Time Sheet, ensure &#39;Is Billable&#39; field is checked.</p>
+<p class="img-container"><img class="screenshot" alt="Sales Invoice" src="{{docs_base_url}}/assets/img/project//timesheet/timesheet-billable.png"></p>
+<p>Based on the actual hours worked and Activity Cost of an Employee, Total Billing Amount will be calculated for Timesheet.</p>
+<h4 id="step-5:-save-and-submit"><a class="header-link" href="#step-5:-save-and-submit"></a>Step 5: Save and Submit</h4>
+<p>After submitting Timesheet, you will find buttons to create Sales Invoice and Salary Slip against this Timesheet.</p>
+<p class="img-container"><img class="screenshot" alt="Sales Invoice" src="/docs/assets//img/project/timesheet/timesheet-total.png"></p>
+<p>###Create Sales Invoice from Timesheet</p>
+<h4 id="submitted-timesheet"><a class="header-link" href="#submitted-timesheet"></a>Submitted Timesheet</h4>
+<p>In the Timesheet, if &quot;Is Billable&quot; is checked, you will find option to create Sales Invoice against it.</p>
+<p class="img-container"><img class="screenshot" alt="Sales Invoice" src="{{docs_base_url}}/assets/img/project/timesheet/timesheet-invoice-1.png"></p>
+<p class="img-container"><img class="screenshot" alt="Sales Invoice timesheet" src="{{docs_base_url}}/assets/img/project/timesheet/make_invoice_from_timesheet.gif"></p>
+<p>####Sales Invoice</p>
+<p>Sales Invoice has dedicated table for the Timesheet table where Timesheet details will be updated. You can select more Timesheets in this table.</p>
+<p class="img-container"><img class="screenshot" alt="Sales Invoice" src="{{docs_base_url}}/assets/img/project/timesheet/timesheet-to-invoice.gif"></p>
+<p>####Select Customer and Item</p>
+<p>Select Customer to be billed. Select an Item, and enter rate as the billing amount.</p>
+<p>####Save</p>
+<p>After enter all required details in the Sales Invoice, Save and Submit it.</p>
+<p>On submitting Sales Invoice, status of the Timesheets linked to the Sales Invoice will be updated as Billed.</p>
+<p class="img-container"><img class="screenshot" alt="Sales Invoice" src="{{docs_base_url}}/assets/img/project/timesheet/timesheet-billed.png"></p>
+    </article>
+  </body>
+</html>

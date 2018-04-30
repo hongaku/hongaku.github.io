@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>Timer in Timesheet</title>
+    <link type="text/css" rel="stylesheet" href="../../../../../assets/css/github-markdown.css">
+    <link type="text/css" rel="stylesheet" href="../../../../../assets/css/pilcrow.css">
+    <link type="text/css" rel="stylesheet" href="../../../../../assets/css/hljs-github.min.css"/>
+  </head>
+  <body>
+    <article class="markdown-body"><h1 id="timer-in-timesheet"><a class="header-link" href="#timer-in-timesheet"></a>Timer in Timesheet</h1>
+<p>Timesheets can be tracked against Project and Tasks along with a Timer.</p>
+<p class="img-container"><img class="screenshot" alt="Timer" src="{{docs_base_url}}/assets/img/project/timesheet/timesheet-timer.gif"></p>
+<h4 id="steps-to-start-a-timer:"><a class="header-link" href="#steps-to-start-a-timer:"></a>Steps to start a Timer:</h4>
+<ul class="list">
+<li>On clicking, <strong>Start Timer</strong>, a dialog pops up and starts the timer for already present activity for which checkbox <code>completed</code> is unchecked.</li>
+</ul>
+<p class="img-container"><img class="screenshot" alt="Timer in Progress" src="{{docs_base_url}}/assets/img/project/timesheet/timesheet-timer-in-progress.png"></p>
+<ul class="list">
+<li><p>If no activities are present, fill up the activity details, i.e. activity type, expected hours or project in the dialog itself, on clicking <strong>Start</strong>, a new row is added into the Timesheet Details child table and timer begins.</p>
+</li>
+<li><p>On clicking, <strong>Complete</strong>, the <code>hours</code> and <code>to_time</code> fields are updated for that particular activity.</p>
+</li>
+</ul>
+<p class="img-container"><img class="screenshot" alt="Timer Completed" src="{{docs_base_url}}/assets/img/project/timesheet/timesheet-after-complete.png"></p>
+<ul class="list">
+<li><p>At any point of time, if the dialog is closed without completing the activity, on opening the dialog again, the timer resumes by calculating how much time has elapsed since <code>from_time</code> of the activity.</p>
+</li>
+<li><p>If any activities are already present in the Timesheet with completed unchecked, clicking on <strong>Resume Timer</strong> fetches the activity and starts its timer.</p>
+</li>
+<li><p>If the time exceeds the <code>expected_hours</code>, an alert box appears.</p>
+</li>
+</ul>
+<p class="img-container"><img class="screenshot" alt="Timer Exceeded" src="{{docs_base_url}}/assets/img/project/timesheet/timesheet-timer-alert.png"></p>
+    </article>
+  </body>
+</html>

@@ -1,0 +1,94 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>Druckformat</title>
+    <link type="text/css" rel="stylesheet" href="../../../../assets/css/github-markdown.css">
+    <link type="text/css" rel="stylesheet" href="../../../../assets/css/pilcrow.css">
+    <link type="text/css" rel="stylesheet" href="../../../../assets/css/hljs-github.min.css"/>
+  </head>
+  <body>
+    <article class="markdown-body"><h1 id="druckformat"><a class="header-link" href="#druckformat"></a>Druckformat</h1>
+<p><span class="text-muted contributed-by">Beigetragen von CWT Connector &amp; Wire Technology GmbH</span></p>
+<p>Druckformate sind die Erscheinungsbilder der Ausdrucke, wenn Sie eine E-Mail oder eine Transaktion wie eine Ausgangsrechnung drucken. Es gibt zwei Arten von Druckformaten:</p>
+<ul class="list">
+<li>Das automatisch generierte &quot;Standard&quot;-Druckformat: Diese Art der Formatierung folgt den Vorgaben von ERPNext.</li>
+<li>Das auf dem Dokument &quot;Druckformat&quot; basierende Format: Hier gibt es HTML-Vorlagen, die  mit Daten gefüllt werden.</li>
+</ul>
+<p>ERPNext bringt eine bestimmte Menge von vordefinierten Vorlagen in drei Stilarten mit: Modern, Classic und Standard.</p>
+<p>Sie können die Vorlagen verändern und eigene erstellen. Die ERPNext-Vorlagen zu bearbeiten, ist nicht erlaubt, weil Sie bei einem Update auf eine neuere Programmversion überschrieben werden können.</p>
+<p>Um Ihre eigenen Versionen zu erstellen, öffnen Sie eine bereits vorhandene Vorlage über:</p>
+<blockquote>
+<p>Einstellungen &gt; Druck &gt; Druckformate</p>
+</blockquote>
+<p class="img-container"><img src="{{docs_base_url}}/assets/img/customize/print-settings.png" alt="Druckformat"></p>
+<p>Wählen Sie den Typ des Druckformats, welches Sie bearbeiten wollen, und klicken Sie auf die Schaltfläche &quot;Kopieren&quot; in der rechten Spalte. Es öffnet sich ein neues Druckformat mit der Einstellung NEIN für &quot;für &quot;Ist Standard&quot; und Sie kännen das Druckformat bearbeiten.</p>
+<p>Ein Druckformat zu bearbeiten ist eine langwierige Angelegenheit und Sie müssen etwas Grundwissen über HTML, CSS und Python mitbringen, um dies verstehen zu können. Wenn Sie Hilfe benötigen, erstellen Sie bitte im Forum eine Anfrage.</p>
+<p>Printformate werden auf der Serverseite über die <a href="http://jinja.pocoo.org/docs/templates/">Programmiersprache Jinja Templating</a> erstellt. Alle Formulare haben Zugriff auf doc object, das Informationen über das Dokument enthält, welches formatiert wird. Sie können über das Frappé-Modul auch auf oft verwendete Hilfswerkzeuge zugreifen.</p>
+<p>Zum Bearbeiten des Erscheinungsbildes bietet sich das <a href="http://getbootstrap.com/">Bootstrap CSS Framework</a>  an und Sie können die volle Bandbreite dieses Werkzeuges nutzen.</p>
+<blockquote>
+<p>Anmerkung: Vorgedrucktes Briefpapier zu verwenden ist normalerweise keine gute Idee, weil Ihre Ausdrucke unfertig (inkonsistent) aussehen, wenn Sie per E-mail verschickt werden.</p>
+</blockquote>
+<h3 id="referenzen"><a class="header-link" href="#referenzen"></a>Referenzen</h3>
+<ol class="list">
+<li><a href="http://jinja.pocoo.org/docs/templates/">Programmiersprache Jinja Templating: Referenz</a></li>
+<li><a href="http://getbootstrap.com/">Bootstrap CSS Framework</a></li>
+</ol>
+<h3 id="druckeinstellungen"><a class="header-link" href="#druckeinstellungen"></a>Druckeinstellungen</h3>
+<p>Um Ihre Druck- und PDF-Einstellungen zu bearbeiten/zu aktualisieren, gehen Sie zu:</p>
+<blockquote>
+<p>Einstellungen &gt; Druck und Branding &gt; Druckeinstellungen</p>
+</blockquote>
+<p class="img-container"><img src="{{docs_base_url}}/assets/img/customize/print-settings.png" alt="Druckformat"></p>
+<h3 id="beispiel"><a class="header-link" href="#beispiel"></a>Beispiel</h3>
+<p> {% raw %}<h3>{{ doc.select_print_heading or &quot;Invoice&quot; }}</h3>
+ <div class="row">
+    <div class="col-md-3 text-right">Customer Name</div>
+    <div class="col-md-9">{{ doc.customer_name }}</div>
+ </div>
+ <div class="row">
+    <div class="col-md-3 text-right">Date</div>
+    <div class="col-md-9">{{ doc.get_formatted(&quot;invoice_date&quot;) }}</div>
+ </div>
+ <table class="table table-bordered">
+    <tbody>
+        <tr>
+            <th>Sr</th>
+            <th>Item Name</th>
+            <th>Description</th>
+            <th class="text-right">Qty</th>
+            <th class="text-right">Rate</th>
+            <th class="text-right">Amount</th>
+        </tr>
+        {%- for row in doc.items -%}
+        <tr>
+            <td style="width: 3%;">{{ row.idx }}</td>
+            <td style="width: 20%;">
+                {{ row.item_name }}
+                {% if row.item_code != row.item_name -%}
+                <br>Item Code: {{ row.item_code}}
+                {%- endif %}
+            </td>
+            <td style="width: 37%;">
+                <div style="border: 0px;">{{ row.description }}</div></td>
+            <td style="width: 10%; text-align: right;">{{ row.qty }} {{ row.uom or row.stock_uom }}</td>
+            <td style="width: 15%; text-align: right;">{{
+                row.get_formatted(&quot;rate&quot;, doc) }}</td>
+            <td style="width: 15%; text-align: right;">{{
+                row.get_formatted(&quot;amount&quot;, doc) }}</td>
+        </tr>
+        {%- endfor -%}
+    </tbody>
+    </table>{% endraw %}</p>
+<h3 id="anmerkungen"><a class="header-link" href="#anmerkungen"></a>Anmerkungen</h3>
+<ol class="list">
+<li>Um nach Datum und Währung formatiert Werte zu erhalten, verwenden Sie: <code>doc.get_formatted(&quot;fieldname&quot;)</code></li>
+<li>Für übersetzbare Zeichenfolgen verwenden Sie: <code>{{ _(&quot;This string is translated&quot;) }}</code></li>
+</ol>
+<h3 id="fußzeilen"><a class="header-link" href="#fußzeilen"></a>Fußzeilen</h3>
+<p>Sie werden des öfteren eine Standard-Fußzeile mit Ihrer Adresse und Ihren Kontaktinformationen bei Ihren Ausdrucken haben wollen. Leider ist es aufgrund der beschränkten Druckunterstützung auf HTML-Seiten nicht möglich dies ohne Skripte umzusetzen. Entweder Sie verwenden dann vorgedrucktes Briefpapier oder Sie fügen diese Informationen dem Briefkopf hinzu.</p>
+<p>{next}</p>
+    </article>
+  </body>
+</html>

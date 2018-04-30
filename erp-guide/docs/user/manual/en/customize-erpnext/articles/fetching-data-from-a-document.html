@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>Fetching Data from one Document to Another</title>
+    <link type="text/css" rel="stylesheet" href="../../../../../assets/css/github-markdown.css">
+    <link type="text/css" rel="stylesheet" href="../../../../../assets/css/pilcrow.css">
+    <link type="text/css" rel="stylesheet" href="../../../../../assets/css/hljs-github.min.css"/>
+  </head>
+  <body>
+    <article class="markdown-body"><h1 id="fetching-data-from-one-document-to-another"><a class="header-link" href="#fetching-data-from-one-document-to-another"></a>Fetching Data from one Document to Another</h1>
+<p><strong>Question:</strong> We track Customer&#39;s PO No and PO Date field in the Sales Order. To have these values fetched into Sales Invoice as well, we have inserted Custom Field in the Sales Invoice. However, when we create Sales Invoice from the Sales Order, Customer&#39;s PO details are not being fetched.</p>
+<p><strong>Answer:</strong> When data is fetched from one transaction to the another transaction, then the mapping of data is done based on the field names. If two transactions have fields with the exact same name, then it&#39;s values are mapped.</p>
+<p>For example, if you want Customer&#39;s PO No. and PO Date to be fetched from Sales Order to Sales Invoice, then you should ensure that Custom Fields added in the Sales Invoice has an exact same field name as in the Sales Order.</p>
+<p>Sales Order (standard fields)</p>
+<p class="img-container"><img class="screenshot" alt="Standard fields in Sales Order" src="{{docs_base_url}}/assets/img/articles/fetching-1.png"></p>
+<p>Sales Invoice (custom fields)</p>
+<p class="img-container"><img class="screenshot" alt="Custom Field in Sales Invoice" src="{{docs_base_url}}/assets/img/articles/fetching-2.png"></p>
+<p>Since names for the Customer&#39;s PO related fields are same in the Sales Order and Sales Invoice, when creating Sales Invoice from the Sales Order, values in these fields are auto-fetched.</p>
+<p class="img-container"><img class="screenshot" alt="Values fetching from Sales Order to Sales Invoice" src="{{docs_base_url}}/assets/img/articles/fetching-3.gif"></p>
+    </article>
+  </body>
+</html>

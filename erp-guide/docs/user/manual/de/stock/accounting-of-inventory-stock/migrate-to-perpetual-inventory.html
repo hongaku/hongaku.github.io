@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>Zur Ständigen Inventur wechseln</title>
+    <link type="text/css" rel="stylesheet" href="../../../../../assets/css/github-markdown.css">
+    <link type="text/css" rel="stylesheet" href="../../../../../assets/css/pilcrow.css">
+    <link type="text/css" rel="stylesheet" href="../../../../../assets/css/hljs-github.min.css"/>
+  </head>
+  <body>
+    <article class="markdown-body"><h1 id="zur-ständigen-inventur-wechseln"><a class="header-link" href="#zur-ständigen-inventur-wechseln"></a>Zur Ständigen Inventur wechseln</h1>
+<p><span class="text-muted contributed-by">Beigetragen von CWT Connector &amp; Wire Technology GmbH</span></p>
+<p>Bestehende Benutzer müssen sich an folgende Schritte halten um das neue System der Ständigen Inventur zu aktivieren. Da die Ständige Inventur immer auf einer Synchronisation zwischen Lager und Kontostand aufbaut, ist es nicht möglich diese Option in einer bestehenden Lagereinstellung zu übernehmen. Sie müssen einen komplett neuen Satz von Lagern erstellen, jedes davon verbunden mit dem betreffenden Konto.</p>
+<p>Schritte:</p>
+<ul class="list">
+<li><p>Heben Sie die Salden der Konten, die Sie zur Pflege des verfügbaren Lagerwertes verwenden, (Warenbestände/Anlagevermögen) durch eine Journalbuchung auf.</p>
+</li>
+<li><p>Da bereits angelegte Lager mit Lagertransaktionen verbunden sind, es aber keine verknüpften Buchungssätze gibt, können diese Lager nicht in einer ständigen Inventur genutzt werden. Sie müssen für zukünftige Lagertransaktionen neue Lager anlegen, die dann mit den zutreffenden Konten verknüpft sind. Wählen Sie bei der Erstellung neuer Lager eine Artikelgruppe unter der das Unterkonto für das Lager erstellt wird.</p>
+</li>
+<li><p>Erstellen Sie folgende Standardkonten für jede Firma: </p>
+<ul class="list">
+<li>Ware erhalten aber noch nicht abgerechnet</li>
+<li>Lagerabgleichskonto</li>
+<li>Aufwendungen in Bewertung enthalten</li>
+<li>Kostenstelle</li>
+</ul>
+</li>
+<li><p>Aktivieren Sie die Ständige Inventur</p>
+</li>
+</ul>
+<blockquote>
+<p>Einstellungen &gt; Rechnungswesen &gt; Konteneinstellungen &gt; Eine  Buchung für jede Lagerbewegung erstellen</p>
+</blockquote>
+<p class="img-container"><img src="/docs/assets/old_images/erpnext/accounting-for-stock-1.png" alt="Aktivierung"></p>
+<ul class="list">
+<li>Erstellen Sie Lagerbuchungen (Materialübertrag) um verfügbare Lagerbestände von einem existierenden Lager auf ein neues Lager zu übertragen. Sobald im neuen Lager der Lagerbestand verfügbar wird, sollten Sie für zukünftige Transaktionen nur noch das neue Lager verwenden.</li>
+</ul>
+<p>Das System wird für bereits existierende Lagertransaktionen keine Buchungssätze erstellen, wenn sie vor der Aktivierung der Ständigen Inventur übertragen wurden, da die alten Lager nicht mit Konten verknüpft werden. Wenn Sie eine neue Transaktion mit einem alten Lager erstellen oder eine existierende Transaktion ändern, gibt es keine korrespondierenden Buchungssätze. Sie müssen Lager und Kontostände manuell über das Journal synchronisieren.</p>
+<blockquote>
+<p>Anmerkung: Wenn Sie bereits das alte System der Ständigen Inventur nutzen, wird dieses automatisch deaktiviert. Sie müssen den Schritten oben folgen um es wieder zu aktivieren.</p>
+</blockquote>
+    </article>
+  </body>
+</html>

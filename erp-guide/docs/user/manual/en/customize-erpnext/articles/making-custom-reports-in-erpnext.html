@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>2. Query Report</title>
+    <link type="text/css" rel="stylesheet" href="../../../../../assets/css/github-markdown.css">
+    <link type="text/css" rel="stylesheet" href="../../../../../assets/css/pilcrow.css">
+    <link type="text/css" rel="stylesheet" href="../../../../../assets/css/hljs-github.min.css"/>
+  </head>
+  <body>
+    <article class="markdown-body"><p>#Reports in ERPNext</p>
+<p>There are three kind of reports in ERPNext.</p>
+<p>###1. Report Builder</p>
+<p>Report Builder is an in-built report customization tool in ERPNext. This allows you to define specific fields of the form which shall be added in the report. Also you can set required filters, sorting and give preferred name to report.</p>
+<div class="embed-container">
+    <iframe src="https://www.youtube.com/watch?v=TxJGUNarcQs?rel=0" frameborder="0" allowfullscreen>
+    </iframe>
+</div>
+
+<h3 id="2.-query-report"><a class="header-link" href="#2.-query-report"></a>2. Query Report</h3>
+<p>Query Report is written in SQL which pull values from account&#39;s database and fetch in the report. Though SQL queries can be written from front end, like HTML, its restricted in hosted users. Because it will allow users with no access to specific report to query data directly from the database.</p>
+<p>Check Purchase Order Item to be Received report in Stock module for example of Query report. Click <a href="https://frappe.io/docs/user/en/guides/reports-and-printing/how-to-make-query-report.html">here</a> to learn how to create Query Report.</p>
+<h3 id="3.-script-report"><a class="header-link" href="#3.-script-report"></a>3. Script Report</h3>
+<p>Script Reports are written in Python and stored on server side. These are complex reports which involves logic and calculation. Since these reports are written on server side, customizing it from hosted account is not possible. </p>
+<p>Check Financial Analytics report in Accounts module for example of Script Report. Click <a href="https://frappe.io/docs/user/en/guides/reports-and-printing/how-to-make-script-reports.html">here</a> to learn how to create Script Report.</p>
+<!-- markdown -->     </article>
+  </body>
+</html>

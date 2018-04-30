@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>Delivery Note Negative Stock Error</title>
+    <link type="text/css" rel="stylesheet" href="../../../../../assets/css/github-markdown.css">
+    <link type="text/css" rel="stylesheet" href="../../../../../assets/css/pilcrow.css">
+    <link type="text/css" rel="stylesheet" href="../../../../../assets/css/hljs-github.min.css"/>
+  </head>
+  <body>
+    <article class="markdown-body"><h1 id="delivery-note-negative-stock-error"><a class="header-link" href="#delivery-note-negative-stock-error"></a>Delivery Note Negative Stock Error</h1>
+<p><strong>Question</strong>: When submitting a Delivery Note, receiving a message says that item&#39;s stock is insufficient, but we have item&#39;s stock available in the Warehouse.</p>
+<p><strong>Answer</strong>: On submission of Delivery Note, stock level is checked as on Posting Date and Posting Time of a Delivery Note. It&#39;s possible that you have stock of an Item available in the Warehouse. But if you are creating back-dated Delivery Note, and if item was not available in the warehouse on the Posting Date and Posting Time of Delivery Note, you are likely to receive an error message on the negative stock. You can refer to the Stock Ledger report to confirm the same.</p>
+<p>If this is the case, you should edit the Posting Date and Time of a Delivery Note, and ensure that it is after the Posting Date and Time of item&#39;s receipt entry.</p>
+    </article>
+  </body>
+</html>

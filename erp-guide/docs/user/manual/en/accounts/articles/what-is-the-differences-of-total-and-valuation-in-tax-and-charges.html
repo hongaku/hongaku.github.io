@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title></title>
+    <link type="text/css" rel="stylesheet" href="../../../../../assets/css/github-markdown.css">
+    <link type="text/css" rel="stylesheet" href="../../../../../assets/css/pilcrow.css">
+    <link type="text/css" rel="stylesheet" href="../../../../../assets/css/hljs-github.min.css"/>
+  </head>
+  <body>
+    <article class="markdown-body"><p>#Purchase Tax or Charges Categories</p>
+<p>Consider Tax or Charge field in Purchase Taxes and Charges master has three values.</p>
+<ul class="list">
+<li>Total</li>
+<li>Valuation</li>
+<li>Total and Valuation</li>
+</ul>
+<p class="img-container"><img alt="Purchase Tax and Charges Categories" class="screenshot" src="{{docs_base_url}}/assets/img/articles/purchase-other-charges-1.png"></p>
+<p>Let&#39;s consider an example to understand an effect of each charge type. We purchase ten units of item, at the rate of 800. total purchase amount is 800. Purchased item has 4% VAT applied on it, and INR 100 was incurred in transportation.</p>
+<p>####Total:</p>
+<p>Tax or Charge categorized as <strong>Total</strong> will be included in the total of purchase transactions. But it will not have impact on the valuation of item purchased.</p>
+<p>If VAT 4% is applied on item, it will amount to INR 32 (at item&#39;s based rate is 800). Since VAT is the <a href="https://frappe.io/blog/erpnext-features/managing-consumption-tax">consumption tax</a>, its should be added value of Purchase Order/Invoice, since it will be included in payable towards supplier. But its should not be added to the value of Purchased item.</p>
+<p>When Purchase Invoice is submitted, general ledger posting will be done for tax/charge categorized as Total.</p>
+<p>####Valuation:</p>
+<p>Tax or charge categorized as <strong>Valuation</strong> will be added in the value of purchased item, but not in the total of that purchase transaction.</p>
+<p>Transportation charge of INR 100 should be categorized as valuation. With this, the value of purchased item will be increased from 800 to 900. Also, this charge will be not be added to the total of purchase transaction, because it your expense, and should not be reflected to the supplier.</p>
+<p>Check <a href="/docs/user/manual/en/stock/accounting-of-inventory-stock/perpetual-inventory.html">here</a> to learn general posting done for expense categorized as Valuation.</p>
+<p>####Total and Valuation:</p>
+<p>Tax or Charge categorized as for <strong>Total and Valuation</strong> will be added in the valuation of item, as well as in the totals of purchase transactions.</p>
+<p>Let&#39;s assume that transportion is arranged by our supplier, but we need to pay transportation charges to them. In that case, for transportation charges, category selected should be Total and Valuation. With this, INR 100 transportation charge will be added to the actual purchase amount 800. Also, INR 100 will reflect in the total, as it will be payable for us towards supplier.</p>
+    </article>
+  </body>
+</html>

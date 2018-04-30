@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>Werkzeug zum Datenimport</title>
+    <link type="text/css" rel="stylesheet" href="../../../../../assets/css/github-markdown.css">
+    <link type="text/css" rel="stylesheet" href="../../../../../assets/css/pilcrow.css">
+    <link type="text/css" rel="stylesheet" href="../../../../../assets/css/hljs-github.min.css"/>
+  </head>
+  <body>
+    <article class="markdown-body"><h1 id="werkzeug-zum-datenimport"><a class="header-link" href="#werkzeug-zum-datenimport"></a>Werkzeug zum Datenimport</h1>
+<p><span class="text-muted contributed-by">Beigetragen von CWT Connector &amp; Wire Technology GmbH</span></p>
+<p>Das Werkzeug zum Datenimport ist ein großartiger Weg um große Mengen an Daten, speziell Stammdaten, in das System hochzuladen oder zu bearbeiten.</p>
+<p>Um das Werkzeug zum Datenimport zu öffnen, gehen Sie entweder zu den Einstellungen oder zur Transaktion, für die Sie importieren wollen. Wenn der Datenimport erlaubt ist, sehen Sie eine Importschaltfläche:</p>
+<p class="img-container"><img alt="Importvorgang starten" class="screenshot" src="{{docs_base_url}}/assets/img/setup/data-import/data-import-1.png"></p>
+<p>Das Werkzeug hat zwei Abschnitte, einen um eine Vorlage herunter zu laden, und einen zweiten um Daten hoch zu laden.</p>
+<p>(Anmerkung: Für den Import sind nur die DocTypes zugelassen, deren Dokumenttyp &quot;Stammdaten&quot; ist, oder bei denen die Einstellung &quot;Import erlauben&quot; aktiviert ist.)</p>
+<h3 id="1.-herunterladen-der-vorlage"><a class="header-link" href="#1.-herunterladen-der-vorlage"></a>1. Herunterladen der Vorlage</h3>
+<p>Daten werden in ERPNext in Tabellen gespeichert, sehr ähnlich einer Tabellenkalkulation mit Spalten und Zeilen voller Daten. Jede Instanz in ERPNext kann mehrere verschiedene mit Ihr verbundene Untertabellen haben. Die Untertabellen sind mit Ihren übergeordneten Tabellen verknüpft und werden dort eingesetzt, wo es für eine Eigenschaft mehrere verschiedene Werte gibt. So kann z. B. ein Artikel mehrere verschiedene Preise haben, eine Rechnung hat mehrere verschiedene Artikel usw.</p>
+<p class="img-container"><img alt="Vorlage herunterladen" class="screenshot" src="{{docs_base_url}}/assets/img/setup/data-import/data-import-2.png"></p>
+<ul class="list">
+<li>Klicken Sie auf die Tabelle, die Sie herunter laden wollen, oder auf &quot;Alle Tabellen&quot;.</li>
+<li>Für Massenbearbeitung klicken Sie auf &quot;Mit Daten herunterladen&quot;.</li>
+</ul>
+<h3 id="2.-füllen-sie-die-vorlage-aus"><a class="header-link" href="#2.-füllen-sie-die-vorlage-aus"></a>2. Füllen Sie die Vorlage aus</h3>
+<p>Öffnen Sie die Vorlage nach dem Herunterladen in einer Tabellenkalkulationsanwendung und fügen Sie die Daten unterhalb der Spaltenköpfe ein.</p>
+<p class="img-container"><img src="/docs/assets/old_images/erpnext/import-3.png" alt="Tabellenblatt"></p>
+<p>Exportieren Sie dann Ihre Vorlage oder speichern Sie sie im CSV-Format (<strong>Comma Separated Values</strong>).</p>
+<p class="img-container"><img src="/docs/assets/old_images/erpnext/import-4.png" alt="Tabellenblatt"></p>
+<h3 id="3.-hochladen-der-csv-datei"><a class="header-link" href="#3.-hochladen-der-csv-datei"></a>3. Hochladen der CSV-Datei</h3>
+<p>Fügen Sie abschliessend die CSV-Datei im Abschnitt Import hinzu. Klicken Sie auf die Schaltfläche &quot;Hochladen und Importieren&quot;.</p>
+<p class="img-container"><img alt="Upload" class="screenshot" src="{{docs_base_url}}/assets/img/setup/data-import/data-import-3.png"></p>
+<h4 id="anmerkungen"><a class="header-link" href="#anmerkungen"></a>Anmerkungen</h4>
+<ol class="list">
+<li>Stellen Sie sicher, dass Sie als Verschlüsselung UTF-8 verwenden, wenn Ihre Anwendung das zulässt.</li>
+<li>Lassen Sie die Spalte ID für einen neuen Datensatz leer.</li>
+</ol>
+<h3 id="4.-hochladen-aller-tabellen-(übergeordnete-und-untertabellen)"><a class="header-link" href="#4.-hochladen-aller-tabellen-(übergeordnete-und-untertabellen)"></a>4. Hochladen aller Tabellen (übergeordnete und Untertabellen)</h3>
+<p>Wenn Sie alle Tabellen auswählen, dann erhalten Sie Spalten für alle Tabellen in einer Zeile gertrennt durch ~ Spalten.</p>
+<p>Wenn Sie mehrere verschiedene Unterzeilen haben, dann müssen Sie einen neuen Hauptartikel in einer neuen Zeile eintragen. Sehen Sie hierzu das Beispiel unten:</p>
+<pre class="hljs"><code>Main Table                          ~   Child Table
+Spalte <span class="hljs-number">1</span>    Spalte <span class="hljs-number">2</span>    Spalte <span class="hljs-number">3</span>    ~   Spalte <span class="hljs-number">1</span>    Spalte <span class="hljs-number">2</span>    Spalte <span class="hljs-number">3</span>
+v<span class="hljs-number">11</span>         v<span class="hljs-number">12</span>         v<span class="hljs-number">13</span>             <span class="hljs-keyword">c</span><span class="hljs-number">11</span>         <span class="hljs-keyword">c</span><span class="hljs-number">12</span>         <span class="hljs-keyword">c</span><span class="hljs-number">13</span>
+                                        <span class="hljs-keyword">c</span><span class="hljs-number">14</span>         <span class="hljs-keyword">c</span><span class="hljs-number">15</span>         <span class="hljs-keyword">c</span><span class="hljs-number">17</span>
+v<span class="hljs-number">21</span>         v<span class="hljs-number">22</span>         v<span class="hljs-number">23</span>             <span class="hljs-keyword">c</span><span class="hljs-number">21</span>         <span class="hljs-keyword">c</span><span class="hljs-number">22</span>         <span class="hljs-keyword">c</span><span class="hljs-number">23</span></code></pre><p>Um zu sehen, wie das gemacht wird, geben Sie manuell über Formulare einige Datensätze ein und exportieren Sie &quot;Alle Tabellen&quot; über &quot;Mit Daten herunterladen&quot;.</p>
+<h3 id="5.-überschreiben"><a class="header-link" href="#5.-überschreiben"></a>5. Überschreiben</h3>
+<p>ERPNext ermöglicht es Ihnen auch alle oder bestimmte Spalten zu überschreiben. Wenn Sie bestimmte Spalten aktualisieren möchten, können Sie die Vorlage mit Daten herunter laden. Vergessen Sie nicht die Box &quot;Überschreiben&quot; zu markieren, bevor sie hochladen.</p>
+<p>Anmerkung: Wenn Sie &quot;Überschreiben&quot; auswählen, werden alle Unterdatensätze eines übergeordneten Elements gelöscht.</p>
+<h3 id="6.-einschränkungen-beim-hochladen"><a class="header-link" href="#6.-einschränkungen-beim-hochladen"></a>6. Einschränkungen beim Hochladen</h3>
+<p>ERPNext begrenzt die Menge an Daten, die Sie in einer Datei hochladen können. Die Menge kann sich je nach Datentyp unterscheiden. Normalerweise kann man problemlos ungefähr 1.000 Zeilen einer Tabelle in einem Vorgang hochladen. Wenn das System den Vorgang nicht akzeptiert, sehen Sie eine Fehlermeldung.</p>
+<p>Warum das alles? Wenn Sie zuviele Daten hochladen, kann das System abstürzen, im Besonderen dann, wenn andere Benutzer parallel arbeiten. Daher begrenzt ERPNext die Anzahl von Schreibvorgängen, die Sie mit einer Eingabe verarbeiten können.</p>
+<hr>
+<h4 id="wie-fügen-sie-dateien-an?"><a class="header-link" href="#wie-fügen-sie-dateien-an?"></a>Wie fügen Sie Dateien an?</h4>
+<p>Wenn Sie ein Formular öffnen, dann sehen Sie in der Seitenleiste rechts einen Abschnitt zum Anfügen von Dateien. Klicken Sie auf &quot;Hinzufügen&quot; und wählen Sie die Datei aus, die Sie anfügen möchten. Klicken Sie auf &quot;Hochladen&quot; und die Sache ist erledigt.</p>
+<h3 id="was-ist-eine-csv-datei?"><a class="header-link" href="#was-ist-eine-csv-datei?"></a>Was ist eine CSV-Datei?</h3>
+<p>Eine CSV (Durch Kommas getrennte Werte)-Datei ist ein Datensatz, den Sie in ERPNext hochladen können um verschiedene Daten zu aktualisieren. Jedes gebräuchliche Tabellenkalkulationsprogramm wie MS-Excel oder OpenOffice Spreadsheet kann im CSV-Format abspeichern.
+Wenn Sie Microsoft Excel benutzen und nicht-englische Zeichen verwenden, dann sollten Sie Ihre Datei UTF-8-kodiert abspeichern. Bei älteren Versionen von Excel gibt es keinen eindeutigen Weg als UTF-8 zu speichern. Deshalb können Sie die Datei auch ganz einfach als CSV abspeichern, dann mit Notepad öffnen und als UTF-8 abspeichern. (Microsoft Excel kann das leider nicht.)</p>
+<p>{next}</p>
+    </article>
+  </body>
+</html>

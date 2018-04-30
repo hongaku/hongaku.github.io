@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>Item Variants</title>
+    <link type="text/css" rel="stylesheet" href="../../../../../assets/css/github-markdown.css">
+    <link type="text/css" rel="stylesheet" href="../../../../../assets/css/pilcrow.css">
+    <link type="text/css" rel="stylesheet" href="../../../../../assets/css/hljs-github.min.css"/>
+  </head>
+  <body>
+    <article class="markdown-body"><h1 id="item-variants"><a class="header-link" href="#item-variants"></a>Item Variants</h1>
+<h3 id="what-are-variants?"><a class="header-link" href="#what-are-variants?"></a>What are Variants?</h3>
+<p>A Item Variant is a version of a Item, such as differing sizes or differing colours (like a <em>blue</em> t-shirt in size <em>small</em> rather then just a t-shirt).
+Without Item variants, you would have to treat the <em>small, medium</em> and <em>large</em> versions of a t-shirt as three separate Items;
+Item variants let you treat the <em>small, medium</em> and <em>large</em> versions of a t-shirt as variations of the one Item &#39;t-shirt&#39;.</p>
+<h3 id="using-variants"><a class="header-link" href="#using-variants"></a>Using Variants</h3>
+<p>Variants can be based on two things</p>
+<ol class="list">
+<li>Item Attributes</li>
+<li>Manufacturers</li>
+</ol>
+<h3 id="variants-based-on-item-attributes"><a class="header-link" href="#variants-based-on-item-attributes"></a>Variants Based on Item Attributes</h3>
+<p>To use Item Variants in ERPNext, create an Item and check &#39;Has Variants&#39;.</p>
+<ul class="list">
+<li>The Item shall then be referred to as a so called &#39;Template&#39;. Such a Template is not identical to a regular &#39;Item&#39; any longer. For example it (the Template) can not be used directly in any Transactions (Sales Order, Delivery Note, Purchase Invoice) itself. Only the Variants of an Item (<em>blue</em> t-shirt in size <em>small)</em> can be practically used in such. Therefore it would be ideal to decide whether an item &#39;Has Variants&#39; or not directly when creating it.</li>
+</ul>
+<p class="img-container"><img class="screenshot" alt="Has Variants" src="{{docs_base_url}}/assets/img/stock/item-has-variants.png"></p>
+<p>On selecting &#39;Has Variants&#39; a table shall appear. Specify the variant attributes for the Item in the table.
+In case the attribute has Numeric Values, you can specify the range and increment values here.</p>
+<p class="img-container"><img class="screenshot" alt="Valid Attributes" src="{{docs_base_url}}/assets/img/stock/item-attributes.png"></p>
+<blockquote>
+<p>Note: You cannot make Transactions against a &#39;Template&#39;</p>
+</blockquote>
+<p>To create &#39;Item Variants&#39; against a &#39;Template&#39; select &#39;Make Variants&#39;</p>
+<p class="img-container"><img class="screenshot" alt="Make Variants" src="{{docs_base_url}}/assets/img/stock/make-variant.png"></p>
+<p class="img-container"><img class="screenshot" alt="Make Variants" src="{{docs_base_url}}/assets/img/stock/make-variant-1.png"></p>
+<p>To learn more about setting Attributes Master check <a href="/docs/user/manual/en/stock/setup/item-attribute.html">Item Attributes</a></p>
+<h3 id="variants-based-on-manufacturers"><a class="header-link" href="#variants-based-on-manufacturers"></a>Variants Based on Manufacturers</h3>
+<p>To setup variants based on Manufactueres, in your Item template, set &quot;Variants Based On&quot; as &quot;Manufacturers&quot;</p>
+<p class="img-container"><img class='screenshot' alt='Setup Item Variant by Manufacturer'
+    src='{{docs_base_url}}/assets/img/stock/select-mfg-for-variant.png'></p>
+<p>When you make a new Variant, the system will prompt you to select a Manufacturer. You can also optionally put in a Manufacturer Part Number</p>
+<p class="img-container"><img class='screenshot' alt='Setup Item Variant by Manufacturer'
+    src='{{docs_base_url}}/assets/img/stock/set-variant-by-mfg.png'></p>
+<p>The naming of the variant will be the name (ID) of the template Item with a number suffix. e.g. &quot;ITEM000&quot; will have variant &quot;ITEM000-1&quot;</p>
+<h3 id="update-variants-based-on-template"><a class="header-link" href="#update-variants-based-on-template"></a>Update Variants Based on Template</h3>
+<p>To update the value in the variants items from the template item, select the respective fields first in the Item Variant Settings page. After that system will update the value of that fields in the variants if that values has been changed in the template item.</p>
+<p>To set the fields Goto Stock &gt; Item Variant Settings
+<img class='screenshot' alt='Item Variant Settings'
+    src='{{docs_base_url}}/assets/img/stock/item_variants_settings.png'></p>
+<div class - "embed-container">
+    <iframe src="https://www.youtube.com/embed/kogIricF40I?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+    </iframe>
+</div>
+
+<p><div class="embed-container">
+    <iframe src="https://www.youtube.com/embed/SngZtDIMdiQ?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+    </iframe></p>
+<div>
+
+<p>{next}</p>
+    </article>
+  </body>
+</html>

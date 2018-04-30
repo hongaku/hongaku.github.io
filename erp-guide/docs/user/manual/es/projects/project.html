@@ -1,0 +1,97 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>Proyecto</title>
+    <link type="text/css" rel="stylesheet" href="../../../../assets/css/github-markdown.css">
+    <link type="text/css" rel="stylesheet" href="../../../../assets/css/pilcrow.css">
+    <link type="text/css" rel="stylesheet" href="../../../../assets/css/hljs-github.min.css"/>
+  </head>
+  <body>
+    <article class="markdown-body"><h1 id="proyecto"><a class="header-link" href="#proyecto"></a>Proyecto</h1>
+<p>El manejo de proyectos en ERPNext se hace a traves de tareas. Puedes crear un proyecto y asignar varias tareas al mismo.</p>
+<p class="img-container"><img class="screenshot" alt="Project" src="{{docs_base_url}}/assets/img/project/project.png"></p>
+<p>También puedes hacer el seguimiento del % completado del proyecto usando diferentes métodos.</p>
+<ol class="list">
+<li>Tareas Completadas</li>
+<li>Progreso de tareas</li>
+<li>Peso de tarea</li>
+</ol>
+<p class="img-container"><img class="screenshot" alt="Project" src="{{docs_base_url}}/assets/img/project/project-percent-complete.png"></p>
+<p>Algunos ejemplos de como el % completado es cálculado basado en tareas.</p>
+<p class="img-container"><img class="screenshot" alt="Project" src="{{docs_base_url}}/assets/img/project/percent-complete-calc.png"></p>
+<p class="img-container"><img class="screenshot" alt="Project" src="{{docs_base_url}}/assets/img/project/percent-complete-formula.png"></p>
+<h3 id="manejando-tareas"><a class="header-link" href="#manejando-tareas"></a>Manejando tareas</h3>
+<p>Los proyecto pueden ser divididos en multiples tareas.
+Las tareas pueden ser creadas a traves del documento de Proyecto o pueden ser creadas via <a href="/docs/user/manual/en/projects/tasks.html">Tarea</a></p>
+<p class="img-container"><img class="screenshot" alt="Project" src="{{docs_base_url}}/assets/img/project/project_task.png"></p>
+<ul class="list">
+<li>Para ver las tareas creadas a un proyecto click en &#39;Tasks&#39;</li>
+</ul>
+<p class="img-container"><img class="screenshot" alt="Project - View Task" src="{{docs_base_url}}/assets/img/project/project_view_task.png"></p>
+<p class="img-container"><img class="screenshot" alt="Project - Task List" src="{{docs_base_url}}/assets/img/project/project_task_list.png"></p>
+<ul class="list">
+<li>También puedes ver las tareas desde la misma vista del proyecto.</li>
+</ul>
+<p class="img-container"><img class="screenshot" alt="Project - Task Grid" src="{{docs_base_url}}/assets/img/project/project_task_grid.png"></p>
+<ul class="list">
+<li>Para agregar peso a las tareas puedes seguir los pasos siguientes</li>
+</ul>
+<p><img class="screenshot" alt="Project - Task Grid" src="{{docs_base_url}}/assets/img/project/tasks.png">
+<img class="screenshot" alt="Project - Task Grid" src="{{docs_base_url}}/assets/img/project/task-weights.png"></p>
+<h3 id="manejando-tiempo"><a class="header-link" href="#manejando-tiempo"></a>Manejando tiempo</h3>
+<p>ERPNext usa <a href="/docs/user/manual/en/projects/time-log.html">Time Log</a> para hacer el seguimiento del progreso de un Proyecto.
+Puedes crear registros de tiempo sobre cada Tarea.
+El tiempo actual de inicio y finalización junto con el costo deben ser actualizados basados en los Registros de Tiempo.</p>
+<ul class="list">
+<li>Para ver los Registros de Tiempo realizados a un proyecto, dar click en &#39;Time Logs&#39;</li>
+</ul>
+<p class="img-container"><img class="screenshot" alt="Project - View Time Log" src="{{docs_base_url}}/assets/img/project/project_view_time_log.png"></p>
+<p class="img-container"><img class="screenshot" alt="Project - Time Log List" src="{{docs_base_url}}/assets/img/project/project_time_log_list.png"></p>
+<ul class="list">
+<li>Puedes agregar un registro de tiempo directamente y luego asociarlo con el proyecto.</li>
+</ul>
+<p class="img-container"><img class="screenshot" alt="Project - Link Time Log" src="{{docs_base_url}}/assets/img/project/project_time_log_link.png"></p>
+<h3 id="gestión-de-gastos"><a class="header-link" href="#gestión-de-gastos"></a>Gestión de gastos</h3>
+<p>Puede reservar la <a href="/docs/user/manual/en/human-resources/expense-claim.html">Reclamación de gastos</a> contra una tarea de proyecto.
+El sistema actualizará el monto total de las reclamaciones de gastos en la sección de costos del proyecto.</p>
+<ul class="list">
+<li>Para ver las reclamaciones de gastos realizadas en un proyecto, haga clic en &#39;Reclamaciones de gastos&#39;</li>
+</ul>
+<p class="img-container"><img class="screenshot" alt="Project - View Expense Claim" src="{{docs_base_url}}/assets/img/project/project_view_expense_claim.png"></p>
+<ul class="list">
+<li>También puede crear un Reclamo de gastos directamente y vincularlo al Proyecto.</li>
+</ul>
+<p class="img-container"><img class="screenshot" alt="Project - Link Expense Claim" src="{{docs_base_url}}/assets/img/project/project_expense_claim_link.png"></p>
+<ul class="list">
+<li>El monto total de los Reclamos de gastos reservados contra un proyecto se muestra en &#39;Reclamo de gastos totales&#39; en la Sección de Costos del proyecto</li>
+</ul>
+<p class="img-container"><img class="screenshot" alt="Project - Total Expense Claim" src="{{docs_base_url}}/assets/img/project/project_total_expense_claim.png"></p>
+<h3 id="centro-de-costo"><a class="header-link" href="#centro-de-costo"></a>Centro de Costo</h3>
+<p>Puedes crear un <a href="/docs/user/manual/en/accounts/setup/cost-center.html">Cost Center</a> sobre un proyecto o usar un centro de costo existente para hacer el seguimiento de todos los gastos realizados al proyecto.</p>
+<p class="img-container"><img class="screenshot" alt="Project - Cost Center" src="{{docs_base_url}}/assets/img/project/project_cost_center.png"></p>
+<p>###Costeo del proyecto</p>
+<p>La sección Costeo del proyecto le ayuda a rastrear el tiempo y los gastos incurridos en relación con el proyecto.</p>
+<p class="img-container"><img class="screenshot" alt="Project - Costing" src="{{docs_base_url}}/assets/img/project/project_costing.png"></p>
+<ul class="list">
+<li><p>La sección de cálculo de costos se actualiza según los registros de tiempo realizados.</p>
+</li>
+<li><p>El margen bruto es la diferencia entre el monto total de costos y el monto total de facturación</p>
+</li>
+</ul>
+<p>###Facturación</p>
+<p>Puedes crear/enlazar una <a href="/docs/user/manual/en/selling/sales-order.html">Sales Order</a> a un proyecto. Una vez asociada puedes usar el módulo de ventas para facturar a un cliente sobre el proyecto.</p>
+<p class="img-container"><img class="screenshot" alt="Project - Sales Order" src="{{docs_base_url}}/assets/img/project/project_sales_order.png"></p>
+<p>###Gantt Chart</p>
+<p>Un Gantt Chart muestra la planificación del proyecto.
+ERPNext te provee con una vista para visualizar las tareas de forma calendarizada usando un Gantt Chart (Hoja de Gantt).</p>
+<ul class="list">
+<li>Para visualizar el gantt chart de un proyecto, ve hasta el proyecto y dar click en &#39;Gantt Chart&#39;</li>
+</ul>
+<p class="img-container"><img class="screenshot" alt="Project - View Gantt Chart" src="{{docs_base_url}}/assets/img/project/project_view_gantt_chart.png"></p>
+<p class="img-container"><img class="screenshot" alt="Project - Gantt Chart" src="{{docs_base_url}}/assets/img/project/project_gantt_chart.png"></p>
+<p>{next}</p>
+    </article>
+  </body>
+</html>

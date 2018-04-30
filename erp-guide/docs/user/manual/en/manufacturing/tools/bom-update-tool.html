@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>BOM Update Tool</title>
+    <link type="text/css" rel="stylesheet" href="../../../../../assets/css/github-markdown.css">
+    <link type="text/css" rel="stylesheet" href="../../../../../assets/css/pilcrow.css">
+    <link type="text/css" rel="stylesheet" href="../../../../../assets/css/hljs-github.min.css"/>
+  </head>
+  <body>
+    <article class="markdown-body"><h1 id="bom-update-tool"><a class="header-link" href="#bom-update-tool"></a>BOM Update Tool</h1>
+<p>From BOM Update Tool, you can replace a sub-assembly BOM and update costs of all BOMs.</p>
+<h3 id="replace-bom"><a class="header-link" href="#replace-bom"></a>Replace BOM</h3>
+<p>Using this utility, you can replace an existing BOM of sub-assembly item, with a new one. The system will update the new BOM in all the parent BOMs where it was used.</p>
+<p>To use the BOM Update Tool, go to:</p>
+<blockquote>
+<p>Manufacturing &gt; Tools &gt; BOM Update Tool</p>
+</blockquote>
+<p>Let&#39;s consider a scenario to understand this better.</p>
+<p>Suppose a company manufactures computers, Bill of Material of of the computer will look like this:</p>
+<ol class="list">
+<li>Monitor</li>
+<li>Key Board</li>
+<li>Mouse</li>
+<li>CPU</li>
+</ol>
+<p>Out of all the items above, CPU is asembled separately. Hence separate BOM will be created for the CPU. Following are the items from the BOM of CPU.</p>
+<ol class="list">
+<li>250 GB Hard Disk</li>
+<li>Mother Board</li>
+<li>Processor</li>
+<li>SMTP</li>
+<li>DVD player</li>
+</ol>
+<p>If we have more items to be added , or existing items to be edited in the BOM of CPU, then we should create new BOM for it.</p>
+<ol class="list">
+<li><em>350 GB Hard Disk</em></li>
+<li>Mother Board</li>
+<li>Processor</li>
+<li>SMTP</li>
+<li>DVD player</li>
+</ol>
+<p>To update new BOM in all the parent BOMs, where CPU is selected as raw-material, you can use Replace utility.</p>
+<p class="img-container"><img class="screenshot" alt="BOM Update Tool" src="{{docs_base_url}}/assets/img/manufacturing/bom-update-tool.png"></p>
+<p>In this tool, you should select Current BOM, and New BOM. On clicking Replace button, current BOM of CPU will be replaced with New BOM in the BOM of finished Item (Computer).</p>
+<p><strong>Will BOM Replace Tool work for replacing finsihed item in BOM?</strong></p>
+<p>No. You should Cancel and Amend current BOM, or create a new BOM for finished item.</p>
+<h3 id="update-bom-cost"><a class="header-link" href="#update-bom-cost"></a>Update BOM Cost</h3>
+<p>Using the button <strong>Update latest price in all BOMs</strong>, you can update cost of all Bill of Materials, based on latest purchase price / price list rate / valuation rate of raw materials.</p>
+<p>On clicking of this buttom, system will create a background process to update all the BOM&#39;s cost. It is processed via background jobs because this process can take a few minutes (depending on the number of BOMs) to update all the BOMs.</p>
+<p>This functionality can also be executed automatically on daily basis. For that, you need to enable &quot;Update BOM Cost Automatically&quot; from Manufacturing Settings.</p>
+<p>{next}</p>
+    </article>
+  </body>
+</html>

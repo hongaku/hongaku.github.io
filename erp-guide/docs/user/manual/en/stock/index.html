@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>Stock</title>
+    <link type="text/css" rel="stylesheet" href="../../../../assets/css/github-markdown.css">
+    <link type="text/css" rel="stylesheet" href="../../../../assets/css/pilcrow.css">
+    <link type="text/css" rel="stylesheet" href="../../../../assets/css/hljs-github.min.css"/>
+  </head>
+  <body>
+    <article class="markdown-body"><h1 id="stock"><a class="header-link" href="#stock"></a>Stock</h1>
+<p>For most small business that deal in physical goods, a large part of their net
+worth is invested in the stock in hand.</p>
+<h3 id="material-flow"><a class="header-link" href="#material-flow"></a>Material Flow</h3>
+<p>There are three main types of entries:</p>
+<ul class="list">
+<li>Purchase Receipt: Items received from Suppliers against Purchase Orders.</li>
+<li>Stock Entry: Items transferred from one Warehouse to another.</li>
+<li>Delivery Note: Items shipped to Customers.</li>
+</ul>
+<h4 id="how-does-erpnext-track-stock-movement-/-levels?"><a class="header-link" href="#how-does-erpnext-track-stock-movement-/-levels?"></a>How does ERPNext track stock movement / levels?</h4>
+<p>Tracking stock is not just about adding and subtracting quantities. Some
+complications arise when:</p>
+<ul class="list">
+<li>Back-dated (past) entries are made / edited: This affects future stock levels and may lead to negative stock.</li>
+<li>Stock has to be valued based on First-in-First-out: ERPNext needs to maintain a sequence of all transactions to know the exact value of your Items.</li>
+<li>Stock reports are required at any point in time in the past: You have to lookup what was the quantity / value your stock of Item X on date Y.</li>
+</ul>
+<p>To manage this, ERPNext collects all inventory transactions in a table called
+the Stock Ledger Entry. All Purchase Receipts, Stock Entries and Delivery
+Notes update this table.</p>
+<h3 id="topics"><a class="header-link" href="#topics"></a>Topics</h3>
+<p>{index}</p>
+    </article>
+  </body>
+</html>

@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>WooCommerce Integration</title>
+    <link type="text/css" rel="stylesheet" href="../../../../assets/css/github-markdown.css">
+    <link type="text/css" rel="stylesheet" href="../../../../assets/css/pilcrow.css">
+    <link type="text/css" rel="stylesheet" href="../../../../assets/css/hljs-github.min.css"/>
+  </head>
+  <body>
+    <article class="markdown-body"><h1 id="woocommerce-integration"><a class="header-link" href="#woocommerce-integration"></a>WooCommerce Integration</h1>
+<h4 id="setting-up-woocommerce-on-erpnext:-"><a class="header-link" href="#setting-up-woocommerce-on-erpnext:-"></a>Setting Up WooCommerce on ERPNEXT:-</h4>
+<p>Steps:- </p>
+<ol class="list">
+<li><p>From Awesome-bar, go to &quot;Woocommerce Settings&quot; doctype.</p>
+</li>
+<li><p>From your woocommerce site, generate &quot;API consumer key&quot; and  &quot;API consumer secret&quot; using Keys/Apps tab.</p>
+</li>
+<li><p>Paste those generated &quot;API consumer key&quot; and  &quot;API consumer secret&quot; into &quot;Woocommerce Settings&quot; doctype.</p>
+</li>
+<li><p>In &quot;Woocommerce Server URL&quot; paste the url of your site where ERPNEXT is installed.</p>
+</li>
+<li><p>Make sure &quot;Enable Sync&quot; is checked.</p>
+</li>
+<li><p>Select Account type from Account Details Section.</p>
+</li>
+<li><p>Click Save.</p>
+</li>
+<li><p>After saving, &quot;Secret&quot; and &quot;Endpoint&quot; are generated automatically and can be seen on &quot;Woocommerce Settings&quot; doctype.</p>
+</li>
+<li><p>Now from your woocommerce site, click on webhooks option and click on &quot;Add Webhook&quot;.</p>
+</li>
+<li><p>Give name to the webhook of your choice. Click on Status dropdown and select &quot;Active&quot;. Select Topic as &quot;Order Created&quot;. Copy the &quot;Endpoint&quot; from &quot;Woocommerce Settings&quot; doctype and paste it in &quot;Delivery URL&quot; field. Copy &quot;Secret&quot; from &quot;Woocommerce Settings&quot; doctype and paste it in &quot;Secret&quot; field. Keep API VERSION as it is and click on Save Webhook.</p>
+</li>
+<li><p>Now the WooCommerce is successful setup on your system.</p>
+</li>
+</ol>
+<p class="img-container"><img class="screenshot" alt="Woocommerce Integration" src="{{docs_base_url}}/assets/img/erpnext_integrations/woocommerce_setting_config.gif"></p>
+<h3 id="note:--in-above-gif,-inplace-of-delivery-url-on-woocommerce-website,-you-need-to-paste-the-url-you-will-obtain-after-saving-the-"woocommerce-settings"-page-(i.e.-endpoint-from-"woocommerce-settings").-i-pasted-other-url-because-i-was-using-localhost.-please-paste-your-endpoint-in-place-of-delivery-url."><a class="header-link" href="#note:--in-above-gif,-inplace-of-delivery-url-on-woocommerce-website,-you-need-to-paste-the-url-you-will-obtain-after-saving-the-"woocommerce-settings"-page-(i.e.-endpoint-from-"woocommerce-settings").-i-pasted-other-url-because-i-was-using-localhost.-please-paste-your-endpoint-in-place-of-delivery-url."></a>Note:-  In above gif, inplace of delivery url on woocommerce website, you need to paste the url you will obtain after saving the &quot;Woocommerce Settings&quot; page (i.e. Endpoint from &quot;Woocommerce Settings&quot;). I pasted other url because I was using localhost. Please paste your endpoint in place of Delivery URL.</h3>
+<h4 id="woocommerce-integration-working:-"><a class="header-link" href="#woocommerce-integration-working:-"></a>WooCommerce Integration Working:-</h4>
+<p>Steps:- </p>
+<ol class="list">
+<li><p>From your Woocommerce website, register yourself as a user.</p>
+</li>
+<li><p>Now Click on Address Details and provide the required details.</p>
+</li>
+<li><p>For start shopping, click on Shop option and now available products can be seen.</p>
+</li>
+<li><p>Add the desired products into cart and click on View Cart.</p>
+</li>
+<li><p>From Cart, once you have added the desired products, you can click on proceed to checkout.</p>
+</li>
+<li><p>All billing details and Order details can be seen now. Once you are ok with it, click on Place Order button.</p>
+</li>
+<li><p>&quot;Order Received&quot; message can been seen indicating that the order is placed successfully.</p>
+</li>
+<li><p>Now on system where ERPNEXT is installed check the following doctypes: Customer, Address, Item, Sales Order.</p>
+</li>
+</ol>
+<p class="img-container"><img class="screenshot" alt="Woocommerce Integration" src="{{docs_base_url}}/assets/img/erpnext_integrations/woocommerce_demo.gif"></p>
+    </article>
+  </body>
+</html>

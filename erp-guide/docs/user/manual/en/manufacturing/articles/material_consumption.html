@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>Validations</title>
+    <link type="text/css" rel="stylesheet" href="../../../../../assets/css/github-markdown.css">
+    <link type="text/css" rel="stylesheet" href="../../../../../assets/css/pilcrow.css">
+    <link type="text/css" rel="stylesheet" href="../../../../../assets/css/hljs-github.min.css"/>
+  </head>
+  <body>
+    <article class="markdown-body"><p>#Material consumption</p>
+<p>Material Consumption functionality allows you to have multiple consumption <code>Stock Entry</code> against a Work Order. To enable this, go to Manufacturing &gt; Manufacturing Settings.</p>
+<p class="img-container"><img class="screenshot" alt="Item Alternative" src="{{docs_base_url}}/assets/img/manufacturing/allow-material-consumption.png"></p>
+<p>Once enabled, a <code>Material Consumption</code> button will be available in Work Order once started.</p>
+<p class="img-container"><img class="screenshot" alt="Item Alternative" src="{{docs_base_url}}/assets/img/manufacturing/material-consumption-button.png"></p>
+<p>When button is clicked, it will do the following:</p>
+<ol class="list">
+<li>It will create Stock Entry with purpose <code>Material Consumption for Manufacture</code>.</li>
+</ol>
+<p class="img-container"><img class="screenshot" alt="Item Alternative" src="{{docs_base_url}}/assets/img/manufacturing/material-consumption-for-manufacture.png"></p>
+<ol start="2">
+<li>If the &quot;Backflush Raw Materials Based On&quot; in the Manufacturing Settings is set to <code>BOM</code>, if will propose to consume all required qty for manufacture.</li>
+<li>If the &quot;Backflush Raw Materials Based On&quot; in the Manufacturing Settings is set to <code>Material Transferred for Manufacture</code>, if will propose to consume all transferred qty for manufacture.</li>
+<li>Once submitted, it will update <code>Consumed Qty</code> column in the Work Order.</li>
+</ol>
+<p class="img-container"><img class="screenshot" alt="Item Alternative" src="{{docs_base_url}}/assets/img/manufacturing/consumed-qty.png"></p>
+<ol start="5">
+<li>In succeeding Material Consumption, it will suggest unconsumed qty.</li>
+<li>Once &quot;Finish&quot; button is clicked in Work Order, it will take into account consumed qty.</li>
+</ol>
+<h3 id="validations"><a class="header-link" href="#validations"></a>Validations</h3>
+<ul class="list">
+<li>If &quot;Allow Multiple Material Consumption&quot; is not set in Manufacturing Settings but &quot;Material Consumption for Manufacture&quot; is use in Stock Entry.</li>
+</ul>
+<p class="img-container"><img class="screenshot" alt="Item Alternative" src="{{docs_base_url}}/assets/img/manufacturing/material-consumption-stock-entry.gif"></p>
+<ul class="list">
+<li>Cannot cancel &quot;Material Consumption for Manufacture&quot; for completed Work Order.</li>
+</ul>
+<p class="img-container"><img class="screenshot" alt="Item Alternative" src="{{docs_base_url}}/assets/img/manufacturing/cancel-material-consumption-stock-entry.gif"></p>
+    </article>
+  </body>
+</html>

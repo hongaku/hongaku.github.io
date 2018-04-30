@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>Artikelbezogene Steuer</title>
+    <link type="text/css" rel="stylesheet" href="../../../../assets/css/github-markdown.css">
+    <link type="text/css" rel="stylesheet" href="../../../../assets/css/pilcrow.css">
+    <link type="text/css" rel="stylesheet" href="../../../../assets/css/hljs-github.min.css"/>
+  </head>
+  <body>
+    <article class="markdown-body"><h1 id="artikelbezogene-steuer"><a class="header-link" href="#artikelbezogene-steuer"></a>Artikelbezogene Steuer</h1>
+<p><span class="text-muted contributed-by">Beigetragen von CWT Connector &amp; Wire Technology GmbH</span></p>
+<p>Wenn Sie über die Einstellung &quot;Steuern und andere Abgaben&quot; Steuern auswählen, werden diese in Transaktionen auf alle Artikel angewendet. Wenn jedoch unterschiedliche Steuern auf bestimmte Artikel in Transaktionen angewendet werden sollen, sollten Sie die Stammdaten für Ihre Artikel und Steuern wie folgt einstellen.</p>
+<h4 id="schritt-1:-geben-sie-im-artikelstamm-die-steuer-an,-die-angewendet-werden-soll."><a class="header-link" href="#schritt-1:-geben-sie-im-artikelstamm-die-steuer-an,-die-angewendet-werden-soll."></a>Schritt 1: Geben Sie im Artikelstamm die Steuer an, die angewendet werden soll.</h4>
+<p>Die Artikelstammdaten beinhalten eine Tabelle, in der Sie Steuern, die angewendet werden sollen, auflisten können.</p>
+<p class="img-container"><img src="/docs/assets/old_images/erpnext/item-wise-tax.png" alt="Artikelbezogene Steuer"></p>
+<p>Der im Artikelstamm angegebene Steuersatz hat gegenüber dem Steuersatz, der in Transaktionen angegeben wird, Vorrang.</p>
+<p>Beispiel: Wenn Sie einen Umsatzsteuersatz von 10% für den Artikel ABC verwenden wollen, aber im Kundenauftrag/der Ausgangsrechnung ein Umsatzsteuersatz von 12% für den Artikel ABC angegeben ist, dann wird der Steuersatz von 10% verwendet, so wie es in den Artikelstammdaten hinterlegt ist.</p>
+<h4 id="schritt-2:-steuern-und-andere-abgaben-einrichten"><a class="header-link" href="#schritt-2:-steuern-und-andere-abgaben-einrichten"></a>Schritt 2: Steuern und andere Abgaben einrichten</h4>
+<p>In den Stammdaten für Steuern und andere Abgaben sollten Sie alle auf Artikel anwendbaren Steuern auswählen.</p>
+<p>Beispiel: Wenn Sie Artikel mit 5% Umsatzsteuer haben, bei anderen eine Dienstleistungssteuer anfällt und bei wieder anderen eine Luxussteuer, dann sollten Ihre Steuerstammdaten auch alle drei Steuern enthalten.</p>
+<p class="img-container"><img src="/docs/assets/old_images/erpnext/item-wise-tax-master.png" alt="Vorlage für artikelbezogene Steuer"></p>
+<h4 id="schritt-3:-steuersatz-in-den-stammdaten-für-steuern-und-abgaben-auf-0-einstellen"><a class="header-link" href="#schritt-3:-steuersatz-in-den-stammdaten-für-steuern-und-abgaben-auf-0-einstellen"></a>Schritt 3: Steuersatz in den Stammdaten für Steuern und Abgaben auf 0 einstellen</h4>
+<p>In den Stammdaten für Steuern und andere Abgaben wird der Steuersatz mit 0% eingepflegt. Das heißt, dass der Steuersatz, der auf Artikel angewendet wird, aus den entsprechenden Artikelstammdaten gezogen wird. Für alle anderen Artikel wird ein Steuersatz von 0% verwendet, das heißt es werden keine weiteren Steuern verwendet.</p>
+<p>Basierend auf den obigen Einstellungen werden Steuern also wie in den Artikelstammdaten angegeben angewendet. Probieren Sie beispielsweise Folgendes aus:</p>
+<p class="img-container"><img src="/docs/assets/old_images/erpnext/item-wise-tax-calc.png" alt="Artikelbezogene Steuerkalkulation"></p>
+<p>{next}</p>
+    </article>
+  </body>
+</html>

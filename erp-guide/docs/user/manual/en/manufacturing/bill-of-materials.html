@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>Bill Of Materials</title>
+    <link type="text/css" rel="stylesheet" href="../../../../assets/css/github-markdown.css">
+    <link type="text/css" rel="stylesheet" href="../../../../assets/css/pilcrow.css">
+    <link type="text/css" rel="stylesheet" href="../../../../assets/css/hljs-github.min.css"/>
+  </head>
+  <body>
+    <article class="markdown-body"><h1 id="bill-of-materials"><a class="header-link" href="#bill-of-materials"></a>Bill Of Materials</h1>
+<p>At the heart of the Manufacturing system is the <strong>Bill of Materials</strong> (BOM).
+The <strong>BOM</strong> is a list of all materials (either bought or made) and operations
+that go into a finished product or sub-Item. In ERPNext, the component could
+have its own BOM hence forming a tree of Items with multiple levels.</p>
+<div class="embed-container">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/9J9QBYBpD0M?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+  </iframe>
+</div>
+
+
+<p>To make accurate Purchase Requests, you must always maintain correct BOMs.
+To make a new BOM:</p>
+<blockquote>
+<p>Manufacturing &gt; Bill of Materials &gt; New BOM</p>
+</blockquote>
+<p class="img-container"><img class="screenshot" alt="Task" src="{{docs_base_url}}/assets/img/manufacturing/bom.png"></p>
+<ul class="list">
+<li>To add Operations select &#39;With Operation&#39;. The Operations table shall appear.</li>
+</ul>
+<p class="img-container"><img class="screenshot" alt="Task" src="{{docs_base_url}}/assets/img/manufacturing/bom-operations.png"></p>
+<ul class="list">
+<li>Select the Item for which you want to make the BOM.</li>
+<li>Add the operations that you have to go through to make that particular Item in the “Operations” table. For each operation, you will be asked to enter a Workstation. You must create new Workstations as and when necessary.</li>
+<li>Workstations are defined only for product costing and Work Order Operations scheduling purposes not inventory. </li>
+<li>Inventory is tracked in Warehouses not Workstations.</li>
+</ul>
+<p>###Costing of a BOM</p>
+<ul class="list">
+<li><p>The Costing section in BOM gives an approximate cost of producing the Item.</p>
+</li>
+<li><p>Add the list of Items you require for each operation, with its quantity. This Item could be a purchased Item or a sub-assembly with its own BOM. If the row Item is a manufactured Item and has multiple BOMs, select the appropriate BOM. You can also define if a part of the Item goes into scrap.</p>
+</li>
+</ul>
+<p class="img-container"><img class="screenshot" alt="Costing" src="{{docs_base_url}}/assets/img/manufacturing/bom-costing.png"></p>
+<ul class="list">
+<li>This cost can be updated on by using the &#39;Update Cost&#39; button.</li>
+</ul>
+<p class="img-container"><img class="screenshot" alt="Update Cost" src="{{docs_base_url}}/assets/img/manufacturing/bom-update-cost.png"></p>
+<ul class="list">
+<li>User can select the currency in the BOM </li>
+<li>System calculates the costing based on the price list currency</li>
+</ul>
+<p class="img-container"><img class="screenshot" alt="Update Cost" src="{{docs_base_url}}/assets/img/manufacturing/price-list-based-currency-bom.png"></p>
+<h3 id="materials-required(exploded)"><a class="header-link" href="#materials-required(exploded)"></a>Materials Required(exploded)</h3>
+<p>This table lists down all the Material required for the Item to be Manufactured.
+It also fetches sub-assemblies along with the quantity.</p>
+<p class="img-container"><img class="screenshot" alt="Exploded Section" src="{{docs_base_url}}/assets/img/manufacturing/bom-exploded.png"></p>
+<p>{next}</p>
+    </article>
+  </body>
+</html>

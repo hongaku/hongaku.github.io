@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>Sales and Payment Transactions</title>
+    <link type="text/css" rel="stylesheet" href="../../../../../assets/css/github-markdown.css">
+    <link type="text/css" rel="stylesheet" href="../../../../../assets/css/pilcrow.css">
+    <link type="text/css" rel="stylesheet" href="../../../../../assets/css/hljs-github.min.css"/>
+  </head>
+  <body>
+    <article class="markdown-body"><h1 id="sales-and-payment-transactions"><a class="header-link" href="#sales-and-payment-transactions"></a>Sales and Payment Transactions</h1>
+<p>In order to be compliant with the latest finance law applicable to POS software, ERPNext automatically registers all sales and payment transactions in a chained log.</p>
+<p>If your country is set to &quot;France&quot;, the deletion of sales and payment transactions will also not be permitted, even if the appropriate permissions are given to the user.</p>
+<p>Please note that ERPNext is not yet fully compliant with the 2016 Finance Law.</p>
+<h1 id="chained-log-report"><a class="header-link" href="#chained-log-report"></a>Chained log Report</h1>
+<p>A dedicated report called &quot;Transaction Log Report&quot; is available to verify that the logged chain has not been broken.</p>
+<p>If the status of the column &quot;Chain Integrity&quot; is &quot;True&quot;, the chain has not been broken.
+It means that you can consult the full chain of events that occurred in your system.</p>
+<p>If the status of the column &quot;Chain Integrity&quot; is &quot;False&quot;, it means that there is a discrepancy in the chain.
+In this case, the previous row has been removed or altered in the database. It is a probable effect of a fraudulent behavior.</p>
+    </article>
+  </body>
+</html>

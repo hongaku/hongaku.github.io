@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>Multi Currency Accounting</title>
+    <link type="text/css" rel="stylesheet" href="../../../../assets/css/github-markdown.css">
+    <link type="text/css" rel="stylesheet" href="../../../../assets/css/pilcrow.css">
+    <link type="text/css" rel="stylesheet" href="../../../../assets/css/hljs-github.min.css"/>
+  </head>
+  <body>
+    <article class="markdown-body"><h1 id="multi-currency-accounting"><a class="header-link" href="#multi-currency-accounting"></a>Multi Currency Accounting</h1>
+<p>In ERPNext, you can make accounting entries in multiple currency. For example, if you have a bank account in foreign currency, you can make transactions in that currency and system will show bank balance in that specific currency only.</p>
+<h2 id="setup"><a class="header-link" href="#setup"></a>Setup</h2>
+<p>To get started with multi-currency accounting, you need to assign accounting currency in Account record. You can define Currency from Chart of Accounts while creating Account.</p>
+<p class="img-container"><img class="screenshot" alt="Set Currency from Chart of Accounts"      src="{{docs_base_url}}/assets/img/accounts/multi-currency/chart-of-accounts.png"></p>
+<p>You can also assign / modify the currency by opening specific Account record for existing Accounts.</p>
+<p class="img-container"><img class="screenshot" alt="Modify Account Currency"      src="{{docs_base_url}}/assets/img/accounts/multi-currency/account.png"></p>
+<p>For Customer / Supplier (Party), you can also define it&#39;s billing currency in the Party record. If the Party&#39;s accounting currency is different from Company Currency, you should mention Default Receivable / Payable Account in that currency.</p>
+<p class="img-container"><img class="screenshot" alt="Customer Accounting Currency"      src="{{docs_base_url}}/assets/img/accounts/multi-currency/customer.png"></p>
+<p>Once you defined Currency in the Account and selected relevant accounts in the Party record , you are ready to make transactions against them. If Party account currency is different from Company Currency, system will restrict to make transaction for that party with that currency only. If account currency is same as Company Currency, you can make transactions for that Party in any currency. But accounting entries (GL Entries) will always be in Party Account Currency.</p>
+<p>You can change accounting currency in Party / Account record, until making any transactions against them. After making accounting entries, system will not allow to change the currency for both Party / Account record.</p>
+<p>In case of multi-company setup, accounting currency of Party must be same for all the companies.</p>
+<h3 id="exchange-rates"><a class="header-link" href="#exchange-rates"></a>Exchange Rates</h3>
+<p>When dealing with multiple currencies, ERPNext has the Currency Exchange module for managing exchange rates. It allows you to save the exchange rate quotes you require. </p>
+<p>For foreign currency transactions, ERPNext checks Currency Exchange for any matching record. If this fails, ERPNext will attempt to get the exchange rate quote from <a href="http://fixer.io">fixer.io</a>. If this still fails, then the exchange rate will have to be entered manually.</p>
+<h4 id="exchange-rate-selection"><a class="header-link" href="#exchange-rate-selection"></a>Exchange Rate Selection</h4>
+<p>ERPNext automatically fetches the latest exchange rate available.</p>
+<h2 id="transactions"><a class="header-link" href="#transactions"></a>Transactions</h2>
+<h3 id="sales-invoice"><a class="header-link" href="#sales-invoice"></a>Sales Invoice</h3>
+<p>In Sales Invoice, transaction currency must be same as accounting currency of Customer if Customer&#39;s accounting currency is other than Company Currency. Otherwise, you can select any currency in Invoice. On selection of Customer, system will fetch Receivable account from Customer / Company. The currency of receivable account must be same as Customer&#39;s accounting currency.</p>
+<p>Now, in POS, Paid Amount will be entered in transaction currency, instead of earlier Company Currency. Write Off Amount will also be entered in transaction currency.</p>
+<p>Outstanding Amount and Advance Amount will always be calculated and shown in Customer&#39;s Account Currency.</p>
+<p class="img-container"><img class="screenshot" alt="Sales Invoice Outstanding"      src="{{docs_base_url}}/assets/img/accounts/multi-currency/sales-invoice.png"></p>
+<h3 id="purchase-invoice"><a class="header-link" href="#purchase-invoice"></a>Purchase Invoice</h3>
+<p>Similarly, in Purchase Invoice, accounting entries will be made based on Supplier&#39;s accounting currency. Outstanding Amount and Advance Amount will also be shown in the supplier&#39;s accounting currency. Write Off Amount will now be entered in transaction currency.</p>
+<h3 id="journal-entry"><a class="header-link" href="#journal-entry"></a>Journal Entry</h3>
+<p>In Journal Entry, you can make transactions in different currencies. There is a checkbox &quot;Multi Currency&quot;, to enable multi-currency entries. If &quot;Multi Currency&quot; option selected, you will be able to select accounts with different currencies.</p>
+<p class="img-container"><img class="screenshot" alt="Journal Entry Exchange Rate"      src="{{docs_base_url}}/assets/img/accounts/multi-currency/journal-entry-multi-currency.png"></p>
+<p>In Accounts table, on selection of foreign currency account, system will show Currency section and fetch Account Currency and Exchange Rate automatically. You can change / modify the Exchange Rate later manually. Debit / Credit amount should be entered in Account Currency, system will calculate and show the Debit / Credit amount in Company Currency automatically.</p>
+<p class="img-container"><img class="screenshot" alt="Journal Entry in multi currency"      src="{{docs_base_url}}/assets/img/accounts/multi-currency/journal-entry-row.png"></p>
+<h2 id="reports"><a class="header-link" href="#reports"></a>Reports</h2>
+<h3 id="general-ledger"><a class="header-link" href="#general-ledger"></a>General Ledger</h3>
+<p>In General Ledger, system shows debit / credit amount in both currency if filtered by an Account and Account Currency is different from Company Currency.</p>
+<p class="img-container"><img class="screenshot" alt="General Ledger Report"      src="{{docs_base_url}}/assets/img/accounts/multi-currency/general-ledger.png"></p>
+<h3 id="accounts-receivable-/-payable"><a class="header-link" href="#accounts-receivable-/-payable"></a>Accounts Receivable / Payable</h3>
+<p>In Accounts Receivable / Payable report, system shows all the amounts in Party / Account Currency.</p>
+<p class="img-container"><img class="screenshot" alt="Accounts Receivable Report"      src="{{docs_base_url}}/assets/img/accounts/multi-currency/accounts-receivable.png"></p>
+<p>{next}</p>
+    </article>
+  </body>
+</html>

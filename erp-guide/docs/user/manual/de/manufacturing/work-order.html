@@ -1,0 +1,111 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>Arbeitsauftrag</title>
+    <link type="text/css" rel="stylesheet" href="../../../../assets/css/github-markdown.css">
+    <link type="text/css" rel="stylesheet" href="../../../../assets/css/pilcrow.css">
+    <link type="text/css" rel="stylesheet" href="../../../../assets/css/hljs-github.min.css"/>
+  </head>
+  <body>
+    <article class="markdown-body"><h1 id="arbeitsauftrag"><a class="header-link" href="#arbeitsauftrag"></a>Arbeitsauftrag</h1>
+<p><span class="text-muted contributed-by">Beigetragen von CWT Connector &amp; Wire Technology GmbH</span></p>
+<p>Der Arbeitsauftrag (auch als Arbeitsauftrag bezeichnet) ist ein Dokument welches vom Produktionsplaner als Startsignal in die Fertigung gegeben wird, um eine bestimmte Anzahl eines bestimmten Artikels zu produzieren. Der Arbeitsauftrag unterstützt Sie auch dabei den Materialbedarf (Lagerbuchung) für diesen Artikel aus der <strong>Stückliste</strong> zu generieren.</p>
+<p>Der <strong>Arbeitsauftrag</strong> wird aus dem <strong>Werkzeug zur Fertigungsplanung</strong> generiert, basierend auf den Kundenaufträgen. Sie können weiterhin direkt einen Arbeitsauftrag erstellen über:</p>
+<blockquote>
+<p>Fertigung &gt; Dokumente &gt; Arbeitsauftrag &gt; Neu</p>
+</blockquote>
+<p class="img-container"><img class="screenshot" alt="Arbeitsauftrag" src="{{docs_base_url}}/assets/img/manufacturing/work-order.png"></p>
+<h3 id="einen-arbeitsauftrag-erstellen"><a class="header-link" href="#einen-arbeitsauftrag-erstellen"></a>Einen Arbeitsauftrag erstellen</h3>
+<ul class="list">
+<li>Wählen Sie den Artikel aus, der gefertigt werden soll.</li>
+<li>Die Standard-Stückliste für diesen Artikel wird aus dem System gezogen. Sie können die Stückliste auch ändern.</li>
+<li>Wenn die ausgewählte Stückliste auch Arbeitsgänge mit berücksichtigt, sollte das System alle Arbeitsgänge aus der Stückliste übernehmen.</li>
+<li>Geben Sie das geplante Startdatum an (ein geschätztes Datum zu dem die Produktion beginnen soll).</li>
+<li>Wählen Sie das Lager aus. Das Fertigungslager ist der Ort zu dem die Artikel gelangen, wenn Sie mit der Herstellung beginnen, und das Eingangslager ist der Ort, wo fertige Erzeugnisse lagern, bevor sie versandt werden.</li>
+</ul>
+<blockquote>
+<p>Anmerkung: Sie können einen Arbeitsauftrag abspeichern ohne ein Lager auszuwählen. Lager sind jedoch zwingend erforderlich um einen Arbeitsauftrag zu übertragen.</p>
+</blockquote>
+<h3 id="arbeitsplätze-neu-zuordnen/dauer-von-arbeitsgängen"><a class="header-link" href="#arbeitsplätze-neu-zuordnen/dauer-von-arbeitsgängen"></a>Arbeitsplätze neu zuordnen/Dauer von Arbeitsgängen</h3>
+<ul class="list">
+<li>Als Voreinstellung zieht das System Arbeitsplätze und die Dauer von Arbeitsgängen aus der gewählten Stückliste.</li>
+</ul>
+<p class="img-container"><img class="screenshot" alt="Arbeitsauftrag - Arbeitsgänge" src="{{docs_base_url}}/assets/img/manufacturing/PO-operations.png"></p>
+<ul class="list">
+<li>Wenn Sie den Arbeitsplatz für einen bestimmten Arbeitsgang im Arbeitsauftrag neu zuordnen möchten, können Sie das tun, bevor Sie den Arbeitsauftrag übertragen.</li>
+</ul>
+<p class="img-container"><img class="screenshot" alt="Arbeitsauftrag - Arbeitsgänge neu zuordnen" src="{{docs_base_url}}/assets/img/manufacturing/PO-reassigning-operations.png"></p>
+<ul class="list">
+<li>Wählen Sie den betreffenden Arbeitsgang aus und ändern Sie seinen Arbeitsplatz.</li>
+<li>Sie können auch die Dauer des Arbeitsgangs ändern.</li>
+</ul>
+<h3 id="kapazitätsplanung-im-arbeitsauftrag"><a class="header-link" href="#kapazitätsplanung-im-arbeitsauftrag"></a>Kapazitätsplanung im Arbeitsauftrag</h3>
+<ul class="list">
+<li>Wenn ein Arbeitsauftrag basierend auf dem geplanten Startdatum und der Verfügbarkeit des Arbeitsplatzes übertragen wird, plant das System alle Arbeitsgänge für den Arbeitsauftrag ein (wenn der Arbeitsauftrag selbst Arbeitsgänge enthält).</li>
+</ul>
+<h3 id="material-der-fertigung-übergeben"><a class="header-link" href="#material-der-fertigung-übergeben"></a>Material der Fertigung übergeben</h3>
+<ul class="list">
+<li>Wenn Sie Ihren Arbeitsauftrags übertragen haben, müssen Sie das Rohmaterial übertragen um den Fertigungsprozess zu starten.</li>
+<li>Das erstellt eine Lagerbuchung mit allen Artikeln, die benötigt werden, um diesen Arbeitsauftrag abzuschliessen. Die Artikel werden an das Fertigungslager übertragen (dieser Prozess fügt basierend auf Ihren Einstellungen Unterbaugruppen mit Stückliste als EINEN Artikel hinzu oder löst die Unterpunkte auf).</li>
+<li>Klicken Sie auf &quot;Material der Fertigung übergeben&quot;.</li>
+</ul>
+<p class="img-container"><img class="screenshot" alt="Materialübertrag" src="{{docs_base_url}}/assets/img/manufacturing/PO-material-transfer.png"></p>
+<ul class="list">
+<li>Geben Sie die Menge des Materials an, das übertragen werden soll.</li>
+</ul>
+<p class="img-container"><img class="screenshot" alt="Materialübertrag - Menge" src="{{docs_base_url}}/assets/img/manufacturing/PO-material-transfer-qty.png"></p>
+<ul class="list">
+<li>Übertragen Sie die Lagerbuchung.</li>
+</ul>
+<p class="img-container"><img class="screenshot" alt="Lagerbuchung zum Kundenauftrag" src="{{docs_base_url}}/assets/img/manufacturing/PO-SE-for-material-transfer.png"></p>
+<ul class="list">
+<li>Das an die Fertigung übertragene Material wird basierend auf der Lagerbuchung im Arbeitsauftrag aktualisiert.</li>
+</ul>
+<p class="img-container"><img class="screenshot" alt="Lagerbuchung zum Arbeitsauftrag" src="{{docs_base_url}}/assets/img/manufacturing/PO-material-transfer-updated.png"></p>
+<h3 id="zeitprotokoll-erstellen"><a class="header-link" href="#zeitprotokoll-erstellen"></a>Zeitprotokoll erstellen</h3>
+<ul class="list">
+<li>Der Fortschritt des Arbeitsauftrages kann über ein [Zeitprotokoll]<img class="screenshot" alt="Make TL against PO" src="{{docs_base_url}}/assets/img/manufacturing/PO-operations-make-tl.png"> mitprotokolliert werden.</li>
+<li>Zeitprotokolle werden zu den Arbeitsgängen des Arbeitsauftrages erstellt.</li>
+<li>Vorlagen für Zeitprotokolle werden für die eingeplanten Arbeitsgänge zum Zeitpunkt des Übertragens des Arbeitsauftrages erstellt.</li>
+<li>Um weitere Zeitprotokolle zu einem Arbeitsgang zu erstellen, wählen Sie &quot;Zeitprotokoll erstellen&quot; im betreffenden Arbeitsgang aus.</li>
+</ul>
+<p class="img-container"><img class="screenshot" alt="Zeitprotokoll zum Arbeitsauftrag erstellen" src="{{docs_base_url}}/assets/img/manufacturing/PO-operations-make-tl.png"></p>
+<h3 id="fertige-erzeugnisse-aktualisieren"><a class="header-link" href="#fertige-erzeugnisse-aktualisieren"></a>Fertige Erzeugnisse aktualisieren</h3>
+<ul class="list">
+<li>Wenn Sie den Arbeitsauftrag fertiggestellt haben, müssen Sie die Fertigen Erzeugnisse aktualisieren.</li>
+<li>Das erstellt eine Lagerbuchung, welche alle Unterartikel vom Fertigungslager abzieht und dem Lager &quot;Fertige Erzeugnisse&quot; gutschreibt.</li>
+<li>Klicken Sie auf &quot;Fertige Erzeugnisse aktualisieren&quot;.</li>
+</ul>
+<p class="img-container"><img class="screenshot" alt="Fertigerzeugnisse aktualiseren" src="{{docs_base_url}}/assets/img/manufacturing/PO-FG-update.png"></p>
+<ul class="list">
+<li>Geben Sie die Menge des übertragenen Materials an.</li>
+</ul>
+<p class="img-container"><img class="screenshot" alt="Menge der Fertigerzeugnisse aktualisieren" src="{{docs_base_url}}/assets/img/manufacturing/PO-FG-update-qty.png"></p>
+<blockquote>
+<p>Tipp: Sie können einen Arbeitsauftrag auch teilweise fertig stellen, indem Sie über eine Lagerbuchung das Lager Fertige Erzeugnisse aktualisieren.</p>
+</blockquote>
+<h3 id="einen-arbeitsauftrag-anhalten"><a class="header-link" href="#einen-arbeitsauftrag-anhalten"></a>Einen Arbeitsauftrag anhalten</h3>
+<ul class="list">
+<li>Wenn Sie einen Arbeitsauftrag anhalten, wird sein Status auf &quot;Angehalten&quot; gesetzt, mit der Folge, dass alle Herstellungsprozesse für diesen Arbeitsauftrag eingestellt werden.</li>
+<li><p>Um den Arbeitsauftrag anzuhalten klicken Sie auf die Schaltfläche &quot;Anhalten&quot;.</p>
+</li>
+<li><p>Wenn Sie den Arbeitsauftrag übertragen, reserviert das System für jeden Arbeitsgang des Arbeitsauftrags in Serie gemäß dem geplanten Startdatum basierend auf der Verfügbarkeit des Arbeitsplatzes ein Zeitfenster. Die Verfügbarkeit des Arbeitsplatzes hängt von den Arbeitszeiten des Arbeitsplatzes und der Urlaubsliste ab und davon, ob ein anderer Arbeitsgang des Arbeitsauftrages in diesem Zeitfenster eingeplant wurde. Sie können in den Fertigungseinstellungen die Anzahl der Tage angeben, in denen das System versucht den Arbeitsgang einzuplanen. Standardmäßig ist dieser Wert auf 30 Tage eingestellt. Wenn der Arbeitsgang über das verfügbare Zeitfenster hinaus Zeit benötigt, fragt Sie das System, ob der Arbeitsgang pausieren soll. Wenn das System die Terminplanung erstellen konnte, legt es Zeitprotokolle an und speichert sie. Sie können diese verändern und später übertragen.</p>
+</li>
+<li>Sie können außerdem zusätzliche Zeitprotokolle für einen Arbeitsgang erstellen. Hierzu wählen Sie den betreffenden Arbeitsgang aus und klicken Sie auf &quot;Zeitprotokoll erstellen&quot;.</li>
+<li>Rohmaterial übertragen: Dieser Schritt erstellt eine Lagerbuchung mit allen Artikeln, die benötigt werden, um dem Arbeitsauftrag abzuschliessen, und dem Fertigungslager hinzugefügt werden müssen (Unterartikel werden entweder als EIN Artikel mit Stücklister ODER in aufgelöster Form gemäß Ihren Einstellungen hinzugefügt).</li>
+<li>Fertigerzeugnisse aktualisieren: Dieser Schritt erstellt eine Lagerbuchung, welche alle Unterartikel vom Fertigungslager abzieht und dem Lager Fertige Erzeugnisse hinzufügt.</li>
+<li>Um die zum Arbeitsauftrag erstellten Zeitprotokolle anzusehen, klicken Sie auf &quot;Zeitprotokolle anzeigen&quot;.</li>
+</ul>
+<p class="img-container"><img class="screenshot" alt="Arbeitsauftrag anhalten" src="{{docs_base_url}}/assets/img/manufacturing/PO-stop.png"></p>
+<ul class="list">
+<li>Sie können auch einen angehaltenen Arbeitsauftrag wieder weiter laufen lassen.</li>
+</ul>
+<blockquote>
+<p>Anmerkung: Um einen Arbeitsauftrag zu einem Artikel zu erstellen müssen Sie auf dem Artikelformular das Feld &quot;Arbeitsauftrag zulassen&quot; ankreuzen.</p>
+</blockquote>
+<p>{next}</p>
+    </article>
+  </body>
+</html>

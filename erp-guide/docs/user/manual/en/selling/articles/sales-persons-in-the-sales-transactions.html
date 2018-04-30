@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title></title>
+    <link type="text/css" rel="stylesheet" href="../../../../../assets/css/github-markdown.css">
+    <link type="text/css" rel="stylesheet" href="../../../../../assets/css/pilcrow.css">
+    <link type="text/css" rel="stylesheet" href="../../../../../assets/css/hljs-github.min.css"/>
+  </head>
+  <body>
+    <article class="markdown-body"><p>#Sales Persons in the Sales Transactions</p>
+<p>In ERPNext, Sales Person master is maintained in <a href="/docs/user/manual/en/setting-up/articles/managing-tree-structure-masters.html">tree structure</a>. Sales Person is selectable in all the sales transactions.</p>
+<p>Sales Persons can be updated in the Customer master as well. On selection of Customer in the transactions, Sales Persons as updated in the Customer will fetch into sales transaction.</p>
+<p class="img-container"><img class="screenshot" alt="Sales Person Customer" src="{{docs_base_url}}/assets/img/articles/sales-person-transaction-1.png"></p>
+<p>####Sales Person Contribution</p>
+<p>If more than one sales persons are working together on an order, then contribution (%) should be set for each Sales Person.</p>
+<p class="img-container"><img class="screenshot" alt="Sales Person Order" src="{{docs_base_url}}/assets/img/articles/sales-person-transaction-2.png"></p>
+<p>On saving transaction, based on the Net Total and Contriution (%), <code>Contribution to Net Total</code> will be calculated for each Sales Person.</p>
+<div class=well>Total % Contribution for all Sales Person must be 100%. If only one Sales Person is selected, then % Contribution will be 100.</div>
+
+<p>####Sales Person Transaction Report</p>
+<p>Check Sales Person&#39;s Transaction report from:</p>
+<p><code>Selling &gt; Standard Reports &gt; Sales Personwise Transaction Summary</code></p>
+<p>This report can be generated based on Sales Order, Delivery Note and Sales Invoice. It will give you total amount of sale made by an employe.</p>
+<p class="img-container"><img class="screenshot" alt="Sales Person Report" src="{{docs_base_url}}/assets/img/articles/sales-person-transaction-3.png"></p>
+<p>####Sales Person wise Commission</p>
+<p>ERPNext only provide total amount of sale made by a Sales Person. If you offer commission to Sales Person, you should add Sales Person as Sales Partners in ERPNext. For Sales Partners, you can define Commission (%). On selected on Sales Partner in a sales transction, based on Net Total, Commission Amount is calculated as well. You can check Sales Partner&#39;s commission report from:</p>
+<p><code>Accounts &gt; Standard Reports &gt; Sales Partners Commission</code></p>
+<!-- markdown -->    </article>
+  </body>
+</html>

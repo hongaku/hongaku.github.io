@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>Budgeting</title>
+    <link type="text/css" rel="stylesheet" href="../../../../assets/css/github-markdown.css">
+    <link type="text/css" rel="stylesheet" href="../../../../assets/css/pilcrow.css">
+    <link type="text/css" rel="stylesheet" href="../../../../assets/css/hljs-github.min.css"/>
+  </head>
+  <body>
+    <article class="markdown-body"><h1 id="budgeting"><a class="header-link" href="#budgeting"></a>Budgeting</h1>
+<p>In ERPNext, you can set and manage Budgets against a specific Account. This is useful when, for example, you are doing online sales. You have a budget for search ads, and you want ERPNext to stop or warn you from over spending, based on that budget.</p>
+<p>Budgets are also great for planning purposes. When you are making plans for the next financial year, you would typically target a revenue based on which you would set your expenses. Setting a budget will ensure that your expenses do not get out of hand, at any point, as per your plans.</p>
+<p>In ERPNext, budget against an Account is defined via Cost Center. Following are the steps to define a Budget.</p>
+<p>###Cost Center</p>
+<p>To create new Cost Center, go to:</p>
+<blockquote>
+<p>Accounts &gt; Budget and Cost Center &gt; Chart of Cost Center &gt; Add New Cost Center</p>
+</blockquote>
+<p class="img-container"><img class="screenshot" alt="Budget" src="{{docs_base_url}}/assets/img/accounts/budgeting-cost-center.png"></p>
+<p>###Budgeting</p>
+<p>####Step 1: Create a new Budget</p>
+<p>To define a Budget, go to:</p>
+<blockquote>
+<p>Accounts &gt; Budget and Cost Center &gt; Budget &gt; New</p>
+</blockquote>
+<p>####Step 2: Select Cost Center</p>
+<p>In the Budget form, select a Cost Center. Budgets can be defined against any Cost Center whether it is a Group / Leaf node in the Chart of Cost Centers. </p>
+<p>####Step 3: Select Account</p>
+<p>In the Budgets table, select Income / Expense account for which Budget is to be defined. </p>
+<p class="img-container"><img class="screenshot" alt="Budget" src="{{docs_base_url}}/assets/img/accounts/budget-account.png"></p>
+<p>####Step 4: Monthly Distribution</p>
+<p>If you have seasonal business, you can also define a Monthly Distribution record, to distribute the budget between months. If you don&#39;t set the monthly distribution, ERPNext will calculate the budget on yearly
+basis or in equal proportion for every month.</p>
+<p class="img-container"><img class="screenshot" alt="Monthly Distribution" src="{{docs_base_url}}/assets/img/accounts/monthly-budget-distribution.png"></p>
+<p>####Step 5: Alert on Budget</p>
+<p>While setting budget, you can also define the actions when expenses will exceed the allocated budget for a period. You can set separate action for monthly and annual budgets. There are 3 types of actions: Stop, Warn and Ignore. If Stop, system will not allow to book expenses more than allocated budget. In Case of Warn, it will just warn the user that expenses has been exceeded from the allocated budget. And Ignore will do nothing.</p>
+<p class="img-container"><img class="screenshot" alt="Monthly Distribution" src="{{docs_base_url}}/assets/img/accounts/budget-warning.png"></p>
+<p>####Budget Variance Report</p>
+<p>At any point of time, user can check Budget Variance Report to analysis the expense vs budget against a cost center.</p>
+<p>To check Budget Variance report, go to:</p>
+<p>Accounts &gt; Budget and Cost Center &gt; Budget Variance Report</p>
+<p class="img-container"><img class="screenshot" alt="Budget Variance Report" src="{{docs_base_url}}/assets/img/accounts/budget-variance-report.png"></p>
+<div class="embed-container">
+    <iframe src="https://www.youtube.com/embed/wWHkB0jlXNk?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+    </iframe>
+</div>
+
+<p>{next}</p>
+    </article>
+  </body>
+</html>

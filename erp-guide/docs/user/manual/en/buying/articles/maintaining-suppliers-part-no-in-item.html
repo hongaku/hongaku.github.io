@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>1. Updating Supplier Item Code In Item</title>
+    <link type="text/css" rel="stylesheet" href="../../../../../assets/css/github-markdown.css">
+    <link type="text/css" rel="stylesheet" href="../../../../../assets/css/pilcrow.css">
+    <link type="text/css" rel="stylesheet" href="../../../../../assets/css/hljs-github.min.css"/>
+  </head>
+  <body>
+    <article class="markdown-body"><p>#Maintaining Supplier&#39;s Item Code in the Item master</p>
+<p>For each item, code assigned might differ from the code your supplier has given to that same item. ERPNext allows you to track Supplier&#39;s Item Code in the item master. Also you can fetch Supplier&#39;s Item Code in your purchase transactions, so that they can easily recognize item referring to their Item Code.</p>
+<h4 id="1.-updating-supplier-item-code-in-item"><a class="header-link" href="#1.-updating-supplier-item-code-in-item"></a>1. Updating Supplier Item Code In Item</h4>
+<p>In the Item master, under Supplier Details section, enter Item Code as given by the Supplier to this item.</p>
+<p class="img-container"><img alt="Supplier Item Code" class="screenshot" src="{{docs_base_url}}/assets/img/articles/supplier-item-code.png"></p>
+<h4 id="2.-supplier's-item-code-in-transactions"><a class="header-link" href="#2.-supplier's-item-code-in-transactions"></a>2. Supplier&#39;s Item Code in Transactions</h4>
+<p>Each purchase transaction has field in the Item table where Supplier&#39;s Item Code is fetched. This field is hidden in form as well as in the Standard print format. You can make it visible by changing property for this field from <a href="/docs/user/manual/en/customize-erpnext/customize-form.html">Customize Form.</a></p>
+<p>Supplier Item Code will only be fetched in the purchase transaction, if both Supplier and Item Code selected in purchase transaction is mapped with value mentioned in the Item master.</p>
+<p class="img-container"><img alt="Supplier Item Code in transaction" class="screenshot" src="{{docs_base_url}}/assets/img/articles/supplier-item-code-in-purchase-order.png"></p>
+<!-- markdown -->    </article>
+  </body>
+</html>

@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>ID der Ausgangsrechnung auf Grundlage der ID des Kundenauftrags</title>
+    <link type="text/css" rel="stylesheet" href="../../../../../../assets/css/github-markdown.css">
+    <link type="text/css" rel="stylesheet" href="../../../../../../assets/css/pilcrow.css">
+    <link type="text/css" rel="stylesheet" href="../../../../../../assets/css/hljs-github.min.css"/>
+  </head>
+  <body>
+    <article class="markdown-body"><h1 id="id-der-ausgangsrechnung-auf-grundlage-der-id-des-kundenauftrags"><a class="header-link" href="#id-der-ausgangsrechnung-auf-grundlage-der-id-des-kundenauftrags"></a>ID der Ausgangsrechnung auf Grundlage der ID des Kundenauftrags</h1>
+<p><span class="text-muted contributed-by">Beigetragen von CWT Connector &amp; Wire Technology GmbH</span></p>
+<p>Das unten abgebildete Skript erlaubt es Ihnen die Benamungsserien der Ausgangsrechnungen und der zugehörigen Eingangsrechnungen gleich zu schalten. Die Ausgangsrechnung verwendet das Präfix M- aber die Nummer kopiert den Namen (die Nummer) des Kundenauftrags.</p>
+<p>Beispiel: Wenn der Kundenauftrag die ID SO-12345 hat, dann bekommt die zugehörige Ausgangsrechnung die ID M-12345.</p>
+<pre class="hljs"><code>frappe.ui.form.on(<span class="hljs-string">"Sales Invoice"</span>, <span class="hljs-string">"refresh"</span>, <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(frm)</span></span>{
+    <span class="hljs-keyword">var</span> sales_order = frm.doc.items[<span class="hljs-number">0</span>].sales_order.replace(<span class="hljs-string">"M"</span>, <span class="hljs-string">"M-"</span>);
+    <span class="hljs-keyword">if</span> (!frm.doc.__islocal &amp;&amp; sales_order &amp;&amp; frm.doc.name!==sales_order){
+        frappe.call({
+        method: <span class="hljs-string">'frappe.model.rename_doc.rename_doc'</span>,
+        args: {
+            doctype: frm.doctype,
+            old: frm.docname,
+            <span class="hljs-string">"new"</span>: sales_order,
+            <span class="hljs-string">"merge"</span>: <span class="hljs-literal">false</span>
+       },
+    });
+    }
+});</code></pre><p>{next}</p>
+    </article>
+  </body>
+</html>

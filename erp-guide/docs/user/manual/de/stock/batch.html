@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>Charge</title>
+    <link type="text/css" rel="stylesheet" href="../../../../assets/css/github-markdown.css">
+    <link type="text/css" rel="stylesheet" href="../../../../assets/css/pilcrow.css">
+    <link type="text/css" rel="stylesheet" href="../../../../assets/css/hljs-github.min.css"/>
+  </head>
+  <body>
+    <article class="markdown-body"><h1 id="charge"><a class="header-link" href="#charge"></a>Charge</h1>
+<p><span class="text-muted contributed-by">Beigetragen von CWT Connector &amp; Wire Technology GmbH</span></p>
+<p>Die Funktion Chargenverwaltung in ERPNext versetzt Sie in die Lage, verschiedene Einheiten eines Artikels zu gruppieren und ihnen eine einzigartige Nummer, die man Chargennummer nennt, zuzuweisen.</p>
+<p>Die Vorgehensweise, das Lager chargenbasiert zu verwalten, wird hauptsächlich in der pharmazeutischen Industrie angewandt. Medikamenten wird hier chargenbasiert eine eindeutige ID zugewiesen. Das hilft dabei, das Verfallsdatum der in einer bestimmten Charge produzierten Mengen aktuell zu halten und nachzuvollziehen.</p>
+<blockquote>
+<p>Anmerkung: Um einen Artikel als Chargenartikel zu kennzeichnen, muss in den Artikelstammdaten das Feld &quot;Hat Chargennummer&quot; markiert werden.</p>
+</blockquote>
+<p>Bei jeder für einen Chargenartikel generierten Lagertransaktion (Kaufbeleg, Lieferschein, POS-Rechnung) sollten Sie die Chargennummer des Artikels mit angeben. Um eine neue Chargennummer für einen Artikel zu erstellen, gehen Sie zu:</p>
+<blockquote>
+<p>Lagerbestand &gt; Dokumente &gt; Charge &gt; Neu</p>
+</blockquote>
+<p>Die Chargenstammdaten werden vor der Ausfertigung des Kaufbelegs erstellt. Somit erstellen Sie immer dann, wenn für einen Chargenartikel ein Kaufbeleg oder ein Produktionsauftrag ausgegeben werden, zuerst die Chargennummer des Artikels und wählen diese dann im Kaufbeleg oder im Produktionsauftrag aus.</p>
+<p class="img-container"><img class="screenshot" alt="Charge" src="{{docs_base_url}}/assets/img/stock/batch.png"></p>
+<blockquote>
+<p>Anmerkung: Bei Lagertransaktionen werden die Chargen-IDs basierend auf dem Code, dem Lager, dem Verfallsdatum der Charge (verglichen mit dem Veröffentlichungsdatum der Transaktion) und der aktuellen Menge im Lager gefiltert.</p>
+</blockquote>
+<p>{next}</p>
+    </article>
+  </body>
+</html>

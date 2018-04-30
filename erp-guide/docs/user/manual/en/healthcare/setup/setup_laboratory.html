@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>Laboratory</title>
+    <link type="text/css" rel="stylesheet" href="../../../../../assets/css/github-markdown.css">
+    <link type="text/css" rel="stylesheet" href="../../../../../assets/css/pilcrow.css">
+    <link type="text/css" rel="stylesheet" href="../../../../../assets/css/hljs-github.min.css"/>
+  </head>
+  <body>
+    <article class="markdown-body"><h1 id="laboratory"><a class="header-link" href="#laboratory"></a>Laboratory</h1>
+<p>If you wish to use features of Laboratory, you can create Users with &quot;Laboratory User&quot;. Lab Tests, Sample Collection etc. are only visible to users with this Role enabled.</p>
+<h3 id="laboratory-settings"><a class="header-link" href="#laboratory-settings"></a>Laboratory Settings</h3>
+<blockquote>
+<p>Healthcare &gt; Setup &gt; Healthcare Settings &gt; Laboratory Settings</p>
+</blockquote>
+<ul class="list">
+<li><p>Manage Sample Collection - If this flag is enabled, every time you create a Lab Test, a Sample Collection document will be created.</p>
+</li>
+<li><p>Require Lab Test Approval - Turning this on will restrict printing and emailing of Lab Tests only if the documents are in Approved status. You can use this flag to ensure that every Test result leaves your facility after verification.</p>
+</li>
+<li><p>Enable the third option if you want the name and designation of the Employee associated with the User who submits the document to be printed in the Lab Test Report.</p>
+</li>
+</ul>
+<h5 id="sms-alerts"><a class="header-link" href="#sms-alerts"></a>SMS Alerts</h5>
+<p>You can configure ERPNext Healthcare to alert Patients via SMS when the Lab Test result gets ready (Submit) and when you Email the result. You an configure the templates for the SMS as registered with your provider here.</p>
+<blockquote>
+<p>Healthcare &gt; Setup &gt; Healthcare Settings &gt; Laboratory SMS Alerts</p>
+</blockquote>
+<h3 id="lab-test-templates"><a class="header-link" href="#lab-test-templates"></a>Lab Test Templates</h3>
+<p>Whenever you create a new Lab Test, the Lab Test document is loaded based on the template configured for that particular test. This means, you will have to have separate templates configured for each Lab Test.</p>
+<p>Here&#39;s how you can configure various types of templates.</p>
+<blockquote>
+<p>Healthcare &gt; Setup &gt; Lab Test Template &gt; New Lab Test Template</p>
+</blockquote>
+<p>After providing the Name for the Test you will have to select a Code and Item group for creating the mapped Item. ERPNext Healthcare maps every Lab Test (every other billable healthcare service) to an Item with &quot;Maintain Stock&quot; set to false. This way, the Accounts Module will invoice the Item and you can see the Sales related reports of Selling Module. You can also set selling rate of the Lab Test here - this will update the Selling Price List.</p>
+<blockquote>
+<p>The Standard Selling Rate field behaves similar to the Item Standard Selling Rate, updating this will not update the Selling Price List</p>
+</blockquote>
+<p>The Is Billable flag in Lab Test Template creates the Item, but as Disabled. Likewise, unchecking this flag will Enable the Item.</p>
+<h6 id="result-format"><a class="header-link" href="#result-format"></a>Result Format</h6>
+<p>Following are the result formats available in ERPNext Healthcare</p>
+<ul class="list">
+<li>Single - select this format for results which require only a single input, result UOM and normal value</li>
+<li>Compound - allows you to configure results which require multiple input fields with corresponding event names, result UOMs and normal values</li>
+<li>Descriptive - this format is helpful for results which have multiple result components and corresponding result entry fields.</li>
+<li>Grouped - You can group test templates which are already configured and combine as a single test. For such templates select &quot;Grouped&quot;.</li>
+<li>No Result - Select this if you don not need to enter or manage test result. Also, no Lab Test document will be created. e.g., Sub Tests for Grouped results.</li>
+</ul>
+<h6 id="normal-values"><a class="header-link" href="#normal-values"></a>Normal values</h6>
+<p>For Single and Compound result formats, you can set the normal values.</p>
+<h6 id="sample"><a class="header-link" href="#sample"></a>Sample</h6>
+<p>You will have to select the Sample required for the test. You can also mention the quantity of sample that needs to be collected. These details will be used when creating the Sample Collection document for the Lab Test.</p>
+<h3 id="medical-department"><a class="header-link" href="#medical-department"></a>Medical Department</h3>
+<p>To organize your clinic into departments, you can create multiple Medical Departments. You can select appropriate departments in Lab Test Template and will be included in the Lab Test result print.</p>
+<blockquote>
+<p>Healthcare &gt; Setup &gt; Medical Department &gt; New Medical Department</p>
+</blockquote>
+<h3 id="lab-test-sample"><a class="header-link" href="#lab-test-sample"></a>Lab Test Sample</h3>
+<p>You can create various masters for Samples that are to be collected for a Lab Test.</p>
+<blockquote>
+<p>Healthcare &gt; Setup &gt; Lab Test Sample &gt; New Lab Test Sample</p>
+</blockquote>
+<h3 id="lab-test-uom"><a class="header-link" href="#lab-test-uom"></a>Lab Test UOM</h3>
+<p>You can create various masters for Unit of Measures to be used in Lab Test document.</p>
+<blockquote>
+<p>Healthcare &gt; Setup &gt; Lab Test UOM &gt; New Lab Test UOM</p>
+</blockquote>
+<h3 id="antibiotic"><a class="header-link" href="#antibiotic"></a>Antibiotic</h3>
+<p>You can create masters for a list of Antibiotics.</p>
+<blockquote>
+<p>Healthcare &gt; Setup &gt; Antibiotic &gt; New Antibiotic</p>
+</blockquote>
+<h3 id="sensitivity"><a class="header-link" href="#sensitivity"></a>Sensitivity</h3>
+<p>You can create masters for a list of Sensitivity to various Antibiotics.</p>
+<blockquote>
+<p>Healthcare &gt; Setup &gt; Sensitivity &gt; New Sensitivity</p>
+</blockquote>
+<p>{next}</p>
+    </article>
+  </body>
+</html>

@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>Retain Sample Stock</title>
+    <link type="text/css" rel="stylesheet" href="../../../../assets/css/github-markdown.css">
+    <link type="text/css" rel="stylesheet" href="../../../../assets/css/pilcrow.css">
+    <link type="text/css" rel="stylesheet" href="../../../../assets/css/hljs-github.min.css"/>
+  </head>
+  <body>
+    <article class="markdown-body"><h1 id="retain-sample-stock"><a class="header-link" href="#retain-sample-stock"></a>Retain Sample Stock</h1>
+<p>A sample of a batch of starting material, packaging material or finished product is stored for the purpose of being analyzed should the need arise later.</p>
+<h3 id="set-sample-retention-warehouse-in-stock-settings"><a class="header-link" href="#set-sample-retention-warehouse-in-stock-settings"></a>Set Sample Retention Warehouse in Stock Settings</h3>
+<p>It is advised to create a new warehouse just for retaining samples and not use it in production.</p>
+<p class="img-container"><img class="screenshot" alt="Sample Retention Warehouse" src="{{docs_base_url}}/assets/img/stock/sample-warehouse.png"></p>
+<h3 id="enable-retain-sample-in-item-master"><a class="header-link" href="#enable-retain-sample-in-item-master"></a>Enable Retain Sample in Item master</h3>
+<p>Check Retain Sample and Maximum allowed samples in Item Master for a batch. Please note that Retain Sample is based
+on Batch hence Has Batch No should be enabled as well.</p>
+<p class="img-container"><img class="screenshot" alt="Retain Sample" src="{{docs_base_url}}/assets/img/stock/retain-sample.png"></p>
+<h3 id="stock-entry"><a class="header-link" href="#stock-entry"></a>Stock Entry</h3>
+<p>Whenever a Stock Entry is created with the purpose as Material Receipt, for items which have Retain Sample enabled, the Sample Quantity can be set during that Stock Entry. Sample quantity cannot be more than the Maximum sample quantity set in Item Master.</p>
+<p class="img-container"><img class="screenshot" alt="Retain Sample" src="{{docs_base_url}}/assets/img/stock/material-receipt-sample.png"></p>
+<p>On submission of this Stock Entry, button &#39;Make Retention Stock Entry&#39; will be available to make another Stock Entry for the transfer of sample items from the mentioned batch to the retention warehouse set in Stock Settings. On clicking this button it will direct you to new Stock Entry with all the information, verify the information and click Submit.</p>
+<p class="img-container"><img class="screenshot" alt="Retain Sample" src="{{docs_base_url}}/assets/img/stock/material-transfer-sample.png"></p>
+    </article>
+  </body>
+</html>

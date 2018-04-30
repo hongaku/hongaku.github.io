@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>Custom Field</title>
+    <link type="text/css" rel="stylesheet" href="../../../../assets/css/github-markdown.css">
+    <link type="text/css" rel="stylesheet" href="../../../../assets/css/pilcrow.css">
+    <link type="text/css" rel="stylesheet" href="../../../../assets/css/hljs-github.min.css"/>
+  </head>
+  <body>
+    <article class="markdown-body"><h1 id="custom-field"><a class="header-link" href="#custom-field"></a>Custom Field</h1>
+<p>Every form in the ERPNext has standard set of fields. If you need to capture some information, but there is no standard field available for it, you can insert Custom Field in a form as per your requirement.</p>
+<p>Following are the steps to insert Custom Field in the existing form.</p>
+<p>####Customize Form</p>
+<p>To add a Custom Field, go to:</p>
+<p><code>Setup &gt; Customize &gt; Customize Form</code></p>
+<p>####Select Document Type</p>
+<p>In the Customize Form, select Document Type in which you want to insert Custom Field. Let&#39;s assume we are inserting Custom Field in the Employee master.</p>
+<p class="img-container"><img alt="Select Document Type" class="screenshot" src="{{docs_base_url}}/assets/img/customize/custom-field-1.gif"></p>
+<h4 id="insert-row-for-the-custom-field"><a class="header-link" href="#insert-row-for-the-custom-field"></a>Insert Row for the Custom Field</h4>
+<p>In Customize Form, open the field above which you want to insert a Custom Field. Click on Insert Above.</p>
+<p class="img-container"><img alt="Select Document Type" class="screenshot" src="{{docs_base_url}}/assets/img/customize/custom-field-2.gif"></p>
+<p>####Set Field Label</p>
+<p>Custom Field&#39;s name will be set based on its Label. If you want to create Custom Field with specific name, but with different label, then you should first set Label as you want Field Name to be set. After Custom Field is saved, you can edit the Field Label again.</p>
+<p class="img-container"><img alt="Select Document Type" class="screenshot" src="{{docs_base_url}}/assets/img/customize/custom-field-3.png"></p>
+<p>####Select Field Type</p>
+<p>There are various types of Field like Data, Date, Link, Select, Text and so on. Select Field Type for the Custom Field.</p>
+<p class="img-container"><img alt="Select Document Type" class="screenshot" src="{{docs_base_url}}/assets/img/customize/custom-field-4.png"></p>
+<p>Click <a href="/docs/user/manual/en/customize-erpnext/articles/field-types.html">here</a> to learn more about types of field you can set for your Custom Field.</p>
+<p>####Set Option</p>
+<p>Based on the Field Type, value will be entered in the Options field.</p>
+<p>If you are creating a Link field, then in the Options, enter Doctype name with which this field will be linked. Click <a href="/docs/user/manual/en/customize-erpnext/articles/creating-custom-link-field.html">here</a> to learn more about creating custom link field.</p>
+<p>If field type is set as Select (drop down field), then all he possible result for this field should be listed in the Options field. Each possible result should be separate by row.</p>
+<p class="img-container"><img alt="Select Document Type" class="screenshot" src="{{docs_base_url}}/assets/img/customize/custom-field-5.png"></p>
+<p>For Data field, Option can be set to &quot;Email&quot; or &quot;Phone&quot; and the field will be validated accordingly.</p>
+<p>For other field types like Date, Currency, Option field will be left blank.</p>
+<p>####Set More Properties</p>
+<p>You can set properties as:</p>
+<ol class="list">
+<li>Mandatory: If checked, entering data in the custom field will be mandatory.</li>
+<li>Print Hide: If checked, this field will be hidden from the Standard Print Format. To make field visible in the Standard Print Format, uncheck this field.</li>
+<li>Field Description: It will be short field description which will appear just below that field.</li>
+<li>Default Value: Value entered in this field will be auto-set in the Custom Field.</li>
+<li>Read Only: Checking this option will make custom field non-editable.</li>
+<li>Allow on Submit: Checking this option will allow editing value in the field when in submitted transaction.</li>
+</ol>
+<p>####Update Customize Form</p>
+<p>After inserting required details for the Custom Field, Update Customize Form. On update, Custom Field will be inserting in the form, Employee master in this case. Before checking Employee form, reload your ERPNext account. After reload, check Employee form to see Custom Field in a form.</p>
+<p class="img-container"><img alt="Select Document Type" class="screenshot" src="{{docs_base_url}}/assets/img/customize/custom-field-6.png"></p>
+<p>####Deleting Custom Field</p>
+<p>Given a permission, user will be able to delete Custom Fields. Incase Custom Field is deleted by mistake, if you add another Custom Field with same name. Then you shall see new field auto-mapped with old-deleted Custom Field.</p>
+<div class="embed-container">
+    <iframe src="https://www.youtube.com/embed/pJhL9mmxV_U?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+    </iframe>
+</div>
+
+<p>{next}</p>
+    </article>
+  </body>
+</html>

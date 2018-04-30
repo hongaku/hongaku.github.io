@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>Lieferantenauftrag</title>
+    <link type="text/css" rel="stylesheet" href="../../../../assets/css/github-markdown.css">
+    <link type="text/css" rel="stylesheet" href="../../../../assets/css/pilcrow.css">
+    <link type="text/css" rel="stylesheet" href="../../../../assets/css/hljs-github.min.css"/>
+  </head>
+  <body>
+    <article class="markdown-body"><h1 id="lieferantenauftrag"><a class="header-link" href="#lieferantenauftrag"></a>Lieferantenauftrag</h1>
+<p><span class="text-muted contributed-by">Beigetragen von CWT Connector &amp; Wire Technology GmbH</span></p>
+<p>Ein Lieferantenauftrag verhält sich analog zu einem Kundenauftrag. Normalerweise handelt es sich um einen bindenden Vertrag mit Ihrem Lieferanten bei dem Sie versichern eine Anzahl von Artikeln zu den entsprechenden Bedingungen zu kaufen.</p>
+<p>Ein Lieferantenauftrag kann automatisch aus einer Materialanfrage oder einem Lieferantenangebot erstellt werden.</p>
+<h3 id="flußdiagramm-der-lieferantenbestellung"><a class="header-link" href="#flußdiagramm-der-lieferantenbestellung"></a>Flußdiagramm der Lieferantenbestellung</h3>
+<p class="img-container"><img class="screenshot" alt="Lieferantenauftrag" src="{{docs_base_url}}/assets/img/buying/purchase-order-f.jpg"></p>
+<p>In ERPNext können Sie einen Lieferantenauftrag auch direkt erstellen über:</p>
+<blockquote>
+<p>Einkauf &gt; Dokumente &gt; Lieferantenauftrag &gt; Neuer Lieferantenauftrag</p>
+</blockquote>
+<h3 id="einen-lieferantenauftrag-erstellen"><a class="header-link" href="#einen-lieferantenauftrag-erstellen"></a>Einen Lieferantenauftrag erstellen</h3>
+<p class="img-container"><img class="screenshot" alt="Lieferantenauftrag" src="{{docs_base_url}}/assets/img/buying/purchase-order.png"></p>
+<p>Einen Lieferantenauftrag einzugeben ist sehr ähnlich zu einer Lieferantenanfrage. Zusätzlich müssen Sie Folgendes eingeben:</p>
+<ul class="list">
+<li>Lieferant</li>
+<li>Für jeden Artikel das Datum, an dem Sie ihn brauchen: Wenn Sie eine Teillieferung erwarten, weis Ihr Lieferant, welche Menge an welchem Datum geliefert werden muss. Das hilft Ihnen dabei eine Überversorgung zu vermeiden. Weiterhin hilft es Ihnen nachzuvollsziehen, wie gut sich Ihr Lieferant an Termine hält.</li>
+</ul>
+<h3 id="steuern"><a class="header-link" href="#steuern"></a>Steuern</h3>
+<p>Wenn Ihnen Ihr Lieferant zusätzliche Steuern oder Abgaben wie Versandgebühren und Versicherung in Rechnung stellt, können Sie das hier eingeben. Das hilft Ihnen dabei die Kosten angemessen mitzuverfolgen. Außerdem müssen Sie Abgaben, die sich auf den Wert des Produktes auswirken, in der Steuertabelle mit berücksichtigen. Sie können für Ihre Steuern auch Vorlagen verwenden. Für weitergehende Informationen wie man Steuern einstellt lesen Sie bitte unter &quot;Vorlage für Einkaufssteuern und Gebühren&quot; nach.</p>
+<h3 id="mehrwertsteuern-(mwst)"><a class="header-link" href="#mehrwertsteuern-(mwst)"></a>Mehrwertsteuern (MwSt)</h3>
+<p>Oft entspricht die Steuer, die Sie für Artikel dem Lieferanten zahlen, derselben Steuer die Ihre Kunden an Sie entrichten. In vielen Regionen ist das, was Sie als Steuer an den Staat abführen, nur die Differenz zwischen dem, was Sie von Ihren Kunden als Steuer bekommen, und dem was Sie als Steuer an Ihren Lieferanten zahlen. Das nennt man Mehrwertsteuer (MwSt).</p>
+<p>Beispiel: Sie kaufen Artikel im Wert X ein und verkaufen Sie für 1,3x X. Somit zahlt Ihr Kunde 1,3x den Betrag, den Sie an Ihren Lieferanten zahlen. Da Sie ja für X bereits Steuer über Ihren Lieferanten gezahlt haben, müssen Sie nurmehr die Differenz von 0,3x X an den Staat abführen.</p>
+<p>Das kann in ERPNext sehr einfach mitprotokolliert werden, das jede Steuerbezeichnung auch ein Konto ist. Im Idealfall müssen Sie für jede Mehrwertsteuerart zwei Konten erstellen, eines für Einnahmen und eines für Ausgaben, Vorsteuer (Forderung) und Umsatzsteuer (Verbindlichkeit), oder etwas ähnliches. Nehmen Sie hierzu mit Ihrem Steuerberater Kontakt auf, wenn Sie weiterführende Hilfe benötigen, oder erstellen Sie eine Anfrage im Forum.</p>
+<h3 id="umrechnung-von-einkaufsmaßeinheit-in-lagermaßeinheit"><a class="header-link" href="#umrechnung-von-einkaufsmaßeinheit-in-lagermaßeinheit"></a>Umrechnung von Einkaufsmaßeinheit in Lagermaßeinheit</h3>
+<p>Sie können Ihre Maßeinheit in der Lieferantenbestellung abändern, wenn es so vom Lager gefordert wird.</p>
+<p>Beispiel: Wenn Sie Ihr Rohmaterial in großen Mengen in Großverpackungen eingekauft haben, aber in kleinteiliger Form einlagern wollen (z. B. Kisten und Einzelteile). Das können Sie einstellen, während Sie Ihre Lieferantenbestellung erstellen.</p>
+<p><strong>Schritt 1:*</strong> Im Artikelformular Lagermaßeinheit auf Stück einstellen.</p>
+<blockquote>
+<p>Anmerkung: Die Maßeinheit im Artikelformular ist die Lagermaßeinheit.</p>
+</blockquote>
+<p><strong>Schritt 2:</strong> In der Lieferantenbestellung stellen Sie die Maßeinheit als Boxen ein (wenn das Material in Kisten angeliefert wird).</p>
+<p><strong>Schritt 3:</strong> Im Bereich Lager und Referenz wird die Maßeinheit als Stückzahl (aus dem Artikelformular) angezogen.</p>
+<h3 id="abbildung-3:-umrechung-von-einkaufsmaßeinheit-in-lagermaßeinheit"><a class="header-link" href="#abbildung-3:-umrechung-von-einkaufsmaßeinheit-in-lagermaßeinheit"></a>Abbildung 3: Umrechung von Einkaufsmaßeinheit in Lagermaßeinheit</h3>
+<p class="img-container"><img class="screenshot" alt="Lieferantenauftrag - Maßeinheit" src="{{docs_base_url}}/assets/img/buying/purchase-order-uom.png"></p>
+<p><strong>Schritt 4:</strong> Geben Sie den Umrechnungsfaktor von einer in die andere Maßeinheit an. Beispiel: 100, wenn eine Kiste 100 Stück umfasst.</p>
+<p><strong>Schritt 5:</strong> Die Lagermenge wird dementsprechend angepasst.</p>
+<p><strong>Schritt 6:</strong> Speichern und übertragen Sie das Formular.</p>
+<p>{next}</p>
+    </article>
+  </body>
+</html>

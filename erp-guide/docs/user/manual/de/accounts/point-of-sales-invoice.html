@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>POS-Rechnung</title>
+    <link type="text/css" rel="stylesheet" href="../../../../assets/css/github-markdown.css">
+    <link type="text/css" rel="stylesheet" href="../../../../assets/css/pilcrow.css">
+    <link type="text/css" rel="stylesheet" href="../../../../assets/css/hljs-github.min.css"/>
+  </head>
+  <body>
+    <article class="markdown-body"><h1 id="pos-rechnung"><a class="header-link" href="#pos-rechnung"></a>POS-Rechnung</h1>
+<p><span class="text-muted contributed-by">Beigetragen von CWT Connector &amp; Wire Technology GmbH</span></p>
+<p>Der Point of Sale (POS) ist der Ort, wo ein Endkundengeschäft durchgeführt wird. Es handelt sich um den Ort, an dem ein Kunde im Austausch für Waren oder Dienstleistungen eine Zahlung an den Händler leistet. Für Endkundengeschäfte laufen die Lieferung von Waren, die Anbahnung des Verkaufs und die Zahlung alle am selben Ort ab, der im allgemeinen als &quot;Point of Sale&quot; bezeichnet wird.</p>
+<p>Sie können eine Ausgangsrechnung des Typs POS erstellen, indem Sie &quot;Ist POS&quot; ankreuzen. Wenn Sie diese Option markieren, dann werden Sie bemerken, dass einige Felder verborgen werden und neue erscheinen.</p>
+<blockquote>
+<p>Tipp: Im Einzelhandel werden Sie wahrscheinlich nicht für jeden Kunden einen eigenen Datensatz anlegen. Sie können einen allgemeinen Kunden, den Sie als &quot;Laufkunden&quot; bezeichnen, erstellen und alle Ihre Transaktionen zu diesem Kundendatensatz erstellen.</p>
+</blockquote>
+<h4 id="pos-einrichten"><a class="header-link" href="#pos-einrichten"></a>POS einrichten</h4>
+<p>In ERPNext können über den POS alle Verkaufs- und Einkaufstransaktionen, wie Ausgangsrechnung, Angebot, Kundenauftrag, Lieferantenauftrag, usw. bearbeitet werden. Über folgende zwei Schritte richten Sie den POS ein:</p>
+<ol class="list">
+<li>Aktivieren Sie die POS-Ansicht über Einstellungen &gt; Anpassen &gt; Funktionseinstellungen</li>
+<li>Erstellen Sie einen Datensatz für die <a href="/docs/user/manual/de/setting-up/pos-setting.html">POS-Einstellungen</a></li>
+</ol>
+<h4 id="auf-die-pos-ansicht-umschalten"><a class="header-link" href="#auf-die-pos-ansicht-umschalten"></a>Auf die POS-Ansicht umschalten</h4>
+<p>Öffnen Sie eine beliebige Verkaufs- oder Einkaufstransaktion. Klicken Sie auf das Computersymbol <i class="icon-desktop"></i>.</p>
+<h4 id="die-verschiedenen-abschnitte-des-pos"><a class="header-link" href="#die-verschiedenen-abschnitte-des-pos"></a>Die verschiedenen Abschnitte des POS</h4>
+<ul class="list">
+<li>Lagerbestand aktualisieren: Wenn diese Option angekreuzt ist, werden im Lagerbuch Buchungen erstellt, wenn Sie eine Ausgangsrechnung übertragen. Somit brauchen Sie keinen separaten Lieferschein.</li>
+<li>Aktualisieren Sie in Ihrer Artikelliste die Lagerinformationen wie Lager (standardmäßig gespeichert), Seriennummer und Chargennummer, sofern sie zutreffen.</li>
+<li>Aktualisieren Sie die Zahlungsdetails wie das Bankkonto/die Kasse, den bezahlten Betrag etc.</li>
+<li>Wenn Sie einen bestimmten Betrag ausbuchen, zum Beispiel dann, wenn Sie zu viel gezahltes Geld erhalten, weil der Wechselkurs nicht genau umgerechnet wurde, dann markieren Sie das Feld &quot;Offenen Betrag ausbuchen&quot; und schließen Sie das Konto.</li>
+</ul>
+<h3 id="einen-artikel-hinzufügen"><a class="header-link" href="#einen-artikel-hinzufügen"></a>Einen Artikel hinzufügen</h3>
+<p>An der Kasse muss der Verkäufer die Artikel, die der Kunde kauft, auswählen. In der POS-Schnittstelle können Sie einen Artikel auf zwei Arten auswählen. Zum einen, indem Sie auf das Bild des Artikels klicken, zum zweiten über den Barcode oder die Seriennummer.</p>
+<p><strong>Artikel auswählen:</strong> Um ein Produkt auszuwählen, klicken Sie auf das Bild des Artikels und legen Sie es in den Einkaufswagen. Ein Einkaufswagen ist ein Ort, der zur Vorbereitung der Zahlung durch den Kunden dient, indem Produktinformationen eingegeben, Steuern angepasst und Rabatte gewährt werden können.</p>
+<p><strong>Barcode/Seriennummer:</strong> Ein Barcode/eine Seriennummer ist eine optionale maschinenlesbare Möglichkeit Daten zu einem Objekt einzulesen, mit dem er/sie verbunden ist. Geben Sie wie auf dem Bild unten angegeben den Barcode/die Seriennummer in das Feld ein und warten Sie einen kurzen Moment, dann wird der Artikel automatisch zum Einkaufswagen hinzugefügt.</p>
+<p class="img-container"><img src="/docs/assets/old_images/erpnext/pos-add-item.png" alt="POS"></p>
+<blockquote>
+<p>Tipp: Um die Menge eines Artikels zu ändern, geben Sie die gewünschte Menge im Feld &quot;Menge&quot; ein. Das wird hauptsächliche dann verwendet, wenn ein Artikel in größeren Mengen gekauft wird.</p>
+</blockquote>
+<p>Wenn die Liste Ihrer Produkte sehr lang ist, verwenden Sie das Suchfeld und geben Sie dort den Produktnamen ein.</p>
+<h3 id="einen-artikel-entfernen"><a class="header-link" href="#einen-artikel-entfernen"></a>Einen Artikel entfernen</h3>
+<p>Es gibt zwei Möglichkeiten einen Artikel zu entfernen:</p>
+<ul class="list">
+<li>Wählen Sie einen Artikel aus, indem Sie auf die Zeile des Artikels im Einkaufswagen klicken. Klicken Sie dann auf die Schaltfläche &quot;Löschen&quot;.</li>
+<li>Geben Sie für jeden Artikel, den Sie löschen möchten, als Menge &quot;0&quot; ein.</li>
+</ul>
+<p>Wenn Sie mehrere verschiedene Artikel auf einmal entfernen möchten, wählen Sie mehrere Zeilen aus und klicken Sie auf die Schaltfläche &quot;Löschen&quot;.</p>
+<blockquote>
+<p>Die Schaltfläche &quot;Löschen&quot; erscheint nur, wenn Artikel ausgewählt wurden.</p>
+</blockquote>
+<p class="img-container"><img src="/docs/assets/old_images/erpnext/pos-remove-item.png" alt="POS"></p>
+<h3 id="zahlung-durchführen"><a class="header-link" href="#zahlung-durchführen"></a>Zahlung durchführen</h3>
+<p>Wenn alle Artikel mit Mengenangabe im Einkaufswagen hinzugefügt wurden, können Sie die Zahlung durchführen. Der Zahlungsprozess untergliedert sich in drei Schritte:</p>
+<ol class="list">
+<li>Klicken Sie auf &quot;Zahlung durchführen&quot; um das Zahlungsfenster zu öffnen.</li>
+<li>Wählen Sie die Zahlungsart aus.</li>
+<li>Klicken Sie auf die Schaltfläche &quot;Zahlen&quot; um das Dokument abzuspeichern.</li>
+</ol>
+<p class="img-container"><img src="/docs/assets/old_images/erpnext/pos-make-payment.png" alt="POS-Zahlung"></p>
+<p>Übertragen Sie das Dokument um den Datensatz abzuschliessen. Nachdem das Dokument übertragen wurde, können Sie es entweder ausdrucken oder per E-Mail versenden.</p>
+<h4 id="buchungssätze-(hauptbuch)-für-einen-pos"><a class="header-link" href="#buchungssätze-(hauptbuch)-für-einen-pos"></a>Buchungssätze (Hauptbuch) für einen POS</h4>
+<p>Soll:</p>
+<ul class="list">
+<li>Kunde (Gesamtsumme)</li>
+<li>Bank / Kasse (Zahlung)</li>
+</ul>
+<p>Haben:</p>
+<ul class="list">
+<li>Ertrag (Nettosumme abzüglich Steuern für jeden Artikel)</li>
+<li>Steuern (Verbindlichkeiten gegenüber dem Finanzamt)</li>
+<li>Kunde (Zahlung)</li>
+<li>Abschreibung/Ausbuchung (optional)</li>
+</ul>
+<p>Um sich nach dem Übertragen die Buchungen anzusehen, klicken Sie auf Kontobuch ansehen.</p>
+<p>{next}</p>
+    </article>
+  </body>
+</html>

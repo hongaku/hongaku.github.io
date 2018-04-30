@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>Item Valuation Fifo And Moving Average</title>
+    <link type="text/css" rel="stylesheet" href="../../../../../assets/css/github-markdown.css">
+    <link type="text/css" rel="stylesheet" href="../../../../../assets/css/pilcrow.css">
+    <link type="text/css" rel="stylesheet" href="../../../../../assets/css/hljs-github.min.css"/>
+  </head>
+  <body>
+    <article class="markdown-body"><h1 id="item-valuation-fifo-and-moving-average"><a class="header-link" href="#item-valuation-fifo-and-moving-average"></a>Item Valuation Fifo And Moving Average</h1>
+<h3 id="how-are-items-valued?"><a class="header-link" href="#how-are-items-valued?"></a>How are Items Valued?</h3>
+<p>One of the major features of any inventory system is that you can find out the
+value of any item based on its historic or average price. You can also find
+the value of all your items for your balance sheet.</p>
+<p>Valuation is important because:</p>
+<ul class="list">
+<li>The buying price may fluctuate.</li>
+<li>The value may change because of some process (value add).</li>
+<li>The value may change because of decay, loss etc.</li>
+</ul>
+<p>You may encounter these terms, so lets clarify:</p>
+<ul class="list">
+<li>Rate: Rate at which the transaction takes place.</li>
+<li>Valuation Rate: Rate at which the items value is set for your valuation.</li>
+</ul>
+<p>There are two major ways in which ERPNext values your items.</p>
+<ul class="list">
+<li><strong>FIFO (First In First Out):</strong> In this system, ERPNext assumes that you will consume / sell those Items first which you bought first. For example, if you buy an Item at price X and then after a few days at price Y, whenever you sell your Item, ERPNext will reduce the quantity of the Item priced at X first and then Y.</li>
+</ul>
+<p class="img-container"><img alt="FIFO" class="screenshot" src="{{docs_base_url}}/assets/img/stock/fifo.png"></p>
+<ul class="list">
+<li><strong>Moving Average:</strong> In this method, ERPNext assumes that the value of the item at any point is the average price of the units of that Item in stock. For example, if the value of an Item is X in a Warehouse with quantity Y and another quantity Y1 is added to the Warehouse at cost X1, the new value X2 would be:</li>
+</ul>
+<blockquote>
+<p>New Value X2 = (X <em> Y + X1 </em> Y1) / (Y + Y1)</p>
+</blockquote>
+    </article>
+  </body>
+</html>

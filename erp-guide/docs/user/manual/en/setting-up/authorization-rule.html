@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>Authorization Rule</title>
+    <link type="text/css" rel="stylesheet" href="../../../../assets/css/github-markdown.css">
+    <link type="text/css" rel="stylesheet" href="../../../../assets/css/pilcrow.css">
+    <link type="text/css" rel="stylesheet" href="../../../../assets/css/hljs-github.min.css"/>
+  </head>
+  <body>
+    <article class="markdown-body"><h1 id="authorization-rule"><a class="header-link" href="#authorization-rule"></a>Authorization Rule</h1>
+<p>Authorization Rule is a tool to define rule for conditional authorization.</p>
+<p>If you sales and purchase transactions of higher value or discount requires an authorization from senior manager, you can set authorization rule for it.</p>
+<p>To create new Authorization Rule, go to:</p>
+<blockquote>
+<p>Setup &gt; Customize &gt; Authorization Rule</p>
+</blockquote>
+<p>Let&#39;s consider an example of Authorization Rule to learn better.</p>
+<p>Assume that Sales Manager needs to authorize Sales Orders, only if its Grand Total value exceeds 10000. If Sales Order values is less than 10000, then even Sales User will be able to submit it. It means Submit permision of Sales User will be restricted only upto Sales Order of Grand Total less than 10000.</p>
+<p><strong>Step 1:</strong></p>
+<p>Open new Authorization Rule</p>
+<p><strong>Step 2:</strong></p>
+<p>Select Company and Transaction on which Authorization Rule will be applicable. This functionality is available for limited transactions only.</p>
+<p><strong>Step 3:</strong></p>
+<p>Select Based On. Authorization Rule will be applied based on value selected in this field.</p>
+<p><strong>Step 4:</strong></p>
+<p>Select Role on whom this Authorization Rule will be applicable. As per the example considered, Sales User will be selected as Application To (Role). To be more specific you can also select Applicable To User, if you wish to apply the rule for specific Sales User, and not all Sales User. Its okay to not select Sales User, as its not mandatory.</p>
+<p><strong>Step 5:</strong></p>
+<p>Select approvers Role. It will be Sales Manager role which if assigned to user, will be able to submit Sales Order above 10000. Also you can select specific Sales Manager, and then rule should be applicable for that User only. Selecting Approving User field is not mandatory.</p>
+<p><strong>Step 6:</strong></p>
+<p>Set Above Value. Given the exmaple, Above Value will be set as 10000.</p>
+<p class="img-container"><img class="screenshot" alt="Authorization Rule" src="{{docs_base_url}}/assets/img/setup/auth-rule.png"></p>
+<p>If Sales User tries submitting Sales Order of value higher than 10000, then he will get error message.</p>
+<blockquote>
+<p>If you wish to restrict Sales User from submitting Sales Orders, then instead of creating Authorization Rule, you should remove submit previledge from Role Permission Manager for Sales User.</p>
+</blockquote>
+<p>{next}</p>
+    </article>
+  </body>
+</html>

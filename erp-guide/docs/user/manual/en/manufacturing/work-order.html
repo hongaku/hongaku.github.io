@@ -1,0 +1,141 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>Work Order</title>
+    <link type="text/css" rel="stylesheet" href="../../../../assets/css/github-markdown.css">
+    <link type="text/css" rel="stylesheet" href="../../../../assets/css/pilcrow.css">
+    <link type="text/css" rel="stylesheet" href="../../../../assets/css/hljs-github.min.css"/>
+  </head>
+  <body>
+    <article class="markdown-body"><h1 id="work-order"><a class="header-link" href="#work-order"></a>Work Order</h1>
+<p><img class="screenshot" alt="Work Order" src="{{docs_base_url}}/assets/img/manufacturing/manufacturing-flow.png">
+A Work Order is a document that is given to
+the manufacturing shop floor by the Production Planner as a signal to produce
+a certain quantity of a certain Item. The Work Order also helps to generate
+the material requirements (Stock Entry) for the Item to be produced from its
+<strong>Bill of Materials</strong>.</p>
+<p>The <strong>Work Order</strong> is generated from the <strong>Production Planning
+Tool</strong> based on Sales Orders. You can also create a direct Work Order
+by:</p>
+<blockquote>
+<p>Manufacturing &gt; Documents &gt; Work Order &gt; New</p>
+</blockquote>
+<p class="img-container"><img class="screenshot" alt="Work Order" src="{{docs_base_url}}/assets/img/manufacturing/work-order.png"></p>
+<div class-"embed-container">
+  <iframe src="https://www.youtube.com/embed/yv_KAIlHrO4?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+  </iframe>
+</div>
+
+<h3 id="creating-work-orders"><a class="header-link" href="#creating-work-orders"></a>Creating Work Orders</h3>
+<ul class="list">
+<li>Select the Item to be produced.</li>
+<li>The default BOM for that item will be fetched by the system. You can also change BOM.</li>
+<li>Enter the Qty to manufacture.</li>
+<li>If the selected BOM has operartion mentioned in it, the system shall fetch all operations from BOM.</li>
+<li>Mention the Planned Start Date (an Estimated Date at which you want the Production to begin.)</li>
+<li>Select Warehouses:<ul class="list">
+<li>Source Warehouses: The warehouse where you store your raw materials. Each required item can have separate source warehouse. Group warehouse also can be selected as source warehouse. On submission of Work Order, the raw mateirals will be reserved in these warehouses for production usage.</li>
+<li>Work-in-Progress Warehouse: The warehouse where your Items will be transferred when you begin production. Group Warehouse can also be selected as Work-in-Progress warehouse.</li>
+<li>Target Warehouse: The warehouse where you store finished Items before they are shipped.</li>
+<li>Scrap Warehouse: Scrap Items will be stored in this warehouse.</li>
+</ul>
+</li>
+<li>Required Items: All the required items (raw materials) will be fetched from BOM and populated in this table. Here you can also change the default source warehouse for any item. And during the production, you can track transferred raw materials from this table.</li>
+</ul>
+<blockquote>
+<p>Note : You can save a Work Order without selecting the warehouses, but warehouses are mandatory for submitting a Work Order</p>
+</blockquote>
+<p>###Reassigning Workstation/Duration for Operations</p>
+<ul class="list">
+<li>By default the system fetchs workstation and duration for Work Order Operations from the selected BOM.</li>
+</ul>
+<p class="img-container"><img class="screenshot" alt="PO Opeartions" src="{{docs_base_url}}/assets/img/manufacturing/PO-operations.png"></p>
+<ul class="list">
+<li>If you wish to reassign the workstation for a particular opeeration in the Work Order, you can do so before submitting the Work Order.</li>
+</ul>
+<p class="img-container"><img class="screenshot" alt="PO reassigning Operations" src="{{docs_base_url}}/assets/img/manufacturing/PO-reassigning-operations.png"></p>
+<ul class="list">
+<li>Select the respective operation, and change its workstation.</li>
+<li>You can also change the Operating Time for that operation</li>
+</ul>
+<h3 id="capacity-planning-in-work-order"><a class="header-link" href="#capacity-planning-in-work-order"></a>Capacity Planning in Work Order</h3>
+<ul class="list">
+<li>When a Work Order is submitted, based on the Planned Start Date and the availability of the workstations, system schedules all operations for the Work Order (if Work Order has operations specified).</li>
+<li>Drafts of Time Logs are also created based on the scheduled operations.</li>
+</ul>
+<h3 id="transfering-materials-for-manufacturing"><a class="header-link" href="#transfering-materials-for-manufacturing"></a>Transfering Materials for Manufacturing</h3>
+<ul class="list">
+<li>Once you have submitted your Work Order, you need to Transfer the Raw Materials to initiate the Manufacturing Process.</li>
+<li><p>This will create a Stock Entry with all the Items required to complete this Work Order to be added to the WIP Warehouse. (this will add sub-Items with BOM as one Item or explode their children based on your setting above).</p>
+</li>
+<li><p>Click on &#39;Start&#39;.</p>
+</li>
+</ul>
+<p class="img-container"><img class="screenshot" alt="Transfer Materials" src="{{docs_base_url}}/assets/img/manufacturing/PO-material-transfer.png"></p>
+<ul class="list">
+<li>Mention the quantity of materials to be transfered.</li>
+</ul>
+<p class="img-container"><img class="screenshot" alt="Material Transfer Qty" src="{{docs_base_url}}/assets/img/manufacturing/PO-material-transfer-qty.png"></p>
+<ul class="list">
+<li>Submit the Stock Entry</li>
+</ul>
+<p class="img-container"><img class="screenshot" alt="Stock Entry for PO" src="{{docs_base_url}}/assets/img/manufacturing/PO-SE-for-material-transfer.png"></p>
+<ul class="list">
+<li>Material Transfered for Manufacturing will be updated in the Work Order based on the Stock Entry.</li>
+</ul>
+<p class="img-container"><img class="screenshot" alt="Stock Entry for PO" src="{{docs_base_url}}/assets/img/manufacturing/PO-material-transfer-updated.png"></p>
+<h4 id="material-transfer-through-stock-entry"><a class="header-link" href="#material-transfer-through-stock-entry"></a>Material Transfer through Stock Entry</h4>
+<p>Use cases for this option are:</p>
+<ul class="list">
+<li>If material transfer is done in bulk and/or is not required to be tracked against a particular Work Order</li>
+<li>If the responsibility for Material Transfer and Production Entry lies with two separate users</li>
+</ul>
+<p>If this is the case, you can select the Skip Material Transfer check box, which will allow you to make the “Manufacture” Stock Entry directly by clicking on the ‘Finish’ button.</p>
+<h3 id="making-time-logs"><a class="header-link" href="#making-time-logs"></a>Making Time Logs</h3>
+<ul class="list">
+<li>Progress in the Work Order can be tracked using <a href="/docs/user/manual/en/projects/timesheet/timesheet-against-work-order.html">Timesheet</a></li>
+<li>Timesheet&#39;s time slots are created against Work Order Operations.</li>
+<li>Drafts of Timesheet are created based on the scheduled operations when an Work Order is Submitted.</li>
+<li>To create more Timesheets against an operation click &#39;Make Timesheet&#39; button.</li>
+</ul>
+<p class="img-container"><img class="screenshot" alt="Make timesheet against PO" src="{{docs_base_url}}/assets/img/manufacturing/PO-operations-make-ts.png"></p>
+<p>###Updating Finished Goods</p>
+<ul class="list">
+<li>Once you are done with the Work Order you need to update the Finished Goods.</li>
+<li>This will create a Stock Entry that will deduct all the sub-Items from the WIP Warehouse and add them to the Finished Goods Warehouse.</li>
+<li>Click on &#39;Finish&#39;.</li>
+</ul>
+<p class="img-container"><img class="screenshot" alt="Update Finished Goods" src="{{docs_base_url}}/assets/img/manufacturing/PO-FG-update.png"></p>
+<ul class="list">
+<li>Mention the quantity of materials to be transfered.</li>
+</ul>
+<p class="img-container"><img class="screenshot" alt="Update Finished Goods Qty" src="{{docs_base_url}}/assets/img/manufacturing/PO-FG-update-qty.png"></p>
+<blockquote>
+<p>Tip : You can also partially complete a Work Order by updating the Finished Goods stock creating a Stock Entry.</p>
+</blockquote>
+<h3 id="stopping-a-work-order"><a class="header-link" href="#stopping-a-work-order"></a>Stopping a Work Order</h3>
+<ul class="list">
+<li>When you stop a Work Order its status is changed to Stop indicating that all production process against that Work Order is to be ceased.</li>
+<li><p>To stop the Work Order click on the &#39;Stop&#39; Button</p>
+<ol class="list">
+<li>On Submitting the Work Order, the system will reserve a slot for each of the Work Order Operations serially after the planned start date based on the workstation availability. The Workstation availability depends on the Workstation timings, holiday list and if some other Work Order Operation was scheduled in that slot. You can mention the number of days for the system to try scheduling the operations in the Manufacturing Settings. This is set to 30 Days by default. If the operation requires time exceeding the available slot, system shall ask you to break the operations. Once the scheduling is done system shall create Time Logs and save them. You can Modify them and submit them later.</li>
+<li>You can also create additional time logs against an Operation. For doing so select the respective operation and click on &#39;Make Time Log&#39;</li>
+<li>Transfer Raw Material: This will create a Stock Entry with all the Items required to complete this Work Order to be added to the WIP Warehouse. (this will add sub-Items with BOM as one Item or explode their children based on your setting above).</li>
+<li>Update Finished Goods: This will create a Stock Entry that will deduct all the sub-Items from the WIP Warehouse and add them to the Finished Goods Warehouse.</li>
+<li>To check all Time Logs made against the Work Order click on &#39;Show Time Logs&#39;</li>
+</ol>
+</li>
+</ul>
+<p class="img-container"><img class="screenshot" alt="PO - stop" src="{{docs_base_url}}/assets/img/manufacturing/PO-stop.png"></p>
+<ul class="list">
+<li>You can also re-start a stopped Work Order.</li>
+</ul>
+<blockquote>
+<p>Note : In order to make a Work Order against an Item you must specify &#39;Yes&#39; to &quot;Allow Work Order&quot; on the Item form.</p>
+</blockquote>
+<p>{next}</p>
+    </article>
+  </body>
+</html>

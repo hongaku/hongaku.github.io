@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>Nach dem Speichern &quot;Schreibschutz&quot; einstellen</title>
+    <link type="text/css" rel="stylesheet" href="../../../../../../assets/css/github-markdown.css">
+    <link type="text/css" rel="stylesheet" href="../../../../../../assets/css/pilcrow.css">
+    <link type="text/css" rel="stylesheet" href="../../../../../../assets/css/hljs-github.min.css"/>
+  </head>
+  <body>
+    <article class="markdown-body"><h1 id="nach-dem-speichern-"schreibschutz"-einstellen"><a class="header-link" href="#nach-dem-speichern-"schreibschutz"-einstellen"></a>Nach dem Speichern &quot;Schreibschutz&quot; einstellen</h1>
+<p><span class="text-muted contributed-by">Beigetragen von CWT Connector &amp; Wire Technology GmbH</span></p>
+<p>Verwenden Sie die Methode cur_frm.set_df_property um die Anzeige Ihres Feldes zu aktualiseren.</p>
+<p>In diesem Skript verwenden wir auch die Eigenschaft <strong>islocal des Dokuments um zu prüfen ob das Dokument wenigstens einmal abgespeichert wurde oder nie. Wenn </strong>islocal gleich 1 ist, dann wurde das Dokument noch nie gespeichert.</p>
+<pre class="hljs"><code>frappe.ui.form.on(<span class="hljs-string">"MyDocType"</span>, <span class="hljs-string">"refresh"</span>, <span class="hljs-keyword">function</span>(frm) {
+    // <span class="hljs-keyword">use</span> the __islocal value <span class="hljs-keyword">of</span> doc, to check <span class="hljs-keyword">if</span> the doc <span class="hljs-keyword">is</span> saved <span class="hljs-keyword">or</span> <span class="hljs-keyword">not</span>
+    frm.set_df_property(<span class="hljs-string">"myfield"</span>, <span class="hljs-string">"read_only"</span>, frm.doc.__islocal ? <span class="hljs-number">0</span> : 1);
+}</code></pre><p>{next}</p>
+    </article>
+  </body>
+</html>

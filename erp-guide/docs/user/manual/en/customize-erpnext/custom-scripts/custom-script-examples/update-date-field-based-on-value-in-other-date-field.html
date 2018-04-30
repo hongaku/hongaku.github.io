@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>Update Date Field Based On Value In Other Date Field</title>
+    <link type="text/css" rel="stylesheet" href="../../../../../../assets/css/github-markdown.css">
+    <link type="text/css" rel="stylesheet" href="../../../../../../assets/css/pilcrow.css">
+    <link type="text/css" rel="stylesheet" href="../../../../../../assets/css/hljs-github.min.css"/>
+  </head>
+  <body>
+    <article class="markdown-body"><h1 id="update-date-field-based-on-value-in-other-date-field"><a class="header-link" href="#update-date-field-based-on-value-in-other-date-field"></a>Update Date Field Based On Value In Other Date Field</h1>
+<p>Below script would auto-set value for the date field, based on the value in another date field.</p>
+<p>Example: Production Due Date must be set as two days before Delivery Date. If you have Production Due Date field already, with field type as Date, as per the below given script, date will be auto-updated in it, two days prior Deliver Date.</p>
+<pre class="hljs"><code>cur<span class="hljs-number">_f</span>rm.cscript.custom<span class="hljs-number">_</span>delivery<span class="hljs-number">_</span>date = <span class="hljs-keyword">function</span>(<span class="hljs-meta">doc</span>, cdt, cd){
+cur<span class="hljs-number">_f</span>rm.set<span class="hljs-number">_</span><span class="hljs-keyword">value</span>(<span class="hljs-string">"production_due_date"</span>, frappe.datetime.add<span class="hljs-number">_</span>days(<span class="hljs-meta">doc</span>.delivery<span class="hljs-number">_</span>date, -<span class="hljs-number">2</span>));
+ }</code></pre>    </article>
+  </body>
+</html>

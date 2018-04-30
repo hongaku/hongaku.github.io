@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>Datenfeld basierend auf dem Wert in einem anderen Datenfeld aktualisieren</title>
+    <link type="text/css" rel="stylesheet" href="../../../../../../assets/css/github-markdown.css">
+    <link type="text/css" rel="stylesheet" href="../../../../../../assets/css/pilcrow.css">
+    <link type="text/css" rel="stylesheet" href="../../../../../../assets/css/hljs-github.min.css"/>
+  </head>
+  <body>
+    <article class="markdown-body"><h1 id="datenfeld-basierend-auf-dem-wert-in-einem-anderen-datenfeld-aktualisieren"><a class="header-link" href="#datenfeld-basierend-auf-dem-wert-in-einem-anderen-datenfeld-aktualisieren"></a>Datenfeld basierend auf dem Wert in einem anderen Datenfeld aktualisieren</h1>
+<p><span class="text-muted contributed-by">Beigetragen von CWT Connector &amp; Wire Technology GmbH</span></p>
+<p>Das unten abgebildete Skript trägt automatisch einen Wert in das Feld Datum ein, das auf einem Wert in einem anderen Skript basiert.</p>
+<p>Beispiel: Das Produktionsdatum muss sich zwei Tage vor dem Lieferdatum befinden. Wenn Sie das Feld zum Produktionsdatum haben, wobei es sich um ein Feld vom Typ Datum handelt, dann können Sie mit dem unten abgebildeten Skript das Datum in diesem Feld automatisch aktualisieren, zwei Tage vor dem Lieferdatum.</p>
+<pre class="hljs"><code>cur<span class="hljs-number">_f</span>rm.cscript.custom<span class="hljs-number">_</span>delivery<span class="hljs-number">_</span>date = <span class="hljs-keyword">function</span>(<span class="hljs-meta">doc</span>, cdt, cd){
+cur<span class="hljs-number">_f</span>rm.set<span class="hljs-number">_</span><span class="hljs-keyword">value</span>(<span class="hljs-string">"production_due_date"</span>, frappe.datetime.add<span class="hljs-number">_</span>days(<span class="hljs-meta">doc</span>.delivery<span class="hljs-number">_</span>date, -<span class="hljs-number">2</span>));
+ }</code></pre><p>{next}</p>
+    </article>
+  </body>
+</html>

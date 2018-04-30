@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title></title>
+    <link type="text/css" rel="stylesheet" href="../../../../../assets/css/github-markdown.css">
+    <link type="text/css" rel="stylesheet" href="../../../../../assets/css/pilcrow.css">
+    <link type="text/css" rel="stylesheet" href="../../../../../assets/css/hljs-github.min.css"/>
+  </head>
+  <body>
+    <article class="markdown-body"><p>#Managing Fractions in UoM</p>
+<p>UoM stands for Unit of Measurement. Few examples of UoM are Numbers (Nos), Kgs, Litre, Meter, Box, Carton etc.</p>
+<p>There are few UoMs which cannot have value in decimal places. For example, if we have television for an item, with Nos as its UoM, we cannot have 1.5 Nos. of television, or 3.7 Nos. of computer sets. The value of quantity for these items must be whole number.</p>
+<p>You can configure if particular UoM can have value in decimal place or no. By default, value in decimal places will be allowed for all the UoMs. To restrict decimal places or value in fraction for any UoM, you should follow these steps.</p>
+<p>####UoM List</p>
+<p>For UoM list, go to:</p>
+<p><code>Stock &gt; Setup &gt; UoM</code></p>
+<p>From the list of UoM, select UoM for which value in decimal place is to be restricted. Let&#39;s assume that UoM is Nos.</p>
+<p>####Configure</p>
+<p>In the UoM master, you will find a field called &quot;Must be whole number&quot;. Check this field to restrict user from enter value in decimal places in quantity field, for item having this UoM.</p>
+<p class="img-container"><img alt="UoM Must be Whole No" class="screenshot" src="{{docs_base_url}}/assets/img/articles/uom-fraction-1.png"></p>
+<p>####Validation</p>
+<p>While creating transaction, if you enter value in fraction for item whos UoM has &quot;Must be whole number&quot; checked, you will get error message stating:</p>
+<p><code>Quantity cannot be a fraction at row #</code></p>
+<p class="img-container"><img alt="UoM Validation Message" class="screenshot" src="{{docs_base_url}}/assets/img/articles/uom-fraction-2.png"></p>
+<!-- markdown -->    </article>
+  </body>
+</html>

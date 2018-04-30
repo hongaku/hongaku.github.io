@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title></title>
+    <link type="text/css" rel="stylesheet" href="../../../../../assets/css/github-markdown.css">
+    <link type="text/css" rel="stylesheet" href="../../../../../assets/css/pilcrow.css">
+    <link type="text/css" rel="stylesheet" href="../../../../../assets/css/hljs-github.min.css"/>
+  </head>
+  <body>
+    <article class="markdown-body"><p>#Manage Rejected Finished Goods Items</p>
+<p>There could be manufactured Items which would not pass quality test, hence rejected.</p>
+<p>Standard manufacturing process in ERPNext doesn&#39;t cover managing rejected items. Hence you should create finished goods entry for both accepted as well as rejected items. With this, you will have rejected items also received in the finished goods warehouse.</p>
+<p>To move rejected items from the finished goods warehouse, you should create Material Transfer entry. Steps below to create Material Transfer entry.</p>
+<p>####Step 1: New Stock Entry</p>
+<p><code>Stock &gt; Documents &gt; Stock Entry &gt; New</code></p>
+<p>####Step 2: Purpose</p>
+<p>Purpose = Material Transfer</p>
+<p>####Step 3: Warehouse</p>
+<p>Source Warehouse = Finished Goods warehouse
+Target Warehouse = Rejected items warehouse</p>
+<p>####Step 4: Items</p>
+<p>Select item which failed quality test, and enter total rejected items as Qty.</p>
+<p>####Step 5: Submit Stock Entry</p>
+<p>On Saving and Submitting Stock Entry, stock of rejected items will be moved from Finished Goods Warehouse to Rejected Warehouse.</p>
+<!-- markdown -->    </article>
+  </body>
+</html>

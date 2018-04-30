@@ -1,0 +1,98 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>Item</title>
+    <link type="text/css" rel="stylesheet" href="../../../../../assets/css/github-markdown.css">
+    <link type="text/css" rel="stylesheet" href="../../../../../assets/css/pilcrow.css">
+    <link type="text/css" rel="stylesheet" href="../../../../../assets/css/hljs-github.min.css"/>
+  </head>
+  <body>
+    <article class="markdown-body"><h1 id="item"><a class="header-link" href="#item"></a>Item</h1>
+<p>An Item is your companys&#39; product or a service. The term Item is applicable to things (products or services) you sell as well as raw materials or components of products yet to be produced (before they can be sold to customers). An Item can be a physical product or a service that you buy/sell from your customers/suppliers. ERPNext allows you to manage all sorts of items like raw-materials, sub-assemblies, finished goods, item variants and service items.</p>
+<p>ERPNext is optimised for itemised management of your sales and purchase. If you are in services, you can create an Item for each services that your offer. Completing the Item Master is very essential for successful implementation of ERPNext.</p>
+<div>
+  <div class='embed-container'>
+    <iframe src='https://www.youtube.com/embed/FcOsV-e8ymE?end=192' frameborder='0' allowfullscreen>
+    </iframe>
+  </div>
+</div>
+
+<h2 id="item-properties"><a class="header-link" href="#item-properties"></a>Item Properties</h2>
+<ul class="list">
+<li><strong>Item Name:</strong> Item name is the actual name of your product or service.</li>
+<li><strong>Item Code:</strong> Item Code is a short-form to denote your Item. If you have very few Items, it is advisable to keep the Item Name and the Item Code same. This helps new users to recognise and update Item details in all transactions. In case you have lot of Items with long names and the list runs in hundreds, it is advisable to code. To understand naming Item codes see <a href="/docs/user/manual/en/stock/item/item-codification.html">Item Codification</a></li>
+<li><strong>Item Group:</strong> Item Group is used to categorize an Item under various criterias like products, raw materials, services, sub-assemblies, consumables or all Item groups. Create your default Item Group list under Setup&gt; Item Group and pre-select the option while filling your New Item details under <a href="/docs/user/manual/en/stock/setup/item-group.html">Item Group</a></li>
+<li><strong>Default Unit of Measure:</strong> This is the default measuring unit that you will use for your product. It could be in nos, kgs, meters, etc. You can store all the UOM’s that your product will require under Set Up&gt; Master Data &gt; UOM. These can be preselected while filling New Item by using % sign to get a pop up of the UOM list.</li>
+<li><strong>Brand:</strong> If you have more than one brand save them under Set Up&gt; Master Data&gt; Brand and pre-select them while filling a New Item.</li>
+<li><strong>Variant:</strong> A Item Variant is a different version of a Item.To learn more about managing variants see <a href="/docs/user/manual/en/stock/item/item-variants.html">Item Variants</a></li>
+</ul>
+<h3 id="upload-an-image"><a class="header-link" href="#upload-an-image"></a>Upload an Image</h3>
+<p>To upload an image for your icon that will appear in all transactions, save the partially filled form. Only after your file is saved  the &#39;upload&#39; button will work above the Image icon. Click on this sign and upload the image.</p>
+<h3 id="inventory-:-warehouse-and-stock-setting"><a class="header-link" href="#inventory-:-warehouse-and-stock-setting"></a>Inventory : Warehouse and Stock Setting</h3>
+<p>In ERPNext, you can select different type of Warehouses to stock your different Items. This can be selected based on Item types. It could be Fixed Asset Item, Stock Item or even Manufacturing Item.</p>
+<ul class="list">
+<li><strong>Stock Item:</strong> If you are maintaining stock of this Item in your Inventory, ERPNext will make a stock ledger entry for each transaction of this item.</li>
+<li><strong>Default Warehouse:</strong> This is the Warehouse that is automatically selected in your transactions.</li>
+<li><strong>Allowance Percentage:</strong> This is the percent by which you will be allowed to over-bill or over-deliver this Item. If not set, it will select from the Global Defaults.</li>
+<li><strong>Valuation Method:</strong> There are two options to maintain valuation of stock. FIFO (first in - first out) and Moving Average. To understand this topic in detail please visit “ Item Valuation, FIFO and Moving Average”.</li>
+</ul>
+<h3 id="serialized-and-batched-inventory"><a class="header-link" href="#serialized-and-batched-inventory"></a>Serialized and Batched Inventory</h3>
+<p>These numbers help to track individual units or batches of Items which you sell. It also tracks warranty and returns. In case any individual Item is recalled by the supplier the number system helps to track individual Item. The numbering system also manages expiry dates. Please note that if you sell your items in thousands, and if the items are very small like pens or erasers, you need not serialize them. In ERPNext, you will have to mention the serial number in some accounting entries. To create serial numbers you will have to manually create all the numbers in your entries. If your product is not a big consumer durable Item, if it has no warranty and has no chances of being recalled, avoid giving serial numbers.</p>
+<blockquote>
+<p>Tip: While entering an item code in an items table, if the table requires inventory details, then depending on whether the entered item is batched or serialized, you can enter serial or batch numbers right away in a pop-up dialog.
+<img alt="Serial No modal" class="screenshot" src="{{docs_base_url}}/assets/img/stock/serial_no_modal.gif"><img alt="Batch No modal" class="screenshot" src="{{docs_base_url}}/assets/img/stock/batch_no_modal.png"></p>
+</blockquote>
+<blockquote>
+<p>Important: Once you mark an item as serialized or batched or neither, you cannot change it after you have made any stock entry.</p>
+</blockquote>
+<ul class="list">
+<li><a href="/docs/user/manual/en/setting-up/stock-reconciliation-for-non-serialized-item.html">Discussion on Serialized Inventory</a></li>
+</ul>
+<h3 id="re-ordering"><a class="header-link" href="#re-ordering"></a>Re Ordering</h3>
+<p>  <strong>*Re-order level</strong> suggests the amount of stock balance in the Warehouse.
+  <strong>*Re-order Qty</strong> suggests the amount of stock to be ordered to maintain minimum stock levels.
+  <strong>*Minimum Order Qty</strong> is the minimum quantity for which a Material Request / Purchase Order must be made.</p>
+<h3 id="item-tax"><a class="header-link" href="#item-tax"></a>Item Tax</h3>
+<p>These settings are required only if a particular Item has a different tax rate than the rate defined in the standard tax Account. For example, If you have a tax Account, “VAT 10%” and this particular Item is exempted from tax, then you select “VAT 10%” in the first column, and set “0” as the tax rate in the second column.</p>
+<p>Go to <a href="/docs/user/manual/en/setting-up/setting-up-taxes.html">Setting Up Taxes</a> to understand this topic in detail.</p>
+<h3 id="inspection"><a class="header-link" href="#inspection"></a>Inspection</h3>
+<p>Inspection Required: If an incoming inspection (at the time of delivery from the Supplier) is mandatory for this Item, mention “Inspection Required” as “Yes”. The system will ensure that a Quality Inspection will be prepared and approved before a Purchase Receipt is submitted.</p>
+<p>Inspection Criteria: If a Quality Inspection is prepared for this Item, then this template of criteria will automatically be updated in the Quality Inspection table of the Quality Inspection. Examples of Criteria are: Weight, Length, Finish etc.</p>
+<h3 id="purchase-details"><a class="header-link" href="#purchase-details"></a>Purchase Details</h3>
+<p class="img-container"><img alt="Item Purchase Details" class="screenshot" src="{{docs_base_url}}/assets/img/stock/item-purchase.png"></p>
+<p class="img-container"><img class="screenshot" alt="Purchase details" src="{{docs_base_url}}/assets/img/stock/item-purchase.png"></p>
+<ul class="list">
+<li><p><strong>Lead time days:</strong> Lead time days are the number of days required for the Item to reach the warehouse.</p>
+</li>
+<li><p><strong>Default Expense Account:</strong> It is the account in which cost of the Item will be debited.</p>
+</li>
+<li><p><strong>Default Cost Centre:</strong> It is used for tracking expense for this Item.</p>
+</li>
+</ul>
+<p>###Supplier Details</p>
+<p class="img-container"><img alt="Item Supplier Details" class="screenshot" src="{{docs_base_url}}/assets/img/stock/item-supplier.png"></p>
+<ul class="list">
+<li><p><strong>Default Supplier:</strong> Supplier from whom you generally purchase this item.</p>
+</li>
+<li><p><strong>Manufacturer Details:</strong> Select Manufacturer and Part No. assigned by the Manufacturer for this item.</p>
+</li>
+<li><p><strong>Supplier Codes:</strong> Track Item Code defined by the Suppliers for this Item. In the Purchase transactions, on selection and Supplier, Supplier Part No. will be fetched as well for the Supplier&#39;s reference.</p>
+</li>
+</ul>
+<h3 id="sales-details"><a class="header-link" href="#sales-details"></a>Sales Details</h3>
+<p class="img-container"><img alt="Item Sales Details" class="screenshot" src="{{docs_base_url}}/assets/img/stock/item-sales.png"></p>
+<ul class="list">
+<li><strong>Default Income Account:</strong> Income account selected here will be fetched automatically in sales invoice for this item.</li>
+</ul>
+<p><strong>*Cost Centre:</strong> Cost center selected here will be fetched automatically in sales invoice for this item.</p>
+<p><strong>*Customer Codes:</strong> Track Item Code assigned by the Customers for this Item. This will help you in searching item while creating Sales Order based on the Item Code in the Customer&#39;s Purchase Order.</p>
+<h3 id="manufacturing-and-website"><a class="header-link" href="#manufacturing-and-website"></a>Manufacturing And Website</h3>
+<p class="img-container"><img class="screenshot" alt="Manufaturing details" src="{{docs_base_url}}/assets/img/stock/item-manufacturing-website.png"></p>
+<p>Visit <a href="/docs/user/manual/en/manufacturing.html">Manufacturing</a> and <a href="/docs/user/manual/en/website.html">Website </a>to understand these topics in detail.</p>
+<h3 id="learn-more-about-item"><a class="header-link" href="#learn-more-about-item"></a>Learn more about Item</h3>
+<p>{index}</p>
+    </article>
+  </body>
+</html>

@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>Managing Fixed Assets</title>
+    <link type="text/css" rel="stylesheet" href="../../../../assets/css/github-markdown.css">
+    <link type="text/css" rel="stylesheet" href="../../../../assets/css/pilcrow.css">
+    <link type="text/css" rel="stylesheet" href="../../../../assets/css/hljs-github.min.css"/>
+  </head>
+  <body>
+    <article class="markdown-body"><h1 id="managing-fixed-assets"><a class="header-link" href="#managing-fixed-assets"></a>Managing Fixed Assets</h1>
+<p>In ERPNext, you can maintain fixed asset records like Computers, Furnitures, Cars, etc. and manage depreciations, sale or disposal of those assets.</p>
+<h2 id="asset-category"><a class="header-link" href="#asset-category"></a>Asset Category</h2>
+<p>Based on the type of assets, create Asset Category. For example, all your desktops and laptops can be part of an Asset Category named &quot;Computers&quot;. Here you can set default depreciation method, periodicity and depreciation related accounts, which will be applicable to all the assets under the category.</p>
+<p class="img-container"><img class="screenshot" alt="Asset Category" src="{{docs_base_url}}/assets/img/asset/asset-category.png"></p>
+<blockquote>
+<p><strong>Note:</strong> You can also set default depreciation related Accounts and Cost Centers in Company master.</p>
+</blockquote>
+<h2 id="asset"><a class="header-link" href="#asset"></a>Asset</h2>
+<p>Asset master is the heart of fixed asset management feature. All the transactions related to Asset like purchasing, sales, depreciation, scrapping will be managed from the Asset master.</p>
+<p class="img-container"><img class="screenshot" alt="Asset" src="{{docs_base_url}}/assets/img/asset/asset.png"></p>
+<p>Explanation of the fields:</p>
+<ol class="list">
+<li><p>Item Code: An Item for the Asset must be a non-stock item, with &quot;Is Asset&quot; field checked.</p>
+<p> <img class="screenshot" alt="Asset Item" src="{{docs_base_url}}/assets/img/asset/asset-item.png"></p>
+</li>
+<li><p>Asset Category: The category of assets it belongs to.</p>
+</li>
+<li>Is Existing Asset: Check if the asset is being carried forward from the previous Fiscal Year. The existing assets which are partially / fully depreciated can also be created/maintained for the future reference.</li>
+<li>Status: The options are - Draft, Submitted, Partially Depreciated, Fully Depreciated, Sold and Scrapped.</li>
+<li>Warehouse: Set the location of the asset.</li>
+<li>Gross Purchase Amount: The purchase cost of the asset.</li>
+<li>Expected Value After Useful Life: Useful Life is the time period over in which the company expects that the asset will be productive. After that period, either the asset is scrapped or sold. In case it is sold, mention the estimated value here. This value is also known as Salvage Value, Scrap Value or Residual Value.</li>
+<li>Opening Accumulated Depreciation: The accumulated depreciation amount which has already been booked for an existing asset.</li>
+<li>Current Value (After Depreciation): In case you are creating record of an existing asset which has already been partially/fully depreciated, mention the current value of the asset. In case of new asset, mention the purchase amount or leave it blank.</li>
+<li>Depreciation Method: There are two options: Straight Line and Double Declining Balance.<ul class="list">
+<li>Straight Line: This method spreads the cost of the fixed asset evenly over its useful life.</li>
+<li>Double Declining Method: An accelerated method of depreciation, it results in higher depreciation expense in the earlier years of ownership.</li>
+</ul>
+</li>
+<li>Total Number of Depreciations: The total number of depreciations during the useful life. In case of existing assets which are partially depreciated, mention the number of pending depreciations.</li>
+<li>Number of Depreciations Booked: Enter the number of already booked depreciations for an existing asset.</li>
+<li>Frequency of Depreciation (Months): The number of months between two depreciations.</li>
+<li>Next Depreciation Date: Mention the next depreciation date, even if it is the first one. If the asset is an existing one and depreciation has already been completed, leave it blank.</li>
+</ol>
+<h3 id="depreciations"><a class="header-link" href="#depreciations"></a>Depreciations</h3>
+<p>The system automatically creates a schedule for depreciation based on depreciation method and other related inputs in the Asset record.</p>
+<p class="img-container"><img class="screenshot" alt="Asset" src="{{docs_base_url}}/assets/img/asset/depreciation-schedule.png"></p>
+<p>On the scheduled date, system creates depreciation entry by creating a Journal Entry and the same Journal Entry is updated in the depreciation table for reference. Next Depreciation Date and Current Value are also updated on submission of depreciation entry.</p>
+<p class="img-container"><img class="screenshot" alt="Asset" src="{{docs_base_url}}/assets/img/asset/depreciation-entry.png"></p>
+<p>In the depreciation entry, the &quot;Accumulated Depreciation Account&quot; is credited and &quot;Depreciation Expense Account&quot; is debited. The related accounts can be set in the Asset Category or Company.</p>
+<p>If you are required to calculate the depreciation based on your Fiscal Year and prorated by the number of days left, select the corresponding option in &quot;Account Settings&quot;.</p>
+<p class="img-container"><img class="screenshot" alt="Asset" src="{{docs_base_url}}/assets/img/asset/book-asset-depreciation-accounting-automatically.png"></p>
+<p>The system will automatically set the fiscal year end date as the next depreciation date and calculate the depreciation amount prorata temporis based on the Available-for-use Date (IFRS16)</p>
+<p class="img-container"><img class="screenshot" alt="Asset" src="/docs/assets/img/asset/asset-prorated-depreciation.png"></p>
+<p>For better visibility, net value of the asset on different depreciation dates are shown in a line graph.</p>
+<p class="img-container"><img class="screenshot" alt="Asset" src="{{docs_base_url}}/assets/img/asset/asset-graph.png"></p>
+<h2 id="purchase-an-asset"><a class="header-link" href="#purchase-an-asset"></a>Purchase an Asset</h2>
+<p>For purchasing a new asset, create and submit the asset record with all the depreciation settings. Then create a Purchase Invoice via &quot;Make Purchase Invoice&quot; button. On clicking the button, system will load a new Purchase Invoice form with pre-loaded items table. It will also set proper fixed asset account (defined in the Asset Category) in the Expense Account field. You need to select Supplier and other necessary details and submit the Purchase Invoice.</p>
+<p class="img-container"><img class="screenshot" alt="Asset" src="{{docs_base_url}}/assets/img/asset/asset-purchase-invoice.png"></p>
+<p>On submission of the invoice, the &quot;Fixed Asset Account&quot; will be debited and payable account will be credited. It also updates purchase date, supplier and Purchase Invoice no. in the Asset master.</p>
+<h2 id="sell-an-asset"><a class="header-link" href="#sell-an-asset"></a>Sell an Asset</h2>
+<p>To sell an asset, open the asset record and create a Sales Invoice by clicking on &quot;Sell Asset&quot;. On submission of the Sales Invoice, following entries will take place:</p>
+<ul class="list">
+<li>&quot;Receivable Account&quot; (Debtors) will be debited by the sales amount.</li>
+<li>&quot;Fixed Asset Account&quot; will be credited by the purchase amount of asset.</li>
+<li>&quot;Accumulated Depreciation Account&quot; will be debited by the total depreciated amount till now.</li>
+<li>&quot;Gain/Loss Account on Asset Disposal&quot; will be credited/debited based on gain/loss amount. The Gain/Loss account can be set in Company record.</li>
+</ul>
+<p class="img-container"><img class="screenshot" alt="Asset" src="{{docs_base_url}}/assets/img/asset/asset-sales.png"></p>
+<h2 id="scrap-an-asset"><a class="header-link" href="#scrap-an-asset"></a>Scrap an Asset</h2>
+<p>You can scrap an asset anytime using the &quot;Scrap Asset&quot; button in the Asset record. The &quot;Gain/Loss Account on Asset Disposal&quot; mentioned in the Company is debited by the Current Value (After Depreciation) of the asset. After scrapping, you can also restore the asset using &quot;Restore Asset&quot; button.</p>
+<p class="img-container"><img class="screenshot" alt="Asset" src="{{docs_base_url}}/assets/img/asset/scrap-journal-entry.png"></p>
+<h2 id="asset-movement"><a class="header-link" href="#asset-movement"></a>Asset Movement</h2>
+<p>The movement of the assets (from one warehouse to another) is also tracked via Asset Movement form.</p>
+<p class="img-container"><img class="screenshot" alt="Asset" src="{{docs_base_url}}/assets/img/asset/asset-movement.png"></p>
+<p>There is also a dedicated button &quot;Transfer Asset&quot; inside the Asset form to track the Asset Movement.</p>
+<p class="img-container"><img class="screenshot" alt="Asset" src="{{docs_base_url}}/assets/img/asset/asset-movement-using-button.png"></p>
+<p>{next}</p>
+    </article>
+  </body>
+</html>

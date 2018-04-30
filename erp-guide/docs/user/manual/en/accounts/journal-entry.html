@@ -1,0 +1,123 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>Journal Entry</title>
+    <link type="text/css" rel="stylesheet" href="../../../../assets/css/github-markdown.css">
+    <link type="text/css" rel="stylesheet" href="../../../../assets/css/pilcrow.css">
+    <link type="text/css" rel="stylesheet" href="../../../../assets/css/hljs-github.min.css"/>
+  </head>
+  <body>
+    <article class="markdown-body"><h1 id="journal-entry"><a class="header-link" href="#journal-entry"></a>Journal Entry</h1>
+<p>All types of accounting entries other than <strong>Sales Invoice</strong> and <strong>Purchase
+Invoice</strong> are made using the <strong>Journal Entry</strong>. A <strong>Journal Entry</strong> 
+is a standard accounting transaction that affects
+multiple Accounts and the sum of debits is equal to the sum of credits.</p>
+<p>To create a Journal Entry go to:</p>
+<blockquote>
+<p>Accounts &gt; Company and Accounts &gt; Journal Entry &gt; New</p>
+</blockquote>
+<p class="img-container"><img class="screenshot" alt="Journal Entry" src="{{docs_base_url}}/assets/img/accounts/journal-entry.png"></p>
+<p>In a Journal Entry, you must select.</p>
+<ul class="list">
+<li>Type of Voucher from the drop down.</li>
+<li>Add rows for the individual accounting entries. In each row, you must specify: <ul class="list">
+<li>The Account that will be affected</li>
+<li>The amount to Debit or Credit</li>
+<li>The Cost Center (if it is an Income or Expense)</li>
+<li>Against Voucher: Link it to a voucher or invoice if it affects the “outstanding” amount of that invoice.</li>
+<li>Is Advance: Select “Yes” if you want to make it selectable in an Invoice. Other information in case it is a Bank Payment or a bill.</li>
+</ul>
+</li>
+</ul>
+<h4 id="difference"><a class="header-link" href="#difference"></a>Difference</h4>
+<p>The “Difference” field is the difference between the Debit and Credit amounts.
+This should be zero if the Journal Entry is to be “Submitted”. If this
+number is not zero, you can click on “Make Difference Entry” to add a new row
+with the amount required to make the total as zero.</p>
+<hr>
+<h2 id="common-entries"><a class="header-link" href="#common-entries"></a>Common Entries</h2>
+<p>A look at some of the common accounting entries that can be done via Journal
+Voucher.</p>
+<h4 id="expenses-(non-accruing)"><a class="header-link" href="#expenses-(non-accruing)"></a>Expenses (non accruing)</h4>
+<p>Many times it may not be necessary to accrue an expense, but it can be
+directly booked against an expense Account on payment. For example a travel
+allowance or a telephone bill. You can directly debit Telephone Expense
+(instead of your telephone company) and credit your Bank on payment.</p>
+<ul class="list">
+<li>Debit: Expense Account (like Telephone expense)</li>
+<li>Credit: Bank or Cash Account</li>
+</ul>
+<h4 id="bad-debts-or-write-offs"><a class="header-link" href="#bad-debts-or-write-offs"></a>Bad Debts or Write Offs</h4>
+<p>If you are writing off an Invoice as a bad debt, you can create a Journal
+Voucher similar to a Payment, except instead of debiting your Bank, you can
+debit an Expense Account called Bad Debts.</p>
+<ul class="list">
+<li>Debit: Bad Debts Written Off</li>
+<li>Credit: Customer</li>
+</ul>
+<blockquote>
+<p>Note: There may be regulations in your country before you can write off bad
+debts.</p>
+</blockquote>
+<h4 id="depreciation"><a class="header-link" href="#depreciation"></a>Depreciation</h4>
+<p>Depreciation is when you write off certain value of your assets as an expense.
+For example if you have a computer that you will use for say 5 years, you can
+distribute its expense over the period and pass a Journal Entry at the end
+of each year reducing its value by a certain percentage.</p>
+<ul class="list">
+<li>Debit: Depreciation (Expense)</li>
+<li>Credit: Asset (the Account under which you had booked the asset to be depreciated)</li>
+</ul>
+<blockquote>
+<p>Note: There may be regulations in your country that define by how much
+amount you can depreciate a class of Assets.</p>
+</blockquote>
+<h4 id="credit-note"><a class="header-link" href="#credit-note"></a>Credit Note</h4>
+<p>&quot;Credit Note&quot; is made for a Customer against a Sales Invoice when the 
+company needs to adjust a payment for returned goods. When a Credit Note
+is made, the seller can either make a payment to the customer or adjust 
+the amount in another invoice.</p>
+<ul class="list">
+<li>Debit: Sales Return Account</li>
+<li>Credit: Customer Account</li>
+</ul>
+<h4 id="debit-note"><a class="header-link" href="#debit-note"></a>Debit Note</h4>
+<p>&quot;Debit Note&quot; is made for a Supplier against a Purchase Invoice or accepted 
+as a credit note from supplier when a company returns goods. When a Debit
+Note is made, the company can either receive a payment from the supplier or 
+adjust the amount in another invoice.</p>
+<ul class="list">
+<li>Debit: Supplier Account</li>
+<li>Credit: Purchase Return Account </li>
+</ul>
+<h4 id="excise-entry"><a class="header-link" href="#excise-entry"></a>Excise Entry</h4>
+<p>When a Company buys good from a Supplier, company pays excise duty
+on these goods to Supplier. And when a company sells these goods to Customers, 
+it receives excise duty. Company will deduct payable excise duty and deposit balance 
+in Govt. account.</p>
+<ul class="list">
+<li><p>When a Company buys goods with Excise duty: </p>
+<ul class="list">
+<li>Debit: Purchase Account</li>
+<li>Debit: Excise Duty Account</li>
+<li>Credit: Supplier Account</li>
+</ul>
+</li>
+<li><p>When a Company sells goods with Excise duty: </p>
+<ul class="list">
+<li>Debit: Customer Account</li>
+<li>Credit: Sales Account</li>
+<li>Credit: Excise Duty Account</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>Note: Applicable in India, might not be applicable for your Country. 
+Please check your country regulations.</p>
+</blockquote>
+<p>{next}</p>
+    </article>
+  </body>
+</html>

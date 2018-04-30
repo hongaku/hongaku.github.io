@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>SMS Setting</title>
+    <link type="text/css" rel="stylesheet" href="../../../../assets/css/github-markdown.css">
+    <link type="text/css" rel="stylesheet" href="../../../../assets/css/pilcrow.css">
+    <link type="text/css" rel="stylesheet" href="../../../../assets/css/hljs-github.min.css"/>
+  </head>
+  <body>
+    <article class="markdown-body"><h1 id="sms-setting"><a class="header-link" href="#sms-setting"></a>SMS Setting</h1>
+<p>To integrate SMS in ERPNext, approach a SMS Gateway Provider who provides HTTP
+API. They will create an account for you and will provide an unique username
+and password.</p>
+<p>To configure SMS Settings in ERPNext, find out their HTTP API (a document
+which describes the method of accessing their SMS interface from 3rd party
+applications). In this document, you will get an URL which is used to send the
+SMS using HTTP request. Using this URL, you can configure SMS Settings in
+ERPNext.</p>
+<p>Example URL:  </p>
+<pre class="hljs"><code>http://instant.smses.com/web2sms.php?username=<span class="hljs-variable">&lt;USERNAME&gt;</span>&amp;password;=<span class="hljs-variable">&lt;PASSWORD&gt;</span>&amp;<span class="hljs-keyword">to</span>;=<span class="hljs-variable">&lt;MOBILENUMBER&gt;</span>&amp;sender;=<span class="hljs-variable">&lt;SENDERID&gt;</span>&amp;message;=<span class="hljs-variable">&lt;MESSAGE&gt;</span></code></pre><p class="img-container"><img class="screenshot" alt="SMS Setting 2" src="{{docs_base_url}}/assets/img/setup/sms-settings2.jpg"></p>
+<blockquote>
+<p>Note: the string up to the &quot;?&quot; is the SMS Gateway URL</p>
+</blockquote>
+<p>Example:</p>
+<pre class="hljs"><code>ht<span class="hljs-symbol">tp:</span>//instant.smses.com/web2sms.php?username=abcd&amp;password;=abcd&amp;to;=<span class="hljs-number">9900</span>XXXXXX&amp;sender;
+=DEMO&amp;message;=THIS+IS+A+TEST+SMS</code></pre><p>The above URL will send SMS from account abcd to mobile number 9900XXXXXX with
+sender ID as DEMO with text message as &quot;THIS IS A TEST SMS&quot;</p>
+<p>Note that some parameters in the URL are static.You will get static values
+from your SMS Provider like username, password etc. These static values should
+be entered in the Static Parameters table.</p>
+<p class="img-container"><img class="screenshot" alt="SMS Setting" src="{{docs_base_url}}/assets/img/setup/sms-settings1.png"></p>
+<p>{next}</p>
+    </article>
+  </body>
+</html>

@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title></title>
+    <link type="text/css" rel="stylesheet" href="../../../../../assets/css/github-markdown.css">
+    <link type="text/css" rel="stylesheet" href="../../../../../assets/css/pilcrow.css">
+    <link type="text/css" rel="stylesheet" href="../../../../../assets/css/hljs-github.min.css"/>
+  </head>
+  <body>
+    <article class="markdown-body"><p>#Depreciation Entry</p>
+<p><strong>Question:</strong> A Fixed Asset Item has been purchased and stored in a warehouse. How to create a depreciation for a Fixed Asset Item?</p>
+<p><strong>Answer:</strong>You can post asset depreciation entry for the fixed asset item via <a href="/docs/user/manual/en/stock/opening-stock.html">Stock Reconciliation</a> Entry.</p>
+<p>####Step 1:</p>
+<p>In the Attachment file, fill in the appropriate columns;</p>
+<ul class="list">
+<li><strong>Item Code</strong> whose value is to be depreciated.</li>
+<li><strong>Warehouse</strong> in which item is stored.</li>
+<li><strong>Qty (Quantity)</strong> Leave this column blank.</li>
+<li><strong>Valuation Rate</strong> will be item&#39;s value after depreciation.</li>
+</ul>
+<p class="img-container"><img alt="reorder level" class="screenshot" src="{{docs_base_url}}/assets/img/articles/fixed-asset-dep-1.gif"></p>
+<p>After updating Valuation Rate for an item, come back to Stock Reconciliation and upload save .csv file.</p>
+<p>####Step 2:</p>
+<p>Select Expense account for depreciation in <strong>Difference Account</strong>. Value booked in the depreciation account will be the difference of old and next valuation rate of the fixed asset item, which will be actually the depreciation amount.</p>
+<p class="img-container"><img alt="reorder level" class="screenshot" src="{{docs_base_url}}/assets/img/articles/fixed-asset-dep-2.png"></p>
+<p>####Stock Reconciliation Help Video</p>
+<iframe width="660" height="371" src="https://www.youtube.com/embed/0yPgrtfeCTs" frameborder="0" allowfullscreen></iframe>
+    </article>
+  </body>
+</html>

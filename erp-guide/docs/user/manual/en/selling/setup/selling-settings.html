@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>Selling Settings</title>
+    <link type="text/css" rel="stylesheet" href="../../../../../assets/css/github-markdown.css">
+    <link type="text/css" rel="stylesheet" href="../../../../../assets/css/pilcrow.css">
+    <link type="text/css" rel="stylesheet" href="../../../../../assets/css/hljs-github.min.css"/>
+  </head>
+  <body>
+    <article class="markdown-body"><h1 id="selling-settings"><a class="header-link" href="#selling-settings"></a>Selling Settings</h1>
+<p>Selling Setting is where you can define propertiese which will be applied in your selling transactions. 
+Let&#39;s check into each property one by one.</p>
+<p class="img-container"><img class="screenshot" alt="Selling Settings" src="{{docs_base_url}}/assets/img/selling/selling-settings.png"></p>
+<p>####1. Customer Naming By</p>
+<p>When customer is saved, system generated unique ID for that Customer. Using that Customer ID, 
+you can select Customer in other transactions.</p>
+<p>Bydefault Customer will be saved with Customer Name. If you wish to save Customer using 
+a naming series, you should set Customer Naming By as &quot;Naming Series&quot;.</p>
+<p>Example of Customer Id&#39;s saved in Naming Series - <code>CUST00001,CUST00002, CUST00003...</code> and so on.</p>
+<p>You can set Naming Series for customer naming from:</p>
+<blockquote>
+<p>Setup &gt; Settings &gt; Naming Series`</p>
+</blockquote>
+<p>####2. Campaign Naming By</p>
+<p>Just like for Customer, you can also configure as how ID will be generated for the Campaign master. 
+Bydefault Campaign will be saved with Campaign Name provided while its creation.</p>
+<p>####3. Default Customer Group</p>
+<p>Customer Group in this field will be auto-updated when you open new Customer form.
+While converting Quotation created for Lead into Sales Order, system attempts to convert 
+Lead into Customer in the backend. While creating Customer in the backend, system pickup 
+Customer Group and Territory as defined in the Selling Setting. If system doesn&#39;t find 
+any values, then following validation message will be raised.
+To resolve this, you should:
+Either manually convert Lead into Customer, and define Customer Group and Territory manually while 
+creating Customer or define Default Customer Group and Territory in the Selling Setting. 
+Then you should have Lead automatically converted into Customer when convert Quotation into Sales Order.</p>
+<p>####4. Default Territory</p>
+<p>Territory defined in this field will be auto-updated in the Territory field of Customer master.</p>
+<p>Just like Customer Group, Territory is also checked when system tries creating Customer in the backend.</p>
+<p>####5. Default Price List</p>
+<p>Price List set in this field will be auto-updated in the Price List field of Sales transactions.</p>
+<p>####6. Sales Order Required</p>
+<p>If you wish to make Sales Order creation mandatory before creation of Sales Invoice, then you should 
+set Sales Order Required field as Yes. Bydefault, this will be &quot;No&quot; for a value.</p>
+<p>####7. Delivery Note Required</p>
+<p>To make Delivery Note creation as mandatory before Sales Invoice creation, you should set 
+this field as &quot;Yes&quot;. It will be &quot;No&quot; by default.</p>
+<p>####8. Maintain Same Rate Throughout Sales Cycle</p>
+<p>System bydefault validates that item price will be same throughout sales cycle 
+(Sales Order - Delivery Note - Sales Invoice). If you could have item price changing within the cycle, 
+and you need to bypass validation of same rate throughout cycle, then you should uncheck this field and save.</p>
+<p>####9. Allow User to Edit Price List Rate in Transaction</p>
+<p>Item table of the sale transactions has field called Price List Rate. This field be non-editale 
+by default in all the sales transactions. This is to ensure that price of an item is fetched from 
+Item Price record, and user is not able to edit it.</p>
+<p>If you need to enable user to edit Item Price, fetched from Price List of an item, you should uncheck this field.</p>
+<p>{next}</p>
+    </article>
+  </body>
+</html>

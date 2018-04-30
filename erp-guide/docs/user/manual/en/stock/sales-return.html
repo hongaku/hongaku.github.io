@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>Sales Return</title>
+    <link type="text/css" rel="stylesheet" href="../../../../assets/css/github-markdown.css">
+    <link type="text/css" rel="stylesheet" href="../../../../assets/css/pilcrow.css">
+    <link type="text/css" rel="stylesheet" href="../../../../assets/css/hljs-github.min.css"/>
+  </head>
+  <body>
+    <article class="markdown-body"><h1 id="sales-return"><a class="header-link" href="#sales-return"></a>Sales Return</h1>
+<p>Goods sold being returned is quite a common practice in business. They could
+be returned by the customer on quality issues, non-delivery on agreed date, or
+any other reason. </p>
+<p>In ERPNext, you can create a Sales Return by simply making a Delivery Note / Sales Invoice with negative quantity.</p>
+<p>First open the original Delivery Note / Sales Invoice, against which customer returned the items.</p>
+<p class="img-container"><img class="screenshot" alt="Original Delivery Note" src="{{docs_base_url}}/assets/img/stock/sales-return-original-delivery-note.png"></p>
+<p>Then click on &quot;Make Sales Return&quot;, it will open a new Delivery Note with &quot;Is Return&quot; checked, items and taxes with negative amount.</p>
+<p class="img-container"><img class="screenshot" alt="Return Against Delivery Note" src="{{docs_base_url}}/assets/img/stock/sales-return-against-delivery-note.png"></p>
+<p>You can also create the return entry against original Sales Invoice, to return stock along with credit note, check &quot;Update Stock&quot; option in Return Sales Invoice.</p>
+<p class="img-container"><img class="screenshot" alt="Return Against Sales Invoice" src="{{docs_base_url}}/assets/img/stock/sales-return-against-sales-invoice.png"></p>
+<p>On submission of Return Delivery Note / Sales Invoice, system will increase stock balance in the mentioned warehouse. To maintain correct stock valuation, stock balance will go up according to the original purchase rate of the returned items.</p>
+<p class="img-container"><img class="screenshot" alt="Return Stock Ledger" src="{{docs_base_url}}/assets/img/stock/sales-return-stock-ledger.png"></p>
+<p>In case of Return Sales Invoice, Customer account will be credited and associated income and tax account will be debited.</p>
+<p>If Perpetual Inventory enabled, system will also post accounting entry against warehouse account to sync warehouse account balance with stock balance as per Stock Ledger.</p>
+<p class="img-container"><img class="screenshot" alt="Return Stock Ledger" src="{{docs_base_url}}/assets/img/stock/sales-return-general-ledger.png"></p>
+    </article>
+  </body>
+</html>

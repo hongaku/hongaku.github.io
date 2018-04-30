@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>Tax Rule</title>
+    <link type="text/css" rel="stylesheet" href="../../../../../assets/css/github-markdown.css">
+    <link type="text/css" rel="stylesheet" href="../../../../../assets/css/pilcrow.css">
+    <link type="text/css" rel="stylesheet" href="../../../../../assets/css/hljs-github.min.css"/>
+  </head>
+  <body>
+    <article class="markdown-body"><h1 id="tax-rule"><a class="header-link" href="#tax-rule"></a>Tax Rule</h1>
+<p>You can define which <a href="/docs/user/manual/en/setting-up/setting-up-taxes.html">Tax Template</a> must be applied on a Sales / Purchase transaction using Tax Rule.</p>
+<p class="img-container"><img class="screenshot" alt="Tax Rule" src="{{docs_base_url}}/assets/img/accounts/tax-rule.png"></p>
+<p>You can define Tax Rules for Sales or Purchase Taxes. 
+While making a Transaction the system will select and apply tax template based on the tax rule defined.
+The system selects Tax Rule with maximum matching Filters.</p>
+<p>Let us consider a senario to understand Tax Rule Better.</p>
+<p>Suppose we define 2 Tax Rules as below.</p>
+<p class="img-container"><img class="screenshot" alt="Tax Rule" src="{{docs_base_url}}/assets/img/accounts/tax-rule-1.png"></p>
+<p class="img-container"><img class="screenshot" alt="Tax Rule" src="{{docs_base_url}}/assets/img/accounts/tax-rule-2.png"></p>
+<p>Here Tax Rule 1 has Billing Country as India and Tax Rule 2 has Billing Country as United Kingdom</p>
+<p>Now supposed we try to create a Sales Order for a customer whose default Billing Country is India, system shall select Tax Rule 1.
+In case the customers Billing Country was United Kingdom, the system would have selected Tax Rule 2.</p>
+    </article>
+  </body>
+</html>

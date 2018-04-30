@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title></title>
+    <link type="text/css" rel="stylesheet" href="../../../../../assets/css/github-markdown.css">
+    <link type="text/css" rel="stylesheet" href="../../../../../assets/css/pilcrow.css">
+    <link type="text/css" rel="stylesheet" href="../../../../../assets/css/hljs-github.min.css"/>
+  </head>
+  <body>
+    <article class="markdown-body"><p>#Manufacturing Settings</p>
+<p>Manufacturing Settings can be found at:</p>
+<p><code>Manufacturing &gt; Setup &gt; Manufacturing Settings</code></p>
+<p class="img-container"><img class="screenshot" alt="Manufacturing Settings" src="{{docs_base_url}}/assets/img/manufacturing/manufacturing-settings-1.png"></p>
+<p>####Disable Capacity Planning and Time Tracking</p>
+<p>As per Capacity Planning feature, when Work Order is created for an item, for each Operation, Time Log is created. Based on actual Operation Time, Time Logs is updated. This also provides total Operations Cost against Work Order.</p>
+<p>If you don&#39;t track actual operations time, and want to disable creation of Time Log based on Operations, you should check &quot;Disable Capacity Planning and Time Tracking&quot; in the Manufacturing Settings.</p>
+<p>####Allow Overtime</p>
+<p>In the Workstation master, actual working hours are defined (say 101m to 6pm). As per the Capacity Planning, Time Logs are created against Workstation, for tracking actual operations hour. It also considers working hours of a Workstation when scheduling job (via Time Log). </p>
+<p class="img-container"><img class="screenshot" alt="Manufacturing Settings" src="{{docs_base_url}}/assets/img/articles/manufacturing-settings-2.png"></p>
+<p>As per the standard validation, if Operation cannot be completed within working hours of Workstation, then user is asked to divide an Operation into multiple and smaller Operations. However, if <code>Allow Overtime</code> field is checked, while creating Time Logs for Operation, working hours of Workstation will not be validated. In this case, Time Logs for Operation will be created beyond working hours of Workstation as well.</p>
+<p>####Allow Production on Holidays</p>
+<p>Holiday of a company can be recorded in the <a href="/docs/user/manual/en/human-resources/">Holiday List</a> master. While scheduling production job on workstation, system doesn&#39;t consider a day listed in the Holiday list. If you want production job to be scheduled on holidays as well, <code>Allow Production on Holidays</code> field should be checked.</p>
+<p class="img-container"><img class="screenshot" alt="Manufacturing Settings" src="{{docs_base_url}}/assets/img/articles/manufacturing-settings-3.png"></p>
+<p>####Over Production Allowance Percentage</p>
+<p>While making Work Orders against a Sales Order, the system will only allow production item quantity to be lesser than or equal to the quantity in the Sales Order. In case you wish to allow Work Orders to be raised with greater quantity, you can mention the Over Production Allowance Percentage here.</p>
+<p>####Back-flush Raw Materials Based On</p>
+<p>When creating Manufacture Entry, raw-material items are back-flush based on BOM of production item. If you want raw-material items to be back-flushed based on Material Transfer entry made against that Work Order instead, then you should set Back-flush Raw Materials Based On &quot;Material Transferred for Manufacture&quot;.</p>
+<p class="img-container"><img class="screenshot" alt="Manufacturing Settings" src="{{docs_base_url}}/assets/img/articles/manufacturing-settings-4.png"></p>
+<p>####Capacity Planning For (Days)</p>
+<p>Define no. of days for which system will do production job allocation in advance.</p>
+<p>####Time Between Operations (in mins)</p>
+<p>Time gap between two production operations.</p>
+<p>####Default Work In Progress Warehouse</p>
+<p>This Warehouse will be auto-updated in the Work In Progress Warehouse field of Work Order.</p>
+<p>####Default Finished Goods Warehouse</p>
+<p>This Warehouse will be auto-updated in the Work In Progress Warehouse field of Work Order.</p>
+    </article>
+  </body>
+</html>

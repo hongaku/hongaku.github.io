@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>Tasks</title>
+    <link type="text/css" rel="stylesheet" href="../../../../assets/css/github-markdown.css">
+    <link type="text/css" rel="stylesheet" href="../../../../assets/css/pilcrow.css">
+    <link type="text/css" rel="stylesheet" href="../../../../assets/css/hljs-github.min.css"/>
+  </head>
+  <body>
+    <article class="markdown-body"><h1 id="tasks"><a class="header-link" href="#tasks"></a>Tasks</h1>
+<p>Project is divided into Tasks. 
+In ERPNext, you can also create a Task independently.</p>
+<p class="img-container"><img class="screenshot" alt="Task" src="{{docs_base_url}}/assets/img/project/task.png"></p>
+<h3 id="status-of-the-task"><a class="header-link" href="#status-of-the-task"></a>Status of the Task</h3>
+<p>A Task can have one of the following statuses - Open, Working, Pending Review, Closed, or Cancelled.</p>
+<p class="img-container"><img class="screenshot" alt="Task - Status" src="{{docs_base_url}}/assets/img/project/task_status.png"></p>
+<ul class="list">
+<li><p>By default each new Task created has the status set to &#39;Open&#39;.</p>
+</li>
+<li><p>If a Time Log is made against a task, its status will be set to &#39;Working&#39;.</p>
+</li>
+</ul>
+<h3 id="dependent-task"><a class="header-link" href="#dependent-task"></a>Dependent Task</h3>
+<p>You can specify a list of dependent tasks under the &#39;Depends On&#39; section.</p>
+<p class="img-container"><img class="screenshot" alt="Depends On" src="{{docs_base_url}}/assets/img/project/task_depends_on.png"></p>
+<ul class="list">
+<li><p>You cannot close the parent task until all dependent tasks are closed.</p>
+</li>
+<li><p>If the dependent tasks are delayed and overlap with the expected Start Date of the Parent task, the system will reschedule the parent task.</p>
+</li>
+</ul>
+<h3 id="managing-time"><a class="header-link" href="#managing-time"></a>Managing Time</h3>
+<p>ERPNext uses <a href="/docs/user/manual/en/projects/time-log.html">Time Log</a> to track the progress of a Task.
+You can create multiple Time Logs against each task.
+The Actual Start and End Time along with the costing is updated based on the Time Log.</p>
+<ul class="list">
+<li>To view Time Log made against a Task click on &#39;Time Logs&#39;</li>
+</ul>
+<p class="img-container"><img class="screenshot" alt="Task - View Time Log" src="{{docs_base_url}}/assets/img/project/task_view_time_log.png"></p>
+<p class="img-container"><img class="screenshot" alt="Task - Time Log List" src="{{docs_base_url}}/assets/img/project/task_time_log_list.png"></p>
+<ul class="list">
+<li>You can also create a Time Log directly and link it to the Task.</li>
+</ul>
+<p class="img-container"><img class="screenshot" alt="Task - Link Time Log" src="{{docs_base_url}}/assets/img/project/task_time_log_link.png"></p>
+<h3 id="managing-expenses"><a class="header-link" href="#managing-expenses"></a>Managing Expenses</h3>
+<p>You can book <a href="/docs/user/manual/en/human-resources/expense-claim.html">Expense Claim</a> against a task.
+The system shall update the total amount from expense claims in the costing section.</p>
+<ul class="list">
+<li>To view Expense Claims made against a Task click on &#39;Expense Claims&#39;</li>
+</ul>
+<p class="img-container"><img class="screenshot" alt="Task - View Expense Claim" src="{{docs_base_url}}/assets/img/project/task_view_expense_claim.png"></p>
+<ul class="list">
+<li>You can also create a Expense Claims directly and link it to the Task.</li>
+</ul>
+<p class="img-container"><img class="screenshot" alt="Task - Link Expense Claim" src="{{docs_base_url}}/assets/img/project/task_expense_claim_link.png"></p>
+<ul class="list">
+<li>Total amount of Expense Claims booked against a task is shown under &#39;Total Expense Claim&#39; in the Task Costing Section</li>
+</ul>
+<p class="img-container"><img class="screenshot" alt="Task - Total Expense Claim" src="{{docs_base_url}}/assets/img/project/task_total_expense_claim.png"></p>
+<div class="embed-container">
+    <iframe src="https://www.youtube.com/embed/IxY-rSJsA6U?end=126rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>
+
+<p>{next}</p>
+    </article>
+  </body>
+</html>

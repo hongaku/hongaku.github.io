@@ -1,0 +1,95 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>Payment Entry</title>
+    <link type="text/css" rel="stylesheet" href="../../../../assets/css/github-markdown.css">
+    <link type="text/css" rel="stylesheet" href="../../../../assets/css/pilcrow.css">
+    <link type="text/css" rel="stylesheet" href="../../../../assets/css/hljs-github.min.css"/>
+  </head>
+  <body>
+    <article class="markdown-body"><h1 id="payment-entry"><a class="header-link" href="#payment-entry"></a>Payment Entry</h1>
+<p>Payment Entry can be made against following transactions.</p>
+<ol class="list">
+<li>Sales Invoice.</li>
+<li>Purchase Invoice.</li>
+<li>Sales Order (Advance Payment)</li>
+<li>Purchase Order (Advance Payment)</li>
+<li>Expense Claim</li>
+</ol>
+<p>####Step 1: Make Payment</p>
+<p>On submitting a document against which Payment Entry can be made, you will find Make Payment button.</p>
+<p class="img-container"><img class="screenshot" alt="Making Payment" src="{{docs_base_url}}/assets/img/accounts/payment-entry-1.png"></p>
+<p>####Step 2: Mode of Payment</p>
+<p>In the Payment Entry, select Mode of Payment (eg: Bank, Cash, Wire Transfer). In the Mode of Payment master, default Account can be set. This default payment Account will fetch into Payment Entry.</p>
+<p class="img-container"><img class="screenshot" alt="Making Paymentt" src="{{docs_base_url}}/assets/img/accounts/payment-entry-2.gif"></p>
+<p>####Step 3: Payment Amount</p>
+<p>Enter actual payment amount received from the Customer or paid to the Supplier or Employee.</p>
+<p class="img-container"><img class="screenshot" alt="Making Payment" src="{{docs_base_url}}/assets/img/accounts/payment-entry-3.png"></p>
+<p>####Step 4: Allocate Amount</p>
+<p>If creating Payment Entry for the Customer, Payment Amount will be allocated against Sales Invoice.</p>
+<p class="img-container"><img class="screenshot" alt="Making Payment" src="{{docs_base_url}}/assets/img/accounts/payment-entry-4.gif"></p>
+<p>On the same lines, when creating Payment Entry for a Supplier, Payment Amount will be allocated against Purchase Invoice.</p>
+<p>You Entry can be created directly from <code>Account &gt; Payment Entry &gt; New</code>. In the new entry, on selection of the Party (Customer/Supplier), all the outstanding Invoices and open Orders will be fetched for party. The Payment Amount will be auto-allocated, preferably against invoice.</p>
+<p>####Step 5: Deductions</p>
+<p>When making payment entry, there could be some difference in the actual payment amount and the invoice outstanding. This difference could be due to rounding error, or change in the currency exchange rate. You can set an Account here where this difference amount will be booked.</p>
+<p class="img-container"><img class="screenshot" alt="Making Payment" src="{{docs_base_url}}/assets/img/accounts/payment-entry-5.gif"></p>
+<p>####Step 6: Submit</p>
+<p>Save and Submit Payment Entry. On submission, outstanding will be updated in the Invoices. </p>
+<p class="img-container"><img class="screenshot" alt="Making Payment" src="{{docs_base_url}}/assets/img/accounts/payment-entry-8.png"></p>
+<p>If payment entry was created against Sales Order or Purchase Order, field Advance Paid will be updated in them. when creating Payment invoice against those transactions, Payment Entry will auto-update in that Invoice, so that you can allocate invoice amount against advance payment entry.</p>
+<p>For incoming payment, accounts posting will be done as following.</p>
+<ul class="list">
+<li>Debit: Bank or Cash Account</li>
+<li>Credit: Customer (Debtor)</li>
+</ul>
+<p>For outgoing payment:</p>
+<ul class="list">
+<li>Debit: Supplier (Creditor)</li>
+<li>Credit: Bank or Cash Account</li>
+</ul>
+<p>###Multi Currency Payment Entry</p>
+<p>ERPNext allows you maintain accounts and invoicing in the <a href="/docs/user/manual/en/accounts/multi-currency-accounting.html">multiple currency</a>. If invoice is made in the party currency, Currency Exchange Rate between companies base currency and party currency is also entered in the invoice. When creating Payment Entry against that invoice, you will again have to mention the Currency Exchange Rate at the time of payment.</p>
+<p class="img-container"><img class="screenshot" alt="Making Payment" src="{{docs_base_url}}/assets/img/accounts/payment-entry-6.png"></p>
+<p>Since Currency Exchange Rate is fluctuating all the time, it can lead to difference in the payment amount against invoice total. This difference amount can be booked in the Currency Exchange Gain/Loss Amount.</p>
+<p class="img-container"><img class="screenshot" alt="Making Payment" src="{{docs_base_url}}/assets/img/accounts/payment-entry-7.png"></p>
+<p>Payments can also be made independent of invoices by creating a new Payment Entry.</p>
+<p>###Internal Intransfer</p>
+<p>Following internal transfers can be managed from the Payment Entry.</p>
+<ol class="list">
+<li>Bank - Cash</li>
+<li>Cash - Bank</li>
+<li>Cash - Cash</li>
+<li>Bank - Bank</li>
+</ol>
+<p class="img-container"><img class="screenshot" alt="Making Payment" src="{{docs_base_url}}/assets/img/accounts/payment-entry-9.png"></p>
+<p>###Difference between Payment Entry and Journal Entry?</p>
+<ol class="list">
+<li>Journal Entry requires understanding of which Account will get Debited or Credited. In the Payment Entry, it is managed in the backend, hence simpler for the User.</li>
+<li>Payment Entry is more efficient in managing payment in the foreign currency.</li>
+<li>Journal Entry can still be used for:<ul class="list">
+<li>Updating opening balance in an Accounts.</li>
+<li>Fixed Asset Depreciation entry.</li>
+<li>For adjusting Credit Note against Sales Invoice and Debit Note against Purchase Invoice, incase there is no payment happening at all.</li>
+</ul>
+</li>
+<li>Payment Entries are used if a cheque is printed.</li>
+</ol>
+<hr>
+<h2 id="managing-outstanding-payments"><a class="header-link" href="#managing-outstanding-payments"></a>Managing Outstanding Payments</h2>
+<p>In most cases, apart from retail sales, billing and payments are separate activities. There are several combinations in which these payments are done. These cases apply to both sales and purchases.</p>
+<ul class="list">
+<li>They can be upfront (100% in advance).</li>
+<li>Post shipment. Either on delivery or within a few days of delivery.</li>
+<li>Part in advance and part on or post delivery.</li>
+<li>Payments can be made together for a bunch of invoices.</li>
+<li>Advances can be given together for a bunch of invoices (and can be split across invoices).</li>
+</ul>
+<p>ERPNext allows you to manage all these scenarios. All accounting entries (GL Entry) can be made against a Sales Invoice, Purchase Invoice or Payment Entry of advance payment (in special cases, an invoice can be made via a Sales Invoice too).</p>
+<p>The total outstanding amount against an invoice is the sum of all the accounting entries that are made “against” (or are linked to) that invoice. This way you can combine or split payments in Payment Entry to manage the
+scenarios.</p>
+<p>{next}</p>
+    </article>
+  </body>
+</html>

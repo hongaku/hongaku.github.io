@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>Naming Series</title>
+    <link type="text/css" rel="stylesheet" href="../../../../../assets/css/github-markdown.css">
+    <link type="text/css" rel="stylesheet" href="../../../../../assets/css/pilcrow.css">
+    <link type="text/css" rel="stylesheet" href="../../../../../assets/css/hljs-github.min.css"/>
+  </head>
+  <body>
+    <article class="markdown-body"><h1 id="naming-series"><a class="header-link" href="#naming-series"></a>Naming Series</h1>
+<h3 id="1.-introduction"><a class="header-link" href="#1.-introduction"></a>1. Introduction</h3>
+<p>Data records are broadly classified as “Master” or “Transaction”. A master
+record is a record that has a “name”, for example a Customer, Item, Supplier,
+Employee etc. A Transaction is a record that has a “number”. Examples of
+transactions include Sales Invoices, Quotations etc. You make transactions
+against a number of master records.</p>
+<p>ERPNext allows you to make prefixes to your transactions, with each prefix
+forming its own series. For example a series with prefix INV12 will have
+numbers INV120001, INV120002 and so on.</p>
+<p>You can have multiple series for all your transactions. It is common to have a
+separate series for each financial year. For example in Sales Invoice you
+could have:</p>
+<ul class="list">
+<li>INV120001</li>
+<li>INV120002</li>
+<li>INV-A-120002</li>
+</ul>
+<p>etc. You could also have a separate series for each type of Customer or for
+each of your retail outlets.</p>
+<h3 id="2.-managing-naming-series-for-documents"><a class="header-link" href="#2.-managing-naming-series-for-documents"></a>2. Managing Naming Series for Documents</h3>
+<p>To setup a series, go to:</p>
+<blockquote>
+<p>Setup &gt; Tools &gt; Update Numbering Series</p>
+</blockquote>
+<p>In this form,</p>
+<ol class="list">
+<li>Select the transaction for which you want to make the series The system will update the current series in the text box.</li>
+<li>Edit the series as required with unique prefixes for each series. Each prefix must be on a new line.</li>
+<li>The first prefix will be the default prefix. If you want the user to explicitly select a series instead of the default one, check the “User must always select” check box.</li>
+</ol>
+<p>You can also update the starting point of a series by entering the series
+name and the starting point in the “Update Series” section.</p>
+<h3 id="3.-example"><a class="header-link" href="#3.-example"></a>3. Example</h3>
+<p>See how to set the naming series</p>
+<p class="img-container"><img class="screenshot" alt="Naming Series" src="{{docs_base_url}}/assets/img/setup/settings/naming-series.gif"></p>
+<h3 id="4.-custom-field-in-naming-series"><a class="header-link" href="#4.-custom-field-in-naming-series"></a>4. Custom Field in Naming Series</h3>
+<p> Some companies prefers to make use of &quot;short-codes&quot; for suppliers, i.e. WN for company &quot;Web Notes&quot; that later can be used in naming series for quick identification.</p>
+<h4 id="example:"><a class="header-link" href="#example:"></a>Example:</h4>
+<pre class="hljs"><code>A custom field <span class="hljs-string">"Vendor ID"</span> is created under Document: Supplier.
+Then under Naming Series, we should allow something like
+    PO-.YY.MM.-.vendor_id.-.#####
+    Resulting <span class="hljs-keyword">in</span> <span class="hljs-string">"PO-1503-WN-00001"</span></code></pre><div>
+  <div class='embed-container'>
+    <iframe src='https://www.youtube.com/embed//IGyISSfI1qU' frameborder='0' allowfullscreen>
+    </iframe>
+  </div>
+</div>
+
+
+<p>{next}</p>
+    </article>
+  </body>
+</html>

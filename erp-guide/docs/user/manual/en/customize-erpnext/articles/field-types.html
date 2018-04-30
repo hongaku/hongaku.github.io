@@ -1,0 +1,103 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title></title>
+    <link type="text/css" rel="stylesheet" href="../../../../../assets/css/github-markdown.css">
+    <link type="text/css" rel="stylesheet" href="../../../../../assets/css/pilcrow.css">
+    <link type="text/css" rel="stylesheet" href="../../../../../assets/css/hljs-github.min.css"/>
+  </head>
+  <body>
+    <article class="markdown-body"><p>#Field Types</p>
+<p>Following are the types of fields you can define while creating new ones, or while amend standard ones.</p>
+<ul class="list">
+<li>Attach: </li>
+</ul>
+<p>Attach field allows you browsing file from File Manager and attach in the transaction.</p>
+<ul class="list">
+<li>Button: </li>
+</ul>
+<p>It will be a Button, on clicking which you can execute some functions like Save, Submit etc. </p>
+<ul class="list">
+<li>Check:</li>
+</ul>
+<p>It will be a check box field. </p>
+<ul class="list">
+<li>Column Break</li>
+</ul>
+<p>Since ERPNext has multiple column layout, using Column Breaks, you can divide set of fields side-by-side. </p>
+<ul class="list">
+<li>Currency</li>
+</ul>
+<p>Currency field holds numeric value, like item price, amount etc. Currency field can have value upto six decimal places. Also you can have currency symbol being shown for the currency field.</p>
+<ul class="list">
+<li>Data</li>
+</ul>
+<p>Data field will be simple text field. It allows entering value upto 255 characters.</p>
+<ul class="list">
+<li>Date and Time</li>
+</ul>
+<p>This field will give you date and time picker. Current date and time (as provided by your computer) is set by default. </p>
+<ul class="list">
+<li>Dynamic Link</li>
+</ul>
+<p>Click <a href="/docs/user/manual/en/customize-erpnext/articles/managing-dynamic-link-fields.html">here</a> to learn how Dynamic Link Field function.</p>
+<ul class="list">
+<li>Float</li>
+</ul>
+<p>Float field carries numeric value, upto six decimal place. Precision for the float field is set in</p>
+<p><code>Setup &gt; Settings &gt; System</code></p>
+<p>Setting will be applicable on all the float field. </p>
+<ul class="list">
+<li>Image</li>
+</ul>
+<p>Image field will render an image file selected in another attach field. </p>
+<p>For the Image field, under Option (in Doctype),field name should be provide where image file is attached. By referring to the value in that field, image will be reference in the Image field.</p>
+<ul class="list">
+<li>Int (Integer)</li>
+</ul>
+<p>Integer field holds numeric value, without decimal place.</p>
+<ul class="list">
+<li>Link</li>
+</ul>
+<p>Link field is connected to another master from where it fetches data. For example, in the Quotation master, Customer is a Link field.</p>
+<ul class="list">
+<li>Geolocation</li>
+</ul>
+<p>Use Geolocation field to store GeoJSON <a href="https://tools.ietf.org/html/rfc7946#section-3.3">featurecollection</a>. Stores polygons, lines and points. Internally it uses following custom properties for identifying a circle.</p>
+<pre class="hljs"><code>{
+    <span class="hljs-attr">"point_type"</span>: <span class="hljs-string">"circle"</span>,
+    <span class="hljs-attr">"radius"</span>: <span class="hljs-number">10.00</span>
+}</code></pre><ul class="list">
+<li>Password</li>
+</ul>
+<p>Password field will have decode value in it.</p>
+<ul class="list">
+<li>Read Only</li>
+</ul>
+<p>Read Only field will carry data fetched from another form, but they themselves will be non-editable. You should set Read Only as field type if its source for value is predetermined.</p>
+<ul class="list">
+<li>Section Break</li>
+</ul>
+<p>Section Break is used to divide form into multiple sections. </p>
+<ul class="list">
+<li>Select</li>
+</ul>
+<p>Select will be a drop-down field. You can add muliple results in the Option field, separated by row.</p>
+<ul class="list">
+<li>Small Text</li>
+</ul>
+<p>Small Text field carries text content, has more character limit than the Data field.</p>
+<ul class="list">
+<li>Table</li>
+</ul>
+<p>Table will be (sort of) Link field which renders another docytpe within the current form. For example, Item table in the Sales Order is a Table field, which is linked to Sales Order Item doctype.</p>
+<ul class="list">
+<li>Text Editor</li>
+</ul>
+<p>Text Editor is text field. It has text-formatting options. In ERPNext, this field is generally used for defining Terms and Conditions.</p>
+<!-- markdown -->
+    </article>
+  </body>
+</html>

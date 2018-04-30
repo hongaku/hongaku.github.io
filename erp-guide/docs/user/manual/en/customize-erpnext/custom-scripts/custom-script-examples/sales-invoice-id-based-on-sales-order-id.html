@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>Sales Invoice Id Based On Sales Order Id</title>
+    <link type="text/css" rel="stylesheet" href="../../../../../../assets/css/github-markdown.css">
+    <link type="text/css" rel="stylesheet" href="../../../../../../assets/css/pilcrow.css">
+    <link type="text/css" rel="stylesheet" href="../../../../../../assets/css/hljs-github.min.css"/>
+  </head>
+  <body>
+    <article class="markdown-body"><h1 id="sales-invoice-id-based-on-sales-order-id"><a class="header-link" href="#sales-invoice-id-based-on-sales-order-id"></a>Sales Invoice Id Based On Sales Order Id</h1>
+<p>Below script allows you to get naming series in Sales Invoice, same as of corresponding Sales Order.
+Invoice uses a prefix M- but the number duplicates the SO doc name (number).</p>
+<p>Example: If Sales Order id is SO-12345, then corresponding Sales Invoice id will be set as M-12345.</p>
+<pre class="hljs"><code>frappe.ui.form.on(<span class="hljs-string">"Sales Invoice"</span>, <span class="hljs-string">"refresh"</span>, <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(frm)</span></span>{
+    <span class="hljs-keyword">var</span> sales_order = frm.doc.items[<span class="hljs-number">0</span>].sales_order.replace(<span class="hljs-string">"M"</span>, <span class="hljs-string">"M-"</span>);
+    <span class="hljs-keyword">if</span> (!frm.doc.__islocal &amp;&amp; sales_order &amp;&amp; frm.doc.name!==sales_order){
+        frappe.call({
+        method: <span class="hljs-string">'frappe.model.rename_doc.rename_doc'</span>,
+        args: {
+            doctype: frm.doctype,
+            old: frm.docname,
+            <span class="hljs-string">"new"</span>: sales_order,
+            <span class="hljs-string">"merge"</span>: <span class="hljs-literal">false</span>
+       },
+    });
+    }
+});</code></pre>    </article>
+  </body>
+</html>

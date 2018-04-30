@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>Customizing visibility of data in the child table</title>
+    <link type="text/css" rel="stylesheet" href="../../../../../assets/css/github-markdown.css">
+    <link type="text/css" rel="stylesheet" href="../../../../../assets/css/pilcrow.css">
+    <link type="text/css" rel="stylesheet" href="../../../../../assets/css/hljs-github.min.css"/>
+  </head>
+  <body>
+    <article class="markdown-body"><h1 id="customizing-visibility-of-data-in-the-child-table"><a class="header-link" href="#customizing-visibility-of-data-in-the-child-table"></a>Customizing visibility of data in the child table</h1>
+<p><strong>Question:</strong> Currently, in the child table (like Item table in Quotation), we can view value in the four columns only. How can we have more values previewed in the child table?</p>
+<p><strong>Answer:</strong> In the version 7, we introduced a feature, editable grid. This allowed the user to add values in the child table without opening dialog box/form for each row.</p>
+<p>This is how Quotation Item table renders value when Editable Grid is enabled. It will maximum list four columns in the table.</p>
+<p class="img-container"><img alt="Role Desk Permission" class="screenshot" src="{{docs_base_url}}/assets/img/articles/child-1.png"></p>
+<p>As per the default setting, only four columns are listed in the child table. Following is how you can add more columns in the editable itself.</p>
+<p>For the field to be added as a column in the table, enter a value in the Column field. Also, ensure that &quot;Is List View&quot; property is checked for that field.</p>
+<p class="img-container"><img alt="Role Desk Permission" class="screenshot" src="{{docs_base_url}}/assets/img/articles/child-2.png"></p>
+<p>Based on the value in the Column field, columns will be added in the child table. Ensure that sum total of value added in the Column field doesn&#39;t exceed 10. Based on the Column value, width for that column will be set.</p>
+<p class="img-container"><img alt="Role Desk Permission" class="screenshot" src="{{docs_base_url}}/assets/img/articles/child-3.png"></p>
+<p><strong>Switch to Un-editable Grid</strong></p>
+<p>To have more values shown in the preview of Quotation Item table, you can disable Editable Grid for the Quotation Item Doctype. Steps below.</p>
+<p class="img-container"><img alt="Role Desk Permission" class="screenshot" src="{{docs_base_url}}/assets/img/articles/child-4.gif"></p>
+<p>Once Editable Grid is disabled for the Quotation Item, the following is how values will be rendered in a preview of the Quotation Item table.</p>
+<p class="img-container"><img alt="Role Desk Permission" class="screenshot" src="{{docs_base_url}}/assets/img/articles/child-5.png"></p>
+<p>To have specific field&#39;s value shown in the preview, ensure that for that field, in the Customize Form tool, &quot;In List View&quot; property is checked.</p>
+<p class="img-container"><img alt="Role Desk Permission" class="screenshot" src="{{docs_base_url}}/assets/img/articles/child-6.png"></p>
+    </article>
+  </body>
+</html>

@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>Payment Terms</title>
+    <link type="text/css" rel="stylesheet" href="../../../../assets/css/github-markdown.css">
+    <link type="text/css" rel="stylesheet" href="../../../../assets/css/pilcrow.css">
+    <link type="text/css" rel="stylesheet" href="../../../../assets/css/hljs-github.min.css"/>
+  </head>
+  <body>
+    <article class="markdown-body"><h1 id="payment-terms"><a class="header-link" href="#payment-terms"></a>Payment Terms</h1>
+<p>You can save your business&#39; payment terms on ERPNext and include it in all documents in the sales/purchase cycle and ERPNext will make all the proper general ledger entries accordingly.</p>
+<p>The documents you can attach Payment Terms to are:</p>
+<ul class="list">
+<li>Sales Invoice</li>
+<li>Purchase Invoice</li>
+<li>Sales Order</li>
+<li>Purchase Order</li>
+<li>Quotation</li>
+</ul>
+<p>Note that the introduction of Payment Terms removes &quot;Credit Days&quot; and &quot;Credit Days Based On&quot; fields in Customer/Supplier master. Payment Term contains the same information and makes it more flexible to use.</p>
+<div class="embed-container">
+    <iframe src="https://www.youtube.com/embed/Z91oWYJx6yA?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>
+
+<h2 id="payment-terms-1"><a class="header-link" href="#payment-terms-1"></a>Payment Terms</h2>
+<p>Navigate to the Payment Term list page and click &quot;New&quot;.</p>
+<blockquote>
+<p>Accounts &gt; Payment Term &gt; New Payment Term</p>
+</blockquote>
+<p>Payment Term has the following fields:
+<strong>Payment Term Name:</strong> (optional) The name for this Payment Term.</p>
+<p><strong>Due Date Based On:</strong> The basis by which the due date for the Payment Term is to be calculated. There are three options:</p>
+<ul class="list">
+<li>Day(s) after invoice date: Due date should be calculated in days with reference to the posting date of the invoice</li>
+<li>Day(s) after the end of the invoice month: Due date should be calculated in days with reference to the last day of the month in which the invoice was created</li>
+<li>Month(s) after the end of the invoice month: Due date should be calculated in months with reference to the last day of the month in which the invoice was created</li>
+</ul>
+<p><strong>Invoice Portion:</strong> (optional) The portion of the total invoice amount for which this Payment Term should be applied. Value given will be regarded as percentage i.e 100 = 100%</p>
+<p><strong>Credit Days:</strong> (optional) The number of days or month credit is allowed depending on the option chosen in the <code>Due Date Based On</code> field. 0 means no credit allowed.</p>
+<p><strong>Description:</strong> (optional) A brief description of the Payment Term.</p>
+<h2 id="payment-terms-in-converted-documents"><a class="header-link" href="#payment-terms-in-converted-documents"></a>Payment Terms In Converted Documents</h2>
+<p>When converting or copying documents in the sales/purchase cycle, the attached Payment Term(s) will not be copied. The reason for this is because the copied information might no longer be true. For example, a Quotation is created for a service costing $1000 on January 1 with payment term of &quot;N 30&quot; (Net payable within 30 days) and then sent to a customer. On the quotation, the due date on the invoice will be January 30. Let&#39;s say the customer agrees to the quotation of January 20 and you decide to make an invoice from the Quotation. If the Payment Terms from the Quotation is copied, the due date on the invoice will still wrongly read January 30. This issue also applies for recurring documents.</p>
+<p>This does not mean you have manually set Payment Terms for every document. If you want the Payment Terms to be copyable, make use of Payment Terms Template.</p>
+<h2 id="payment-terms-template"><a class="header-link" href="#payment-terms-template"></a>Payment Terms Template</h2>
+<p>Payment Terms Template tells ERPNext how to populate the table in the Payment Terms Schedule section of the sales/purchase document.</p>
+<p>You should use it if you have a set of standard Payment Terms or if you want the Payment Term(s) on a sales/purchase document to be copyable.</p>
+<p>To create a new Payment Terms Template, navigate to the Payment Term Template creation form:</p>
+<blockquote>
+<p>Accounts &gt; Payment Terms Template &gt; New Payment Terms Template</p>
+</blockquote>
+<p><strong>Payment Term:</strong> (optional) The name for this Payment Term.</p>
+<p><strong>Due Date Based On:</strong> The basis by which the due date for the Payment Term is to be calculated. There are three options:</p>
+<ul class="list">
+<li>Day(s) after invoice date: Due date should be calculated in days with reference to the posting date of the invoice</li>
+<li>Day(s) after the end of the invoice month: Due date should be calculated in days with reference to the last day of the month in which the invoice was created</li>
+<li>Month(s) after the end of the invoice month: Due date should be calculated in months with reference to the last day of the month in which the invoice was created</li>
+</ul>
+<p><strong>Invoice Portion:</strong> (optional) The portion of the total invoice amount for which this Payment Term should be applied. Value given will be regarded as percentage i.e 100 = 100%</p>
+<p><strong>Credit Days:</strong> (optional) The number of days or month credit is allowed depending on the option chosen in the <code>Due Date Based On</code> field. 0 means no credit allowed.</p>
+<p><strong>Description:</strong> (optional) A brief description of the Payment Term.</p>
+<p>Add as many rows as needed but make sure that the sum of the values in the <code>Invoice Portion</code> fields in all populated rows equals 100.</p>
+<h2 id="how-to-add-payment-terms-to-documents"><a class="header-link" href="#how-to-add-payment-terms-to-documents"></a>How to Add Payment Terms To Documents</h2>
+<p>You can add Payments Terms in the &quot;Payment Terms Schedule&quot; section of the Document. Each row in the table represents a portion of the document&#39;s grand total. The table collects the following information:</p>
+<p><strong>Payment Term:</strong> (optional) The name of the Payment Term document you require. If this is added, the data from the selected Payment Term will be used to populate the remaining columns in the row.</p>
+<p><strong>Description:</strong> (optional) Description of the Payment Term.</p>
+<p><strong>Due Date:</strong> (optional) The due date for the portion of the invoice. Set this value only if you did not specify anything in the <code>Payment Term</code> column.</p>
+<p><strong>Invoice Portion:</strong> The percentage portion of the document represented in each row.</p>
+<p><strong>Payment Amount:</strong> The amount due from the portion of the invoice represented by each row.</p>
+    </article>
+  </body>
+</html>

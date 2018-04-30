@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>Implementation Strategy</title>
+    <link type="text/css" rel="stylesheet" href="../../../../assets/css/github-markdown.css">
+    <link type="text/css" rel="stylesheet" href="../../../../assets/css/pilcrow.css">
+    <link type="text/css" rel="stylesheet" href="../../../../assets/css/hljs-github.min.css"/>
+  </head>
+  <body>
+    <article class="markdown-body"><h1 id="implementation-strategy"><a class="header-link" href="#implementation-strategy"></a>Implementation Strategy</h1>
+<p>Antes de que empieces a manejar todas tus operaciones en ERPNext, primero
+deberías estar familiarizado con el sistema y los términos que utiliza.
+    Por esa razón recomendamos que la implementación pase en dos fases.</p>
+<ul class="list">
+<li>La <strong>Fase de Prueba</strong>, donde introduces información de prueba que representan sus transacciones del día a día y la <strong>Fase de Producción</strong>, donde comenzamos a introducir información real.</li>
+</ul>
+<h3 id="fase-de-prueba"><a class="header-link" href="#fase-de-prueba"></a>Fase de Prueba</h3>
+<ul class="list">
+<li>Leer el manual</li>
+<li>Crea una cuenta gratis en <a href="https://erpnext.com">https://erpnext.com</a> (La forma más facíl de experimental).</li>
+<li>Crea su primer Cliente, Suplidor y Producto. Agrega varios de estos para que se familiarice con ellos.</li>
+<li>Crea un Grupo de Clientes, Grupo de Productos, Almacenes, Grupo de Suplidores, para que puedas clasificar sus productos.</li>
+<li>Completar un ciclo estandar de ventas - Iniciativa &gt; Oportunidad &gt; Cotización &gt; Orden de Venta &gt; Nota de Entrega &gt; Factura de Venta &gt; Pago (Entrada de diario)</li>
+<li>Completa un ciclo estandar de compra - Solicitud de Material &gt; Orden de Compra &gt; Recibo de Compra &gt; Pagos (Entrada de diario).</li>
+<li>Completar un ciclo de manofactura (si aplica) - BOM &gt; Herramienta de Planificación de Producción &gt; Orden de Producción &gt; Problema de material</li>
+<li>Replicar un escenario de su día a día dentro del sistema.</li>
+<li>Crea un custom fields, formato de impresión, etc como sea requerido.</li>
+</ul>
+<h3 id="fase-de-producción"><a class="header-link" href="#fase-de-producción"></a>Fase de Producción</h3>
+<p>Una vez ya estes falimiliarizado con ERPNext, inicia introduciendo la información real!</p>
+<ul class="list">
+<li>Borra toda la información de prueba de la cuenta o inicia con una nueva instalación.</li>
+<li>Si solo quieres borrar las transacciones y no las demás informaciones sobre Productos, Clientes, Suplidores, BOM etc, puedes dar click en Eliminar Transacciones de su compañia y inicia desde cero. Para hacerlo, abre el registro de la compañia via Setup &gt; Masters &gt; Company y eliminar las transacciones de su compañia clickeando en el botón <strong>Eliminar las transacciones de la compañia</strong> al final del formulario de la compañia.</li>
+<li>También puedes configurar una nueva cuenta en <a href="https://erpnext.com">https://erpnext.com</a>, y usa los 30 días gratis. <a href="/introduction/getting-started-with-erpnext">Encuentra mas formas de usar ERPNext</a></li>
+<li>Configura todos los módulos con Grupos de Clientes, Grupos de Productos, Almacenes, BOMs etc.</li>
+<li>Importar Clientes, Suplidores, Productos, Contactos y Direcciones usando la Herramienta de Importación de Data.</li>
+<li>Importar el inventario de apertura usando la Herramienta de Reconciliación de Inventario.</li>
+<li>Crear la entrada de apertura de cuenta usando la Entrada de Diario y crea facturas de ventas pendientes y facturas de compra.</li>
+<li>Si necesitas ayuda, <a href="https://erpnext.com/pricing">puedes pagar por soporte</a> o <a href="https://discuss.erpnext.com">preguntar en el foro de la comunidad</a>.</li>
+</ul>
+<p>{next}</p>
+    </article>
+  </body>
+</html>

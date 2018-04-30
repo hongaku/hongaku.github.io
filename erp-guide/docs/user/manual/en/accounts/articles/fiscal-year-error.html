@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>Fixing Fiscal Year Error</title>
+    <link type="text/css" rel="stylesheet" href="../../../../../assets/css/github-markdown.css">
+    <link type="text/css" rel="stylesheet" href="../../../../../assets/css/pilcrow.css">
+    <link type="text/css" rel="stylesheet" href="../../../../../assets/css/hljs-github.min.css"/>
+  </head>
+  <body>
+    <article class="markdown-body"><h1 id="fixing-fiscal-year-error"><a class="header-link" href="#fixing-fiscal-year-error"></a>Fixing Fiscal Year Error</h1>
+<p>While creating any entry, system validates if dates (like Posting Date, Transaction Date etc.) belongs to Fiscal Year selected. If not, system through an error message saying:</p>
+<p><code>Date ##-##-#### not in fiscal year</code></p>
+<p>You are more likely to receive this error message if your Fiscal Year has changes, but new Fiscal Year still not set a default. To ensure new Fiscal Year is auto updated in the transactions, you should setup your master as instructed below.</p>
+<h4 id="create-new-fiscal-year"><a class="header-link" href="#create-new-fiscal-year"></a>Create New Fiscal Year</h4>
+<p>Only User with System Manager&#39;s Role Assigned has permission to create new Fiscal Year. To create new Fiscal Year, go to:</p>
+<p><code>Accounts &gt; Setup &gt; Fiscal Year</code></p>
+<p>Click <a href="/docs/user/manual/en/accounts/setup/fiscal-year.html">here</a> to learn more about Fiscal Year.</p>
+<h4 id="set-fiscal-year-as-default"><a class="header-link" href="#set-fiscal-year-as-default"></a>Set Fiscal Year as Default</h4>
+<p>After Fiscal Year is saved, you will find option to set that Fiscal year as Default.</p>
+<p class="img-container"><img alt="Debit Credit Not Equal" class="screenshot" src="{{docs_base_url}}/assets/img/articles/fiscal-year-error-1.png"></p>
+<p>Default Fiscal Year will be updated in the Global Default setting as well. You can manually update Default Fiscal Year from:</p>
+<p><code>Setup &gt; Settings &gt; Global Default</code></p>
+<p class="img-container"><img alt="Debit Credit Not Equal" class="screenshot" src="{{docs_base_url}}/assets/img/articles/fiscal-year-error-2.png"></p>
+<p>Save Global Default, and Reload your ERPNext account. Then, default Fiscal Year will be auto-updated in your transactions.</p>
+<p>Note: In transactions, you can manually select required Fiscal Year, from More Info section.</p>
+<!-- markdown -->    </article>
+  </body>
+</html>

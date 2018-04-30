@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>Address Template</title>
+    <link type="text/css" rel="stylesheet" href="../../../../../assets/css/github-markdown.css">
+    <link type="text/css" rel="stylesheet" href="../../../../../assets/css/pilcrow.css">
+    <link type="text/css" rel="stylesheet" href="../../../../../assets/css/hljs-github.min.css"/>
+  </head>
+  <body>
+    <article class="markdown-body"><h1 id="address-template"><a class="header-link" href="#address-template"></a>Address Template</h1>
+<p>Each region has its own way of defining Addresses. To manage multiple address formats for your Documents (like Quotation, Purchase Invoice etc.), you can create country-wise <strong>Address Templates</strong>.</p>
+<blockquote>
+<p>Setup &gt; Printing and Branding &gt; Address Template</p>
+</blockquote>
+<p>A default Address Template is created when you setup the system. You can either edit or update it or create a new template.</p>
+<p>One template is default and will apply to all countries that do not have an specific template.</p>
+<h4 id="template"><a class="header-link" href="#template"></a>Template</h4>
+<p>The templating engine is based on HTML and the <a href="http://jinja.pocoo.org/docs/templates/">Jinja Templating</a> system and all the fields (including Custom Fields) will be available for creating the template.</p>
+<p>Here is the default template:</p>
+<pre class="hljs"><code><span class="xml"></span><span class="hljs-template-tag">{% <span class="hljs-name">raw</span> %}</span><span class="xml"></span><span class="hljs-template-variable">{{ address_line1 }}</span><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span>
+</span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-name">if</span></span> address_line2 %}</span><span class="xml"></span><span class="hljs-template-variable">{{ address_line2 }}</span><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span></span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-name">endif</span></span> -%}</span><span class="xml">
+</span><span class="hljs-template-variable">{{ city }}</span><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span>
+</span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-name">if</span></span> state %}</span><span class="xml"></span><span class="hljs-template-variable">{{ state }}</span><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span></span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-name">endif</span></span> -%}</span><span class="xml">
+</span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-name">if</span></span> pincode %}</span><span class="xml">PIN:  </span><span class="hljs-template-variable">{{ pincode }}</span><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span></span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-name">endif</span></span> -%}</span><span class="xml">
+</span><span class="hljs-template-variable">{{ country }}</span><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span>
+</span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-name">if</span></span> phone %}</span><span class="xml">Phone: </span><span class="hljs-template-variable">{{ phone }}</span><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span></span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-name">endif</span></span> -%}</span><span class="xml">
+</span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-name">if</span></span> fax %}</span><span class="xml">Fax: </span><span class="hljs-template-variable">{{ fax }}</span><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span></span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-name">endif</span></span> -%}</span><span class="xml">
+</span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-name">if</span></span> email_id %}</span><span class="xml">Email: </span><span class="hljs-template-variable">{{ email_id }}</span><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span></span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-name">endif</span></span> -%}</span><span class="xml"></span><span class="hljs-template-tag">{% <span class="hljs-name">endraw</span> %}</span><span class="xml"></span></code></pre><h3 id="example"><a class="header-link" href="#example"></a>Example</h3>
+<p class="img-container"><img class="screenshot" alt="Print Heading" src="{{docs_base_url}}/assets/img/setup/print/address-format.png"></p>
+<p>{next}</p>
+    </article>
+  </body>
+</html>

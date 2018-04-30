@@ -1,0 +1,339 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>Ständige Inventur</title>
+    <link type="text/css" rel="stylesheet" href="../../../../../assets/css/github-markdown.css">
+    <link type="text/css" rel="stylesheet" href="../../../../../assets/css/pilcrow.css">
+    <link type="text/css" rel="stylesheet" href="../../../../../assets/css/hljs-github.min.css"/>
+  </head>
+  <body>
+    <article class="markdown-body"><h1 id="ständige-inventur"><a class="header-link" href="#ständige-inventur"></a>Ständige Inventur</h1>
+<p><span class="text-muted contributed-by">Beigetragen von CWT Connector &amp; Wire Technology GmbH</span></p>
+<p>In der Ständigen Inventur erstellt das System Buchungen für jede Lagertransaktion, so dass das Lager und der Kontostand immer synchron bleiben. Der Kontostand wird für jedes Lager mit der zutreffenden  Kontobezeichnung verbucht. Wenn das Lager gespeichert wird, erstellt das System automatisch eine Kontobezeichnung mit dem selben Namen wie das Lager. Da für jedes Lager ein Kontostand verwaltet wird, sollten Sie Lager auf Basis der in ihnen eingelagerten Artikel (Umlaufvermögen/Anlagevermögen) erstellen.</p>
+<p>Wenn Artikel in einem bestimmten Lager ankommen, erhöht sich der Stand des Vermögenskontos (das mit dem Lager verknüpft ist). Analog dazu wird ein Aufwand verbucht, wenn Sie Waren ausliefern, und der Stand des Vermögenskontos nimmt ab, basierend auf der Bewertung der entsprechenden Artikel. </p>
+<h3 id="aktivierung"><a class="header-link" href="#aktivierung"></a>Aktivierung</h3>
+<ol class="list">
+<li>Richten Sie die folgenden Standard-Konten für jede Firma ein:<ul class="list">
+<li>Lagerwaren erhalten aber noch nicht abgerechnet</li>
+<li>Lagerabgleichskonto</li>
+<li>In der Bewertung enthaltene Kosten</li>
+<li>Kostenstelle</li>
+</ul>
+</li>
+<li>In der Ständigen Inventur verwaltet das System für jedes Lager einen eigenen Kontostand unter einer eigenen Kontobezeichnung. Um diese Kontobezeichnung zu erstellen, gehen Sie zu &quot;Konto erstellen unter&quot; in den Lagerstammdaten.</li>
+<li>Aktivieren Sie die Ständige Inventur.</li>
+</ol>
+<blockquote>
+<p>Einstellungen &gt; Rechnungswesen &gt; Kontoeinstellungen &gt; Eine Buchung für jede Lagerbewegung erstellen</p>
+</blockquote>
+<hr>
+<h3 id="beispiel"><a class="header-link" href="#beispiel"></a>Beispiel</h3>
+<p>Wir nehmen folgenden Kontenplan und folgende Lagereinstellungen für Ihre Firma an:</p>
+<p>Kontenplan</p>
+<ul class="list">
+<li>Vermögen (Soll) <ul class="list">
+<li>Umlaufvermögen</li>
+<li>Forderungen<ul class="list">
+<li>Jane Doe</li>
+</ul>
+</li>
+<li>Lagervermögenswerte<ul class="list">
+<li>In Verkaufsstellen</li>
+<li>Fertigerzeugnisse</li>
+<li>In der Fertigung</li>
+</ul>
+</li>
+<li>Steuervermögenswerte<ul class="list">
+<li>Umsatzsteuer (Vorsteuer)</li>
+</ul>
+</li>
+<li>Anlagevermögen</li>
+<li>Anlagevermögen im Lager</li>
+</ul>
+</li>
+<li>Verbindlichkeiten (Haben)<ul class="list">
+<li>Kurzfristige Verbindlichkeiten</li>
+<li>Verbindlichkeiten aus Lieferungen und Leistungen<ul class="list">
+<li>East Wind Inc.</li>
+</ul>
+</li>
+<li>Lagerverbindlichkeiten <ul class="list">
+<li>Lagerware erhalten aber noch nicht abgerechnet</li>
+</ul>
+</li>
+<li>Steuerverbindlichkeiten<ul class="list">
+<li>Dienstleistungssteuer</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Erträge (Haben)<ul class="list">
+<li>Direkte Erträge</li>
+<li>Verkäufe</li>
+</ul>
+</li>
+<li>Aufwendungen (Soll)<ul class="list">
+<li>Direkte Aufwendungen</li>
+<li>Lageraufwendungen<ul class="list">
+<li>Selbstkosten</li>
+<li>In der Bewertung enthaltene Kosten</li>
+<li>Bestandsveränderungen</li>
+<li>Versandgebühren</li>
+<li>Zoll</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="kontenkonfiguration-des-lagers"><a class="header-link" href="#kontenkonfiguration-des-lagers"></a>Kontenkonfiguration des Lagers</h4>
+<ul class="list">
+<li>In Verkaufsstellen</li>
+<li>In der Fertigung</li>
+<li>Fertigerzeugnisse</li>
+<li>Anlagevermögen im Lager</li>
+</ul>
+<h4 id="kaufbeleg"><a class="header-link" href="#kaufbeleg"></a>Kaufbeleg</h4>
+<p>Nehmen wir an, Sie haben 10 Stück des Artikels &quot;RM0001&quot; zu 200€ und 5 Stück des Artikels &quot;Tisch&quot; zu <strong>100€</strong> vom Lieferanten &quot;Arcu Vel Quam Fabricators&quot; eingekauft. Im Folgenden finden Sie die Details des Kaufbelegs:</p>
+<p><strong>Supplier:</strong> Arcu Vel Quam Fabricators</p>
+<p><strong>Artikel:</strong></p>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Artikel</th>
+            <th>Lager</th>
+            <th>Menge</th>
+            <th>Preis</th>
+            <th>Gesamtmenge</th>
+            <th>Wertansatz</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>RM0001</td>
+            <td>In Verkaufsstellen</td>
+            <td>10</td>
+            <td>200</td>
+            <td>2000</td>
+            <td>2200</td>
+        </tr>
+        <tr>
+            <td>Tisch</td>
+            <td>Anlagevermögen im Lager</td>
+            <td>5</td>
+            <td>100</td>
+            <td>500</td>
+            <td>550</td>
+        </tr>
+    </tbody>
+</table>
+<p><strong>Steuern:</strong>
+</p>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Konto</th>
+            <th>Betrag</th>
+            <th>Kategorie</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Versandgebühren</td>
+            <td>100</td>
+            <td>Gesamtsumme und Bewertung</td>
+        </tr>
+        <tr>
+            <td>MwSt</td>
+            <td>120</td>
+            <td>Gesamtsumme</td>
+        </tr>
+        <tr>
+            <td>Zoll</td>
+            <td>150</td>
+            <td>Bewertung</td>
+        </tr>
+    </tbody>
+</table>
+<p><strong>Lagerbuch</strong>
+</p>
+
+<img class="screenshot" alt="Lagerbuch" src="{{docs_base_url}}/assets/img/accounts/perpetual-receipt-sl-1.png">
+
+<strong>Hauptbuch:</strong>
+
+<img class="screenshot" alt="Hauptbuch" src="{{docs_base_url}}/assets/img/accounts/perpetual-receipt-gl-2.png">
+
+Um ein System der doppelten Buchhaltung zu erhalten, werden dadurch, dass sich der Kontensaldo durch den Kaufbeleg erhöht, die Konten &quot;In Verkaufsstellen&quot; und &quot;Anlagevermögen im Lager&quot; belastet und das temporäre Konto &quot;Lagerware erhalten aber noch nicht abgerechnet&quot; entlastet. Zum selben Zeitpunkt wird eine negative Aufwendung auf das Konto &quot;In der Bewertung enthaltene Kosten&quot; verbucht, um die Bewertung hinzuzufügen und um eine doppelte Aufwandsverbuchung zu vermeiden.
+
+---
+
+### Eingangsrechnung
+
+Wenn eine Rechnung des Lieferanten für den oben angesprochenen Kaufbeleg eintrifft, wird hierzu eine Eingangsrechnung erstellt. Die Buchungen im Hauptbuch sind folgende:
+
+#### Hauptbuch
+
+<img class="screenshot" alt="Hauptbuch" src="{{docs_base_url}}/assets/img/accounts/perpetual-pinv-gl-3.png">
+
+Hier wird das Konto &quot;Lagerware erhalten aber noch nicht bewertet&quot; belastet und hebt den Effekt des Kaufbeleges auf.
+
+<em> </em> *
+
+### Lieferschein
+
+Nehmen wir an, dass Sie eine Kundenbestellung von &quot;Utah Automation Services&quot; über 5 Stück des Artikels &quot;RM0001&quot; zu 300€ haben. Im Folgenden sehen Sie die Details des Lieferscheins.
+
+<strong>Kunde:</strong> Utah Automation Services
+
+<strong>Artikel:</strong>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Artikel</th>
+            <th>Lager</th>
+            <th>Menge</th>
+            <th>Preis</th>
+            <th>Summe</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>RM0001</td>
+            <td>In Verkaufsstellen</td>
+            <td>5</td>
+            <td>300</td>
+            <td>1500</td>
+        </tr>
+    </tbody>
+</table>
+<p><strong>Steuern:</strong>
+</p>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Konto</th>
+            <th>Menge</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Dienstleistungssteuer</td>
+            <td>150</td>
+        </tr>
+        <tr>
+            <td>MwSt</td>
+            <td>100</td>
+        </tr>
+    </tbody>
+</table>
+
+<p><strong>Lagerbuch</strong></p>
+<p class="img-container"><img class="screenshot" alt="Lagerbuch" src="{{docs_base_url}}/assets/img/accounts/perpetual-dn-sl-4.png"></p>
+<p><strong>Hauptbuch</strong></p>
+<p class="img-container"><img class="screenshot" alt="Hauptbuch" src="{{docs_base_url}}/assets/img/accounts/perpetual-dn-gl-5.png"></p>
+<p>Da der Artikel aus dem Lager &quot;In Verkaufsstellen&quot; geliefert wird, wird das Konto &quot;In Verkaufsstellen&quot; entlastet und ein Betrag in gleicher Höhe dem Aufwandskonto &quot;Selbstkosten&quot; belastet. Der belastete/entlastete Betrag ist gleich dem Gesamtwert (Einkaufskosten) des Verkaufsartikels. Und der Wert wird gemäß der bevorzugten Bewertungsmethode (FIFO/Gleitender Durchschnitt) oder den tatsächlichen Kosten eines serialisierten Artikels kalkuliert.</p>
+<pre class="hljs"><code>In diesem Beispiel gehen wir davon aus, dass wir als Berwertungsmethode FIFO verwenden. 
+Bewertungpreis  = Einkaufpreis + In der Bewertung enthaltene Abgaben/Gebühren 
+                = <span class="hljs-number">200</span> + (<span class="hljs-number">250</span> * (<span class="hljs-number">2000</span> / <span class="hljs-number">2500</span>) / <span class="hljs-number">10</span>) 
+                = <span class="hljs-number">220</span>
+Gesamtsumme der Bewertung = <span class="hljs-number">220</span> * <span class="hljs-number">5</span> 
+                        = <span class="hljs-number">1100</span></code></pre><hr>
+<h3 id="ausgangsrechnung-mit-lageraktualisierung"><a class="header-link" href="#ausgangsrechnung-mit-lageraktualisierung"></a>Ausgangsrechnung mit Lageraktualisierung</h3>
+<p>Nehmen wir an, dass Sie zur obigen Bestellung keinen Lieferschein erstellt haben sondern direkt eine Ausgangsrechnung mit der Option &quot;Lager aktualisieren&quot; erstellt haben. Die Details der Ausgangsrechnung sind die gleichen wie bei obigem Lieferschein.</p>
+<p><strong>Lagerbuch</strong></p>
+<p class="img-container"><img class="screenshot" alt="Lagerbuch" src="{{docs_base_url}}/assets/img/accounts/perpetual-inv-sl-6.png"></p>
+<p><strong>Hauptbuch</strong></p>
+<p class="img-container"><img class="screenshot" alt="Hauptbuch" src="{{docs_base_url}}/assets/img/accounts/perpetual-inv-gl-7.png"></p>
+<p>Hier werden, im Gegensatz zu den normalen Buchungen für Rechnungen, die Konten &quot;In Verkaufsstellen&quot; und &quot;Selbstkosten&quot; basierend auf der Bewertung beeinflusst.</p>
+<hr>
+<h3 id="lagerbuchung-(materialschein)"><a class="header-link" href="#lagerbuchung-(materialschein)"></a>Lagerbuchung (Materialschein)</h3>
+<p><strong>Artikel:</strong></p>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Artikel/th&gt;
+            <th>Eingangslager</th>
+            <th>Menge</th>
+            <th>Preis</th>
+            <th>Summe</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>RM0001</td>
+            <td>In den Verkaufsstellen</td>
+            <td>50</td>
+            <td>220</td>
+            <td>11000</td>
+        </tr>
+    </tbody>
+</table>
+
+<p><strong>Lagerbuch</strong></p>
+<p class="img-container"><img class="screenshot" alt="Lagerbuch" src="{{docs_base_url}}/assets/img/accounts/perpetual-st-receipt-sl.png"></p>
+<p><strong>Hauptbuch</strong></p>
+<p class="img-container"><img class="screenshot" alt="Hauptbuch" src="{{docs_base_url}}/assets/img/accounts/perpetual-st-receipt-gl.png"></p>
+<hr>
+<h3 id="lagerbuchung-(materialanfrage)"><a class="header-link" href="#lagerbuchung-(materialanfrage)"></a>Lagerbuchung (Materialanfrage)</h3>
+<p><strong>Artikel:</strong></p>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Artikel</th>
+            <th>Ausgangslager</th>
+            <th>Menge</th>
+            <th>Preis</th>
+            <th>Summe</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>RM0001</td>
+            <td>In den Verkaufsstellen</td>
+            <td>10</td>
+            <td>220</td>
+            <td>2200</td>
+        </tr>
+    </tbody>
+</table>
+
+<p><strong>Lagerbuch</strong></p>
+<p class="img-container"><img class="screenshot" alt="Lagerbuch" src="{{docs_base_url}}/assets/img/accounts/perpetual-st-issue-sl.png"></p>
+<p><strong>Hauptbuch</strong></p>
+<p class="img-container"><img class="screenshot" alt="Hauptbuch" src="{{docs_base_url}}/assets/img/accounts/perpetual-st-issue-gl.png"></p>
+<hr>
+<h3 id="lagerbuchung-(materialübertrag)"><a class="header-link" href="#lagerbuchung-(materialübertrag)"></a>Lagerbuchung (Materialübertrag)</h3>
+<p><strong>Artikel:</strong></p>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Artikel</th>
+            <th>Ausgangslager</th>
+            <th>Eingangslager</th>
+            <th>Menge</th>
+            <th>Preis</th>
+            <th>Summe</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>RM0001</td>
+            <td>In den Verkaufsstellen</td>
+            <td>Fertigung</td>
+            <td>10</td>
+            <td>220</td>
+            <td>2200</td>
+        </tr>
+    </tbody>
+</table>
+
+<p><strong>Lagerbuch</strong></p>
+<p class="img-container"><img class="screenshot" alt="Lagerbuch" src="{{docs_base_url}}/assets/img/accounts/perpetual-st-transfer-sl.png"></p>
+<p><strong>Hauptbuch</strong></p>
+<p class="img-container"><img class="screenshot" alt="Hauptbuch" src="{{docs_base_url}}/assets/img/accounts/perpetual-st-transfer-gl.png"></p>
+    </article>
+  </body>
+</html>

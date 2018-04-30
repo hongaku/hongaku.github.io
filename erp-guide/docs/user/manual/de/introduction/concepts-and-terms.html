@@ -1,0 +1,306 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>Konzepte und Begriffe</title>
+    <link type="text/css" rel="stylesheet" href="../../../../assets/css/github-markdown.css">
+    <link type="text/css" rel="stylesheet" href="../../../../assets/css/pilcrow.css">
+    <link type="text/css" rel="stylesheet" href="../../../../assets/css/hljs-github.min.css"/>
+  </head>
+  <body>
+    <article class="markdown-body"><h1 id="konzepte-und-begriffe"><a class="header-link" href="#konzepte-und-begriffe"></a>Konzepte und Begriffe</h1>
+<p><span class="text-muted contributed-by">Beigetragen von CWT Connector &amp; Wire Technology GmbH</span></p>
+<p>Machen Sie sich mit der Terminologie, die verwendet wird, und mit einigen Grundbegriffen von ERPNext vertraut, bevor Sie mit der Einführung beginnen.</p>
+<hr>
+<h3 id="grundbegriffe"><a class="header-link" href="#grundbegriffe"></a>Grundbegriffe</h3>
+<h4 id="firma"><a class="header-link" href="#firma"></a>Firma</h4>
+<p>Bezeichnung für die Firmendatensätze, die unter ERPNext verwendet werden. In ein und derselben Installation können Sie mehrere Firmendatensätze anlegen, die alle unterschiedliche juristische Personen darstellen. Die Buchführung wird für jede Firma unterschiedlich sein, aber sie teilen sich die Datensätze zu Kunden, Lieferanten und Artikeln.</p>
+<blockquote>
+<p>Rechnungswesen &gt; Einstellungen &gt; Firma</p>
+</blockquote>
+<h4 id="kunde"><a class="header-link" href="#kunde"></a>Kunde</h4>
+<p>Bezeichnung eines Kunden. Ein Kunde kann eine Einzelperson oder eine Organisation sein. Sie können für jeden Kunden mehrere verschiedene Kontakte und Adressen erstellen.</p>
+<blockquote>
+<p>Vertrieb &gt; Dokumente &gt; Kunde</p>
+</blockquote>
+<h4 id="lieferant"><a class="header-link" href="#lieferant"></a>Lieferant</h4>
+<p>Bezeichnung eines Lieferanten von Waren oder Dienstleistungen. Ihr Telekommunikationsanbieter ist ein Lieferant, genauso wie Ihr Lieferant für Rohmaterial. Auch in diesem Fall kann der Lieferant eine Einzelperson oder eine Organisation sein und mehrere verschiedene Kontakte und Adressen haben.</p>
+<blockquote>
+<p>Einkauf &gt; Dokumente &gt; Lieferant</p>
+</blockquote>
+<h4 id="artikel"><a class="header-link" href="#artikel"></a>Artikel</h4>
+<p>Ein Produkt, ein Unterprodukt oder eine Dienstleistung, welche(s) entweder eingekauft, verkauft oder hergestellt wird, und eindeutig identifizierbar ist.</p>
+<blockquote>
+<p>Lagerbestand &gt; Dokumente &gt; Artikel</p>
+</blockquote>
+<h4 id="konto"><a class="header-link" href="#konto"></a>Konto</h4>
+<p>Ein Konto ist der Oberbegriff, unter dem Finanztransaktionen und Unternehmensvorgänge ausgeführt werden. Beispiel: &quot;Reisekosten&quot; ist ein Konto, Der Kunde &quot;Zoe&quot;, der Lieferant &quot;Mae&quot; sind Konten. ERPNext erstellt automatisch Konten für Kunden und Lieferanten.</p>
+<blockquote>
+<p>Rechnungswesen &gt; Dokumente &gt; Kontenplan</p>
+</blockquote>
+<h4 id="adresse"><a class="header-link" href="#adresse"></a>Adresse</h4>
+<p>Eine Adresse bezeichnet Einzelheiten zum Sitz eines Kunden oder Lieferanten. Dies können unterschiedliche Orte sein, wie z. B. Hauptbüro, Fertigung, Lager, Ladengeschäft etc.</p>
+<blockquote>
+<p>Vertrieb &gt; Dokumente &gt; Adresse</p>
+</blockquote>
+<h4 id="kontakt"><a class="header-link" href="#kontakt"></a>Kontakt</h4>
+<p>Ein individueller Kontakt gehört zu einem Kunden oder Lieferanten oder ist gar unabhängig. Ein Kontakt beinhaltet einen Namen und Kontaktdetails wie die E-Mail-Adresse und die Telefonnummer.</p>
+<blockquote>
+<p>Vertrieb &gt; Dokumente &gt; Kontakt</p>
+</blockquote>
+<h4 id="kommunikation"><a class="header-link" href="#kommunikation"></a>Kommunikation</h4>
+<p>Eine Auflistung der gesamten Kommunikation mit einem Kontakt oder Lead. Alle E-Mails, die vom System versendet werden, werden dieser Liste hinzugefügt.</p>
+<blockquote>
+<p>Support &gt; Dokumente &gt; Kommunikation</p>
+</blockquote>
+<h4 id="preisliste"><a class="header-link" href="#preisliste"></a>Preisliste</h4>
+<p>Eine Preisliste ist ein Ort an dem verschiedene Preismodelle gespeichert werden können. Es handelt sich um eine Bezeichnung, die sie für einen Satz von Artikelpreisen, die als definierte Liste abgespeichert werden, vergeben.</p>
+<blockquote>
+<p>Vertrieb &gt; Einstellungen &gt; Preisliste</p>
+</blockquote>
+<blockquote>
+<p>Einkauf &gt; Einstellungen &gt; Preisliste</p>
+</blockquote>
+<hr>
+<h3 id="buchführung"><a class="header-link" href="#buchführung"></a>Buchführung</h3>
+<h4 id="geschäftsjahr"><a class="header-link" href="#geschäftsjahr"></a>Geschäftsjahr</h4>
+<p>Bezeichnet ein Geschäfts- oder Buchungsjahr. Sie können mehrere verschiedene Geschäftsjahre zur selben Zeit laufen lassen. Jedes Geschäftsjahr hat ein Startdatum und ein Enddatum und Transaktionen können nur zu dieser Periode erfasst werden. Wenn Sie ein Geschäftsjahr schliessen, werden die Schlußstände der Konten als Eröffnungsbuchungen ins nächste Jahr übertragen.</p>
+<blockquote>
+<p>Rechnungswesen &gt; Einstellungen &gt; Geschäftsjahr</p>
+</blockquote>
+<h4 id="kostenstelle"><a class="header-link" href="#kostenstelle"></a>Kostenstelle</h4>
+<p>Eine Kostenstelle entspricht einem Konto. Im Unterschied dazu gibt ihr Aufbau die Geschäftstätigkeit Ihres Unternehmens noch etwas besser wieder als ein Konto. Beispiel: Sie können in Ihrem Kontenplan Ihre Aufwände nach Typ aufteilen (z. B. Reisen, Marketing). Im Kostenstellenplan können Sie Aufwände nach Produktlinien oder Geschäftseinheiten (z. B. Onlinevertrieb, Einzelhandel, etc.) unterscheiden.</p>
+<blockquote>
+<p>Rechnungswesen &gt; Einstellungen &gt; Kostenstellenplan </p>
+</blockquote>
+<h4 id="journalbuchung-(buchungssatz)"><a class="header-link" href="#journalbuchung-(buchungssatz)"></a>Journalbuchung (Buchungssatz)</h4>
+<p>Ein Dokument, welches Buchungen des Hauptbuchs beinhaltet und bei dem die Summe von Soll und Haben dieser Buchungen gleich groß ist. Sie können in ERPNext über Journalbuchungen Zahlungen, Rücksendungen, etc. verbuchen.</p>
+<blockquote>
+<p>Rechnungswesen &gt; Dokumente &gt; Journalbuchung</p>
+</blockquote>
+<h4 id="ausgangsrechnung"><a class="header-link" href="#ausgangsrechnung"></a>Ausgangsrechnung</h4>
+<p>Eine Rechnung über die Lieferung von Artikeln (Waren oder Dienstleistungen) an den Kunden.</p>
+<blockquote>
+<p>Rechnungswesen &gt; Dokumente &gt; Ausgangsrechnung</p>
+</blockquote>
+<h4 id="eingangsrechnung"><a class="header-link" href="#eingangsrechnung"></a>Eingangsrechnung</h4>
+<p>Eine Rechnung von einem Lieferanten über die Lieferung bestellter Artikel (Waren oder Dienstleistungen)</p>
+<blockquote>
+<p>Rechnungswesen &gt; Dokumente &gt; Eingangsrechnung</p>
+</blockquote>
+<h4 id="währung"><a class="header-link" href="#währung"></a>Währung</h4>
+<p>ERPNext erlaubt es Ihnen, Transaktionen in verschiedenen Währungen zu buchen. Es gibt aber nur eine Währung für Ihre Bilanz. Wenn Sie Ihre Rechnungen mit Zahlungen in unterschiedlichen Währungen eingeben, wird der Betrag gemäß dem angegebenen Umrechnungsfaktor in die Standardwährung umgerechnet.</p>
+<blockquote>
+<p>Einstellungen &gt; Rechnungswesen &gt; Währung</p>
+</blockquote>
+<hr>
+<h3 id="vertrieb"><a class="header-link" href="#vertrieb"></a>Vertrieb</h3>
+<h4 id="kundengruppe"><a class="header-link" href="#kundengruppe"></a>Kundengruppe</h4>
+<p>Eine Einteilung von Kunden, normalerweise basierend auf einem Marktsegment.</p>
+<blockquote>
+<p>Vertrieb &gt; Einstellungen &gt; Kundengruppe</p>
+</blockquote>
+<h4 id="lead"><a class="header-link" href="#lead"></a>Lead</h4>
+<p>Eine Person, die in der Zukunft ein Geschäftspartner werden könnte. Aus einem Lead können Opportunities entstehen (und daraus Verkäufe).</p>
+<blockquote>
+<p>CRM &gt; Dokumente &gt; Lead</p>
+</blockquote>
+<h4 id="opportunity"><a class="header-link" href="#opportunity"></a>Opportunity</h4>
+<p>Ein potenzieller Verkauf</p>
+<blockquote>
+<p>CRM &gt; Dokumente &gt; Opportunity</p>
+</blockquote>
+<h4 id="kundenauftrag"><a class="header-link" href="#kundenauftrag"></a>Kundenauftrag</h4>
+<p>Eine Mitteilung eines Kunden, mit der er die Lieferbedingungen und den Preis eines Artikels (Produkt oder Dienstleistung) akzeptiert. Auf der Basis eines Kundenauftrages werden Lieferungen, Fertigungsaufträge und Ausgangsrechnungen erstellt.</p>
+<blockquote>
+<p>Vertrieb &gt; Dokumente &gt; Kundenauftrag</p>
+</blockquote>
+<h4 id="region"><a class="header-link" href="#region"></a>Region</h4>
+<p>Ein geographisches Gebiet für eine Vertriebstätigkeit. Für Regionen können Sie Ziele vereinbaren und jeder Verkauf ist einer Region zugeordnet.</p>
+<blockquote>
+<p>Vertrieb &gt; Einstellungen &gt; Region</p>
+</blockquote>
+<h4 id="vertriebspartner"><a class="header-link" href="#vertriebspartner"></a>Vertriebspartner</h4>
+<p>Eine Drittpartei, ein Händler, ein Partnerunternehmen oder ein Handelsvertreter, welche die Produkte des Unternehmens vertreiben, normalerweise auf Provisionsbasis.</p>
+<blockquote>
+<p>Vertrieb &gt; Einstellungen &gt; Vertriebspartner</p>
+</blockquote>
+<h4 id="vertriebsmitarbeiter"><a class="header-link" href="#vertriebsmitarbeiter"></a>Vertriebsmitarbeiter</h4>
+<p>Eine Person, die mit einem Kunden Gespräche führt und Geschäfte abschliesst. Sie können für Vertriebsmitarbeiter Ziele definieren und die Vertriebsmitarbeiter bei Transaktionen mit angeben.</p>
+<blockquote>
+<p>Vertrieb &gt; Einstellungen &gt; Vertriebsmitarbeiter</p>
+</blockquote>
+<hr>
+<h3 id="einkauf"><a class="header-link" href="#einkauf"></a>Einkauf</h3>
+<h4 id="lieferantenauftrag"><a class="header-link" href="#lieferantenauftrag"></a>Lieferantenauftrag</h4>
+<p>Ein Vertrag, der mit einem Lieferanten geschlossen wird, um bestimmte Artikel zu vereinbarten Kosten in der richtigen Menge zum richtigen Zeitpunkt und zu den vereinbarten Bedingungen zu liefern.</p>
+<blockquote>
+<p>Einkauf &gt; Dokumente &gt; Lieferantenauftrag</p>
+</blockquote>
+<h4 id="materialanfrage"><a class="header-link" href="#materialanfrage"></a>Materialanfrage</h4>
+<p>Eine von einem Systembenutzer oder automatisch von ERPNext (basierend auf einem Mindestbestand oder einer geplanten Menge im Fertigungsplan) generierte Anfrage, um eine Menge an Artikeln zu beschaffen.</p>
+<blockquote>
+<p>Einkauf &gt; Dokumente &gt; Materialanfrage</p>
+</blockquote>
+<hr>
+<h3 id="lager(bestand)"><a class="header-link" href="#lager(bestand)"></a>Lager(bestand)</h3>
+<h4 id="lager"><a class="header-link" href="#lager"></a>Lager</h4>
+<p>Ein logisches Lager zu dem Lagerbuchungen erstellt werden.</p>
+<blockquote>
+<p>Lagerbestand &gt; Dokumente &gt; Lager</p>
+</blockquote>
+<h4 id="lagerbuchung"><a class="header-link" href="#lagerbuchung"></a>Lagerbuchung</h4>
+<p>Materialübertrag von einem Lager, in ein Lager oder zwischen mehreren Lagern.</p>
+<blockquote>
+<p>Lagerbestand &gt; Dokumente &gt; Lagerbuchung</p>
+</blockquote>
+<h4 id="lieferschein"><a class="header-link" href="#lieferschein"></a>Lieferschein</h4>
+<p>Eine Liste von Artikeln mit Mengenangaben für die Auslieferung an den Kunden. Ein Lieferschein reduziert die Lagermenge eines Artikels auf dem Lager, von dem er versendet wird. Ein Lieferschein wird normalerweise zu einem Kundenauftrag erstellt.</p>
+<blockquote>
+<p>Lagerbestand &gt; Dokumente &gt; Lieferschein</p>
+</blockquote>
+<h4 id="kaufbeleg"><a class="header-link" href="#kaufbeleg"></a>Kaufbeleg</h4>
+<p>Eine Notiz, die angibt, dass eine bestimmte Menge von Artikeln von einem Lieferanten erhalten wurde, meistens in Verbindung mit einem Lieferantenauftrag.</p>
+<blockquote>
+<p>Lagerbestand &gt; Dokumente &gt; Kaufbeleg</p>
+</blockquote>
+<h4 id="seriennummer"><a class="header-link" href="#seriennummer"></a>Seriennummer</h4>
+<p>Eine einmalig vergebene Nummer, die einem bestimmten einzelnen Artikel zugeordnet wird.</p>
+<blockquote>
+<p>Lagerbestand &gt; Dokumente &gt; Seriennummer</p>
+</blockquote>
+<h4 id="charge(nnummer)"><a class="header-link" href="#charge(nnummer)"></a>Charge(nnummer)</h4>
+<p>Eine Nummer, die einer Menge von einzelnen Artikeln, die beispielsweise als zusammenhängende Gruppe eingekauft oder produziert werden, zugeordnet wird.</p>
+<blockquote>
+<p>Lagerbestand &gt; Dokumente &gt; Charge</p>
+</blockquote>
+<h4 id="lagerbuch"><a class="header-link" href="#lagerbuch"></a>Lagerbuch</h4>
+<p>Eine Tabelle, in der alle Materialbewegungen von einem Lager in ein anderes erfasst werden. Das ist die Tabelle, die aktualisiert wird, wenn eine Lagerbuchung, ein Lieferschein, ein Kaufbeleg oder eine Ausgangsrechnung (POS) erstellt werden.</p>
+<h4 id="lagerabgleich"><a class="header-link" href="#lagerabgleich"></a>Lagerabgleich</h4>
+<p>Lageraktualisierung mehrerer verschiedener Artikel über eine Tabellendatei (CSV).</p>
+<blockquote>
+<p>Lagerbestand &gt; Werkzeuge &gt; Bestandsabgleich</p>
+</blockquote>
+<h4 id="qualitätsprüfung"><a class="header-link" href="#qualitätsprüfung"></a>Qualitätsprüfung</h4>
+<p>Ein Erfassungsbogen, auf dem bestimmte (qualitative) Parameter eines Artikels zur Zeit des Erhalts vom Lieferanten oder zum Zeitpunkt der Lieferung an den Kunden festgehalten werden.</p>
+<blockquote>
+<p>Lagerbestand &gt; Werkzeuge &gt; Qualitätsprüfung</p>
+</blockquote>
+<h4 id="artikelgruppe"><a class="header-link" href="#artikelgruppe"></a>Artikelgruppe</h4>
+<p>Eine Einteilung von Artikeln.</p>
+<blockquote>
+<p>Lagerbestand &gt; Einstellungen &gt; Artikelgruppenstruktur</p>
+</blockquote>
+<hr>
+<h3 id="personalwesen"><a class="header-link" href="#personalwesen"></a>Personalwesen</h3>
+<h4 id="mitarbeiter"><a class="header-link" href="#mitarbeiter"></a>Mitarbeiter</h4>
+<p>Datensatz einer Person, die in der Vergangenheit oder Gegenwart im Unternehmen gearbeitet hat oder arbeitet.</p>
+<blockquote>
+<p>Personalwesen &gt; Dokumente &gt; Mitarbeiter</p>
+</blockquote>
+<h4 id="urlaubsantrag"><a class="header-link" href="#urlaubsantrag"></a>Urlaubsantrag</h4>
+<p>Ein Datensatz eines genehmigten oder abgelehnten Urlaubsantrages.</p>
+<blockquote>
+<p>Personalwesen &gt; Dokumente &gt; Urlaubsantrag</p>
+</blockquote>
+<h4 id="urlaubstyp"><a class="header-link" href="#urlaubstyp"></a>Urlaubstyp</h4>
+<p>Eine Urlaubsart (z. B. Erkrankung, Mutterschaft, usw.)</p>
+<blockquote>
+<p>Personalwesen &gt; Einstellungen &gt; Urlaubstyp</p>
+</blockquote>
+<h4 id="gehaltsabrechnung-erstellen"><a class="header-link" href="#gehaltsabrechnung-erstellen"></a>Gehaltsabrechnung erstellen</h4>
+<p>Ein Werkzeug, welches Ihnen dabei hilft, mehrere verschiedene Gehaltsabrechnungen für Mitarbeiter zu erstellen.</p>
+<blockquote>
+<p>Rechnungswesen &gt; Werkzeuge &gt; Gehaltsabrechung bearbeiten</p>
+</blockquote>
+<h4 id="gehaltsabrechnung"><a class="header-link" href="#gehaltsabrechnung"></a>Gehaltsabrechnung</h4>
+<p>Ein Datensatz über das monatliche Gehalt, das an einen Mitarbeiter ausgezahlt wird.</p>
+<blockquote>
+<p>Rechnungswesen &gt; Dokumente &gt; Gehaltsabrechnung</p>
+</blockquote>
+<h4 id="gehaltsstruktur"><a class="header-link" href="#gehaltsstruktur"></a>Gehaltsstruktur</h4>
+<p>Eine Vorlage, in der alle Komponenten des Gehalts (Verdienstes) eines Mitarbeiters, sowie Steuern und andere soziale Abgaben enthalten sind.</p>
+<blockquote>
+<p>Rechnungswesen &gt; Einstellungen &gt; Gehaltsstruktur</p>
+</blockquote>
+<h4 id="beurteilung"><a class="header-link" href="#beurteilung"></a>Beurteilung</h4>
+<p>Ein Datensatz über die Leistungsfähigkeit eines Mitarbeiters zu einem bestimmten Zeitraum basierend auf bestimmten Parametern.</p>
+<blockquote>
+<p>Rechnungswesen &gt; Dokumente &gt; Bewertung</p>
+</blockquote>
+<h4 id="bewertungsvorlage"><a class="header-link" href="#bewertungsvorlage"></a>Bewertungsvorlage</h4>
+<p>Eine Vorlage, die alle unterschiedlichen Parameter der Leistungsfähigkeit eines Mitarbeiters und deren Gewichtung für eine bestimmte Rolle erfasst.</p>
+<blockquote>
+<p>Rechnungswesen &gt; Einstellungen &gt; Bewertungsvorlage</p>
+</blockquote>
+<h4 id="anwesenheit"><a class="header-link" href="#anwesenheit"></a>Anwesenheit</h4>
+<p>Ein Datensatz der die Anwesenheit oder Abwesenheit eines Mitarbeiters an einem bestimmten Tag widerspiegelt.</p>
+<blockquote>
+<p>Rechnungswesen &gt; Dokumente &gt; Anwesenheit</p>
+</blockquote>
+<hr>
+<h3 id="fertigung"><a class="header-link" href="#fertigung"></a>Fertigung</h3>
+<h4 id="stücklisten"><a class="header-link" href="#stücklisten"></a>Stücklisten</h4>
+<p>Eine Liste aller Arbeitsgänge und Artikel und deren Mengen, die benötigt wird, um einen neuen Artikel zu fertigen. Eine Stückliste wird verwendet um Einkäufe zu planen und die Produktkalkulation durchzuführen.</p>
+<blockquote>
+<p>Fertigung &gt; Dokumente &gt; Stückliste</p>
+</blockquote>
+<h4 id="arbeitsplatz"><a class="header-link" href="#arbeitsplatz"></a>Arbeitsplatz</h4>
+<p>Ein Ort, an dem ein Arbeitsgang der Stückliste durchgeführt wird. Der Arbeitsplatz wird auch verwendet um die direkten Kosten eines Produktes zu kalkulieren.</p>
+<blockquote>
+<p>Fertigung &gt; Dokumente &gt; Arbeitsplatz</p>
+</blockquote>
+<h4 id="fertigungsauftrag"><a class="header-link" href="#fertigungsauftrag"></a>Fertigungsauftrag</h4>
+<p>Ein Dokument, welches die Fertigung (Herstellung) eines bestimmten Produktes in einer bestimmten Menge anstösst.</p>
+<blockquote>
+<p>Fertigung &gt; Dokumente &gt; Fertigungsauftrag</p>
+</blockquote>
+<h4 id="werkzeug-zur-fertigungsplanung"><a class="header-link" href="#werkzeug-zur-fertigungsplanung"></a>Werkzeug zur Fertigungsplanung</h4>
+<p>Ein Werkzeug zur automatisierten Erstellung von Fertigungsaufträgen und Materialanfragen basierend auf offenen Kundenaufträgen in einem vorgegebenen Zeitraum.</p>
+<blockquote>
+<p>Fertigung &gt; Werkzeuge &gt; Werkzeug zur Fertigungsplanung</p>
+</blockquote>
+<hr>
+<h3 id="webseite"><a class="header-link" href="#webseite"></a>Webseite</h3>
+<h4 id="blogeintrag"><a class="header-link" href="#blogeintrag"></a>Blogeintrag</h4>
+<p>Ein kleiner Text der im Abschnitt &quot;Blog&quot; der Webseite erscheint, erstellt über das Webseitenmodul von ERPNext. &quot;Blog&quot; ist eine Kurzform von &quot;web log&quot;.</p>
+<blockquote>
+<p>Webseite &gt; Dokumente &gt; Blogeintrag</p>
+</blockquote>
+<h4 id="webseite-1"><a class="header-link" href="#webseite-1"></a>Webseite</h4>
+<p>Eine Webseite mit einer eindeutigen URL (Webadresse), erstellt über ERPNext.</p>
+<blockquote>
+<p>Webseite &gt; Dokumente &gt; Webseite</p>
+</blockquote>
+<hr>
+<h3 id="einstellungen-/-anpassung"><a class="header-link" href="#einstellungen-/-anpassung"></a>Einstellungen / Anpassung</h3>
+<h4 id="benutzerdefiniertes-feld"><a class="header-link" href="#benutzerdefiniertes-feld"></a>Benutzerdefiniertes Feld</h4>
+<p>Ein vom Benutzer definiertes Feld auf einem Formular/in einer Tabelle.</p>
+<blockquote>
+<p>Einstellungen &gt; Anpassen &gt; Benutzerdefiniertes Feld</p>
+</blockquote>
+<h4 id="allgemeine-einstellungen"><a class="header-link" href="#allgemeine-einstellungen"></a>Allgemeine Einstellungen</h4>
+<p>In diesem Abschnitt stellen Sie grundlegende Voreinstellungen für verschiedene Parameter des Systems ein.</p>
+<blockquote>
+<p>Einstellungen &gt; Einstellungen &gt; Allgemeine Einstellungen</p>
+</blockquote>
+<h4 id="druckkopf"><a class="header-link" href="#druckkopf"></a>Druckkopf</h4>
+<p>Eine Kopfzeile, die bei einer Transaktion für den Druck eingestellt werden kann. Beispiel: Sie wollen ein Angebot mit der Überschrift &quot;Angebot&quot; oder &quot;Proforma Rechnung&quot; ausdrucken.</p>
+<blockquote>
+<p>Einstellungen &gt; Druck &gt; Druckkopf</p>
+</blockquote>
+<h4 id="allgemeine-geschäftsbedingungen"><a class="header-link" href="#allgemeine-geschäftsbedingungen"></a>Allgemeine Geschäftsbedingungen</h4>
+<p>Hier befindet sich der Text Ihrer Vertragsbedingungen.</p>
+<blockquote>
+<p>Einstellungen &gt; Druck &gt; Allgemeine Geschäftsbedingungen</p>
+</blockquote>
+<h4 id="standardmaßeinheit"><a class="header-link" href="#standardmaßeinheit"></a>Standardmaßeinheit</h4>
+<p>Hier wird festgelegt, in welcher Einheit ein Artikel gemessen wird. Z. B. kg, Stück, Paar, Pakete usw.</p>
+<blockquote>
+<p>Lagerbestand &gt; Einstellungen &gt; Maßeinheit</p>
+</blockquote>
+<p>{next}</p>
+    </article>
+  </body>
+</html>

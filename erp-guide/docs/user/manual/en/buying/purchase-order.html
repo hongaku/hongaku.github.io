@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>Purchase Order</title>
+    <link type="text/css" rel="stylesheet" href="../../../../assets/css/github-markdown.css">
+    <link type="text/css" rel="stylesheet" href="../../../../assets/css/pilcrow.css">
+    <link type="text/css" rel="stylesheet" href="../../../../assets/css/hljs-github.min.css"/>
+  </head>
+  <body>
+    <article class="markdown-body"><h1 id="purchase-order"><a class="header-link" href="#purchase-order"></a>Purchase Order</h1>
+<p>A Purchase Order is analogous to a Sales Order. It is usually a binding
+contract with your Supplier that you promise to buy a set of Items under the
+given conditions.</p>
+<p>A Purchase Order can be automatically created from a Material Request or
+Supplier Quotation.</p>
+<h4 id="purchase-order-flow-chart"><a class="header-link" href="#purchase-order-flow-chart"></a>Purchase Order Flow Chart</h4>
+<p class="img-container"><img src="{{docs_base_url}}/assets/img/buying/buying_flow.png" alt="Purchase Order"></p>
+<p>In ERPNext, you can also make a Purchase Order directly by going to:</p>
+<blockquote>
+<p>Buying &gt; Documents &gt; Purchase Order &gt; New Purchase Order</p>
+</blockquote>
+<h4 id="create-purchase-order"><a class="header-link" href="#create-purchase-order"></a>Create Purchase Order</h4>
+<p class="img-container"><img class="screenshot" alt="Purchase Order" src="{{docs_base_url}}/assets/img/buying/purchase-order.png"></p>
+<p>Entering a Purchase Order is very similar to a Purchase Request, additionally
+you will have to set:</p>
+<ul class="list">
+<li>Supplier.</li>
+<li>A “Required By” date on each Item: If you are expecting part delivery, your Supplier will know how much quantity to deliver at which date. This will help you from preventing over-supply. It will also help you to track how well your Supplier is doing on timeliness.</li>
+</ul>
+<h3 id="taxes"><a class="header-link" href="#taxes"></a>Taxes</h3>
+<p>If your Supplier is going to charge you additional taxes or charge like a
+shipping or insurance charge, you can add it here. It will help you to
+accurately track your costs. Also, if some of these charges add to the value
+of the product you will have to mention them in the Taxes table. You can also
+use templates for your taxes. For more information on setting up your taxes
+see the Purchase Taxes and Charges Template.</p>
+<h3 id="value-added-taxes-(vat)"><a class="header-link" href="#value-added-taxes-(vat)"></a>Value Added Taxes (VAT)</h3>
+<p>Many a times, the tax paid by you to a Supplier, for an Item, is the same tax
+which you collect from your Customer. In many regions, what you pay to your
+government is only the difference between what you collect from your Customer
+and what you pay to your Supplier. This is called Value Added Tax (VAT).</p>
+<h4 id="add-taxes-in-purchase-order"><a class="header-link" href="#add-taxes-in-purchase-order"></a>Add Taxes in Purchase Order</h4>
+<p class="img-container"><img class="screenshot" alt="Purchase Order" src="{{docs_base_url}}/assets/img/buying/add_taxes_to_doc.png"></p>
+<h4 id="show-tax-break-up"><a class="header-link" href="#show-tax-break-up"></a>Show Tax break-up</h4>
+<p class="img-container"><img class="screenshot" alt="Purchase Order" src="{{docs_base_url}}/assets/img/buying/show_tax_breakup.png"></p>
+<p>For example you buy Items worth X and sell them for 1.3X. So your Customer
+pays 1.3 times the tax you pay your Supplier. Since you have already paid tax
+to your Supplier for X, what you owe your government is only the tax on 0.3X.</p>
+<p>This is very easy to track in ERPNext since each tax head is also an Account.
+Ideally you must create two Accounts for each type of VAT you pay and collect,
+“Purchase VAT-X” (asset) and “Sales VAT-X” (liability), or something to that
+effect. Please contact your accountant if you need more help or post a query
+on our forums!</p>
+<h4 id="purchase-uom-and-stock-uom-conversion"><a class="header-link" href="#purchase-uom-and-stock-uom-conversion"></a>Purchase UOM and Stock UOM Conversion</h4>
+<p>You can change your UOM as per your stock requirements in the Purchase Order
+form.</p>
+<p>For example, If you have bought your raw material in large quantities with UOM
+-boxes, and wish to stock them in UOM- Nos; you can do so while making your
+Purchase Order.</p>
+<p><strong>Step 1:</strong> Store UOM as Nos in the Item form.</p>
+<p>Note: The UOM in the Item form is the stock UOM.</p>
+<p><strong>Step 2:</strong> In the Purchase Order mention UOM as Box. (Since material arrives in
+Boxes)</p>
+<p><strong>Step 3:</strong> In the Warehouse and Reference section, the UOM will be pulled in as
+Nos (from the Item form)</p>
+<h4 id="figure-3:-conversion-of-purchase-uom-to-stock-uom"><a class="header-link" href="#figure-3:-conversion-of-purchase-uom-to-stock-uom"></a>Figure 3: Conversion of Purchase UOM to stock UOM</h4>
+<p class="img-container"><img class="screenshot" alt="Purchase Order - UOM" src="{{docs_base_url}}/assets/img/buying/purchase-order-uom.png"></p>
+<p><strong>Step 4:</strong> Mention the UOM conversion factor. For example, (100);If one box has
+100 pieces.  </p>
+<p><strong>Step 5:</strong>  Notice that the stock quantity will be updated accordingly.</p>
+<p><strong>Step 6:</strong> Save and Submit the Form.</p>
+<p>{next}</p>
+    </article>
+  </body>
+</html>

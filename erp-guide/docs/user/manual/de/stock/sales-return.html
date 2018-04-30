@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>Kundenreklamationen</title>
+    <link type="text/css" rel="stylesheet" href="../../../../assets/css/github-markdown.css">
+    <link type="text/css" rel="stylesheet" href="../../../../assets/css/pilcrow.css">
+    <link type="text/css" rel="stylesheet" href="../../../../assets/css/hljs-github.min.css"/>
+  </head>
+  <body>
+    <article class="markdown-body"><h1 id="kundenreklamationen"><a class="header-link" href="#kundenreklamationen"></a>Kundenreklamationen</h1>
+<p><span class="text-muted contributed-by">Beigetragen von CWT Connector &amp; Wire Technology GmbH</span></p>
+<p>Dass verkaufte Produkte zurück gesendet werden ist in der Wirtschaft üblich. Gründe für die Rücksendung durch den Kunden sind Qualitätsmängel, verspätete Lieferung oder auch anderes.</p>
+<p>In ERPNext können Sie eine Kundenreklamation erstellen, indem Sie ganz einfach einen Lieferschein/eine Ausgangsrechnung mit negativer Menge erstellen.</p>
+<p>Öffnen Sie dazu zuerst den Lieferschein/die Ausgangsrechnung zu dem/der der Kunde einen Artikel zurück sendet.</p>
+<p class="img-container"><img class="screenshot" alt="Original-Lieferschein" src="{{docs_base_url}}/assets/img/stock/sales-return-original-delivery-note.png"></p>
+<p>Klicken Sie dann auf &quot;Kundenreklamation erstellen&quot;, das öffnet einen neuen Lieferschein, bei dem &quot;Ist Reklamation&quot; aktiviert ist, und die Artikel und Steuern mit negativem Betrag angezeigt werden.
+Sie können die Reklamation auch über die Originalausgangsrechnung erstellen. Um Material mit einer Gutschrift zurück zu geben, markieren Sie die Option &quot;Lager aktualisieren&quot; in der Reklamationsrechnung.</p>
+<p class="img-container"><img class="screenshot" alt="Kundenreklamation zum Lieferschein" src="{{docs_base_url}}/assets/img/stock/sales-return-against-delivery-note.png"></p>
+<p>Bei der Ausgabe eines Rücksendelieferscheins / einer Reklamationsrechnung erhöht das System den Lagerbestand im entsprechenden Lager. Um den richtigen Lagerwert zu erhalten erhöht sich der Lagerbestand um den Wert des ursprünglichen Einkaufspreises des zurückgeschickten Artikels.</p>
+<p class="img-container"><img class="screenshot" alt="Kundenreklamation zur Eingangsrechnung" src="{{docs_base_url}}/assets/img/stock/sales-return-against-sales-invoice.png"></p>
+<p>Für den Fall einer Reklamationsrechnung erhält das Kundenkonto eine Gutschrift und die damit verknüpften Konten für Erträge und Steuern werden belastet.
+Wenn die ständige Inventur aktiviert ist, erstellt das System auch Buchungen für das Lagerkonto um den Kontostand des Lagers mit dem Lagerbuch zu synchronisieren. </p>
+<p class="img-container"><img class="screenshot" alt="Lagerbuch und Reklamation" src="{{docs_base_url}}/assets/img/stock/sales-return-stock-ledger.png"></p>
+<p class="img-container"><img class="screenshot" alt="Lagerbuch und Reklamation" src="{{docs_base_url}}/assets/img/stock/sales-return-general-ledger.png"></p>
+<p>{next}</p>
+    </article>
+  </body>
+</html>

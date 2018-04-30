@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>Projected Quantity</title>
+    <link type="text/css" rel="stylesheet" href="../../../../assets/css/github-markdown.css">
+    <link type="text/css" rel="stylesheet" href="../../../../assets/css/pilcrow.css">
+    <link type="text/css" rel="stylesheet" href="../../../../assets/css/hljs-github.min.css"/>
+  </head>
+  <body>
+    <article class="markdown-body"><h1 id="projected-quantity"><a class="header-link" href="#projected-quantity"></a>Projected Quantity</h1>
+<p>Projected Quantity is the level of stock that is predicted for a particular
+Item, based on the current stock levels and other requirements. It is the
+quantity of gross inventory that includes supply and demand in the past which
+is done as part of the planning process.</p>
+<p>The projected inventory is used by the planning system to monitor the reorder
+point and to determine the reorder quantity. The projected Quantity is used by
+the planning engine to monitor the safety stock levels. These levels are
+maintained to serve unexpected demands.</p>
+<p>Having a tight control of the projected inventory is crucial to determine
+shortages and to calculate the right order quantity.</p>
+<p class="img-container"><img class="screenshot" alt="Projected Quantity" src="{{docs_base_url}}/assets/img/stock/projected_quantity.png"></p>
+<blockquote>
+<p>Projected Qty = Actual Qty + Planned Qty + Requested Qty + Ordered Qty -
+Reserved Qty</p>
+</blockquote>
+<ul class="list">
+<li>Actual Qty: Quantity available in the warehouse.</li>
+<li>Planned Qty: Quantity, for which, Work Order has been raised, but is pending to be manufactured.</li>
+<li>Requested Qty: Quantity requested for purchase, but not ordered.</li>
+<li>Ordered Qty: Quantity ordered for purchase, but not received.</li>
+<li>Reserved Qty: Quantity ordered for sale, but not delivered.</li>
+</ul>
+<p>{next}</p>
+    </article>
+  </body>
+</html>

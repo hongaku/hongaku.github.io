@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title></title>
+    <link type="text/css" rel="stylesheet" href="../../../../../assets/css/github-markdown.css">
+    <link type="text/css" rel="stylesheet" href="../../../../../assets/css/pilcrow.css">
+    <link type="text/css" rel="stylesheet" href="../../../../../assets/css/hljs-github.min.css"/>
+  </head>
+  <body>
+    <article class="markdown-body"><p>#Allow Over Delivery/Billing</p>
+<p>While creating Delivery Note, system validates if item&#39;s Qty mentined is same as in the Sales Order. If Item Qty has been increased, you will get over-delivery validation. If you want to be able to deliver more items than mentioned in the Sales Order, you should update &quot;Allow over delivery or receipt upto this percent&quot; in the Item master.</p>
+<p class="img-container"><img alt="Item wise Allowance percentage" class="screenshot" src="{{docs_base_url}}/assets/img/articles/allowance-percentage-1.png"></p>
+<p>Item&#39;s and Rate is also validated when creating Sales Invoice from Sales Order. Also when creating Purchase Receipt and Purchaes Invoice from Purchase Order. Updating &quot;Allow over delivery or receipt upto this percent&quot; will be affective in all sales and purchase transactions.</p>
+<p>For example, if you have ordered 100 units of an item, and if item&#39;s over receipt percent is 50%, then you are allowed to make Purchase Receipt for upto 150 units.</p>
+<p>Update global value for &quot;Allow over delivery or receipt upto this percent&quot; from Stock Settings. Value updated here will be applicable for all the items.</p>
+<ol class="list">
+<li><p>Go to <code>Stock &gt; Setup &gt; Stock Settings</code></p>
+</li>
+<li><p>Set <code>Allowance Percentage</code>.</p>
+</li>
+<li><p>Save Stock Settings.</p>
+</li>
+</ol>
+<p class="img-container"><img alt="Item wise Allowance percentage" class="screenshot" src="{{docs_base_url}}/assets/img/articles/allowance-percentage-2.png"></p>
+<!-- markdown -->
+    </article>
+  </body>
+</html>

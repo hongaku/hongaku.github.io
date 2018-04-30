@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>Using Custom Domain On Erpnext</title>
+    <link type="text/css" rel="stylesheet" href="../../../../../assets/css/github-markdown.css">
+    <link type="text/css" rel="stylesheet" href="../../../../../assets/css/pilcrow.css">
+    <link type="text/css" rel="stylesheet" href="../../../../../assets/css/hljs-github.min.css"/>
+  </head>
+  <body>
+    <article class="markdown-body"><h1 id="using-custom-domain-on-erpnext"><a class="header-link" href="#using-custom-domain-on-erpnext"></a>Using Custom Domain On Erpnext</h1>
+<!-- markdown -->
+<p>If you have subscribed to any of the plans at <a href="https://erpnext.com">ERPNext</a>, you can have us serve your site on your custom domain (for example at <a href="http://example.com)">http://example.com)</a>. This enables your website to be served on a custom domain.</p>
+<p>To enable this feature, you will first have to edit DNS settings of your domain as follows.</p>
+<ul class="list">
+<li>Make a CNAME record for a subdomain (www in most cases) to {youraccountname}.erpnext.com</li>
+<li>If you want serve the website on a naked domain (ie. <a href="http://example.com)">http://example.com)</a>, set a URL redirect to <a href="http://www.example.com">http://www.example.com</a> and not a CNAME record. Making a CNAME record in this case can have unexpected consequences including you not being able to receive emails anymore.</li>
+</ul>
+<p>After you&#39;ve setup the DNS records, you will have to raise a support ticket by sending an email to <a href="mailto:support@erpnext.com">support@erpnext.com</a> and we&#39;ll take it from there.</p>
+<p><strong>Note</strong>: We do not support HTTPS on custom domains. HTTPS enables end to end encryption (from your browser to our server). Although not critical for the website but we strongly recommend against using the ERPNext app over an unencrypted protocol. To be safe always use the ERP at your erpext.com address.</p>
+    </article>
+  </body>
+</html>

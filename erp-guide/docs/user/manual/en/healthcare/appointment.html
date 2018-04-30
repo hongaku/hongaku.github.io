@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>Patient Appointment</title>
+    <link type="text/css" rel="stylesheet" href="../../../../assets/css/github-markdown.css">
+    <link type="text/css" rel="stylesheet" href="../../../../assets/css/pilcrow.css">
+    <link type="text/css" rel="stylesheet" href="../../../../assets/css/hljs-github.min.css"/>
+  </head>
+  <body>
+    <article class="markdown-body"><h1 id="patient-appointment"><a class="header-link" href="#patient-appointment"></a>Patient Appointment</h1>
+<p>ERPNext Healthcare allows you to book Patient appointments for any date and if configured, send them alerts via Email or SMS.</p>
+<p>You can create a Patient Appointment from</p>
+<blockquote>
+<p>Healthcare &gt; Patient Appointment &gt; New Patient Appointment</p>
+</blockquote>
+<p>You can book appointments for a registered Patient by searching and selecting the Patient field. You can search the Patient by Patient ID, Name, Email or Mobile number. You can also register a new Patient from the Appointment screen by selecting &quot;Create a new patient&quot; in the Patient field.</p>
+<p class="img-container"><img class="screenshot" alt="ERPNext Healthcare" src="{{docs_base_url}}/assets/img/healthcare/appointment_1.png"></p>
+<p>If you have a front desk executive to manage your appointments, you can configure a user role to have access to Patient Appointment so that she can do the bookings by selecting the Physician whom the Patient wish to consult and the date for booking. &quot;Check Availability&quot; button will pop up all the available time slots with status indicators for the date. She can select a time slot and &quot;Book&quot; the Appointment for the Patient.</p>
+<p class="img-container"><img class="screenshot" alt="ERPNext Healthcare" src="{{docs_base_url}}/assets/img/healthcare/appointment_2.png"></p>
+<p>After Booking, the scheduled time of the Appointment and duration will be updated and seved in the document.</p>
+<p class="img-container"><img class="screenshot" alt="ERPNext Healthcare" src="{{docs_base_url}}/assets/img/healthcare/appointment_3.png"></p>
+<p>You can configure ERPNext to send an SMS alert to the Patient about the booking confirmation or a reminder on the day of Appointment by doing necessary configurations in -</p>
+<blockquote>
+<p>Healthcare &gt; Healthcare Settings &gt; Out Patient SMS Alerts</p>
+</blockquote>
+<p>The screen also allows the executive to select a Referring Physician so that you can track the source the appointment.</p>
+<h3 id="actions"><a class="header-link" href="#actions"></a>Actions</h3>
+<ul class="list">
+<li><p>Billing: If you collect the consultation fee while booking the Appointment itself you can do so by using the &quot;Create &gt; Invoice&quot; button. This will take you to the ERPNext Accounts Sales Invoice screen.</p>
+</li>
+<li><p>Vital Signs: &quot;Create &gt; Vital Signs&quot; button will take you to the new Vital Signs screen to record the vitals of the Patient.</p>
+</li>
+<li><p>Consultation: From the Appointment screen you can directly create a Consultation to record the details of patient encounter.</p>
+</li>
+<li><p>View Patient Medical Record.</p>
+</li>
+</ul>
+<blockquote>
+<p>Note: User should have privileges (User Role) to view the buttons</p>
+</blockquote>
+<p>A Patient can also book an appointment with a Physician by checking the Physician&#39;s availability directly through the <strong>ERPNext Portal</strong>.</p>
+<p>{next}</p>
+    </article>
+  </body>
+</html>

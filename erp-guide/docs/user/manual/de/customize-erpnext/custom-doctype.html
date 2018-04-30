@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>Benutzerdefinierter DocType</title>
+    <link type="text/css" rel="stylesheet" href="../../../../assets/css/github-markdown.css">
+    <link type="text/css" rel="stylesheet" href="../../../../assets/css/pilcrow.css">
+    <link type="text/css" rel="stylesheet" href="../../../../assets/css/hljs-github.min.css"/>
+  </head>
+  <body>
+    <article class="markdown-body"><h1 id="benutzerdefinierter-doctype"><a class="header-link" href="#benutzerdefinierter-doctype"></a>Benutzerdefinierter DocType</h1>
+<p><span class="text-muted contributed-by">Beigetragen von CWT Connector &amp; Wire Technology GmbH</span></p>
+<p>Ein DocType oder Dokumententyp wird dazu verwendet Formulare in ERPNext einzufügen. Formulare wie Kundenauftrag, Ausgangsrechnung und Fertigungsauftrag werden im Hintergrund als DocType verarbeitet. Nehmen wir an, dass wir für ein Buch einen benutzerdefinierten DocType erstellen.</p>
+<p>Ein benutzerspezifischer DocType erlaubt es Ihnen nach Ihren Bedürfnissen benutzerspezifische Formulare in ERPNext einzufügen.</p>
+<p>Um einen neuen DocType zu erstellen, gehen Sie zu:</p>
+<blockquote>
+<p>Einstellungen &gt; Anpassen &gt; Doctype &gt; Neu</p>
+</blockquote>
+<h3 id="einzelheiten-zum-doctype"><a class="header-link" href="#einzelheiten-zum-doctype"></a>Einzelheiten zum DocType</h3>
+<ol class="list">
+<li>Modul: Wählen Sie das Modul aus, in dem dieser DocType verwendet wird.</li>
+<li>Dokumententyp: Geben Sie an, ob dieser DocType Hauptdaten befördern oder Transaktionen nachverfolgen soll. Der DocType für das Buch wird als Vorlage hinzugefügt.</li>
+<li>Ist Untertabelle: Wenn dieser DocType als Tabelle in einen anderen DocType eingefügt wird, wie die Artikeltabelle in den DocType Kundenauftrag, dann sollten Sie auch &quot;Ist Untertabelle&quot; ankreuzen. Ansonsten nicht.</li>
+<li>Ist einzeln: Wenn diese Option aktiviert ist, wird dieser DocType zu einem einzeln verwendeten Formular, wie die Vertriebseinstellungen, die nicht von Benutzern reproduziert werden können.</li>
+<li>Benutzerdefiniert?: Dieses Feld ist standardmäßig aktiviert, wenn ein benutzerdefinierter DocType hinzugefügt wird.</li>
+</ol>
+<p class="img-container"><img src="{{docs_base_url}}/assets/img/setup/customize/doctype-basics.png" alt="Grundlagen zum Doctype"></p>
+<h3 id="felder"><a class="header-link" href="#felder"></a>Felder</h3>
+<p>In der Tabelle Felder können Sie die Felder (Eigenschaften) des DocTypes (Artikel) hinzufügen.</p>
+<p>Felder sind viel mehr als Datenbankspalten; sie können sein:</p>
+<ol class="list">
+<li>Spalten in der Datenbank</li>
+<li>Wichtig für das Layout (Bereiche, Spaltentrennung)</li>
+<li>Untertabellen (Feld vom Typ Tabelle)</li>
+<li>HTML</li>
+<li>Aktionen (Schaltflächen)</li>
+<li>Anhänge oder Bilder</li>
+</ol>
+<p class="img-container"><img src="{{docs_base_url}}/assets/img/setup/customize/Doctype-all-fields.png" alt="Felder im DocType"></p>
+<p>Wenn Sie Felder hinzufügen, müssen Sie den <strong>Typ</strong> angeben. Für eine Bereichs- oder Spaltentrennung  ist die <strong>Bezeichnung</strong> optional. Der <strong>Name</strong> (Feldname) ist der Name der Spalte in der Datenbank.</p>
+<p>Sie können auch weitere Einstellungen des Feldes eingeben, so z. B. ob es zwingend erforderlich ist, schreibgeschützt, usw.</p>
+<h3 id="benennung"><a class="header-link" href="#benennung"></a>Benennung</h3>
+<p>In diesem Abschnitt können Sie Kriterien definieren nach denen Dokumente dieses DocTypes benannt werden. Es gibt viele verschiedene Kriterien nach denen ein Dokument benannt werden kann, wie z. B. dem Wert in diesem spezifischen Feld, oder die Benamungsserie, oder der Wert der vom Benutzer an der Eingabeaufforderung eingegeben wird, die angezeit wird, wenn ein Dokument abgespeichert wird. Im folgenden Beispiel benennen wir auf Grundlage des Wertes im Feld <strong>book_name</strong>.</p>
+<p class="img-container"><img src="{{docs_base_url}}/assets/img/setup/customize/doctype-field-naming.png" alt="Bezeichnung von DocTypes"></p>
+<h3 id="berechtigung"><a class="header-link" href="#berechtigung"></a>Berechtigung</h3>
+<p>In dieser Tabelle können Sie Rollen und Berechtigungs-Rollen für diese für die betreffenden DocTypes auswählen.</p>
+<p class="img-container"><img src="{{docs_base_url}}/assets/img/setup/customize/Doctype-permissions.png" alt="Berechtigungen bei DocTypes"></p>
+<h3 id="doctypes-abspeichern"><a class="header-link" href="#doctypes-abspeichern"></a>DocTypes abspeichern</h3>
+<p>Wenn Sie einen DocType abspeichern, erscheint ein Popup-Fenster über welches Sie den Namen des DocTypes eingeben können.</p>
+<p class="img-container"><img src="{{docs_base_url}}/assets/img/setup/customize/Doctype-save.png" alt="DocTypes speichern"></p>
+<h3 id="der-doctype-im-system"><a class="header-link" href="#der-doctype-im-system"></a>Der DocType im System</h3>
+<p>Um den DocType zu aktivieren, öffnen Sie das Modul, welches Sie für den DocType definiert haben. Da wird den DocType &quot;Books&quot; im Modul Personalwesen erstellt haben, gehen Sie hierhin um Zugriff zu erhalten:</p>
+<blockquote>
+<p>Personalwesen &gt; Dokumente &gt; Buch</p>
+</blockquote>
+<p class="img-container"><img src="{{docs_base_url}}/assets/img/setup/customize/Doctype-list-view.png" alt="Übersicht der DocTypes"></p>
+<h3 id="buchvorlage"><a class="header-link" href="#buchvorlage"></a>Buchvorlage</h3>
+<p>Wenn Sie die Felder ausfüllen, schaut das ganze dann so aus.</p>
+<p class="img-container"><img src="{{docs_base_url}}/assets/img/setup/customize/Doctype-book-added.png" alt="Übersicht der DocTypes"></p>
+<p>{next}</p>
+    </article>
+  </body>
+</html>

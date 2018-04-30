@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>Eine benutzerdefinierte Schaltfläche hinzufügen</title>
+    <link type="text/css" rel="stylesheet" href="../../../../../../assets/css/github-markdown.css">
+    <link type="text/css" rel="stylesheet" href="../../../../../../assets/css/pilcrow.css">
+    <link type="text/css" rel="stylesheet" href="../../../../../../assets/css/hljs-github.min.css"/>
+  </head>
+  <body>
+    <article class="markdown-body"><h1 id="eine-benutzerdefinierte-schaltfläche-hinzufügen"><a class="header-link" href="#eine-benutzerdefinierte-schaltfläche-hinzufügen"></a>Eine benutzerdefinierte Schaltfläche hinzufügen</h1>
+<p><span class="text-muted contributed-by">Beigetragen von CWT Connector &amp; Wire Technology GmbH</span></p>
+<pre class="hljs"><code>frappe.ui.form.on(<span class="hljs-string">"Event"</span>, <span class="hljs-string">"refresh"</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">frm</span>) </span>{
+    frm.add_custom_button(__(<span class="hljs-string">"Do Something"</span>), <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+        <span class="hljs-comment">// When this button is clicked, do this</span>
+
+        <span class="hljs-keyword">var</span> subject = frm.doc.subject;
+        <span class="hljs-keyword">var</span> event_type = frm.doc.event_type;
+
+        <span class="hljs-comment">// do something with these values, like an ajax request </span>
+        <span class="hljs-comment">// or call a server side frappe function using frappe.call</span>
+        $.ajax({
+            <span class="hljs-attr">url</span>: <span class="hljs-string">"http://example.com/just-do-it"</span>,
+            <span class="hljs-attr">data</span>: {
+                <span class="hljs-string">"subject"</span>: subject,
+                <span class="hljs-string">"event_type"</span>: event_type
+            }
+
+            <span class="hljs-comment">// read more about $.ajax syntax at http://api.jquery.com/jquery.ajax/</span>
+
+        });
+    });
+});</code></pre><p>{next}</p>
+    </article>
+  </body>
+</html>

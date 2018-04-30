@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title></title>
+    <link type="text/css" rel="stylesheet" href="../../../../../assets/css/github-markdown.css">
+    <link type="text/css" rel="stylesheet" href="../../../../../assets/css/pilcrow.css">
+    <link type="text/css" rel="stylesheet" href="../../../../../assets/css/hljs-github.min.css"/>
+  </head>
+  <body>
+    <article class="markdown-body"><h1>Leave Calculation In Salary Slip</h1>
+
+<p>There are two types of leave which user can apply for.
+<br>
+<br></p>
+<p><ol class="list">
+    <li>Paid Leave (Sick Leave, Privilege Leave, Casual Leave etc.)</li>
+    <li>Unpaid Leave
+        <br>
+    </li>
+</ol>Paid Leave are firstly allocated by HR manager. As and when Employee creates Leave Application, leaves allocated to him/her are deducted. These leaves doesn&#39;t have impact on the employee&#39;s Salary Slip.
+<br>
+<br>When Employee is out of paid leave, he create Leave Application for unpaid leave. The term used for unpaid leave in ERPNext is Leave Without Pay (LWP). These leaves does have impact on the Employee&#39;s Salary Slip.
+<br>
+<br></p>
+<p><div class="well">Just marking Absent in the Attendance record do not have impact on salary calculation of an Employee, as that absenteeism could be because of paid leave. Hence creating Leave Application should be created incase of absenteeism.<br></div>Let&#39;s consider
+a scenario to understand how leaves impact employees Salary Slip.
+<br>
+<br><b>Masters:</b></p>
+<p><br>
+<br></p>
+<p><ol class="list">
+    <li>Setup Employee</li>
+    <li>Allocate him paid leaves</li>
+    <li>Create Salary Structure for that Employee. In the Earning and Deduction table, select which component of salary should be affected if Employee takes LWP.</li>
+    <li>Create Holiday List (if any), and link it with Employee master.</li>
+</ol></p>
+<p><p>When creating Salary Slip for an Employee, following is what you will see:</p>
+<img src="{{docs_base_url}}/assets/img/articles/SGrab_282.png">
+<br>
+<br><b>Working Days:</b> Working Days in Salary Slip are calculated based on number of days selected above. If you don&#39;t wish to consider holiday in Working Days, then you should do following setting.
+<br>
+<br></p>
+<p><div class="well">Human Resource &gt;&gt; Setup &gt;&gt; HR Setting
+    <br>
+    <br>Uncheck field &quot;Include Holidays in Total No. of Working Days&quot;
+    <br>
+</div>Holidays are counted based on Holiday List attached to the Employee&#39;s master.<b><br><br>Leave Without Pay: </b>Leave Without Pay is updated based on Leave Application made for this Employee, in the month for which Salary Slip is created, and which has
+Leave Type as &quot;Leave Without Pay&quot;.
+<br>
+<br><b>Payment Days:</b> Following is how Payment Days are calculated:
+<br>
+<br>Payment Days = Working Days - Leave Without Pay
+<br>
+<br>As indicated above, if you have LWP checked for components in the earning and deducted table, you will notice a reduction in Amount based on no. of LWP of an Employee for that month.
+<br>
+<br>
+<img src="{{docs_base_url}}/assets/img/articles/SGrab_283.png" width="760"><br></p>
+<!-- markdown -->    </article>
+  </body>
+</html>

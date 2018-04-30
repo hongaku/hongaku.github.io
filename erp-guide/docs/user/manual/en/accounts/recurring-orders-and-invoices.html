@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>Scenario:</title>
+    <link type="text/css" rel="stylesheet" href="../../../../assets/css/github-markdown.css">
+    <link type="text/css" rel="stylesheet" href="../../../../assets/css/pilcrow.css">
+    <link type="text/css" rel="stylesheet" href="../../../../assets/css/hljs-github.min.css"/>
+  </head>
+  <body>
+    <article class="markdown-body"><p>#Recurring Orders and Invoices</p>
+<p>If you have a contract with a <strong>Customer</strong> where you bill the Customer on a monthly, quarterly, half-yearly or annual basis, you should use recurring feature in orders and invoices. </p>
+<h4 id="scenario:"><a class="header-link" href="#scenario:"></a>Scenario:</h4>
+<p>Subscription for your hosted ERPNext account requires yearly renewal. We use Sales Order for generating proforma invoices. To automate proforma invoicing for renewal, we set original Sales Order as recurring. Recurring proforma invoice is created automatically just before customer&#39;s account is about to expire, and requires renewal. This recurring Proforma Invoice is also emailed automatically to the customer.</p>
+<p>Feature of setting document as recurring is available in Sales Order, Sales Invoice, Purchase Order and Purchase Invoice.</p>
+<p>Option to set document as recurring will be visible only after submission. Recurring is last section in document. Check <strong>Is Recurring</strong> to set document as recurring.</p>
+<p class="img-container"><img alt="Recurring Invoice" class="screenshot" src="{{docs_base_url}}/assets/img/accounts/recurring.gif"></p>
+<p><strong>From Date and To Date:</strong> This defines contract period with the customer.</p>
+<p><strong>Repeat on the Day of Month:</strong> If recurring type is set as Monthly, then it will be day of the month on which recurring invoice will be generated.</p>
+<p><strong>End Date:</strong> Date after which auto-creation of recurring invoice will be stopped.</p>
+<p><strong>Notification Email Address:</strong> Email Addresses (separated by comma) on which recurring invoice will be emailed when auto-generated.</p>
+<p><strong>Recurring ID:</strong> Recurring ID will be original document id which will be linked to all corresponding recurring document. For example, original Sales Invoice&#39;s id will be updated into all recurring Sales Invoices.</p>
+<p><strong>Recurring Print Format:</strong> Select a print format to define document view which should be emailed to customer.</p>
+<p>####Exception Handling:</p>
+<p>In a situation where recurring invoice is not created successfully, user with System Manager role is notified about it via email. Also the document on which recurring event failed, &quot;Is Recurring&quot; field is unchecked for it. This means system doesn&#39;t try creating recurring invoice for that document again.</p>
+<p>Failure in creation of recurring invoice could be due to multiple reasons like wrong Email Address mentioned in the Email Notification field in Recurring section etc.</p>
+<p>On receipt of notification, if cause of failure is fixed (like correcting Email Address) within 24 hours, then recurring invoice will be generated automatically. If issue is not fixed within the said time, then document should be created for that month/year manually.</p>
+<p>{next}</p>
+    </article>
+  </body>
+</html>

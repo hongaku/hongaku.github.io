@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>Supplier</title>
+    <link type="text/css" rel="stylesheet" href="../../../../assets/css/github-markdown.css">
+    <link type="text/css" rel="stylesheet" href="../../../../assets/css/pilcrow.css">
+    <link type="text/css" rel="stylesheet" href="../../../../assets/css/hljs-github.min.css"/>
+  </head>
+  <body>
+    <article class="markdown-body"><h1 id="supplier"><a class="header-link" href="#supplier"></a>Supplier</h1>
+<p>Suppliers are companies or individuals who provide you with products or services.</p>
+<p>You can create a new Supplier from:</p>
+<p><code>Explore &gt; Supplier &gt; New Supplier</code></p>
+<p class="img-container"><img class="screenshot" alt="Supplier Master" src="{{docs_base_url}}/assets/img/buying/supplier-master.png"></p>
+<div>
+    <div class='embed-container'>
+        <iframe src='https://www.youtube.com/embed//zsrrVDk6VBs?start=213' frameborder='0' allowfullscreen>
+        </iframe>
+    </div>
+</div>
+
+<h3 id="contacts-and-addresses"><a class="header-link" href="#contacts-and-addresses"></a>Contacts and Addresses</h3>
+<p>Contacts and Addresses in ERPNext are stored separately so that you can create multiple Contacts and Addresses for a Suppliers. Once Supplier is saved, you will find option to create Contact and Address for that Supplier.</p>
+<p class="img-container"><img class="screenshot" alt="Supplier Master" src="{{docs_base_url}}/assets/img/buying/supplier-new-address-contact.png"></p>
+<blockquote>
+<p>Tip: When you select a Supplier in any transaction, Contact for which &quot;Is Primary&quot; field id checked, it will auto-fetch with the Supplier details.</p>
+</blockquote>
+<h3 id="integration-with-accounts"><a class="header-link" href="#integration-with-accounts"></a>Integration with Accounts</h3>
+<p>For all the Supplier, &quot;Creditor&quot; account is set as default payable Account. When Purchase Invoice is created, payable towards the supplier is booked against &quot;Creditors&quot; account.</p>
+<p>If you want to customize payable account for the Supplier, you should first add a payable Account in the Chart of Account, and then select that Payable Account in the Supplier master.</p>
+<p class="img-container"><img class="screenshot" alt="Supplier Master" src="{{docs_base_url}}/assets/img/buying/supplier-payable-account.png"></p>
+<p>If you don&#39;t want to customize payable account, and proceed with default payable account &quot;Creditor&quot;, then do not update any value in the Default Supplier Account&#39;s table.</p>
+<blockquote>
+<p>Advanced Tip: Default Payable Account is set in the Company master. If you want to set another account as Account as default for payable instead of Creditors Account, go to Company master, and set that account as &quot;Default Payable Account&quot;.</p>
+</blockquote>
+<p>You can add multiple companies in your ERPNext instance, and one Supplier can be used across multiple companies. In this case, you should define Companywise Payable Account for the Supplier in the &quot;Default Payable Accounts&quot; table.</p>
+<iframe width="660" height="371" src="https://www.youtube.com/embed/anoGi_RpQ20" frameborder="0" allowfullscreen></iframe>
+
+<p>(Check from 2:20)</p>
+<p>{next}</p>
+    </article>
+  </body>
+</html>

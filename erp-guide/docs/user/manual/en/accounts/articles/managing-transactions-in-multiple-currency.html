@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>Step 1: New Sales Invoice</title>
+    <link type="text/css" rel="stylesheet" href="../../../../../assets/css/github-markdown.css">
+    <link type="text/css" rel="stylesheet" href="../../../../../assets/css/pilcrow.css">
+    <link type="text/css" rel="stylesheet" href="../../../../../assets/css/hljs-github.min.css"/>
+  </head>
+  <body>
+    <article class="markdown-body"><p>#Managing Transactions In Multiple Currency</p>
+<p>In ERPNext, transactions can be created in the base currency as well as in parties (customer or supplier) currency. If transaction is created in the parties currency, their currency symbol is updated in the print format as well.</p>
+<p>Let&#39;s consider a Sales Invoice, where your base currency is of a Company is USD and party currency is EUR.</p>
+<h4 id="step-1:-new-sales-invoice"><a class="header-link" href="#step-1:-new-sales-invoice"></a>Step 1: New Sales Invoice</h4>
+<p><code>Accounts &gt; Documents &gt; Sales Invoice &gt; New</code></p>
+<h4 id="step-2:-select-party"><a class="header-link" href="#step-2:-select-party"></a>Step 2: Select Party</h4>
+<p>Select Customer from the Customer master. If default Currency is updated in the Customer master, same will be fetched in the Sales Invoice as well, as Customer Currency.</p>
+<h4 id="step-3:-exchange-rate"><a class="header-link" href="#step-3:-exchange-rate"></a>Step 3: Exchange Rate</h4>
+<p>Currency Exchange between base currency and customer currency will auto-fetch.</p>
+<p class="img-container"><img alt="Accounts Frozen Date" class="screenshot" src="{{docs_base_url}}/assets/img/articles/multiple-currency-1.gif"></p>
+<h4 id="step-4:-update-details"><a class="header-link" href="#step-4:-update-details"></a>Step 4: Update Details</h4>
+<p>Update other details like Item, Taxes, Terms. In the Taxes and other Charges table, charges of type Actual should be updated in the Customer&#39;s currency.</p>
+<h4 id="step-4:-save-and-submit"><a class="header-link" href="#step-4:-save-and-submit"></a>Step 4: Save and Submit</h4>
+<p>Save Sales Invoice and then check Print Format. For all the Currency field (rate, amount, totals) Customer&#39;s Currency symbol will be updated as well.</p>
+<p class="img-container"><img alt="Accounts Frozen Date" class="screenshot" src="{{docs_base_url}}/assets/img/articles/multiple-currency-2.png"></p>
+<h4 id="currency-exchange-masters"><a class="header-link" href="#currency-exchange-masters"></a>Currency Exchange Masters</h4>
+<p>If you have come to terms with party to follow standard exchange rate throughout, you can capture it by creating Currency Exchange Rate master. To create new Currency Exchange Rate master, go to:</p>
+<p><code>Accounts &gt; Setup &gt; Currency Exchange</code></p>
+<p> If system find Exchange Rate master for any currency, it is given preference over currency exchange rate.</p>
+    </article>
+  </body>
+</html>

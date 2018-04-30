@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>Produkt-Bundle</title>
+    <link type="text/css" rel="stylesheet" href="../../../../../assets/css/github-markdown.css">
+    <link type="text/css" rel="stylesheet" href="../../../../../assets/css/pilcrow.css">
+    <link type="text/css" rel="stylesheet" href="../../../../../assets/css/hljs-github.min.css"/>
+  </head>
+  <body>
+    <article class="markdown-body"><h1 id="produkt-bundle"><a class="header-link" href="#produkt-bundle"></a>Produkt-Bundle</h1>
+<p><span class="text-muted contributed-by">Beigetragen von CWT Connector &amp; Wire Technology GmbH</span></p>
+<p>Der Begriff &quot;Produkt-Bundle&quot; ist gleichbedeutend mit der Stückliste des Vertriebs. Es handelt sich dabei um eine Vorlage, in der Sie Artikel zusammenstellen können, die zusammengepackt werden und als ein Artikel verkauft werden. Beispiel: Wenn ein Laptop geliefert wird, müssen Sie sicher stellen, dass das Ladekabel, die Maus und die Tragetasche mitgeliefert werden und der Lagerbestand dieser Artikel dementsprechend bearbeitet wird. Um dieses Szenario abzubilden, können Sie für den Hauptartikel, z. B. den Laptop, die Option &quot;Produkt-Bundle&quot;einstellen, und die zu liefernden Artikel wie Laptop + Ladekabel + anderes Zubehör als Unterartikel auflisten.</p>
+<p>Im Folgenden sind die Schritte dargestellt, wie die Vorlage zum Produkt-Bundle eingestellt wird, und wie sie in Vertriebsaktionen genutzt wird.</p>
+<h3 id="ein-neues-produkt-bundle-erstellen"><a class="header-link" href="#ein-neues-produkt-bundle-erstellen"></a>Ein neues Produkt-Bundle erstellen</h3>
+<p>Um ein neues Produkt-Bundle zu erstellen, gehen Sie zu:</p>
+<blockquote>
+<p>Vertrieb &gt; Einstellungen &gt; Produkt-Bundle &gt; Neu</p>
+</blockquote>
+<p class="img-container"><img class="screenshot" alt="Produkt-Bundle" src="{{docs_base_url}}/assets/img/selling/product-bundle.png"></p>
+<h3 id="hauptartikel-auswählen"><a class="header-link" href="#hauptartikel-auswählen"></a>Hauptartikel auswählen</h3>
+<p>In der Vorlage des Produkt-Bundles gibt es zwei Abschnitte. Produkt-Bundle-Artikel (Hauptartikel) und Paketartikel.</p>
+<p>Für den Produkt-Bundle-Artikel wählen sie einen übergeordneten Artikel aus. Der übergeordnete Artikel darf <strong>kein Lagerartikel</strong> sein, da nicht er über das Lager verwaltet wird, sondern nur die Paketartikel. Wenn Sie den übergeordneten Artikel im Lager verwalten wollen, dann müssen Sie eine reguläre Stückliste erstellen und ihn über eine Lagertransaktion zusammen packen lassen.</p>
+<h3 id="unterartikel-auswählen"><a class="header-link" href="#unterartikel-auswählen"></a>Unterartikel auswählen</h3>
+<p>Im Abschnitt Paketartikel listen Sie alle Unterartikel auf, die über das Lager verwaltet werden und an den Kunden geliefert werden.</p>
+<h3 id="produkt-bundle-in-vertriebstransaktionen"><a class="header-link" href="#produkt-bundle-in-vertriebstransaktionen"></a>Produkt-Bundle in Vertriebstransaktionen</h3>
+<p>Wenn Vertriebstransaktionen erstellt werden, wie z. B. Ausgangsrechnung, Kundenauftrag und Lieferschein, dann wird der übergeordnete Artikel aus der Hauptartikelliste ausgewählt.</p>
+<p class="img-container"><img class="screenshot" alt="Produkt-Bundle" src="{{docs_base_url}}/assets/img/selling/product-bundle.gif"></p>
+<p>Beim Auswählen des übergeordneten Artikels aus der Hauptartikelliste werden die Unterartikel aus der Tabelle &quot;Packliste&quot; der Transaktion angezogen. Wenn der Unterartikel ein serialisierter Artikel ist, können Sie seine Seriennummer direkt in der Packlistentabelle angeben. Wenn die Transaktion versendet wird, reduziert das System den Lagerbestand der Unterartikel auf dem Lager der in der Packlistentabelle angegeben ist.</p>
+<p>####Produkt-Bundles nutzen um Angebote abzubilden</p>
+<p>Diese Einsatzmöglichkeit von Produkt-Bundles wurde entdeckt, als ein Kunde, der mit Nahrungsmitteln handelte, nach einer Funktion fragte, Angebote wie &quot;Kaufe eins und bekomme eines frei dazu&quot; abzubilden. Um das umzusetzen, legte er einen Nicht-Lager-Artikel an, der als übergeordneter Artikel verwendet wurde. In der Beschreibung des Artikels gab er die Einzelheiten zu diesem Angebot und ein Bild an. Der Verkaufsartikel wurde dann als Packartikel ausgewählt, wobei die Menge 2 war. Somit zog das System immer dann, wenn ein Artikel über dieses Angebot verkauft wurde, eine Menge von 2 im Lager ab.</p>
+<p>{next}</p>
+    </article>
+  </body>
+</html>

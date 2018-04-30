@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>Updating Opening Balance in Accounts</title>
+    <link type="text/css" rel="stylesheet" href="../../../../assets/css/github-markdown.css">
+    <link type="text/css" rel="stylesheet" href="../../../../assets/css/pilcrow.css">
+    <link type="text/css" rel="stylesheet" href="../../../../assets/css/hljs-github.min.css"/>
+  </head>
+  <body>
+    <article class="markdown-body"><h1 id="updating-opening-balance-in-accounts"><a class="header-link" href="#updating-opening-balance-in-accounts"></a>Updating Opening Balance in Accounts</h1>
+<p>If you are a new company you can start using ERPNext accounting module by going to chart of accounts. However, if you are migrating from a legacy accounting system like Tally or a Fox Pro based software</p>
+<p>We recommend that you start using accounting in a new financial year, but you could start midway too. To setup your accounts, you will need the following for the “day” you start using accounting in ERPNext:</p>
+<ul class="list">
+<li><p>Opening capital accounts - like your shareholder’s (or owner’) capital, loans, bank balances on that day.</p>
+</li>
+<li><p>List of outstanding sales and purchase invoices (Payables and Receivables).</p>
+</li>
+</ul>
+<p>If you were using another accounting software before, firstly you should close financial statements in that software. The closing balance of the accounts should be updated as an opening balance in the ERPNext. Before starting to update opening balance, ensure that your <a href="/docs/user/manual/en/accounts/chart-of-accounts.html">Chart of Accounts</a> has all the Accounts required.</p>
+<blockquote>
+<p>Opening entry is only for Balance Sheet accounts and not for the Accounts in the Profit and Loss statement.</p>
+</blockquote>
+<ul class="list">
+<li><p>For all assets (excluding Accounts Receivables): This entry will contain all your assets except the amounts you are expecting from your Customers against outstanding Sales Invoices. You will have to update your receivables by making an individual entry for each Invoice (this is because, the system will help you track the invoices which are yet to be paid). You can credit the sum of all these debits against the <strong>Temporary Opening</strong> account.</p>
+</li>
+<li><p>For all liabilities: Similarly you need to pass a Journal Entry for your Opening Liabilities (except for the bills you have to pay) against <strong>Temporary Opening</strong> account.</p>
+</li>
+</ul>
+<p>###Opening Entry</p>
+<h4 id="step-1:-new-journal-entry"><a class="header-link" href="#step-1:-new-journal-entry"></a>Step 1: New Journal Entry</h4>
+<p>To open new Journal Entry, go to:</p>
+<p><code>Explore &gt; Accounts &gt; Journal Entry</code></p>
+<h4 id="step-2:-entry-type"><a class="header-link" href="#step-2:-entry-type"></a>Step 2: Entry Type</h4>
+<p>If Entry Type is selected as Opening Entry, all the Balance Sheet Accounts will be auto-fetched in the Journal Entry.</p>
+<p class="img-container"><img class="screenshot" alt="Opening Account" src="{{docs_base_url}}/assets/img/accounts/opening-account-1.png"></p>
+<h4 id="step-3:-posting-date"><a class="header-link" href="#step-3:-posting-date"></a>Step 3: Posting Date</h4>
+<p>Select Posting Date on which Accounts Opening Balance will be updated.</p>
+<h4 id="step-4:-enter-debit/credit-value"><a class="header-link" href="#step-4:-enter-debit/credit-value"></a>Step 4: Enter Debit/Credit Value</h4>
+<p>For each Account, enter opening value in the Debit or Credit column. As per the double entry valuation system, Total Debit value in a entry must be equal to Total Credit value.</p>
+<p class="img-container"><img class="screenshot" alt="Opening Account" src="{{docs_base_url}}/assets/img/accounts/opening-6.png"></p>
+<p>####Step 5: Is Opening</p>
+<p>Set field <code>Is Opening</code> as <code>Yes</code>.</p>
+<p class="img-container"><img class="screenshot" alt="Opening Account" src="{{docs_base_url}}/assets/img/accounts/opening-3.png"></p>
+<p>####Step 6: Save and Submit</p>
+<p>After enter opening balance for each account, Save and Submit Journal Entry. To check if Opening Balance for an account is updated correctly, you can check Trial Balance report.</p>
+<p>###Selecting Accounts Manually</p>
+<p>If your Balance Sheet has many Accounts, then updating Account Opening balance from single Journal Entry can lead to performance issues. In such a scenario, you can multiple Journal Entries to update opening balance in all the Accounts.</p>
+<p>If you are updating account opening balance in few accounts at a time, you can use <strong>Temporary Opening</strong> account for balancing purpose. In the standard chart of accounts, a Temporary Opening Account is auto-created under Assets.</p>
+<p class="img-container"><img class="screenshot" alt="Opening Account" src="{{docs_base_url}}/assets/img/accounts/opening-7.png"></p>
+<p>In the Journal Entry, manually select an Account for which opening balance is to be updated. For each Account, enter opening balance value in the Debit or Credit column, based on it&#39;s Account Type (Asset or Liability).</p>
+<p>For example, if you want to update balance in bank accounts, create Journal Entry as following.</p>
+<p class="img-container"><img class="screenshot" alt="Opening Account" src="{{docs_base_url}}/assets/img/accounts/opening-2.png"></p>
+<p>Once all your invoices are entered, your <strong>Temporary Opening</strong> account will have a balance of zero!</p>
+<p>###Trial Balance</p>
+<p>After completing the accounting entries, the trial balance report will look like the one given below:</p>
+<p class="img-container"><img class="screenshot" alt="Opening Account" src="{{docs_base_url}}/assets/img/accounts/opening-4.png"></p>
+<p>###Stock Opening</p>
+<p>To track stock balance in the Chart of Account, an Account is created for each Warehouse.</p>
+<p><code>Chart of Accounts &gt; Assets &gt; Current Asset &gt; StocK Assets &gt; (Warehouse Account)</code></p>
+<p class="img-container"><img class="screenshot" alt="Opening Account" src="{{docs_base_url}}/assets/img/accounts/opening-5.png"></p>
+<p>To update stock opening balance, create <a href="/docs/user/manual/en/stock/opening-stock.html">Stock Reconciliation entry</a>. Based on the valuation of items&#39;s update in the Warehouse, balance will be updated in the Warehouse account.</p>
+<p>###Fixed Asset Opening</p>
+<p>Opening balance for the fixed asset account should be updated via Journal Entry. Assets which are not fully depreciated should be added in the <a href="/docs/user/manual/en/accounts/managing-fixed-assets.html">Asset master</a>. For adding Assets in your possession, ensure to check <strong>Is Existing Asset</strong> field.</p>
+<h3 id="outstanding-payables-and-receivables"><a class="header-link" href="#outstanding-payables-and-receivables"></a>Outstanding Payables and Receivables</h3>
+<p>After opening Journal Entries are made, you will need to enter the Sales Invoice and Purchase Invoice that is yet to be paid.</p>
+<p>Since you have already booked the income or expense on these invoices in the previous period, select <strong>Temporary Opening</strong> in the “Income” and “Expense” accounts.</p>
+<blockquote>
+<p>Note: Make sure to set each invoice as “Is Opening”!</p>
+</blockquote>
+<p>If you don’t care what items are in that invoice, just make a dummy item entry in the Invoice. Item code in the Invoice is not necessary, so it should not be such a problem.</p>
+<p>You can also do this quickly using the <strong>Opening Invoice Creation Tool</strong></p>
+<p>To use this tool, just type &quot;Opening Invoice&quot; in the search bar and select the <strong>Opening Invoice Creation Tool</strong></p>
+<p>Here, select the company and type of invoice (sales or purchase) and add a line item for each invoice you want to create.</p>
+<p class="img-container"><img class="screenshot" alt="Opening Invoice Creation Tool" src="{{docs_base_url}}/assets/img/accounts/opening-invoice-creation-tool.png"></p>
+<div>
+  <div class='embed-container'>
+    <iframe src='https://www.youtube.com/embed//U5wPIvEn-0c' frameborder='0' allowfullscreen>
+    </iframe>
+  </div>
+</div>
+
+<p>{next}</p>
+    </article>
+  </body>
+</html>

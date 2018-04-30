@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>Setting up Braintree</title>
+    <link type="text/css" rel="stylesheet" href="../../../../../assets/css/github-markdown.css">
+    <link type="text/css" rel="stylesheet" href="../../../../../assets/css/pilcrow.css">
+    <link type="text/css" rel="stylesheet" href="../../../../../assets/css/hljs-github.min.css"/>
+  </head>
+  <body>
+    <article class="markdown-body"><h1 id="setting-up-braintree"><a class="header-link" href="#setting-up-braintree"></a>Setting up Braintree</h1>
+<p>To setup Braintree, go to <code>Explore &gt; Integrations &gt; Braintree Settings</code></p>
+<h2 id="setup-braintree"><a class="header-link" href="#setup-braintree"></a>Setup Braintree</h2>
+<p>To enable Braintree in your ERPNext account, you need to configure the following parameters:</p>
+<ul class="list">
+<li>Merchant ID</li>
+<li>Public Key</li>
+<li>Private Key</li>
+</ul>
+<p>You can setup several Braintree payment gateways if needed. The choice of payment gateway account will determine which braintree account is used for the payment.</p>
+<p class="img-container"><img src="/docs/assets/img/setup/integrations/braintree_account.png" alt="Braintree Settings"></p>
+<p>On enabling service, the system will create Payment Gateway record and an Account head in chart of account with account type as Bank.</p>
+<p class="img-container"><img src="/docs/assets/img/setup/integrations/braintree_coa.png" alt="Braintree COA"></p>
+<p>It will also create a payment gateway account. You can change the default bank account if needed and create a template for the payment request.</p>
+<p class="img-container"><img src="/docs/assets/img/setup/integrations/payment_gateway_account_braintree.png" alt="Payment Gateway Account"></p>
+<p>After configuring the Payment Gateway Account, your system is able to accept online payments through Braintree.</p>
+<h2 id="supporting-transaction-currencies"><a class="header-link" href="#supporting-transaction-currencies"></a>Supporting transaction currencies</h2>
+<pre class="hljs"><code><span class="hljs-string">"AED"</span>,<span class="hljs-string">"AMD"</span>,<span class="hljs-string">"AOA"</span>,<span class="hljs-string">"ARS"</span>,<span class="hljs-string">"AUD"</span>,<span class="hljs-string">"AWG"</span>,<span class="hljs-string">"AZN"</span>,<span class="hljs-string">"BAM"</span>,<span class="hljs-string">"BBD"</span>,<span class="hljs-string">"BDT"</span>,<span class="hljs-string">"BGN"</span>,<span class="hljs-string">"BIF"</span>,<span class="hljs-string">"BMD"</span>,<span class="hljs-string">"BND"</span>,<span class="hljs-string">"BOB"</span>,
+<span class="hljs-string">"BRL"</span>,<span class="hljs-string">"BSD"</span>,<span class="hljs-string">"BWP"</span>,<span class="hljs-string">"BYN"</span>,<span class="hljs-string">"BZD"</span>,<span class="hljs-string">"CAD"</span>,<span class="hljs-string">"CHF"</span>,<span class="hljs-string">"CLP"</span>,<span class="hljs-string">"CNY"</span>,<span class="hljs-string">"COP"</span>,<span class="hljs-string">"CRC"</span>,<span class="hljs-string">"CVE"</span>,<span class="hljs-string">"CZK"</span>,<span class="hljs-string">"DJF"</span>,<span class="hljs-string">"DKK"</span>,
+<span class="hljs-string">"DOP"</span>,<span class="hljs-string">"DZD"</span>,<span class="hljs-string">"EGP"</span>,<span class="hljs-string">"ETB"</span>,<span class="hljs-string">"EUR"</span>,<span class="hljs-string">"FJD"</span>,<span class="hljs-string">"FKP"</span>,<span class="hljs-string">"GBP"</span>,<span class="hljs-string">"GEL"</span>,<span class="hljs-string">"GHS"</span>,<span class="hljs-string">"GIP"</span>,<span class="hljs-string">"GMD"</span>,<span class="hljs-string">"GNF"</span>,<span class="hljs-string">"GTQ"</span>,<span class="hljs-string">"GYD"</span>,
+<span class="hljs-string">"HKD"</span>,<span class="hljs-string">"HNL"</span>,<span class="hljs-string">"HRK"</span>,<span class="hljs-string">"HTG"</span>,<span class="hljs-string">"HUF"</span>,<span class="hljs-string">"IDR"</span>,<span class="hljs-string">"ILS"</span>,<span class="hljs-string">"INR"</span>,<span class="hljs-string">"ISK"</span>,<span class="hljs-string">"JMD"</span>,<span class="hljs-string">"JPY"</span>,<span class="hljs-string">"KES"</span>,<span class="hljs-string">"KGS"</span>,<span class="hljs-string">"KHR"</span>,<span class="hljs-string">"KMF"</span>,
+<span class="hljs-string">"KRW"</span>,<span class="hljs-string">"KYD"</span>,<span class="hljs-string">"KZT"</span>,<span class="hljs-string">"LAK"</span>,<span class="hljs-string">"LBP"</span>,<span class="hljs-string">"LKR"</span>,<span class="hljs-string">"LRD"</span>,<span class="hljs-string">"LSL"</span>,<span class="hljs-string">"LTL"</span>,<span class="hljs-string">"MAD"</span>,<span class="hljs-string">"MDL"</span>,<span class="hljs-string">"MKD"</span>,<span class="hljs-string">"MNT"</span>,<span class="hljs-string">"MOP"</span>,<span class="hljs-string">"MUR"</span>,
+<span class="hljs-string">"MVR"</span>,<span class="hljs-string">"MWK"</span>,<span class="hljs-string">"MXN"</span>,<span class="hljs-string">"MYR"</span>,<span class="hljs-string">"MZN"</span>,<span class="hljs-string">"NAD"</span>,<span class="hljs-string">"NGN"</span>,<span class="hljs-string">"NIO"</span>,<span class="hljs-string">"NOK"</span>,<span class="hljs-string">"NPR"</span>,<span class="hljs-string">"NZD"</span>,<span class="hljs-string">"PAB"</span>,<span class="hljs-string">"PEN"</span>,<span class="hljs-string">"PGK"</span>,<span class="hljs-string">"PHP"</span>,
+<span class="hljs-string">"PKR"</span>,<span class="hljs-string">"PLN"</span>,<span class="hljs-string">"PYG"</span>,<span class="hljs-string">"QAR"</span>,<span class="hljs-string">"RON"</span>,<span class="hljs-string">"RSD"</span>,<span class="hljs-string">"RUB"</span>,<span class="hljs-string">"RWF"</span>,<span class="hljs-string">"SAR"</span>,<span class="hljs-string">"SBD"</span>,<span class="hljs-string">"SCR"</span>,<span class="hljs-string">"SEK"</span>,<span class="hljs-string">"SGD"</span>,<span class="hljs-string">"SHP"</span>,<span class="hljs-string">"SLL"</span>,
+<span class="hljs-string">"SOS"</span>,<span class="hljs-string">"SRD"</span>,<span class="hljs-string">"STD"</span>,<span class="hljs-string">"SVC"</span>,<span class="hljs-string">"SYP"</span>,<span class="hljs-string">"SZL"</span>,<span class="hljs-string">"THB"</span>,<span class="hljs-string">"TJS"</span>,<span class="hljs-string">"TOP"</span>,<span class="hljs-string">"TRY"</span>,<span class="hljs-string">"TTD"</span>,<span class="hljs-string">"TWD"</span>,<span class="hljs-string">"TZS"</span>,<span class="hljs-string">"UAH"</span>,<span class="hljs-string">"UGX"</span>,
+<span class="hljs-string">"USD"</span>,<span class="hljs-string">"UYU"</span>,<span class="hljs-string">"UZS"</span>,<span class="hljs-string">"VEF"</span>,<span class="hljs-string">"VND"</span>,<span class="hljs-string">"VUV"</span>,<span class="hljs-string">"WST"</span>,<span class="hljs-string">"XAF"</span>,<span class="hljs-string">"XCD"</span>,<span class="hljs-string">"XOF"</span>,<span class="hljs-string">"XPF"</span>,<span class="hljs-string">"YER"</span>,<span class="hljs-string">"ZAR"</span>,<span class="hljs-string">"ZMK"</span>,<span class="hljs-string">"ZWD"</span></code></pre>    </article>
+  </body>
+</html>

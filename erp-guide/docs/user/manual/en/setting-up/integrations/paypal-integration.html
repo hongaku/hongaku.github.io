@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>Setup  PayPal</title>
+    <link type="text/css" rel="stylesheet" href="../../../../../assets/css/github-markdown.css">
+    <link type="text/css" rel="stylesheet" href="../../../../../assets/css/pilcrow.css">
+    <link type="text/css" rel="stylesheet" href="../../../../../assets/css/hljs-github.min.css"/>
+  </head>
+  <body>
+    <article class="markdown-body"><p>#Setting up PayPal</p>
+<p>A payment gateway is an e-commerce application service provider service that authorizes credit card payments for e-businesses, online retailers, bricks and clicks, or traditional brick and mortar.</p>
+<p>A payment gateway facilitates the transfer of information between a payment portal (such as a website, mobile phone or interactive voice response service) and the Front End Processor or acquiring bank.</p>
+<p>To setup PayPal ,
+<code>Explore &gt; Integrations &gt; PayPal Settings</code></p>
+<h4 id="setup-paypal"><a class="header-link" href="#setup-paypal"></a>Setup  PayPal</h4>
+<p>To enable PayPal payment service, you need to configure parameters like API Username, API Password and Signature.</p>
+<p class="img-container"><img class="screenshot" alt="PayPal Settings" src="{{docs_base_url}}/assets/img/setup/integrations/paypal_settings.png"></p>
+<p>You also can set test payment environment, by settings <code>Use Sandbox</code></p>
+<p>On enabling service, the system will create Payment Gateway record and Account head in chart of accounts having account type as Bank.</p>
+<p class="img-container"><img class="screenshot" alt="PayPal COA" src="{{docs_base_url}}/assets/img/setup/integrations/paypal_coa.png"></p>
+<p>Also it will create Payment Gateway Account entry. Payment Gateway Account is configuration hub from this you can set account head from existing COA, default Payment Request email body template.</p>
+<p class="img-container"><img class="screenshot" alt="Payment Gateway Account" src="{{docs_base_url}}/assets/img/setup/integrations/payment_gateway_account_paypal.png"></p>
+<p>After enabling service and configuring Payment Gateway Account your system is able to accept online payments.</p>
+<p>####Supporting transaction currencies
+AUD, BRL, CAD, CZK, DKK, EUR, HKD, HUF, ILS, JPY, MYR, MXN, TWD, NZD, NOK, PHP, PLN, GBP, RUB, SGD, SEK, CHF, THB, TRY, USD</p>
+<p>##Get PayPal credentials</p>
+<h4 id="paypal-sanbox-api-signature"><a class="header-link" href="#paypal-sanbox-api-signature"></a>Paypal Sanbox API Signature</h4>
+<ul class="list">
+<li>Login to paypal developer account, <a href="https://developer.paypal.com/">PayPal Developer Account</a></li>
+<li><p>From <strong>Accounts</strong> tab. create a new business account.
+<img class="screenshot" alt="Payment Request" src="{{docs_base_url}}/assets/img/setup/integrations/setup-sanbox-1.png"></p>
+</li>
+<li><p>From this account profile you will get your sandbox api credentials
+<img class="screenshot" alt="Payment Request" src="{{docs_base_url}}/assets/img/setup/integrations/sanbox-credentials.png"></p>
+</li>
+</ul>
+<hr>
+<h4 id="paypal-account-api-signature"><a class="header-link" href="#paypal-account-api-signature"></a>PayPal Account API Signature</h4>
+<ul class="list">
+<li><p>Login to PayPal Account and go to profile
+<img class="screenshot" alt="Payment Request" src="{{docs_base_url}}/assets/img/setup/integrations/api-step-1.png"></p>
+</li>
+<li><p>From <strong>My Selling Tools</strong> go to <strong>api Access</strong>
+<img class="screenshot" alt="Payment Request" src="{{docs_base_url}}/assets/img/setup/integrations/api-step-2.png"></p>
+</li>
+<li><p>On API Access Page, choose option 2 to generate API credentials
+<img class="screenshot" alt="Payment Request" src="{{docs_base_url}}/assets/img/setup/integrations/api-step-3.png"></p>
+</li>
+</ul>
+    </article>
+  </body>
+</html>

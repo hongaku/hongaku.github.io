@@ -1,0 +1,369 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>Concepts And Terms</title>
+    <link type="text/css" rel="stylesheet" href="../../../../assets/css/github-markdown.css">
+    <link type="text/css" rel="stylesheet" href="../../../../assets/css/pilcrow.css">
+    <link type="text/css" rel="stylesheet" href="../../../../assets/css/hljs-github.min.css"/>
+  </head>
+  <body>
+    <article class="markdown-body"><h1 id="concepts-and-terms"><a class="header-link" href="#concepts-and-terms"></a>Concepts And Terms</h1>
+<p>Before you start implementation, lets get familiar with the terminology that
+is used and some basic concepts in ERPNext.</p>
+<hr>
+<h3 id="basic-concepts"><a class="header-link" href="#basic-concepts"></a>Basic Concepts</h3>
+<h4 id="company"><a class="header-link" href="#company"></a>Company</h4>
+<p>This represents the Company records for which ERPNext is setup. With this same
+setup, you can create multiple Company records, each representing a different
+legal entity. The accounting for each Company will be different, but they will
+share the Customer, Supplier and Item records.</p>
+<blockquote>
+<p>Setup &gt; Company</p>
+</blockquote>
+<h4 id="customer"><a class="header-link" href="#customer"></a>Customer</h4>
+<p>Represents a customer. A Customer can be an individual or an organization.
+You can create multiple Contacts and Addresses for each Customer.</p>
+<blockquote>
+<p>Selling &gt; Customer</p>
+</blockquote>
+<h4 id="supplier"><a class="header-link" href="#supplier"></a>Supplier</h4>
+<p>Represents a supplier of goods or services. Your telephone company is a
+Supplier, so is your raw materials Supplier. Again, a Supplier can be an
+individual or an organization and has multiple Contacts and Addresses.</p>
+<blockquote>
+<p>Buying &gt; Supplier</p>
+</blockquote>
+<h4 id="item"><a class="header-link" href="#item"></a>Item</h4>
+<p>A Product, sub-product or Service that is either bought, sold or manufactured
+and is uniquely identified.</p>
+<blockquote>
+<p>Stock &gt; Item</p>
+</blockquote>
+<h4 id="account"><a class="header-link" href="#account"></a>Account</h4>
+<p>An Account is a heading under which financial and business transactions are
+carried on. For example, “Travel Expense” is an account, “Customer Zoe”,
+“Supplier Mae” are accounts. ERPNext creates accounts for Customers and
+Suppliers automatically.</p>
+<blockquote>
+<p>Accounts &gt; Chart of Accounts</p>
+</blockquote>
+<h4 id="address"><a class="header-link" href="#address"></a>Address</h4>
+<p>An address represents location details of a Customer or Supplier. These can be
+of different locations such as Head Office, Factory, Warehouse, Shop etc.</p>
+<blockquote>
+<p>Selling &gt; Address</p>
+</blockquote>
+<h4 id="contact"><a class="header-link" href="#contact"></a>Contact</h4>
+<p>An individual Contact belongs to a Customer or Supplier or is just an
+independent. A Contact has a name and contact details like email and phone
+number.</p>
+<blockquote>
+<p>Selling &gt; Contact</p>
+</blockquote>
+<h4 id="communication"><a class="header-link" href="#communication"></a>Communication</h4>
+<p>A list of all Communication with a Contact or Lead. All emails sent from the
+system are added to the Communication table.</p>
+<blockquote>
+<p>Support &gt; Communication</p>
+</blockquote>
+<h4 id="price-list"><a class="header-link" href="#price-list"></a>Price List</h4>
+<p>A Price List is a place where different rate plans can be stored. It’s a name
+you give to a set of Item Prices stored under a particular List.</p>
+<blockquote>
+<p>Selling &gt; Price List</p>
+</blockquote>
+<blockquote>
+<p>Buying &gt; Price List</p>
+</blockquote>
+<hr>
+<h3 id="accounting"><a class="header-link" href="#accounting"></a>Accounting</h3>
+<h4 id="fiscal-year"><a class="header-link" href="#fiscal-year"></a>Fiscal Year</h4>
+<p>Represents a Financial Year or Accounting Year. You can operate multiple
+Fiscal Years at the same time. Each Fiscal Year has a start date and an end
+date and transactions can only be recorded in this period. When you “close” a
+fiscal year, it&#39;s balances are transferred as “opening” balances for the next
+fiscal year.</p>
+<blockquote>
+<p>Setup &gt; Company &gt; Fiscal Year</p>
+</blockquote>
+<h4 id="cost-center"><a class="header-link" href="#cost-center"></a>Cost Center</h4>
+<p>A Cost Center is like an Account, but the only difference is that its
+structure represents your business more closely than Accounts.
+For example, in your Chart of Accounts, you can separate your expenses by its type
+(i.e., travel, marketing, etc.). In your Chart of Cost Centers, you can separate
+them by product line or business group (e.g., online sales, retail sales, etc.).</p>
+<blockquote>
+<p>Accounts &gt; Chart of Cost Centers</p>
+</blockquote>
+<h4 id="journal-entry"><a class="header-link" href="#journal-entry"></a>Journal Entry</h4>
+<p>A document that contains General Ledger (GL) entries and the sum of Debits and
+Credits of those entries is the same. In ERPNext you can update Payments,
+Returns, etc., using Journal Entries.</p>
+<blockquote>
+<p>Accounts &gt; Journal Entry</p>
+</blockquote>
+<h4 id="sales-invoice"><a class="header-link" href="#sales-invoice"></a>Sales Invoice</h4>
+<p>A bill sent to Customers for delivery of Items (goods or services).</p>
+<blockquote>
+<p>Accounts &gt; Sales Invoice</p>
+</blockquote>
+<h4 id="purchase-invoice"><a class="header-link" href="#purchase-invoice"></a>Purchase Invoice</h4>
+<p>A bill sent by a Supplier for delivery of Items (goods or services).</p>
+<blockquote>
+<p>Accounts &gt; Purchase Invoice</p>
+</blockquote>
+<h4 id="currency"><a class="header-link" href="#currency"></a>Currency</h4>
+<p>ERPNext allows you to book transactions in multiple currencies. There is only
+one currency for your book of accounts though. While posting your Invoices with
+payments in different currencies, the amount is converted to the default
+currency by the specified conversion rate.</p>
+<blockquote>
+<p>Setup &gt; Currency</p>
+</blockquote>
+<hr>
+<h3 id="selling"><a class="header-link" href="#selling"></a>Selling</h3>
+<h4 id="customer-group"><a class="header-link" href="#customer-group"></a>Customer Group</h4>
+<p>A classification of Customers, usually based on market segment.</p>
+<blockquote>
+<p>Selling &gt; Setup &gt; Customer Group</p>
+</blockquote>
+<h4 id="lead"><a class="header-link" href="#lead"></a>Lead</h4>
+<p>A person who could be a future source of business. A Lead may generate
+Opportunities. (from: “may lead to a sale”).</p>
+<blockquote>
+<p>CRM &gt; Lead</p>
+</blockquote>
+<h4 id="opportunity"><a class="header-link" href="#opportunity"></a>Opportunity</h4>
+<p>A potential sale. (from: “opportunity for a business”).</p>
+<blockquote>
+<p>CRM &gt; Opportunity</p>
+</blockquote>
+<h4 id="quotation"><a class="header-link" href="#quotation"></a>Quotation</h4>
+<p>Customer&#39;s request to price an item or service.</p>
+<blockquote>
+<p>Selling &gt; Quotation</p>
+</blockquote>
+<h4 id="sales-order"><a class="header-link" href="#sales-order"></a>Sales Order</h4>
+<p>A note confirming the terms of delivery and price of an Item (product or
+service) by the Customer. Deliveries, Work Orders and Invoices are made
+on basis of Sales Orders.</p>
+<blockquote>
+<p>Selling &gt; Sales Order</p>
+</blockquote>
+<h4 id="territory"><a class="header-link" href="#territory"></a>Territory</h4>
+<p>A geographical area classification for sales management. You can set targets
+for Territories and each sale is linked to a Territory.</p>
+<blockquote>
+<p>Selling &gt; Setup &gt; Territory</p>
+</blockquote>
+<h4 id="sales-partner"><a class="header-link" href="#sales-partner"></a>Sales Partner</h4>
+<p>A third party distributer / dealer / affiliate / commission agent who sells
+the company’s products usually for a commission.</p>
+<blockquote>
+<p>Selling &gt; Setup &gt; Sales Partner</p>
+</blockquote>
+<h4 id="sales-person"><a class="header-link" href="#sales-person"></a>Sales Person</h4>
+<p>Someone who pitches to the Customer and closes deals. You can set targets for
+Sales Persons and tag them in transactions.</p>
+<blockquote>
+<p>Selling &gt; Setup &gt; Sales Person</p>
+</blockquote>
+<hr>
+<h3 id="buying"><a class="header-link" href="#buying"></a>Buying</h3>
+<h4 id="purchase-order"><a class="header-link" href="#purchase-order"></a>Purchase Order</h4>
+<p>A contract given to a Supplier to deliver the specified Items at the specified
+cost, quantity, dates and other terms.</p>
+<blockquote>
+<p>Buying &gt; Purchase Order</p>
+</blockquote>
+<h4 id="material-request"><a class="header-link" href="#material-request"></a>Material Request</h4>
+<p>A request made by a system User, or automatically generated by ERPNext based
+on reorder level or projected quantity in Production Plan for purchasing a set
+of Items.</p>
+<blockquote>
+<p>Buying &gt; Material Request</p>
+</blockquote>
+<hr>
+<h3 id="stock-(inventory)"><a class="header-link" href="#stock-(inventory)"></a>Stock (Inventory)</h3>
+<h4 id="warehouse"><a class="header-link" href="#warehouse"></a>Warehouse</h4>
+<p>A logical Warehouse against which stock entries are made.</p>
+<blockquote>
+<p>Stock &gt; Warehouse</p>
+</blockquote>
+<h4 id="stock-entry"><a class="header-link" href="#stock-entry"></a>Stock Entry</h4>
+<p>Material transfer from a Warehouse, to a Warehouse or from one Warehouse to
+another.</p>
+<blockquote>
+<p>Stock &gt; Stock Entry</p>
+</blockquote>
+<h4 id="delivery-note"><a class="header-link" href="#delivery-note"></a>Delivery Note</h4>
+<p>A list of Items with quantities for shipment. A Delivery Note will reduce the
+stock of Items for the Warehouse from where you ship. A Delivery Note is
+usually made against a Sales Order.</p>
+<blockquote>
+<p>Stock &gt; Delivery Note</p>
+</blockquote>
+<h4 id="purchase-receipt"><a class="header-link" href="#purchase-receipt"></a>Purchase Receipt</h4>
+<p>A note stating that a particular set of Items were received from the Supplier,
+most likely against a Purchase Order.</p>
+<blockquote>
+<p>Stock &gt; Purchase Receipt</p>
+</blockquote>
+<h4 id="serial-number"><a class="header-link" href="#serial-number"></a>Serial Number</h4>
+<p>A unique number given to a particular unit of an Item.</p>
+<blockquote>
+<p>Stock &gt; Serial Number</p>
+</blockquote>
+<h4 id="batch"><a class="header-link" href="#batch"></a>Batch</h4>
+<p>A number given to a group of units of a particular Item that may be purchased
+or manufactured in a group.</p>
+<blockquote>
+<p>Stock &gt; Batch</p>
+</blockquote>
+<h4 id="stock-ledger-entry"><a class="header-link" href="#stock-ledger-entry"></a>Stock Ledger Entry</h4>
+<p>A unified table for all material movement from one warehouse to another. This
+is the table that is updated when a Stock Entry, Delivery Note, Purchase
+Receipt, and Sales Invoice (POS) is made.</p>
+<h4 id="stock-reconciliation"><a class="header-link" href="#stock-reconciliation"></a>Stock Reconciliation</h4>
+<p>Update Stock of multiple Items from a spreadsheet (CSV) file.</p>
+<blockquote>
+<p>Stock &gt; Stock Reconciliation</p>
+</blockquote>
+<h4 id="quality-inspection"><a class="header-link" href="#quality-inspection"></a>Quality Inspection</h4>
+<p>A note prepared to record certain parameters of an Item at the time of Receipt
+from Supplier, or Delivery to Customer.</p>
+<blockquote>
+<p>Stock &gt; Quality Inspection</p>
+</blockquote>
+<h4 id="item-group"><a class="header-link" href="#item-group"></a>Item Group</h4>
+<p>A classification of Item.</p>
+<blockquote>
+<p>Stock &gt; Setup &gt; Item Group</p>
+</blockquote>
+<hr>
+<h3 id="human-resource-management"><a class="header-link" href="#human-resource-management"></a>Human Resource Management</h3>
+<h4 id="employee"><a class="header-link" href="#employee"></a>Employee</h4>
+<p>Record of a person who has been in present or past, in the employment of the
+company.</p>
+<blockquote>
+<p>Human Resources &gt; Employee</p>
+</blockquote>
+<h4 id="leave-application"><a class="header-link" href="#leave-application"></a>Leave Application</h4>
+<p>A record of an approved or rejected request for leave.</p>
+<blockquote>
+<p>Human Resource &gt; Leave Application</p>
+</blockquote>
+<h4 id="leave-type"><a class="header-link" href="#leave-type"></a>Leave Type</h4>
+<p>A type of leave (e.g., Sick Leave, Maternity Leave, etc.).</p>
+<blockquote>
+<p>Human Resource &gt; Leave and Attendance &gt; Leave Type</p>
+</blockquote>
+<h4 id="payroll-entry"><a class="header-link" href="#payroll-entry"></a>Payroll Entry</h4>
+<p>A tool that helps in creation of multiple Salary Slips for Employees.</p>
+<blockquote>
+<p>Human Resource &gt; Payroll Entry</p>
+</blockquote>
+<h4 id="salary-slip"><a class="header-link" href="#salary-slip"></a>Salary Slip</h4>
+<p>A record of the monthly salary given to an Employee.</p>
+<blockquote>
+<p>Human Resource &gt; Salary Slip</p>
+</blockquote>
+<h4 id="salary-structure"><a class="header-link" href="#salary-structure"></a>Salary Structure</h4>
+<p>A template identifying all the components of an Employees&#39; salary (earnings),
+tax and other social security deductions.</p>
+<blockquote>
+<p>Human Resource &gt; Salary and Payroll &gt; Salary Structure</p>
+</blockquote>
+<h4 id="appraisal"><a class="header-link" href="#appraisal"></a>Appraisal</h4>
+<p>A record of the performance of an Employee over a specified period based on
+certain parameters.</p>
+<blockquote>
+<p>Human Resources &gt; Appraisal</p>
+</blockquote>
+<h4 id="appraisal-template"><a class="header-link" href="#appraisal-template"></a>Appraisal Template</h4>
+<p>A template recording the different parameters of an Employees&#39; performance and
+their weightage for a particular role.</p>
+<blockquote>
+<p>Human Resources &gt; Employee Setup &gt; Appraisal Template</p>
+</blockquote>
+<h4 id="attendance"><a class="header-link" href="#attendance"></a>Attendance</h4>
+<p>A record indicating presence or absence of an Employee on a particular day.</p>
+<blockquote>
+<p>Human Resources &gt; Attendance</p>
+</blockquote>
+<hr>
+<h3 id="manufacturing"><a class="header-link" href="#manufacturing"></a>Manufacturing</h3>
+<h4 id="bill-of-materials-(bom)"><a class="header-link" href="#bill-of-materials-(bom)"></a>Bill of Materials (BOM)</h4>
+<p>A list of Operations and Items with their quantities, that are required to
+produce another Item. A Bill of Materials (BOM) is used to plan purchases and
+do product costing.</p>
+<blockquote>
+<p>Manufacturing &gt; BOM</p>
+</blockquote>
+<h4 id="workstation"><a class="header-link" href="#workstation"></a>Workstation</h4>
+<p>A place where a BOM operation takes place. It is useful to calculate the
+direct cost of the product.</p>
+<blockquote>
+<p>Manufacturing &gt; Workstation</p>
+</blockquote>
+<h4 id="work-order"><a class="header-link" href="#work-order"></a>Work Order</h4>
+<p>A document signaling production (manufacture) of a particular Item with
+specified quantities.</p>
+<blockquote>
+<p>Manufacturing &gt; Work Order</p>
+</blockquote>
+<h4 id="production-planning-tool"><a class="header-link" href="#production-planning-tool"></a>Production Planning Tool</h4>
+<p>A tool for automatic creation of Work Orders and Purchase Requests based
+on Open Sales Orders in a given period.</p>
+<blockquote>
+<p>Manufacturing &gt; Production Planning Tool</p>
+</blockquote>
+<hr>
+<h3 id="website"><a class="header-link" href="#website"></a>Website</h3>
+<h4 id="blog-post"><a class="header-link" href="#blog-post"></a>Blog Post</h4>
+<p>A short article that appears in the “Blog” section of the website generated
+from the ERPNext website module. Blog is a short form of “Web Log”.</p>
+<blockquote>
+<p>Website &gt; Blog Post</p>
+</blockquote>
+<h4 id="web-page"><a class="header-link" href="#web-page"></a>Web Page</h4>
+<p>A web page with a unique URL (web address) on the website generated from
+ERPNext.</p>
+<blockquote>
+<p>Website &gt; Web Page</p>
+</blockquote>
+<hr>
+<h3 id="setup-/-customization"><a class="header-link" href="#setup-/-customization"></a>Setup / Customization</h3>
+<h4 id="custom-field"><a class="header-link" href="#custom-field"></a>Custom Field</h4>
+<p>A user defined field on a form / table.</p>
+<blockquote>
+<p>Setup &gt; Customize ERPNext &gt; Custom Field</p>
+</blockquote>
+<h4 id="global-defaults"><a class="header-link" href="#global-defaults"></a>Global Defaults</h4>
+<p>This is the section where you set default values for various parameters of the
+system.</p>
+<blockquote>
+<p>Setup &gt; Data &gt; Global Defaults</p>
+</blockquote>
+<h4 id="print-heading"><a class="header-link" href="#print-heading"></a>Print Heading</h4>
+<p>A title that can be set on a transaction just for printing. For example, you
+want to print a Quotation with a title “Proposal” or “Pro forma Invoice”.</p>
+<blockquote>
+<p>Setup &gt; Branding and Printing &gt; Print Headings</p>
+</blockquote>
+<h4 id="terms-and-conditions"><a class="header-link" href="#terms-and-conditions"></a>Terms and Conditions</h4>
+<p>Text of your terms of contract.</p>
+<blockquote>
+<p>Selling &gt; Setup &gt; Terms and Conditions</p>
+</blockquote>
+<h4 id="unit-of-measure-(uom)"><a class="header-link" href="#unit-of-measure-(uom)"></a>Unit of Measure (UOM)</h4>
+<p>How quantity is measured for an Item. E.g., Kg, No., Pair, Packet, etc.</p>
+<blockquote>
+<p>Stock &gt; Setup &gt; UOM</p>
+</blockquote>
+<p>{next}</p>
+    </article>
+  </body>
+</html>

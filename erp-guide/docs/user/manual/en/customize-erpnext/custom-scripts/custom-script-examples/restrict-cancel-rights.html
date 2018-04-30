@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>Restrict Cancel Rights</title>
+    <link type="text/css" rel="stylesheet" href="../../../../../../assets/css/github-markdown.css">
+    <link type="text/css" rel="stylesheet" href="../../../../../../assets/css/pilcrow.css">
+    <link type="text/css" rel="stylesheet" href="../../../../../../assets/css/hljs-github.min.css"/>
+  </head>
+  <body>
+    <article class="markdown-body"><h1 id="restrict-cancel-rights"><a class="header-link" href="#restrict-cancel-rights"></a>Restrict Cancel Rights</h1>
+<p>Add a handler to <code>custom_before_cancel</code> event:</p>
+<pre class="hljs"><code>cur_frm.cscript.custom_before_cancel = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(doc)</span> </span>{
+    <span class="hljs-keyword">if</span> (frappe.user_roles.indexOf(<span class="hljs-string">"Accounts User"</span>)!=<span class="hljs-number">-1</span> &amp;&amp; frappe.user_roles.indexOf(<span class="hljs-string">"Accounts Manager"</span>)==<span class="hljs-number">-1</span>
+            &amp;&amp; user_roles.indexOf(<span class="hljs-string">"System Manager"</span>)==<span class="hljs-number">-1</span>) {
+        <span class="hljs-keyword">if</span> (flt(doc.grand_total) &gt; <span class="hljs-number">10000</span>) {
+            frappe.msgprint(<span class="hljs-string">"You can not cancel this transaction, because grand total \
+                is greater than 10000"</span>);
+            frappe.validated = <span class="hljs-literal">false</span>;
+        }
+    }
+}</code></pre><p>{next}</p>
+    </article>
+  </body>
+</html>

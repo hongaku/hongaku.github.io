@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>Implementation Strategy</title>
+    <link type="text/css" rel="stylesheet" href="../../../../assets/css/github-markdown.css">
+    <link type="text/css" rel="stylesheet" href="../../../../assets/css/pilcrow.css">
+    <link type="text/css" rel="stylesheet" href="../../../../assets/css/hljs-github.min.css"/>
+  </head>
+  <body>
+    <article class="markdown-body"><h1 id="implementation-strategy"><a class="header-link" href="#implementation-strategy"></a>Implementation Strategy</h1>
+<p>Before you start managing your Operations in EPRNext, you must first become
+familiar with the system and the terms used. For this we recommend
+implementation should happen in two phases.</p>
+<ul class="list">
+<li>A <strong>Test Phase</strong>, where you enter dummy records representing your day to day transactions and a <strong>Live Phase</strong>, where we start entering live data.</li>
+</ul>
+<h3 id="test-phase"><a class="header-link" href="#test-phase"></a>Test Phase</h3>
+<ul class="list">
+<li>Read the Manual</li>
+<li>Create a free account at <a href="https://erpnext.com">https://erpnext.com</a> (the easiest way to experiment).</li>
+<li>Create your first Customer, Supplier and Item. Add a few more so you get familiar with them.</li>
+<li>Create Customer Groups, Item Groups, Warehouses, Supplier Groups, so that you can classify your Items.</li>
+<li>Complete a standard sales cycle - Lead &gt; Opportunity &gt; Quotation &gt; Sales Order &gt; Delivery Note &gt; Sales Invoice &gt; Payment (Journal Entry)</li>
+<li>Complete a standard purchase cycle - Material Request &gt; Purchase Order &gt; Purchase Receipt &gt; Payment (Journal Entry).</li>
+<li>Complete a manufacturing cycle (if applicable) - BOM &gt; Production Planning Tool &gt; Work Order &gt; Material Issue</li>
+<li>Replicate a real life scenario into the system.</li>
+<li>Create custom fields, print formats etc as required.</li>
+</ul>
+<h3 id="live-phase"><a class="header-link" href="#live-phase"></a>Live Phase</h3>
+<p>Once you are familiar with ERPNext, start entering your live data!</p>
+<ul class="list">
+<li>Clean up the account of test data or better, start a fresh install.</li>
+<li>If you just want to clear your transactions and not your master data like Item, Customer, Supplier, BOM etc, you can click delete the transactions of your Company and start fresh. To do so, open the Company Record via Setup &gt; Masters &gt; Company and delete your Company&#39;s transactions by clicking on the <strong>Delete Company Transactions</strong> button at the bottom of the Company Form.</li>
+<li>You can also setup a new account at <a href="https://erpnext.com">https://erpnext.com</a>, and use the 30-day free trial. <a href="docs/user/manual/en/introduction/getting-started-with-erpnext">Find out more ways of deploying ERPNext</a></li>
+<li>Setup all the modules with Customer Groups, Item Groups, Warehouses, BOMs etc.</li>
+<li>Import Customers, Suppliers, Items, Contacts and Addresses using Data Import Tool.</li>
+<li>Import opening stock using Stock Reconciliation Tool.</li>
+<li>Create opening accounting entries via Journal Entry and create outstanding Sales Invoices and Purchase Invoices.</li>
+<li>If you need help, <a href="https://erpnext.com/pricing">you can buy support</a> or <a href="https://discuss.erpnext.com">ask in the user forum</a>.</li>
+</ul>
+<p>{next}</p>
+    </article>
+  </body>
+</html>

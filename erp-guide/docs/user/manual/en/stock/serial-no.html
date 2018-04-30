@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>Serial No</title>
+    <link type="text/css" rel="stylesheet" href="../../../../assets/css/github-markdown.css">
+    <link type="text/css" rel="stylesheet" href="../../../../assets/css/pilcrow.css">
+    <link type="text/css" rel="stylesheet" href="../../../../assets/css/hljs-github.min.css"/>
+  </head>
+  <body>
+    <article class="markdown-body"><h1 id="serial-no"><a class="header-link" href="#serial-no"></a>Serial No</h1>
+<p>As we discussed in the <strong>Item</strong> section, if an <strong>Item</strong> is <em>serialized</em>, a
+<strong>Serial Number</strong> (Serial No) record is maintained for each quantity of that
+<strong>Item</strong>. This information is helpful in tracking the location of the Serial
+No, its warranty and end-of-life (expiry) information.</p>
+<p><strong>Serial Nos</strong> are also useful to maintain fixed assets. <strong>Maintenance Schedules</strong> can also be created against serial numbers for planning and scheduling maintenance activity for these assets (if they require maintenance).</p>
+<p>You can also track from which <strong>Supplier</strong> you purchased the <strong>Serial No</strong> and
+to which <strong>Customer</strong> you have sold it. The <strong>Serial No</strong> status will tell you
+its current inventory status.</p>
+<p>If your Item is <em>serialized</em> you will have to enter the Serial Nos in the
+related column with each Serial No in a new line.
+You can maintain single units of serialized items using Serial Number.</p>
+<div class="embed-container">
+    <iframe src="https://www.youtube.com/embed/gvOVlEwFDAkrel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+    </iframe>
+</div>
+
+<h3 id="serial-nos-and-inventory"><a class="header-link" href="#serial-nos-and-inventory"></a>Serial Nos and Inventory</h3>
+<p>Inventory of an Item can only be affected if the Serial No is transacted via a
+Stock transaction (Stock Entry, Purchase Receipt, Delivery Note, Sales
+Invoice). When a new Serial No is created directly, its warehouse cannot be
+set.</p>
+<p class="img-container"><img class="screenshot" alt="Serial Number" src="{{docs_base_url}}/assets/img/stock/serial-no.png"></p>
+<ul class="list">
+<li><p>The Status is set based on Stock Entry.</p>
+</li>
+<li><p>Only Serial Numbers with status &#39;Available&#39; can be delivered.</p>
+</li>
+<li><p>Serial Nos can automatically be created from a Stock Entry or Purchase Receipt. If you mention Serial No in the Serial Nos column, it will automatically create those serial Nos.</p>
+</li>
+<li><p>If in the Item Master, the Serial No Series is mentioned, you can leave the Serial No column blank in a Stock Entry / Purchase Receipt and Serial Nos will automatically be set from that series.</p>
+</li>
+</ul>
+<p>{next}</p>
+    </article>
+  </body>
+</html>

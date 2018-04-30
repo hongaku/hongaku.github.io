@@ -1,0 +1,131 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>How To Customise Cash Flow Report</title>
+    <link type="text/css" rel="stylesheet" href="../../../../../assets/css/github-markdown.css">
+    <link type="text/css" rel="stylesheet" href="../../../../../assets/css/pilcrow.css">
+    <link type="text/css" rel="stylesheet" href="../../../../../assets/css/hljs-github.min.css"/>
+  </head>
+  <body>
+    <article class="markdown-body"><h1 id="how-to-customise-cash-flow-report"><a class="header-link" href="#how-to-customise-cash-flow-report"></a>How To Customise Cash Flow Report</h1>
+<p>As your chart of accounts begins to get more complex and reporting standards change and evolve, the default cash flow 
+report might no longer suffice. This is because ERPNext might not be able to accurately guess the classification and 
+purpose of all accounts in the charts of accounts. Another gripe you might have is the inability to adjust the report 
+format to fit your needs.</p>
+<p>This will no longer be a problem because ERPNext now allows users to customise the cash flow report.</p>
+<h2 id="technical-overview"><a class="header-link" href="#technical-overview"></a>Technical Overview</h2>
+<p>Customisation is made possible by the introduction of two new doctypes - Cash Flow Mapper and Cash Flow Mapping. Both 
+doctypes contain the information required to generate a cash flow report.</p>
+<p>Cash Flow Mapping shows how accounts in your charts of accounts map to a line item in your cash flow report while 
+Cash Flow Mapper gets all the Cash Flow Mappings that relate to the three sections of a cash flow statement.</p>
+<p>With this, you generate detailed cash flow reports to your requirements. This might not make a lot of sense but it will 
+after we go through an example.</p>
+<h2 id="example"><a class="header-link" href="#example"></a>Example</h2>
+<h3 id="background-information"><a class="header-link" href="#background-information"></a>Background information</h3>
+<p>Let&#39;s assume we have a fictitious company for which we want to generate a cash flow report.
+This is what the cash flow report looks like at the moment:
+<img alt="Default cash flow report" class="screenshot" src="{{docs_base_url}}/assets/img/articles/default-cash-flow-report.png"></p>
+<p>We don&#39;t like the report for the following reasons:</p>
+<ul class="list">
+<li>The reporting format is too scant.</li>
+<li>The &#39;Net Cash From Operations&#39; figure is wrong</li>
+</ul>
+<h3 id="customisation-process"><a class="header-link" href="#customisation-process"></a>Customisation Process</h3>
+<p>We wants the Cash Flow Report to look something similar to the format in the images below:
+<img alt="cash flow format 1" class="screenshot" src="{{docs_base_url}}/assets/img/articles/format-1.png">
+<img alt="cash flow format 1" class="screenshot" src="{{docs_base_url}}/assets/img/articles/format-2.png"></p>
+<h4 id="activate-customised-cash-flow-report"><a class="header-link" href="#activate-customised-cash-flow-report"></a>Activate Customised Cash Flow Report</h4>
+<p>Do this in Accounts Settings by checking the &#39;Use Custom Cash Flow Format&#39; checkbox. This will cause ERPNext to only 
+use your custom format for cash flow reports.</p>
+<p>After doing that, your cash flow report should look like this:
+<img alt="custom cash flow statement" class="screenshot" src="{{docs_base_url}}/assets/img/articles/no-mappers.png"></p>
+<p>Move to the next section to build the report.</p>
+<h4 id="create-cash-flow-mappings"><a class="header-link" href="#create-cash-flow-mappings"></a>Create Cash Flow Mappings</h4>
+<p>For each line, we need to create a Cash Flow Mapping document to represent it.</p>
+<p class="img-container"><img alt="new cash flow mapping form" class="screenshot" src="{{docs_base_url}}/assets/img/articles/new-cash-flow-mapping.png"></p>
+<p>You can think of the Cash Flow Mapping as a representation of each line in the cash flow report. A Cash Flow Mapping 
+is a child of a Cash Flow Mapper which will be explained later. </p>
+<p>Let&#39;s start by creating Cash Flow Mappings that will represent the add back of non cash expenses already recodgnised in
+the Profit or Loss statement. We want them to appear on the cash statement as:</p>
+<ul class="list">
+<li>Income taxes recognised in profit or loss</li>
+<li>Finance costs recognised in profit or loss</li>
+<li>Depreciation of non-current assets</li>
+</ul>
+<p>Start by opening a new Cash Flow Mapping form.</p>
+<p>The fields in the Cash Flow Mapping doctype are:</p>
+<ul class="list">
+<li><strong>Name</strong>: This something to identify this document. Name it something related to the label</li>
+<li><strong>Label</strong>: This is what will show in the cash flow statement</li>
+<li><strong>Accounts</strong>: This table contains all the accounts which this line relates to.</li>
+</ul>
+<p>With this information, let&#39;s go ahead and create the Cash Flow Mapping Document for the line &#39;Income taxes recognised in profit or loss&#39;</p>
+<p class="img-container"><img alt="custom cash flow statement" class="screenshot" src="{{docs_base_url}}/assets/img/articles/cash-flow-mapping-1.png"></p>
+<p>I have named it &#39;Income Tax Charge&#39; and given it a label &#39;Income taxes recognised in profit or loss&#39;. We want this 
+line to reflect income tax charges from our profit or loss statement. The account where this happens in our chart 
+of account is named &#39;Income Taxes&#39; (an expense) so I have added &#39;Income Taxes&#39; into the accounts table. If you have 
+more accounts representing income tax expenses, you should add all of them here.</p>
+<p>Because Income Tax expense needs to be adjusted further in the cash flow statement, check the &#39;Is Income Tax Expense&#39; 
+checkbox. This is what will help ERPNext properly calculate the adjustments to be made.</p>
+<p><em>For best results, let parent accounts have child accounts that have the same treatment for cash flow reporting 
+purposes because ERPNext will calculate net change of all children accounts in a situation where the selected account 
+is a parent account.</em> </p>
+<p>In the same way, I have created for the remaining two mappings.</p>
+<p class="img-container"><img alt="custom cash flow statement" class="screenshot" src="{{docs_base_url}}/assets/img/articles/cash-flow-mapping-2.png"></p>
+<p>Finance costs also need to be adjusted so make sure to check the &#39;Is Finance Cost&#39; checkbox.</p>
+<p class="img-container"><img alt="custom cash flow statement" class="screenshot" src="{{docs_base_url}}/assets/img/articles/cash-flow-mapping-3.png"></p>
+<p>Next let&#39;s add Cash Flow Mapping for items that show changes in working capital:</p>
+<ul class="list">
+<li>Increase/(decrease) in other liabilities</li>
+<li>(Increase)/decrease in trade and other receivables</li>
+<li>Increase/(decrease) in trade and other payables</li>
+<li>VAT payable</li>
+<li>(Increase)/decrease in inventory</li>
+</ul>
+<p class="img-container"><img alt="custom cash flow statement" class="screenshot" src="{{docs_base_url}}/assets/img/articles/cash-flow-mapping-4.png"></p>
+<p class="img-container"><img alt="custom cash flow statement" class="screenshot" src="{{docs_base_url}}/assets/img/articles/cash-flow-mapping-5.png"></p>
+<p class="img-container"><img alt="custom cash flow statement" class="screenshot" src="{{docs_base_url}}/assets/img/articles/cash-flow-mapping-6.png"></p>
+<p class="img-container"><img alt="custom cash flow statement" class="screenshot" src="{{docs_base_url}}/assets/img/articles/cash-flow-mapping-7.png"></p>
+<p class="img-container"><img alt="custom cash flow statement" class="screenshot" src="{{docs_base_url}}/assets/img/articles/cash-flow-mapping-8.png"></p>
+<p>Don&#39;t forget to tell ERPNext that these mappings represent changes in working capital by checking the &#39;Is Working 
+Capital&#39; checkbox.</p>
+<p>At this point we have created all the mappings necessary for the Operating Activities section of our cash flow 
+statement. However, ERPNext doesn&#39;t know that yet until we create Cash Flow Mapper documents. We&#39;ll create Cash Flow 
+Mapper documents next.</p>
+<h4 id="create-cash-flow-mappers"><a class="header-link" href="#create-cash-flow-mappers"></a>Create Cash Flow Mappers</h4>
+<p>Cash Flow Mappers represents the sections of the cash flow statement. A standard cash flow statement has only three 
+sections so when you view the Cash Flow Mapper list, you will that three have been created for you named:</p>
+<ul class="list">
+<li>Operating Activities</li>
+<li>Financing Activities </li>
+<li>Investing Activities </li>
+</ul>
+<p>You will not be able to add or remove any of them but they are editable and can be renamed.
+<img alt="cash flow mapper list" class="screenshot" src="{{docs_base_url}}/assets/img/articles/cash-flow-mapper-2.png"></p>
+<p>Open the Operating Activities Cash Flow Mapper so we can add the Cash Flow Mappings we have created.</p>
+<ul class="list">
+<li><strong>Section Name</strong>: This is the heading of the section.</li>
+<li><strong>Section Leader</strong>: This is the first sub-header immediately after the profit figure. Relates only to Operating 
+Activities Cash Flow Mapper</li>
+<li><strong>Section Subtotal</strong>: This is the label for subtotal in the cash flow statement section. Relates only to Operating 
+Activities Cash Flow Mapper</li>
+<li><strong>Section Footer</strong>: This is the label for the total in the cash flow statement section.</li>
+<li><strong>Mapping</strong>: This table contains all the Cash Flow Mappings related to the Cash Flow Mapper.</li>
+</ul>
+<p>Now add all the Cash Flow Mappings you have created and Save. You should have something like this:
+<img alt="cash flow mapper for operating activities" class="screenshot" src="{{docs_base_url}}/assets/img/articles/cash-flow-mapper-4.png"></p>
+<p> Refresh the cash flow statement and view the changes.
+<img alt="updated cash flow report" class="screenshot" src="{{docs_base_url}}/assets/img/articles/cash-flow-mapper-3.png"></p>
+<p>Looks close to our requirements but we are not done yet. Create new mappings for &#39;Investing Activities&#39; and &#39;Financing 
+Activities&#39; sections of the cash flow statement.</p>
+<p class="img-container"><img alt="cash flow mapping" class="screenshot" src="{{docs_base_url}}/assets/img/articles/cash-flow-mapping-9.png"></p>
+<p class="img-container"><img alt="cash flow mapping" class="screenshot" src="{{docs_base_url}}/assets/img/articles/cash-flow-mapping-10.png"></p>
+<p class="img-container"><img alt="cash flow mapper for operating activities" class="screenshot" src="{{docs_base_url}}/assets/img/articles/cash-flow-mapper-5.png"></p>
+<p class="img-container"><img alt="cash flow mapper for operating activities" class="screenshot" src="{{docs_base_url}}/assets/img/articles/cash-flow-mapper-6.png"></p>
+<p>Here&#39;s what our cash flow statement now looks like:
+<img alt="final cash flow statement" class="screenshot" src="{{docs_base_url}}/assets/img/articles/final-cash-flow.png"></p>
+    </article>
+  </body>
+</html>

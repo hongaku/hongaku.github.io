@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>1.Purpose: Material Issue</title>
+    <link type="text/css" rel="stylesheet" href="../../../../../assets/css/github-markdown.css">
+    <link type="text/css" rel="stylesheet" href="../../../../../assets/css/pilcrow.css">
+    <link type="text/css" rel="stylesheet" href="../../../../../assets/css/hljs-github.min.css"/>
+  </head>
+  <body>
+    <article class="markdown-body"><p>#Stock Entry Purpose</p>
+<p>Stock Entry is a stock transaction, which can be used for multiple purposes. Let&#39;s learn about each Stock Entry Purpose below.</p>
+<h4 id="1.purpose:-material-issue"><a class="header-link" href="#1.purpose:-material-issue"></a>1.Purpose: Material Issue</h4>
+<p>Material Issue entry create to issue item(s) from a warehouse. On submission of Material Issue, stock of item is deducated from the Source Warehouse. </p>
+<p>Material Issue is generally made for the low value consumable items like office stationary, product consumables etc. Also you can create Material Issue to reconcile serialized and batched item&#39;s stock.</p>
+<p class="img-container"><img alt="Material Issue" class="screenshot" src="{{docs_base_url}}/assets/img/articles/stock-entry-issue.png"></p>
+<h4 id="2.purpose:-material-receipt"><a class="header-link" href="#2.purpose:-material-receipt"></a>2.Purpose: Material Receipt</h4>
+<p>Material Receipt entry is created to inward stock of item(s) in a warehouse. This type of stock entry can be created for updating opening balance of serialized and batched item. Also items purchased without Purchase Order can be inwarded from Material Receipt entry.</p>
+<p>For the stock valuation purpose, provided Item Valuation becomes a mandatory field in the Material Receipt entry.</p>
+<p class="img-container"><img alt="Material Receipt" class="screenshot" src="{{docs_base_url}}/assets/img/articles/stock-entry-receipt.png"></p>
+<h4 id="3.purpose:-material-transfer"><a class="header-link" href="#3.purpose:-material-transfer"></a>3.Purpose: Material Transfer</h4>
+<p>Material Transfer entry is created for the inter-warehouse Material Transfer.</p>
+<p class="img-container"><img alt="Material Transfer" class="screenshot" src="{{docs_base_url}}/assets/img/articles/stock-entry-transfer.png"></p>
+<h4 id="4.purpose:-material-transfer-for-manufacture"><a class="header-link" href="#4.purpose:-material-transfer-for-manufacture"></a>4.Purpose: Material Transfer for Manufacture</h4>
+<p>In the manufacturing process, raw-materials are issued from the stores to the production department (generally WIP warehouse). This Material Transfer entry is created from Work Order. Items in this entry are fetched from the BOM of production Item, as selected in Work Order.</p>
+<p class="img-container"><img alt="Transfer for Manufacture" class="screenshot" src="{{docs_base_url}}/assets/img/articles/stock-entry-manufacture-transfer.gif"></p>
+<h4 id="4.purpose:-manufacture"><a class="header-link" href="#4.purpose:-manufacture"></a>4.Purpose: Manufacture</h4>
+<p>Manufacture is created from Work Order. In this entry, both raw-material item as well as production item are fetched from the BOM, selected in the Work Order. For the raw-material items, only Source Warehouse (generally WIP warehouse) is mentioned. For the production item, only target warehouse as mentioned in the Work Order is updated. On submission, stock of raw-material items are deducted from Source Warehouse, which indicates that raw-material items were consumed in the manufacturing process. Production Item is added to the Target Warehouse marking the completion of production cycle.</p>
+<p class="img-container"><img alt="Manufacture" class="screenshot" src="{{docs_base_url}}/assets/img/articles/stock-entry-manufacture.gif"></p>
+<h4 id="5.purpose:-repack"><a class="header-link" href="#5.purpose:-repack"></a>5.Purpose: Repack</h4>
+<p>Repack Entry is created when items purchases in bulk is repacked under smaller packs. <img src="/docs/user/manual/en/stock/articles/repack-entry.html" alt="Check this page to know more about Repack entry."></p>
+<h4 id="6.purpose:-subcontract"><a class="header-link" href="#6.purpose:-subcontract"></a>6.Purpose: Subcontract</h4>
+<p>Subcontracting transaction involves company transfer raw-material items to the sub-contractors warehouse. This requires adding a warehouse for the sub-contractor as well. Sub-contract entry transfers stock from the companies warehouse to the sub-contractors warehouse.<img src="/docs/user/manual/en/manufacturing/subcontracting.html" alt="Check this page to know more about Subcontracting">.</p>
+<p class="img-container"><img alt="Subcontract" class="screenshot" src="{{docs_base_url}}/assets/img/articles/stock-entry-subcontract.gif"></p>
+<!-- markdown -->    </article>
+  </body>
+</html>

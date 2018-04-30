@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>VAT/EXCISE Tax Implementation for UAE/KSA</title>
+    <link type="text/css" rel="stylesheet" href="../../../../../assets/css/github-markdown.css">
+    <link type="text/css" rel="stylesheet" href="../../../../../assets/css/pilcrow.css">
+    <link type="text/css" rel="stylesheet" href="../../../../../assets/css/hljs-github.min.css"/>
+  </head>
+  <body>
+    <article class="markdown-body"><h1 id="vat/excise-tax-implementation-for-uae/ksa"><a class="header-link" href="#vat/excise-tax-implementation-for-uae/ksa"></a>VAT/EXCISE Tax Implementation for UAE/KSA</h1>
+<h3 id="1.-setting-up-tax-registration-no-for-customer,-supplier-and-company"><a class="header-link" href="#1.-setting-up-tax-registration-no-for-customer,-supplier-and-company"></a>1. Setting up Tax Registration No for customer, supplier and company</h3>
+<p>Set tax registation number in the field tax id for the customer, supplier and company</p>
+<ol class="list">
+<li><p>For Customer
+<img class="screenshot" alt="TRN in Customer" src="{{docs_base_url}}/assets/img/regional/uae/tax-id-customer.png"></p>
+</li>
+<li><p>For Company
+<img class="screenshot" alt="TRN in Company" src="{{docs_base_url}}/assets/img/regional/uae/tax-id-company.png"></p>
+</li>
+</ol>
+<h3 id="2.-setting-up-tax-code-for-products"><a class="header-link" href="#2.-setting-up-tax-code-for-products"></a>2. Setting up TAX Code for Products</h3>
+<p>Setup tax code in the item master, system will fetch same code in the sales/purchase invoice on selection of an item.</p>
+<p class="img-container"><img class="screenshot" alt="Tax Code in Item" src="{{docs_base_url}}/assets/img/regional/uae/tax-code-item.png"></p>
+<h3 id="3.-default-tax-templates"><a class="header-link" href="#3.-default-tax-templates"></a>3. Default Tax Templates</h3>
+<p>ERPNext provides you default tax template for vat(5%, zero, exempted) and excise(50%, 100%). You can create your own <a href="/docs/user/manual/en/setting-up/setting-up-taxes.html">tax template</a>.</p>
+<p class="img-container"><img class="screenshot" alt="Default Tax Template" src="{{docs_base_url}}/assets/img/regional/uae/uae-tax-templates.png"></p>
+<h3 id="3.-making-vat-ready-invoices"><a class="header-link" href="#3.-making-vat-ready-invoices"></a>3. Making VAT Ready Invoices</h3>
+<p>If you have setup the TRN of your Customers and Suppliers, and your tax template, you are ready to go for making VAT Ready Invoices!</p>
+<p>For <strong>Sales Invoice</strong>,</p>
+<ol class="list">
+<li>Select the correct Customer and Item and the address where the transaction will happen.</li>
+<li>Check if the TRN of your Company and Supplier have been correctly set.</li>
+<li>Check if the TAX Code has been set in the Item</li>
+<li>Select the  template that you have created based on the type of transaction</li>
+<li>Save and Submit the Invoice</li>
+</ol>
+<p class="img-container"><img class="screenshot" alt="VAT Invoice" src="{{docs_base_url}}/assets/img/regional/uae/vat-invoice.gif"></p>
+<h3 id="4.-print-tax-invoice"><a class="header-link" href="#4.-print-tax-invoice"></a>4. Print Tax Invoice</h3>
+<p>ERPNext provides 2 default print foramt</p>
+<ol class="list">
+<li><p>Simplified Tax Invoice
+<img class="screenshot" alt="Simplified Tax Invoice" src="{{docs_base_url}}/assets/img/regional/uae/simplified-invoice.png"></p>
+</li>
+<li><p>Detailed Tax Invoice
+<img class="screenshot" alt="Detailed Tax Invoice" src="{{docs_base_url}}/assets/img/regional/uae/detailed-invoice.png"></p>
+</li>
+</ol>
+    </article>
+  </body>
+</html>

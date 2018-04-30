@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>Eröffnungskonto</title>
+    <link type="text/css" rel="stylesheet" href="../../../../assets/css/github-markdown.css">
+    <link type="text/css" rel="stylesheet" href="../../../../assets/css/pilcrow.css">
+    <link type="text/css" rel="stylesheet" href="../../../../assets/css/hljs-github.min.css"/>
+  </head>
+  <body>
+    <article class="markdown-body"><h1 id="eröffnungskonto"><a class="header-link" href="#eröffnungskonto"></a>Eröffnungskonto</h1>
+<p><span class="text-muted contributed-by">Beigetragen von CWT Connector &amp; Wire Technology GmbH</span></p>
+<p>Jetzt, da Sie den größten Teil der Einrichtung hinter sich haben, wird es Zeit tiefer einzusteigen!</p>
+<p>Es gibt zwei wichtige Gruppen von Daten, die Sie eingeben müssen, bevor Sie Ihre Tätigkeiten beginnen.</p>
+<ul class="list">
+<li>Die Stände in der Eröffnungsbilanz</li>
+<li>Die Anfangsbestände im Lager</li>
+</ul>
+<p>Um Ihre Konten und Lagerbestände richtig eröffnen zu können, brauchen Sie belastbare Daten. Stellen Sie sicher, dass Sie Ihre Daten entsprechend vorbereitet haben.</p>
+<h3 id="konten-eröffnen"><a class="header-link" href="#konten-eröffnen"></a>Konten eröffnen</h3>
+<p>Wir gehen davon aus, dass Sie mit der Buchhaltung in einem neuen Geschäftsjahr beginnen, Sie können aber auch mittendrin starten. Um Ihre Konten einzurichten, brauchen Sie Folgendes für den Tag an dem Sie die Buchhaltung über ERPNext starten.</p>
+<ul class="list">
+<li>Eröffnungsstände der Kapitalkonten - wie Kapital von Anteilseignern (oder das des Inhabers), Darlehen, Stände von Bankkonten</li>
+<li>Liste der offenen Rechnungen aus Verkäufen und Einkäufen (Forderungen und Verbindlichkeiten)</li>
+<li>Entsprechende Belege</li>
+</ul>
+<p>Sie können Konten basierend auf Belegarten auswählen. In so einem Szenario sollte Ihre Bilanz ausgeglichen sein.</p>
+<p class="img-container"><img class="screenshot" alt="Eröffnungskonto" src="{{docs_base_url}}/assets/img/accounts/opening-account-1.png"></p>
+<p>Beachten Sie bitte auch, dass das System abstürzt, wenn es mehr als 300 Bücher gibt. Um so eine Situation zu vermeiden, können Sie Konten über temporäre Konten eröffnen.</p>
+<h3 id="temporäre-konten"><a class="header-link" href="#temporäre-konten"></a>Temporäre Konten</h3>
+<p>Eine schöne Möglichkeit die Eröffnung zu vereinfachen bietet sich über die Verwendung von temporären Konten, nur für die Eröffnung. Die Kontenstände dieser Konten werden alle 0, wenn alle alten Rechnungen und die Eröffnungsstände von Bank, Schulden etc. eingegeben wurden. Im Standard-Kontenrahmen wird ein temporäres Eröffnungskonto unter den Vermögenswerten erstellt.</p>
+<h3 id="die-eröffnungsbuchung"><a class="header-link" href="#die-eröffnungsbuchung"></a>Die Eröffnungsbuchung</h3>
+<p>In ERPNext werden Eröffnungskonten eingerichtet, indem bestimmte Buchungssätze übertragen werden.</p>
+<p>Hinweis: Stellen Sie sicher, dass im Abschnitt &quot;Weitere Informationen&quot; &quot;Ist Eröffnung&quot; auf &quot;Ja&quot; eingestellt ist.</p>
+<blockquote>
+<p>Rechnungswesen &gt; Journalbuchung &gt; Neu</p>
+</blockquote>
+<p>Vervollständigen Sie die Buchungssätze auf der Soll- und Haben-Seite.</p>
+<p class="img-container"><img class="screenshot" alt="Opening Account" src="{{docs_base_url}}/assets/img/accounts/opening-6.png"></p>
+<p>Um einen Eröffnungsstand einzupflegen, erstellen Sie einen Buchungssatz für ein Konto oder eine Gruppe von Konten.</p>
+<p>Beispiel: Wenn Sie die Kontenstände von drei Bankkonten einpflegen möchten, dann erstellen Sie Buchungssätze der folgenden Art und Weise:</p>
+<p class="img-container"><img class="screenshot" alt="Opening Account" src="{{docs_base_url}}/assets/img/accounts/opening-3.png"></p>
+<p>Um einen Ausgleich herzustellen, wird ein temporäres Konto für Vermögen und Verbindlichkeiten verwendet. Wenn Sie einen Anfangsbestand in einem Verbindlichkeitenkonto einpflegen, können Sie zum Ausgleich ein temporäres Vermögenskonto verwenden.</p>
+<p>Auf diese Art und Weise können Sie den Anfangsbestand auf Vermögens- und Verbindlichkeitenkonten erstellen.</p>
+<p>Sie können zwei Eröffnungsbuchungssätze erstellen:</p>
+<ul class="list">
+<li>Für alle Vermögenswerte (außer Forderungen): Dieser Buchungssatz beinhaltet alle Ihre Vermögenswerte außer den Summen, die Sie noch von Ihren Kunden als offene Forderungen zu Ihren Ausgangsrechnungen erhalten. Sie müssen Ihre Forderungen einpflegen, indem Sie zu jeder Rechnung eine individuelle Buchung erstellen (weil Ihnen das System dabei hilft, die Rechnungen, die noch bezahlt werden müssen, nachzuverfolgen). Sie können die Summe all dieser Forderungen auf der Habenseite zu einem <strong>temporären Eröffnungskonto</strong> buchen.</li>
+<li>Für alle Verbindlichkeiten: In ähnlicher Art und Weise müssen Sie einen Buchungssatz für die Anfangsstände Ihrer Verbindlichkeiten (mit Ausnahme der Rechnungen, die Sie noch zahlen müssen) zu einem <strong>temporären Eröffnungskonto</strong> erstellen.</li>
+<li>Mit dieser Methode können Sie Eröffnungsstände für spezielle Bilanzkonten einpflegen aber nicht für alle.</li>
+<li>Eine Eröffnungsbuchung ist nur für Bilanzkonten möglich, nicht aber für Aufwands- oder Ertragskonten.</li>
+</ul>
+<p>Wenn Sie die Buchungen erstellt haben, schaut der Bericht zur Probebilanz in etwa wie folgt aus:</p>
+<p class="img-container"><img class="screenshot" alt="Probebilanz" src="{{docs_base_url}}/assets/img/accounts/opening-4.png"></p>
+<h3 id="offene-rechnungen"><a class="header-link" href="#offene-rechnungen"></a>Offene Rechnungen</h3>
+<p>Nachdem Sie Ihre Eröffnungsbuchungen erstellt haben, müssen Sie alle Ausgangs- und Eingangsrechnungen, die noch offen sind, eingeben.</p>
+<p>Da Sie die Erträge und Aufwendungen zu diesen Rechnungen bereits in der vorherigen Periode gebucht haben, wählen Sie in den Ertrags- und Aufwandskonten das <strong>temporäre Eröffnungskonto</strong> als Gegenkonto aus.</p>
+<blockquote>
+<p>Hinweis: Stellen Sie sicher, dass Sie jede Rechnung mit &quot;Ist Eröffnungsbuchung&quot; markiert haben.</p>
+</blockquote>
+<p>Wenn es Ihnen egal ist, welche Artikel in diesen Rechnungen enthalten sind, dann erstellen Sie einfach einen Platzhalter-Artikel in der Rechnung. Die Artikelnummer ist in der Rechnung nicht zwingend erforderlich, also sollte das kein Problem sein.</p>
+<p>Wenn Sie alle Ihre Rechnungen eingegeben haben, hat Ihr Eröffnungskonto einen Stand von 0.</p>
+<p>{next}</p>
+    </article>
+  </body>
+</html>

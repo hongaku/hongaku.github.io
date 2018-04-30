@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>Periodenabschlussbeleg</title>
+    <link type="text/css" rel="stylesheet" href="../../../../../assets/css/github-markdown.css">
+    <link type="text/css" rel="stylesheet" href="../../../../../assets/css/pilcrow.css">
+    <link type="text/css" rel="stylesheet" href="../../../../../assets/css/hljs-github.min.css"/>
+  </head>
+  <body>
+    <article class="markdown-body"><h1 id="periodenabschlussbeleg"><a class="header-link" href="#periodenabschlussbeleg"></a>Periodenabschlussbeleg</h1>
+<p><span class="text-muted contributed-by">Beigetragen von CWT Connector &amp; Wire Technology GmbH</span></p>
+<p>Zum Ende eines jeden Jahres (oder evtl. auch vierteljährlich oder monatlich) und nachdem Sie die Bücher geprüft haben, können Sie Ihre Kontenbücher abschliessen. Das heißt, dass Sie die besonderen Abschlussbuchungen durchführen können, z. B.:</p>
+<ul class="list">
+<li>Abschreibungen</li>
+<li>Wertveränderungen des Anlagevermögens</li>
+<li>Rückstellungen für Steuern und Verbindlichkeiten</li>
+<li>Aktualisieren von uneinbringbaren Forderungen</li>
+</ul>
+<p>usw. und Sie können Ihren Gewinn oder Verlust verbuchen.</p>
+<p>Wenn Sie das tun, muss der Kontostand Ihres GuV-Kontos 0 werden. Sie starten ein neues Geschäftsjahr (oder eine Periode) mit einer ausgeglichenen Bilanz und einem jungfräulichen GuV-Konto.</p>
+<p>Sie sollten nach den Sonderbuchungen zum aktuellen Geschäftsjahr über Journalbuchungen in ERPNext alle Ihre Ertrags- und Aufwandskonten auf 0 setzen, indem Sie hierhin gehen:</p>
+<blockquote>
+<p>Buchhaltung &gt; Werkzeuge &gt; Periodenabschlussbeleg</p>
+</blockquote>
+<p>Das <strong>Buchungsdatum</strong> ist das Datum, zu dem die Buchung ausgeführt wird. Wenn Ihr Geschäftsjahr am 31. Dezember endet, dann sollten Sie dieses Datum als Buchungsdatum im Periodenabschlussbeleg auswählen.</p>
+<p>Das <strong>Transaktionsdatum</strong> ist das Datum, zu dem der Periodenabschlussbeleg erstellt wird.</p>
+<p>Das <strong>abzuschließende Geschäftsjahr</strong> ist das Jahr, für das Sie Ihre Finanzbuchhaltung abschliessen.</p>
+<p class="img-container"><img class="screenshot" alt="Periodenabschlussbeleg" src="{{docs_base_url}}/assets/img/accounts/period-closing-voucher.png"></p>
+<p>Dieser Beleg überträgt den Gewinn oder Verlust (über die GuV ermittelt) in die Schlußbilanz. Sie sollten ein Konto vom Typ Verbindlichkeiten, wie Gewinnrücklagen oder Überschuss, oder vom Typ Kapital als Schlußkonto auswählen.</p>
+<p>Der Periodenabschlussbeleg erstellt Buchungen im Hauptbuch, bei denen alle Ertrags- und Aufwandskonten auf 0 gesetzt werden, und überträgt den Gewinn oder Verlust in die Schlußbilanz.</p>
+<p>Wenn Sie Buchungen zu einem abgeschlossenen Geschäftsjahr erstellen, besonders dann, wenn für dieses Geschäftsjahr schon ein Periodenabschlussbeleg erstellt wurde, sollten Sie einen neuen Periodenabschlussbeleg erstellen. Der spätere Beleg überträgt dann nur den offenen Differenzbetrag aus der GuV in die Schlußbilanz.</p>
+<p>{next}</p>
+    </article>
+  </body>
+</html>

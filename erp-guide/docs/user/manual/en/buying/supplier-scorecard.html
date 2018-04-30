@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>Supplier Scorecard</title>
+    <link type="text/css" rel="stylesheet" href="../../../../assets/css/github-markdown.css">
+    <link type="text/css" rel="stylesheet" href="../../../../assets/css/pilcrow.css">
+    <link type="text/css" rel="stylesheet" href="../../../../assets/css/hljs-github.min.css"/>
+  </head>
+  <body>
+    <article class="markdown-body"><h1 id="supplier-scorecard"><a class="header-link" href="#supplier-scorecard"></a>Supplier Scorecard</h1>
+<p>A Supplier Scorecard is an evaluation tool used to assess the performance of 
+suppliers. Supplier scorecards can be used to keep track of item quality, 
+delivery and responsiveness of suppliers across long periods of time. This data 
+is typically used to help in purchasing decisions.</p>
+<p>A Supplier Scorecard is manually created for each supplier.</p>
+<p>In ERPNext, you can create a supplier scorecard by going to:</p>
+<blockquote>
+<p>Buying &gt; Documents &gt; Supplier Scorecard &gt; New Supplier Scorecard</p>
+</blockquote>
+<h3 id="create-supplier-scorecard"><a class="header-link" href="#create-supplier-scorecard"></a>Create Supplier Scorecard</h3>
+<p>A supplier scorecard is created for each supplier individually. Only one supplier scorecard can be created for each 
+supplier. 
+<img class="screenshot" alt="Purchase Order" src="{{docs_base_url}}/assets/img/buying/supplier-scorecard.png"></p>
+<h4 id="final-score-and-standings"><a class="header-link" href="#final-score-and-standings"></a>Final Score and Standings</h4>
+<p>The supplier scorecard consists of a set evaluation periods, during which the performance of a supplier is 
+evaluated. This period can be daily, monthly or yearly. The current score is calculated from the score of each evaluation 
+period based on the weighting function. The default formula is linearly weight over the previous 12 scoring periods. 
+<img class="screenshot" alt="Purchase Order" src="{{docs_base_url}}/assets/img/buying/supplier-scorecard-weighing.png">
+This formula is customizable.</p>
+<p>The supplier standing is used to quickly sort suppliers based on their performance. These are customizable for each supplier. 
+The scorecard standing of a supplier can also be used to restrict suppliers from being included in Request for Quotations or 
+being issued Purchase Orders.
+<img class="screenshot" alt="Purchase Order" src="{{docs_base_url}}/assets/img/buying/supplier-scorecard-standing.png"></p>
+<h4 id="evaluation-criteria-and-variables"><a class="header-link" href="#evaluation-criteria-and-variables"></a>Evaluation Criteria and Variables</h4>
+<p>A supplier can be evaluated on several individual evaluation criteria, including (but not limited to) quotation response time, 
+delivered item quality, and delivery timeliness. These criteria are weighed to determine the final period score.
+<img class="screenshot" alt="Purchase Order" src="{{docs_base_url}}/assets/img/buying/supplier-scorecard-criteria.png">
+The method for calculating each criteria is determined through the criteria formula field, which can use a number of pre-established variables.
+The value of each of these variables is calculated over the scoring period for each supplier. Examples of such variables include:</p>
+<ul class="list">
+<li>The total number of items received from the supplier</li>
+<li>The total number of accepted items from the supplier</li>
+<li>The total number of rejected items from the supplier</li>
+<li>The total number of deliveries from the supplier</li>
+<li>The total amount (in dollars) received from a supplier
+Additional variables can be added through server-side customizations.</li>
+</ul>
+<p>The criteria formula should be customized to evaluate the suppliers in each criteria in a way that best fits the Company requirements.</p>
+<h5 id="evaluation-formulas"><a class="header-link" href="#evaluation-formulas"></a>Evaluation Formulas</h5>
+<p>The evaluation formula uses the pre-established or custom variables to evaluate an aspect of supplier performance over the scoring period. Formulas can use the following mathematical functions:</p>
+<ul class="list">
+<li>addition: + </li>
+<li>subtraction: -</li>
+<li>multiplication: *</li>
+<li>division: /</li>
+<li>min: min(x,y)</li>
+<li>max: max(x,y)</li>
+<li>if/else: (x) if (formula) else (y)</li>
+<li>less than: &lt;</li>
+<li>greated than: &gt;</li>
+<li>variables: {variable_name}</li>
+</ul>
+<p>It is crucial that the formula be solvable for all variable values. This is most often an issue if the value resolves to 0. For example:</p>
+<pre class="hljs"><code><span class="xml"></span><span class="hljs-template-variable">{total_accepted_items}</span><span class="xml"> / </span><span class="hljs-template-variable">{total_received_items}</span><span class="xml"></span></code></pre><p>This example would resolve to 0 / 0 in periods where there are no received items, and therefore should have a check to protect in this case:</p>
+<pre class="hljs"><code>({total_accepted_items} / {total_received_items}) <span class="hljs-keyword">if</span> {total_received_items} &gt; <span class="hljs-number">0</span> <span class="hljs-keyword">else</span> <span class="hljs-number">1</span>.</code></pre><h3 id="evaluating-the-supplier"><a class="header-link" href="#evaluating-the-supplier"></a>Evaluating the Supplier</h3>
+<p>An evaluation is generated for each Supplier Scorecard Period by clicking the &quot;Generate Missing Scorecard Periods&quot; button. The supplier 
+current score can be seen, as well as a visual graphic showing the performance of the supplier over time. Any actions against the supplier 
+are also noted here, including warnings when create RFQs and POs or locking out those features for this supplier altogether.</p>
+<p>{next}</p>
+    </article>
+  </body>
+</html>

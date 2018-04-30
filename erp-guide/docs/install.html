@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>Install</title>
+    <link type="text/css" rel="stylesheet" href="assets/css/github-markdown.css">
+    <link type="text/css" rel="stylesheet" href="assets/css/pilcrow.css">
+    <link type="text/css" rel="stylesheet" href="assets/css/hljs-github.min.css"/>
+  </head>
+  <body>
+    <article class="markdown-body"><h1 id="install"><a class="header-link" href="#install"></a>Install</h1>
+<!-- title: ERPNext Installation -->
+<h1 id="installation"><a class="header-link" href="#installation"></a>Installation</h1>
+<p>ERPNext is based on the <a href="https://frappe.io">Frappé Framework</a>, a full stack web framework based on Python, MariaDB, Redis, Node.</p>
+<p>To intall ERPNext, you will have to install the <a href="https://github.com/frappe/bench">Frappé Bench</a>, the command-line, package manager and site manager for Frappé Framework. For more details, read the Bench README.</p>
+<p>After you have installed Frappé Bench, go to you bench folder, which is     <code>frappe.bench</code> by default and setup <strong>erpnext</strong>.</p>
+<pre class="hljs"><code><span class="hljs-string">bench </span><span class="hljs-built_in">get-app</span> <span class="hljs-string">erpnext </span>{{ <span class="hljs-string">source_link </span>}}</code></pre><p>Then create a new site to install the app.</p>
+<pre class="hljs"><code>bench<span class="hljs-built_in"> new-site </span>mysite</code></pre><p>This will create a new folder in your <code>/sites</code> directory and create a new database for this site.</p>
+<p>Next, install erpnext in this site</p>
+<pre class="hljs"><code><span class="hljs-keyword">bench </span>--site mysite <span class="hljs-keyword">install-app </span>erpnext</code></pre><p>To run this locally, run</p>
+<pre class="hljs"><code><span class="hljs-keyword">bench </span>start</code></pre><p>Fire up your browser and go to <a href="http://localhost:8000">http://localhost:8000</a> and you should see the login screen. Login as <strong>Administrator</strong> and <strong>admin</strong> (or the password you set at the time of <code>new-site</code>) and you are set.</p>
+<!-- jinja -->
+<!-- autodoc -->    </article>
+  </body>
+</html>

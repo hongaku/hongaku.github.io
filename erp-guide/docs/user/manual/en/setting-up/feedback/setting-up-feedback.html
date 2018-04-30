@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>Feedback Trigger</title>
+    <link type="text/css" rel="stylesheet" href="../../../../../assets/css/github-markdown.css">
+    <link type="text/css" rel="stylesheet" href="../../../../../assets/css/pilcrow.css">
+    <link type="text/css" rel="stylesheet" href="../../../../../assets/css/hljs-github.min.css"/>
+  </head>
+  <body>
+    <article class="markdown-body"><h1 id="feedback-trigger"><a class="header-link" href="#feedback-trigger"></a>Feedback Trigger</h1>
+<p>You can set up the Feedback Trigger for various documents to get the Feedback from the user.</p>
+<p>For this, you will need to setup the Feedback Trigger,</p>
+<blockquote>
+<p>Setup &gt; Email &gt; Feedback Trigger</p>
+</blockquote>
+<h3 id="setting-up-feedback-trigger"><a class="header-link" href="#setting-up-feedback-trigger"></a>Setting Up Feedback Trigger</h3>
+<p>To Setup an Feedback:</p>
+<ol class="list">
+<li>Select which Document Type you want to send feedback request mail.</li>
+<li>Select the Email Field, This field will be used to get the recipients email id.</li>
+<li>Set the Subject for feedback request mail.</li>
+<li>Set the conditions, if all the conditions are met only then the feedback request mail will be sent.</li>
+<li>Compose the message.</li>
+</ol>
+<h3 id="setting-a-subject"><a class="header-link" href="#setting-a-subject"></a>Setting a Subject</h3>
+<p>You can retrieve the data for a particular field by using <code>doc.[field_name]</code>. To use it in your subject/message, you have to surround it with <code>{% raw %}{{ }}{% endraw %}</code>. These are called <a href="http://jinja.pocoo.org/">Jinja</a> tags. So, for example, to get the name of a document, you use <code>{% raw %}{{ doc.name }}{% endraw %}</code>. The below example sends an feedback request whenever Issue is Closed with the Subject, &quot;ISS-##### Issue is Resolved&quot;</p>
+<p class="img-container"><img class="screenshot" alt="Setting Subject" src="{{docs_base_url}}/assets/img/setup/feedback/feedback-trigger-subject.png"></p>
+<h3 id="setting-conditions"><a class="header-link" href="#setting-conditions"></a>Setting Conditions</h3>
+<p>Feedback Trigger allows you to set conditions according to the field data in your documents. The feedback request email will be sent on document save only if the all conditions are true For example if you want to trigger the feedback request mail to a customer if an Issue is has been saved as &quot;Closed&quot; as it&#39;s status, you put <code>doc.status == &quot;Closed&quot;</code> in the conditions textbox. You can also set more complex conditions by combining them.</p>
+<p class="img-container"><img class="screenshot" alt="Setting Condition" src="{{docs_base_url}}/assets/img/setup/feedback/feedback-trigger-condition.png"></p>
+<h3 id="setting-a-message"><a class="header-link" href="#setting-a-message"></a>Setting a Message</h3>
+<p>You can use both Jinja Tags (<code>{% raw %}{{ doc.[field_name] }}{% endraw %}</code>) and HTML tags in the message textbox.</p>
+<pre class="hljs"><code><span class="xml"></span><span class="hljs-template-tag">{% <span class="hljs-name">raw</span> %}</span><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">h3</span>&gt;</span>Your Support Ticket is Resolved<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Issue </span><span class="hljs-template-variable">{{ doc.name }}</span><span class="xml"> Is resolved. Please check and confirm the same.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span> Your Feedback is important for us. Please give us your Feedback for </span><span class="hljs-template-variable">{{ doc.name }}</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span> Please visit the following url for feedback.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+</span><span class="hljs-template-variable">{{ feedback_url }}</span><span class="xml">
+</span><span class="hljs-template-tag">{% <span class="hljs-name">endraw</span> %}</span><span class="xml"></span></code></pre><hr>
+<h3 id="example"><a class="header-link" href="#example"></a>Example</h3>
+<ol class="list">
+<li><p>Setting up Feedback Trigger
+ <img class="screenshot" alt="Defining Criteria" src="{{docs_base_url}}/assets/img/setup/feedback/setting-up-feedback-trigger.png"></p>
+</li>
+<li><p>Setting the Recipients and Message
+ <img class="screenshot" alt="Set Message" src="{{docs_base_url}}/assets/img/setup/feedback/setting-up-feedback-trigger-message.png"></p>
+</li>
+</ol>
+<p>{next}</p>
+    </article>
+  </body>
+</html>

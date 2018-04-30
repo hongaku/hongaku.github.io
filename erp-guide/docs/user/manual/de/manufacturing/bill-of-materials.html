@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>Stückliste</title>
+    <link type="text/css" rel="stylesheet" href="../../../../assets/css/github-markdown.css">
+    <link type="text/css" rel="stylesheet" href="../../../../assets/css/pilcrow.css">
+    <link type="text/css" rel="stylesheet" href="../../../../assets/css/hljs-github.min.css"/>
+  </head>
+  <body>
+    <article class="markdown-body"><h1 id="stückliste"><a class="header-link" href="#stückliste"></a>Stückliste</h1>
+<p><span class="text-muted contributed-by">Beigetragen von CWT Connector &amp; Wire Technology GmbH</span></p>
+<p>Das Herz des Fertigungssystems bildet die Stückliste. Die <strong>Stückliste</strong> ist eine Auflistung aller Materialien (egal ob gekauft oder selbst hergestellt) und Arbeitsgänge die in das fertige Erzeugnis oder Untererzeugnis einfliessen. In ERPNext kann eine Komponente ihre eigene Stückliste haben, und formt somit eine mehrstufige Baumstruktur.</p>
+<p>Um passende Einkaufsanfragen zu erstellen, müssen Sie Ihre Stücklisten immer auf dem aktuellen Stand halten. Um eine neue Stückliste anzulegen, gehen Sie zu:</p>
+<blockquote>
+<p>Fertigung &gt; Dokumente &gt; Stückliste &gt; Neue Stückliste</p>
+</blockquote>
+<p class="img-container"><img class="screenshot" alt="Task" src="{{docs_base_url}}/assets/img/manufacturing/bom.png"></p>
+<p>Um Arbeitsgänge hinzuzufügen, wählen Sie &quot;Mit Arbeitsgängen&quot;. Die Übersicht der Arbeitsgänge erscheint.</p>
+<p class="img-container"><img class="screenshot" alt="Task" src="{{docs_base_url}}/assets/img/manufacturing/bom-operations.png"></p>
+<ul class="list">
+<li>Wählen Sie den Artikel für den Sie eine Stückliste erstellen wollen.</li>
+<li>Fügen Sie die Arbeitsgänge, die Sie durchlaufen müssen, um diesen Artikel zu fertigen, in der Tabelle der Arbeitsgänge hinzu. Für jeden Arbeitsgang werden Sie nach einem Arbeitsplatz gefragt. Wenn nötig, müssen Sie neue Arbeitsplätze anlegen.</li>
+<li>Arbeitsplätze sind nur für die Produktkostenkalkulation und die Terminplanung der Arbeitsgänge des Fertigungsauftrags definiert, nicht für das Fertigungslager.</li>
+<li>Der Bestand an Erzeugnissen wird über das Lager nachverfolgt, nicht über die Arbeitsplätze.</li>
+</ul>
+<h3 id="kostenkalkulation-einer-stückliste"><a class="header-link" href="#kostenkalkulation-einer-stückliste"></a>Kostenkalkulation einer Stückliste</h3>
+<ul class="list">
+<li>Der Bereich Kostenkalkulation der Stückliste gibt einen ungefähren Wert der Produktionskosten eines Artikels wieder</li>
+<li>Fügen Sie die Liste der Artikel, die Sie für jeden Arbeitsgang benötigen, mit der entsprechenden Menge hinzu. Bei dem Artikel kann es sich um einen Zukaufartikel oder um eine Unterfertigung mit eigener Stückliste handeln. Wenn der Artikel in der Zeile ein gefertigter Artikel ist und mehrere verschiedene Stücklisten hat, wählen Sie die passende Stückliste aus. Sie können auch festlegen, ob ein Teil des Artikels zu Ausschuss wird.</li>
+</ul>
+<p class="img-container"><img class="screenshot" alt="Kostenkalkulation" src="{{docs_base_url}}/assets/img/manufacturing/bom-costing.png"></p>
+<ul class="list">
+<li>Diese Kosten können über die Schaltfläche &quot;Kosten aktualisieren&quot; aktualisiert werden.</li>
+</ul>
+<p class="img-container"><img class="screenshot" alt="Kosten aktualisieren" src="{{docs_base_url}}/assets/img/manufacturing/bom-update-cost.png"></p>
+<h3 id="benötigtes-material-(aufgelöst)"><a class="header-link" href="#benötigtes-material-(aufgelöst)"></a>Benötigtes Material (aufgelöst)</h3>
+<p>Diese Tabelle listet alles Material auf, welches benötigt wird um den Artikel zu fertigen. Sie zieht weiterhin Unterbaugruppen mit Menge an.</p>
+<p class="img-container"><img class="screenshot" alt="Aufgelöste Ansicht" src="{{docs_base_url}}/assets/img/manufacturing/bom-exploded.png"></p>
+<p>{next}</p>
+    </article>
+  </body>
+</html>

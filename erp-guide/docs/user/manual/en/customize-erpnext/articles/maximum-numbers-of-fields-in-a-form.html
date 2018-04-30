@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>Maximum Numbers Of Fields In A Form</title>
+    <link type="text/css" rel="stylesheet" href="../../../../../assets/css/github-markdown.css">
+    <link type="text/css" rel="stylesheet" href="../../../../../assets/css/pilcrow.css">
+    <link type="text/css" rel="stylesheet" href="../../../../../assets/css/hljs-github.min.css"/>
+  </head>
+  <body>
+    <article class="markdown-body"><h1 id="maximum-numbers-of-fields-in-a-form"><a class="header-link" href="#maximum-numbers-of-fields-in-a-form"></a>Maximum Numbers Of Fields In A Form</h1>
+<p>Sometimes while creating custom fields, you might experienced an error message like below:</p>
+<blockquote>
+<p>Row size too large. The maximum row size for the used table type, not counting BLOBs, is 65535. This includes storage overhead, check the manual. You have to change some columns to TEXT or BLOBs</p>
+</blockquote>
+<h3 id="what-it-actually-means?"><a class="header-link" href="#what-it-actually-means?"></a>What it actually means?</h3>
+<p>In simple terms, it means that you have reached the limit of maximum numbers of fields for the specific form/doctype. So, what is the limit of maximum numbers of fields?</p>
+<p>In MySQL, there is a hard limit of 4096 columns per table, but the effective maximum may be less for a given table. The exact limit depends on several interacting factors.</p>
+<p>Every table (regardless of storage engine) has a maximum row size of 65,535 bytes. Storage engines may place additional constraints on this limit, reducing the effective maximum row size.</p>
+<p>The maximum row size constrains the number (and possibly size) of columns because the total length of all columns cannot exceed this size (65,535 bytes). For example, <code>utf8mb3</code> characters require up to 3 bytes per character, so for a <code>VARCHAR(140)</code> column, the server must allocate <code>140 × 3 = 420</code> bytes per value. Consequently, a table cannot contain more than <code>65,535 / 420 = 156</code> such columns.</p>
+<p>In Frappé frapework, <code>VARCHAR(140)</code> type columns are created based on &quot;Data&quot;, &quot;Link&quot;, &quot;Select&quot;, &quot;Dynamic Link&quot;, &quot;Password&quot; and &quot;Read Only&quot; fieldtypes. Hence, you can create approximately 156 such columns in the system.</p>
+<h3 id="solutions:"><a class="header-link" href="#solutions:"></a>Solutions:</h3>
+<p>To add more fields in the system, you can do some changes.</p>
+<ol class="list">
+<li>Convert some of the fields to &quot;Text&quot;, &quot;Small Text&quot;, &quot;Text Editor&quot; or &quot;Code&quot; type field. In MySQL, BLOB and TEXT columns count from one to four plus eight bytes each toward the row-size limit because their contents are stored separately from the rest of the row. So, converting to those fieldtypes will free up some spaces and will allow to add some more fields.</li>
+<li>Set smaller value in the &quot;Length&quot; property while creating fields, default value is 140. System sets length of <code>VARCHAR</code> based on this property and allocates size for that columns. Hence, smaller Length leads to add more fields.</li>
+</ol>
+    </article>
+  </body>
+</html>

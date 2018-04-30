@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title></title>
+    <link type="text/css" rel="stylesheet" href="../../../../../assets/css/github-markdown.css">
+    <link type="text/css" rel="stylesheet" href="../../../../../assets/css/pilcrow.css">
+    <link type="text/css" rel="stylesheet" href="../../../../../assets/css/hljs-github.min.css"/>
+  </head>
+  <body>
+    <article class="markdown-body"><p><strong>Question:</strong> User has roles like Account User and Account Manager assigned. Still, when accessing  Account Receivable report, User is getting an error message of no permission the territory master.</p>
+<p class="img-container"><img alt="Report Permission Error" class="screenshot" src="{{docs_base_url}}/assets/img/articles/report-permission-1.png"></p>
+<p><strong>Answer:</strong></p>
+<p>As per the permission system in ERPNext, for the User to be able to access a form or a report, s(he) should have at-least read permission on all the link field in that form/report. Since Territory is a link field in Account Receivable report, please add a permission rule to let Account User/Manager have at-least Read permission on the Territory master. Please follow below-given steps to resolve this issue.</p>
+<ol class="list">
+<li><p>Roles assigned to User are Account User and Account Manager.  </p>
+</li>
+<li><p>As indicates in the Error message, the user didn&#39;t have permission on the territory master. As per the default permission, none of the above role assigned to that User has any permission on the Territory master.  </p>
+</li>
+<li><p>To resolve this issue, I have assigned Account User permission to Read Territory master.  </p>
+<p class="img-container"><img alt="Permission Manager" class="screenshot" src="{{docs_base_url}}/assets/img/articles/report-permission-2.png"></p>
+</li>
+</ol>
+<p>As per this permission update, User should be able to access Account Receivable report fine.</p>
+    </article>
+  </body>
+</html>

@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>Manage Foreign Exchange Difference</title>
+    <link type="text/css" rel="stylesheet" href="../../../../../assets/css/github-markdown.css">
+    <link type="text/css" rel="stylesheet" href="../../../../../assets/css/pilcrow.css">
+    <link type="text/css" rel="stylesheet" href="../../../../../assets/css/hljs-github.min.css"/>
+  </head>
+  <body>
+    <article class="markdown-body"><h1 id="manage-foreign-exchange-difference"><a class="header-link" href="#manage-foreign-exchange-difference"></a>Manage Foreign Exchange Difference</h1>
+<p>In ERPNext, you can create transactions in the foriegn currency as well. When creating transaction in the foreign currency, system updates current exchanage rate with respect to customer/supplier&#39;s currency and base currency on your Company. Since Exchange Rate is always flucuating, on might receive payment from the client on exchange rate different from one mentioned in the Sales/Purchase Invoice. Following is the intruction on how to manage different amount avail in payment entry due to exchange rate change.</p>
+<h4 id="add-expense-account"><a class="header-link" href="#add-expense-account"></a>Add Expense Account</h4>
+<p>To mange currency difference, create Account <strong>Foreign Exchange Gain/Loss</strong>. This account is generally created on the Expense side of P&amp;L statement. However, you can place it under another group as per your accounting requirement.</p>
+<p class="img-container"><img alt="Accounts Frozen Date" class="screenshot" src="{{docs_base_url}}/assets/img/articles/exchange-rate-difference-1.png"></p>
+<h4 id="book-payment-entry"><a class="header-link" href="#book-payment-entry"></a>Book Payment Entry</h4>
+<p>In the payment voucher, update invoice amount against Customer or Supplier account, then update actual payment amount against Bank/Cash account. Add new row and select Foreign Exchange Gain/Loss to update currency difference amount.</p>
+<p>In the below scenario, Sales Invoice was made EUR, at the exchange rate of 1.090. As per this rate, Sales Invoice amount in USD (base currency) was $1000.</p>
+<p>One receipt of payment, exchange rate changed. As per the new exchange rate, payment received in the base currency was $1080. This means gain of $80 due to change in exchange rate. Following is how Foreign Exchange Gain will be booked in this scenerio.</p>
+<p class="img-container"><img alt="Accounts Frozen Date" class="screenshot" src="{{docs_base_url}}/assets/img/articles/exchange-rate-difference-2.gif"></p>
+<p>In case you incur loss due to change foriegn exchnage rate, then different amount about be updated in the debit of Foreign Exchange Gain/Loss account. Also you can add another row to update another expenses like bank charges, remittance charges etc.</p>
+<!-- markdown -->
+    </article>
+  </body>
+</html>

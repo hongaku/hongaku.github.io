@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>Contact and Address</title>
+    <link type="text/css" rel="stylesheet" href="../../../../assets/css/github-markdown.css">
+    <link type="text/css" rel="stylesheet" href="../../../../assets/css/pilcrow.css">
+    <link type="text/css" rel="stylesheet" href="../../../../assets/css/hljs-github.min.css"/>
+  </head>
+  <body>
+    <article class="markdown-body"><h1 id="contact-and-address"><a class="header-link" href="#contact-and-address"></a>Contact and Address</h1>
+<p>Contacts do not need to be linked to another document, they can be stand alone.  You can even create a contact with only a first name, not linked to any other document or party (Customer/Supplier).</p>
+<p>The Contact_ID is automatically created:</p>
+<ol class="list">
+<li>If only a First Name is entered that First Name defines the ID , thus First name (only)</li>
+<li>If a First Name and a Party is linked the ID becomes “FirstName-Party”</li>
+</ol>
+<p>Contacts can, but do not have to be linked, to:  User, Customer, Supplier, and Sales Partner. Since Customers and Addresses are not directly linked to a User, all links go via Contacts.</p>
+<p>A Contact can be linked to the (web) user. If that user is also a Customer, it is linked to the Customer by the Customer ID</p>
+<p>Contacts and Addresses in ERPNext are stored separately so that you can
+attach multiple Contacts or Addresses to Customers and Suppliers.</p>
+<p>To create a new Contact go to,</p>
+<blockquote>
+<p>CRM &gt; Contact &gt; New</p>
+</blockquote>
+<p class="img-container"><img class="screenshot" alt="Contact" src="{{docs_base_url}}/assets/img/crm/contact.png"></p>
+<p>Or you can add a Contact or Address directly from the Customer record, click on “New
+Contact” or “New Address”.</p>
+<p class="img-container"><img class="screenshot" alt="Contact" src="{{docs_base_url}}/assets/img/crm/contact-from-cust.png"></p>
+<blockquote>
+<p>Tip: When you select a Customer in any transaction, one Contact and Address
+gets pre-selected. This is the “Default Contact or Address”.</p>
+</blockquote>
+<p>To Import multiple Contacts and Addresses from a spreadsheet, use the Data
+Import Tool.</p>
+<hr>
+<h3 id="address-titles"><a class="header-link" href="#address-titles"></a>Address Titles</h3>
+<p>The Address Title (Name of person or organization that this address belongs to) is a free format unlinked field. The ID is automatically created from the Address Title and Address Type. (AddressTitle-AddressType).</p>
+<h3 id="address-linking"><a class="header-link" href="#address-linking"></a>Address Linking</h3>
+<p>Addresses can be entered individually (unlinked)  or linked to customers, leads, suppliers or Sales Partners. </p>
+<p>Linking is done in the reference section where the links can be established.</p>
+<p>(Contributed by Robert Becht)</p>
+    </article>
+  </body>
+</html>

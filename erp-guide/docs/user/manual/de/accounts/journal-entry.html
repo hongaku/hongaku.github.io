@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>Journalbuchung / Buchungssatz</title>
+    <link type="text/css" rel="stylesheet" href="../../../../assets/css/github-markdown.css">
+    <link type="text/css" rel="stylesheet" href="../../../../assets/css/pilcrow.css">
+    <link type="text/css" rel="stylesheet" href="../../../../assets/css/hljs-github.min.css"/>
+  </head>
+  <body>
+    <article class="markdown-body"><h1 id="journalbuchung-/-buchungssatz"><a class="header-link" href="#journalbuchung-/-buchungssatz"></a>Journalbuchung / Buchungssatz</h1>
+<p><span class="text-muted contributed-by">Beigetragen von CWT Connector &amp; Wire Technology GmbH</span></p>
+<p>Außer der <strong>Ausgangsrechnung</strong> und der <strong>Eingangsrechnung</strong> werden alle Buchungsvorgänge als <strong>Journalbuchung / Buchungssatz</strong> erstellt. Ein <strong>Buchungssatz</strong> ist ein Standard-Geschäftsvorfall aus dem Rechnungswesen, der sich auf mehrere verschiedene Konten auswirkt und bei dem die Summen von Soll und Haben gleich groß sind.</p>
+<p>Um einen neuen Buchungssatz zu erstellen, gehen Sie zu:</p>
+<blockquote>
+<p>Rechnungswesen &gt; Dokumente &gt; Journalbuchung &gt; Neu</p>
+</blockquote>
+<p class="img-container"><img class="screenshot" alt="Buchungssatz" src="{{docs_base_url}}/assets/img/accounts/journal-entry.png"></p>
+<p>In einem Buchungssatz müssen Sie folgendes tun:</p>
+<ul class="list">
+<li>Die Belegart über das DropDown-Menü auswählen.</li>
+<li>Zeilen für die einzelnen Buchungen hinzufügen. In jeder Zeile müssen Sie folgendes Angeben:<ul class="list">
+<li>Das Konto, das betroffen ist.</li>
+<li>Die Beträge für Soll und Haben.</li>
+<li>Die Kostenstelle (wenn es sich um einen Ertrag oder einen Aufwand handelt)</li>
+<li>Den Gegenbeleg: Verknüpfen Sie hier mit einem Beleg, oder einer Rechnung, wenn es sich um den &quot;offenen&quot; Betrag dieser Rechnung handelt.</li>
+<li>Ist Anzahlung: Wählen Sie hier &quot;Ja&quot; wenn Sie diese Option in einer Rechnung auswählen können möchten. Oder geben Sie andere Informationen an, wenn es sich um &quot;Bankzahlung&quot; oder &quot;auf Rechnung&quot; handelt.</li>
+</ul>
+</li>
+</ul>
+<h4 id="differenz"><a class="header-link" href="#differenz"></a>Differenz</h4>
+<p>Das &quot;Differenz&quot;-Feld zeigt den Unterschied zwischen den Soll- und Habenbeträgen. Dieser Wert sollte &quot;0&quot; sein bevor der Buchungssatz übertragen wird. Wenn dieser Wert nicht &quot;0&quot; ist, dann können Sie auf die Schaltfläche &quot;Differenzbuchung erstellen&quot; klicken, um eine neue Zeile mit dem benötigten Betrag, der benötigt wird, die Differenz auf &quot;0&quot; zu stellen, einzufügen.</p>
+<hr>
+<h3 id="standardbuchungen"><a class="header-link" href="#standardbuchungen"></a>Standardbuchungen</h3>
+<p>Schauen wir uns einige Standardbuchungssätze an, die über Journalbelege erstellt werden können.</p>
+<h4 id="aufwände-(nicht-aufgeschlüsselt)"><a class="header-link" href="#aufwände-(nicht-aufgeschlüsselt)"></a>Aufwände (nicht aufgeschlüsselt)</h4>
+<p>Oftmals ist es nicht notwendig einen Aufwand genau aufzuschlüsseln, sondern er kann bei Zahlung direkt auf ein Aufwandskonto gebucht werden. Beispiele hierfür sind eine Reisekostenabrechnung oder eine Telefonrechnung. Sie können Aufwände für Telefon direkt verbuchen anstatt mit dem Konto Ihres Telekommunikationsanbieters und die Zahlung auf dem Bankkonto belasten.</p>
+<ul class="list">
+<li>Soll: Aufwandskonto (wie Telefon)</li>
+<li>Haben: Bank oder Kasse</li>
+</ul>
+<h4 id="zweifelhafte-forderungen-und-abschreibungen"><a class="header-link" href="#zweifelhafte-forderungen-und-abschreibungen"></a>Zweifelhafte Forderungen und Abschreibungen</h4>
+<p>Wenn Sie eine Rechnung als uneinbringbar abschreiben wollen, können Sie einen Journalbeleg ähnlich einem Zahlungsbeleg erstellen, nur dass Sie nicht Ihre Bank belasten, sondern das Aufwandskonto &quot;Uneinbringbare Forderungen&quot;.</p>
+<ul class="list">
+<li>Soll: Abschreibungen auf uneinbringbare Forderungen</li>
+<li>Haben: Kunde</li>
+</ul>
+<blockquote>
+<p>Anmerkung: Beachten Sie, dass es spezielle landesspezifische Regeln für das Abschreiben uneinbringbarer Forderungen gibt.</p>
+</blockquote>
+<h4 id="abschreibungen-aufgrund-von-wertminderungen"><a class="header-link" href="#abschreibungen-aufgrund-von-wertminderungen"></a>Abschreibungen aufgrund von Wertminderungen</h4>
+<p>Eine Abschreibung tritt dann auf, wenn Sie einen bestimmten Wert Ihres Vermögens als Aufwand abschreiben. Beispielsweise einen Computer, den Sie auf fünf Jahre nutzen. Sie können seinen Wert über die Periode verteilen und am Ende jeden Jahres einen Buchungssatz erstellen, der seinen Wert um einen bestimmten Prozentsatz vermindert.</p>
+<ul class="list">
+<li>Soll: Abschreibung (Aufwand)</li>
+<li>Haben: Vermögenskonto (das Konto auf das Sie den Vermögenswert, denn Sie abschreiben, gebucht haben)</li>
+</ul>
+<blockquote>
+<p>Anmerkung: Beachten Sie, dass es spezielle landesspezifische Regeln dafür gibt, in welcher Höhe bestimmte Arten von Vermögensgegenständen abgeschrieben werden können.</p>
+</blockquote>
+<p>{next}</p>
+    </article>
+  </body>
+</html>
